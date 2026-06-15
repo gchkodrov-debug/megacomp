@@ -13,10 +13,10 @@ $configUrl = "https://raw.githubusercontent.com/gchkodrov-debug/megacomp/main/co
 $repoDir = "C:\Users\User\Desktop\megacomp"
 
 function Write-Banner {
-    Write-Host "╔══════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║        RINO v$version - MegaComp AI       ║" -ForegroundColor Cyan
-    Write-Host "║     Your system. Your agent. One.     ║" -ForegroundColor Cyan
-    Write-Host "╚══════════════════════════════════════╝" -ForegroundColor Cyan
+    Write-Host "========================================" -ForegroundColor Cyan
+    Write-Host "      RINO v$version - MegaComp AI         " -ForegroundColor Cyan
+    Write-Host "   Your system. Your agent. One.          " -ForegroundColor Cyan
+    Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ""
 }
 
@@ -82,13 +82,13 @@ Write-Banner
 
 switch ($true) {
     ($Check -or $Report) {
-        Write-Host "`n🔍 Running diagnostics..." -ForegroundColor Green
-        $report = New-DailyReport
+        Write-Host "`nRunning diagnostics..." -ForegroundColor Green
+        $result = New-DailyReport
     }
     ($Apply) {
-        Write-Host "`n⚡ Applying optimizations..." -ForegroundColor Yellow
+        Write-Host "`nApplying optimizations..." -ForegroundColor Yellow
         New-DailyReport
-        Write-Host "  ✓ Health check complete" -ForegroundColor Green
+        Write-Host "  Health check complete" -ForegroundColor Green
     }
     default {
         Write-Host "Usage:" -ForegroundColor Yellow
