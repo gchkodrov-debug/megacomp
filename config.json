@@ -9,7 +9,9 @@
   "agents": {
     "ollama": {
       "enabled": true,
-      "model": "gemma4:e2b",
+      "primary_model": "gemma4:e2b",
+      "fast_model": "tinyllama:latest",
+      "embedding_model": "nomic-embed-text:latest",
       "context_window": 8192
     },
     "autogen": {
