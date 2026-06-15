@@ -1,0 +1,52 @@
+{
+  "rino": {
+    "name": "Rino",
+    "version": "2.0.0",
+    "master": "George",
+    "auto_improve": true,
+    "cycle_hours": 24
+  },
+  "agents": {
+    "ollama": {
+      "enabled": true,
+      "model": "gemma4:e2b",
+      "context_window": 8192
+    },
+    "autogen": {
+      "enabled": true,
+      "version": "0.10.0"
+    },
+    "github": {
+      "enabled": true,
+      "repo": "gchkodrov-debug/megacomp",
+      "auto_push": true
+    }
+  },
+  "monitoring": {
+    "disk_warning_gb": 10,
+    "uptime_warning_days": 14,
+    "report_format": "markdown"
+  },
+  "optimizations_applied": [
+    "nvidia_driver_474.44",
+    "hibernation_disabled",
+    "sysmain_disabled",
+    "search_indexing_disabled",
+    "telemetry_disabled",
+    "xbox_services_disabled",
+    "delivery_optimization_disabled",
+    "dns_cloudflare",
+    "tcp_optimized",
+    "prefetch_disabled",
+    "boot_defrag_disabled",
+    "registry_tweaks_applied",
+    "services_optimized"
+  ],
+  "todo": [
+    "Enable XMP in BIOS for 2400MHz RAM",
+    "Check BIOS version F6 -> F22+",
+    "Consider Windows 11 upgrade",
+    "Install NVMe SSD for boot",
+    "Upgrade GPU from GT 730"
+  ]
+}

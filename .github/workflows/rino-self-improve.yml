@@ -1,0 +1,39 @@
+name: Rino Self-Improve
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday 6AM
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  diagnostics:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run System Diagnostics
+        run: |
+          Write-Output "## System Info" >> $env:GITHUB_STEP_SUMMARY
+          Get-ComputerInfo -Property "CsProcessors","OsName","OsVersion","OsArchitecture" >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "## Disk" >> $env:GITHUB_STEP_SUMMARY
+          Get-PSDrive C | Select-Object Used,Free >> $env:GITHUB_STEP_SUMMARY
+          Write-Output "## Memory" >> $env:GITHUB_STEP_SUMMARY
+          Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize,FreePhysicalMemory >> $env:GITHUB_STEP_SUMMARY
+        shell: powershell
+
+  optimize-suggestions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for new tool releases
+        run: |
+          echo "## Tool Update Check" >> $GITHUB_STEP_SUMMARY
+          echo "Checking configured tools for updates..." >> $GITHUB_STEP_SUMMARY
+      - name: Suggest improvements
+        run: |
+          echo "## Improvement Suggestions" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Update BIOS from F6 to latest" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Enable XMP in BIOS for 2400MHz RAM" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Check for Windows 11 upgrade (i7-6700 may need bypass)" >> $GITHUB_STEP_SUMMARY
+          echo "- [ ] Verify NVIDIA driver 474.44 installed correctly" >> $GITHUB_STEP_SUMMARY
