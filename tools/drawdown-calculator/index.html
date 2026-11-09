@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawdown Room Calculator — Free Tool by OneJobKits</title>
+<meta name="description" content="Free prop-firm drawdown room calculator. See your daily limit, total limit, and how a trailing floor really moves — before you trade. Education & record-keeping tool by OneJobKits.">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --line:#2a2f3a;
+    --ink:#e8e6e1; --muted:#9aa0ab; --accent:#e8b34b; --green:#3fb97c;
+    --red:#e05c5c; --amber:#e09543; --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5}
+  .wrap{max-width:860px;margin:0 auto;padding:24px 18px 60px}
+  header{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+  .brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .brand .logo{font-weight:800;font-size:22px;letter-spacing:.3px}
+  .brand .logo span{color:var(--accent)}
+  .brand .tag{color:var(--muted);font-size:13px}
+  h1{font-size:30px;margin:14px 0 6px;line-height:1.2}
+  .sub{color:var(--muted);max-width:640px;margin:0}
+  .qbox{background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:var(--radius);padding:14px 16px;margin:20px 0}
+  .qbox p{margin:0;font-size:15px}
+  .qbox .who{color:var(--muted);font-size:13px;margin-top:6px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .card h2{font-size:16px;margin:0 0 4px}
+  .card .hint{color:var(--muted);font-size:13px;margin:0 0 14px}
+  label{display:block;font-size:13px;color:var(--muted);margin:12px 0 5px}
+  label:first-of-type{margin-top:0}
+  input,select{width:100%;background:#0c0e12;border:1px solid var(--line);color:var(--ink);
+    border-radius:9px;padding:10px 12px;font-size:16px}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .verdict{border-radius:var(--radius);padding:16px 18px;margin-top:16px;border:1px solid var(--line);
+    background:var(--panel2)}
+  .verdict .big{font-size:19px;font-weight:700;margin:2px 0 4px}
+  .verdict p{margin:4px 0}
+  .pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.6px;
+    padding:3px 10px;border-radius:999px;text-transform:uppercase}
+  .pill.ok{background:rgba(63,185,124,.15);color:var(--green);border:1px solid var(--green)}
+  .pill.warn{background:rgba(224,149,67,.15);color:var(--amber);border:1px solid var(--amber)}
+  .pill.stop{background:rgba(224,92,92,.15);color:var(--red);border:1px solid var(--red)}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+  th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .bar{height:14px;background:#0c0e12;border:1px solid var(--line);border-radius:7px;overflow:hidden;margin:8px 0 4px}
+  .bar > div{height:100%;background:var(--green);transition:width .25s}
+  .barlabels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+  .explain{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;margin-top:16px}
+  .explain h2{font-size:16px;margin:0 0 8px}
+  .explain p{margin:8px 0;color:#cfd2d8}
+  .explain strong{color:var(--ink)}
+  .cta{background:linear-gradient(135deg,#232030,#171a21);border:1px solid var(--accent);
+    border-radius:var(--radius);padding:20px;margin-top:22px}
+  .cta h2{margin:0 0 6px;font-size:19px}
+  .cta p{margin:6px 0;color:#cfd2d8}
+  .btn{display:inline-block;margin-top:10px;background:var(--accent);color:#171106;font-weight:700;
+    padding:11px 18px;border-radius:10px;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent);margin-left:8px}
+  .disclaimer{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);
+    margin-top:26px;padding-top:14px}
+  .err{color:var(--red);font-size:13px;min-height:18px;margin-top:8px}
+  footer{color:var(--muted);font-size:13px;margin-top:18px}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="logo">One<span>Job</span>Kits</div>
+      <div class="tag">Free tool · Prop Firm Challenge Tracker series</div>
+    </div>
+    <h1>Drawdown Room Calculator</h1>
+    <p class="sub">Two numbers decide most challenges: your <strong>daily loss limit</strong> and your
+    <strong>total drawdown floor</strong>. This free calculator shows exactly how much room you
+    have left under each one — and what changes when the floor <em>trails</em> your best day
+    instead of sitting still.</p>
+  </header>
+
+  <div class="qbox">
+    <p>“Do you size from the daily limit or the total one?” · “Is the floor static, intraday
+    trailing, or end-of-day trailing — and does open P&amp;L count?”</p>
+    <p class="who">The two questions funded traders ask most — collected in OneJobKits' Demand
+    Ledger, Run 1 (Nov 2026). This calculator is the answer, in numbers.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1 · Your challenge</h2>
+      <p class="hint">Copy these from your firm's rules page — the page you should also be
+      screenshotting for your records.</p>
+
+      <label for="startBalance">Starting balance ($)</label>
+      <input id="startBalance" type="number" min="1" step="any" value="100000">
+
+      <div class="row2">
+        <div>
+          <label for="dailyPct">Daily loss limit (%)</label>
+          <input id="dailyPct" type="number" min="0" step="any" value="5">
+        </div>
+        <div>
+          <label for="totalPct">Max total drawdown (%)</label>
+          <input id="totalPct" type="number" min="0" step="any" value="10">
+        </div>
+      </div>
+
+      <label for="floorType">How does the total floor work at your firm?</label>
+      <select id="floorType" data-v="eod">
+        <option value="static">Static — the floor never moves</option>
+        <option value="eod">Trailing, end-of-day (EOD) — floor follows your best closing balance</option>
+        <option value="intraday">Trailing, intraday — floor follows your best balance incl. open P&amp;L</option>
+      </select>
+
+      <label for="lockPct">Trailing lock (optional) — floor stops rising once balance reaches start + this % (0 = never locks)</label>
+      <input id="lockPct" type="number" min="0" step="any" value="0">
+    </div>
+
+    <div class="card">
+      <h2>2 · Where you are today</h2>
+      <p class="hint">Your numbers right now. "Best balance" means the highest balance your
+      account has reached so far — closing balance for EOD firms, highest equity (including
+      open trades) for intraday firms.</p>
+
+      <label for="startToday">Balance at today's open ($)</label>
+      <input id="startToday" type="number" step="any" value="98500">
+
+      <label for="pnlToday">Today's P&amp;L so far ($, use − for a loss)</label>
+      <input id="pnlToday" type="number" step="any" value="-700">
+
+      <label for="peakBalance">Best balance reached so far ($)</label>
+      <input id="peakBalance" type="number" step="any" value="101200">
+
+      <div class="err" id="errBox"></div>
+    </div>
+  </div>
+
+  <div class="verdict" id="verdictBox">
+    <span class="pill ok" id="statusPill">Room to trade</span>
+    <div class="big" id="bindingLine">—</div>
+    <p id="verdictText">—</p>
+    <div class="bar"><div id="roomBar" style="width:100%"></div></div>
+    <div class="barlabels"><span id="barLeft">Floor</span><span id="barRight">Start</span></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2>Your two limits, side by side</h2>
+    <table>
+      <thead><tr><th>Limit</th><th>Breach line</th><th class="num">Room left</th><th class="num">Room used</th></tr></thead>
+      <tbody>
+        <tr><td>Daily loss limit (resets tomorrow)</td><td id="dailyLine">—</td><td class="num" id="dailyRoom">—</td><td class="num" id="dailyUsed">—</td></tr>
+        <tr><td>Total drawdown floor (<span id="floorTypeEcho">end-of-day trailing</span>)</td><td id="totalLine">—</td><td class="num" id="totalRoom">—</td><td class="num" id="totalUsed">—</td></tr>
+      </tbody>
+    </table>
+    <p class="hint" style="margin-top:10px">Whichever room is <strong>smaller</strong> is the one that
+    actually governs your day. That is the whole answer to "daily or total?" — it is not a
+    choice; it is whichever runs out first, and it changes as the floor moves.</p>
+  </div>
+
+  <div class="explain">
+    <h2>Static vs. trailing — the 30-second version</h2>
+    <p><strong>Static floor:</strong> your breach line is set on day one (e.g. $90,000 on a
+    $100K account) and never moves. Profits genuinely add room.</p>
+    <p><strong>Trailing floor:</strong> your breach line follows your <em>best</em> balance up.
+    On a $100K account with 10% trailing drawdown, the day your balance peaks at $106,000,
+    your floor quietly becomes $96,000 — you no longer have $10,000 of room to the start, you
+    have $10,000 of room <em>below your peak</em>. Fall back to $100,000 and you have already
+    used 40% of your total room without ever dipping below your starting balance.</p>
+    <p><strong>EOD vs. intraday:</strong> an end-of-day floor trails your best <em>closing</em>
+    balance. An intraday floor trails your best <em>equity</em> — including open, unrealised
+    profit that later disappears. The same winning morning that lifts an intraday floor can
+    leave you with less room by lunch. If your firm counts open P&amp;L, a trade that was up
+    $2,000 and closed flat has still moved your floor.</p>
+    <p><strong>Why the lock matters:</strong> some firms stop the floor from rising once your
+    balance passes a set gain (often the starting balance). Above that point the floor behaves
+    like a static one — set the lock % above and the calculator shows the difference.</p>
+  </div>
+
+  <div class="cta">
+    <h2>A calculator tells you your room once. A tracker watches it every day.</h2>
+    <p>The <strong>Prop Firm Challenge Tracker</strong> (OneJobKits Kit #1) logs both limits
+    daily, keeps your firm's rules as written on the day you bought the challenge, and keeps
+    dated balance + payout records — because when a firm says you broke a rule, your journal
+    is your only witness.</p>
+    <p>Start with the free one-page worksheet: <em>“Daily limit or total limit? The 5 drawdown
+    numbers to write down before your first trade.”</em></p>
+    <a class="btn" href="https://jobkit08.gumroad.com" target="_blank" rel="noopener">Get the free worksheet + the Tracker</a>
+    <a class="btn ghost" href="https://jobkit08.gumroad.com" target="_blank" rel="noopener">Browse all OneJobKits kits</a>
+  </div>
+
+  <p class="disclaimer"><strong>Disclaimer:</strong> This is a free education and
+  record-keeping tool. It explains how common prop-firm drawdown rules work in general terms;
+  it is not financial advice, not trading advice, and not a recommendation of any firm,
+  product, or trade. Every firm writes its own rules and interprets them itself — always
+  confirm the exact rule, and how it is measured, on your own firm's current rules page, and
+  keep dated records of what that page said when you bought your challenge.</p>
+
+  <footer>Built by <a href="https://jobkit08.gumroad.com" target="_blank" rel="noopener">OneJobKits</a>
+  — job-specific spreadsheet &amp; binder kits. Free tool, no sign-up, nothing you type here
+  leaves your browser.</footer>
+
+</div>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var ids = ["startBalance","dailyPct","totalPct","floorType","lockPct",
+             "startToday","pnlToday","peakBalance"];
+  var fmt = function(n){
+    var s = Math.abs(n).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
+    return (n < 0 ? "-$" : "$") + s;
+  };
+  var pct = function(x){ return (Math.round(x*10)/10).toLocaleString("en-US") + "%"; };
+
+  function calc(){
+    var start  = parseFloat($("startBalance").value);
+    var dPct   = parseFloat($("dailyPct").value);
+    var tPct   = parseFloat($("totalPct").value);
+    var type   = $("floorType").value;
+    var lock   = parseFloat($("lockPct").value) || 0;
+    var sToday = parseFloat($("startToday").value);
+    var pnl    = parseFloat($("pnlToday").value);
+    var peakIn = parseFloat($("peakBalance").value);
+    var err = "";
+
+    if ([start,dPct,tPct,sToday,pnl].some(function(v){ return isNaN(v); }) || start <= 0){
+      err = "Fill in every field with a number to see your room.";
+    }
+    if (!err && (dPct < 0 || tPct < 0 || dPct > 100 || tPct > 100)){
+      err = "Limit percentages should be between 0 and 100.";
+    }
+    if (!err && (sToday <= 0)) err = "Today's opening balance must be above zero.";
+
+    var balance = isNaN(sToday) || isNaN(pnl) ? NaN : sToday + pnl;
+    var peak = isNaN(peakIn) ? balance : Math.max(peakIn, balance, start);
+
+    // --- the floors ---
+    var dailyFloor = sToday * (1 - dPct/100);
+    var baseFloor  = start  * (1 - tPct/100);
+    var reference  = start, floorLabel = "static — set from your starting balance";
+    if (type === "eod" || type === "intraday"){
+      reference = Math.max(start, peak);
+      if (lock > 0) reference = Math.min(reference, start * (1 + lock/100));
+      floorLabel = (type === "eod" ? "trailing your best closing balance" :
+                    "trailing your best equity, incl. open P&L") +
+                   (lock > 0 ? ", locked at start + " + lock + "%" : "");
+    }
+    var totalFloor = Math.max(baseFloor, reference - start * tPct/100);
+
+    var dailyRoom = balance - dailyFloor;
+    var totalRoom = balance - totalFloor;
+    var dailyUsed = sToday > dailyFloor ? (sToday - balance) / (sToday - dailyFloor) * 100 : 0;
+    var totalUsed = start * tPct/100 > 0 ? Math.max(0, (reference - balance)) / (start * tPct/100) * 100 : 0;
+
+    $("floorTypeEcho").textContent =
+      type === "static" ? "static" : (type === "eod" ? "end-of-day trailing" : "intraday trailing");
+    $("dailyLine").textContent = fmt(dailyFloor);
+    $("totalLine").textContent = fmt(totalFloor) + "  (" + floorLabel + ")";
+    $("dailyRoom").textContent = fmt(dailyRoom);
+    $("totalRoom").textContent = fmt(totalRoom);
+    $("dailyUsed").textContent = pct(Math.min(999, Math.max(0, dailyUsed)));
+    $("totalUsed").textContent = pct(Math.min(999, Math.max(0, totalUsed)));
+    $("errBox").textContent = err;
+
+    var binding = dailyRoom <= totalRoom ? "DAILY" : "TOTAL";
+    var room = Math.min(dailyRoom, totalRoom);
+    var pill = $("statusPill"), big = $("bindingLine"), txt = $("verdictText");
+    // room remaining as a share of the full drawdown budget (tPct% of start)
+    var barPct = Math.max(0, Math.min(100, room / (start * tPct/100 || 1) * 100));
+    $("roomBar").style.width = barPct + "%";
+    $("roomBar").style.background =
+      room <= 0 ? "var(--red)" : (binding === "DAILY" ? dailyUsed : totalUsed) >= 50 ? "var(--amber)" : "var(--green)";
+    $("barLeft").textContent = "Breach floor " + fmt(binding === "DAILY" ? dailyFloor : totalFloor);
+    $("barRight").textContent = "Balance " + fmt(balance);
+
+    if (err){
+      pill.className = "pill warn"; pill.textContent = "Check your numbers";
+      big.textContent = "—"; txt.textContent = "Fix the fields above and your room appears here.";
+      return;
+    }
+    if (room <= 0){
+      pill.className = "pill stop"; pill.textContent = "At or past a limit";
+      big.textContent = "By these numbers, a limit line has been reached.";
+      txt.textContent = "Your balance of " + fmt(balance) + " is at or below the " +
+        (binding === "DAILY" ? "daily loss line (" + fmt(dailyFloor) + ")" :
+         "total drawdown floor (" + fmt(totalFloor) + ")") +
+        ". If this matches your firm's own dashboard, stop and check their rules page and your records before doing anything else.";
+    } else if ((binding === "DAILY" ? dailyUsed : totalUsed) >= 50 || room < start * 0.01){
+      pill.className = "pill warn"; pill.textContent = "Room is thin";
+      big.textContent = "Your " + (binding === "DAILY" ? "DAILY" : "TOTAL") +
+        " limit binds first — " + fmt(room) + " of room left.";
+      txt.textContent = "More than half of the binding limit is already used. The other limit (" +
+        (binding === "DAILY" ? "total: " + fmt(totalRoom) : "daily: " + fmt(dailyRoom)) +
+        ") is not the one watching you today.";
+    } else {
+      pill.className = "pill ok"; pill.textContent = "Room to trade";
+      big.textContent = "Your " + (binding === "DAILY" ? "DAILY" : "TOTAL") +
+        " limit binds first — " + fmt(room) + " of room left.";
+      txt.textContent = "The " + (binding === "DAILY" ? "daily" : "total") + " limit leaves you " +
+        fmt(room) + " before its line. The other limit (" +
+        (binding === "DAILY" ? "total" : "daily") + ") leaves " +
+        fmt(binding === "DAILY" ? totalRoom : dailyRoom) +
+        ". Log both numbers today — the floor you cannot see move is the one that ends challenges.";
+    }
+  }
+  ids.forEach(function(id){
+    $(id).addEventListener("input", calc);
+    $(id).addEventListener("change", calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
