@@ -30,6 +30,9 @@ jobs:
           mkdir -p _site/tools/drawdown-calculator
           cp index.html _site/index.html
           cp tools/drawdown-calculator/index.html _site/tools/drawdown-calculator/index.html
+          cp sitemap.xml _site/sitemap.xml
+          cp robots.txt _site/robots.txt
+          cp -r products _site/products
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
