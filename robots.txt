@@ -1,3 +1,33 @@
+# OneJobKits hub — crawling is welcome.
+# Search engines and AI search assistants are explicitly allowed to crawl
+# this site so our product pages can be found, understood and cited.
+
 User-agent: *
 Allow: /
+
+# AI search crawlers — explicitly allowed (we want discovery)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://gchkodrov-debug.github.io/megacomp/sitemap.xml
