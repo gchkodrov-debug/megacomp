@@ -35,6 +35,7 @@ jobs:
           cp llms.txt _site/llms.txt
           cp google2b6737130bb8aa62.html _site/google2b6737130bb8aa62.html
           cp -r products _site/products
+          cp -r guides _site/guides
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
