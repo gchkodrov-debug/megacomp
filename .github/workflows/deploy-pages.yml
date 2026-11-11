@@ -32,6 +32,7 @@ jobs:
           cp tools/drawdown-calculator/index.html _site/tools/drawdown-calculator/index.html
           cp sitemap.xml _site/sitemap.xml
           cp robots.txt _site/robots.txt
+          cp llms.txt _site/llms.txt
           cp google2b6737130bb8aa62.html _site/google2b6737130bb8aa62.html
           cp -r products _site/products
           touch _site/.nojekyll
