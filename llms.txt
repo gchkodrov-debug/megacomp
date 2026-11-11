@@ -11,6 +11,18 @@
 ## Free tool
 - Drawdown Room Calculator - a free calculator for prop-firm traders to size daily drawdown room: https://gchkodrov-debug.github.io/megacomp/tools/drawdown-calculator/
 
+## Guides
+- [Do you size from the daily limit or the total one?](https://gchkodrov-debug.github.io/megacomp/guides/daily-limit-or-total-limit/): Both drawdown limits run at once; plan from whichever leaves less room. How to work out both numbers daily.
+- [Is the floor static, intraday trailing, or EOD trailing — and does open P&L count?](https://gchkodrov-debug.github.io/megacomp/guides/static-intraday-trailing-or-eod-trailing-drawdown/): The four rulebook settings that decide your real drawdown room, in plain words.
+- [What records should I keep in case my prop firm changes the rules or denies my payout?](https://gchkodrov-debug.github.io/megacomp/guides/what-records-to-keep-prop-firm-payout-dispute/): The dated evidence folder — rules at purchase, daily balances, payout log — to keep from day one.
+- [Do most traders break prop firm rules on purpose — or just not realise the rule existed?](https://gchkodrov-debug.github.io/megacomp/guides/do-traders-break-prop-firm-rules-on-purpose/): The fine-print rule categories that end challenges, and the one-page rule sheet that prevents it.
+- [How do I compare prop firms by max drawdown before buying a challenge?](https://gchkodrov-debug.github.io/megacomp/guides/compare-prop-firms-by-max-drawdown/): Compare the mechanics under the headline percentage: the nine things to write down per firm.
+- [How do you organize all your family's important documents?](https://gchkodrov-debug.github.io/megacomp/guides/how-to-organize-family-important-documents/): One binder, sorted by category, with a one-page index — the full checklist and setup.
+- [What paperwork should a family caregiver keep in one place?](https://gchkodrov-debug.github.io/megacomp/guides/what-paperwork-should-a-caregiver-keep/): The five sections of a caregiver binder, including the paper trail that unsticks dead ends between offices.
+- [What should I pack in a hospital go-bag for my elderly parent?](https://gchkodrov-debug.github.io/megacomp/guides/hospital-go-bag-for-elderly-parent/): Their essentials plus the paperwork folder, packed before you need it.
+- [What details does my crew need before they start a job?](https://gchkodrov-debug.github.io/megacomp/guides/what-details-does-my-crew-need-before-a-job/): The 12 details on a handover sheet, filled in at the sale, that carry a job to the site.
+- [How do I track payments on every job so cash doesn't run dry between jobs?](https://gchkodrov-debug.github.io/megacomp/guides/how-to-track-job-payments-cash-timing/): One money log per job and a weekly 15-minute routine that keeps cash timing visible.
+
 ## Products
 
 - [Prop-Firm Challenge Journal & Drawdown Guardian](https://gchkodrov-debug.github.io/megacomp/products/prop-firm-challenge-tracker/): A complete kit for funded and aspiring prop-firm traders who need daily drawdown records. Standard $39, upper tier $69 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
