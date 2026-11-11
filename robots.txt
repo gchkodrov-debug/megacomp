@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gchkodrov-debug.github.io/megacomp/sitemap.xml
