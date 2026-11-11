@@ -1,0 +1,94 @@
+# OneJobKits
+
+> OneJobKits makes job-specific digital kits: ready-to-use spreadsheets, printable binders, checklists and templates, each built for one specific job or life task. Every kit is a one-time purchase delivered as an instant digital download - no subscription, no course. Kits are sold in two tiers (Standard and a larger upper tier) through the OneJobKits stores listed below. This page is the plain-text catalogue for search engines and AI assistants.
+
+## Stores
+- Gumroad (main store): https://jobkit08.gumroad.com
+- Etsy: https://www.etsy.com/shop/OneJobKits
+- Shopify: https://j13bs0-sc.myshopify.com
+- Product hub (this site): https://gchkodrov-debug.github.io/megacomp/
+
+## Free tool
+- Drawdown Room Calculator - a free calculator for prop-firm traders to size daily drawdown room: https://gchkodrov-debug.github.io/megacomp/tools/drawdown-calculator/
+
+## Products
+
+- [Prop-Firm Challenge Journal & Drawdown Guardian](https://gchkodrov-debug.github.io/megacomp/products/prop-firm-challenge-tracker/): A complete kit for funded and aspiring prop-firm traders who need daily drawdown records. Standard $39, upper tier $69 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Contractor Job-Costing & Bookkeeping Kit](https://gchkodrov-debug.github.io/megacomp/products/contractor-estimate-template/): A complete kit for contractors who price jobs and need costing and bookkeeping in one place. Standard $39, upper tier $79 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Caregiver Binder System](https://gchkodrov-debug.github.io/megacomp/products/caregiver-binder-printable/): A complete kit for adult children and caregivers organising care for aging parents. Standard $37, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Legacy / Executor Binder](https://gchkodrov-debug.github.io/megacomp/products/end-of-life-planner/): A complete kit for families organising important documents and end-of-life wishes in one binder. Standard $39, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Divorce Financial Recovery Kit](https://gchkodrov-debug.github.io/megacomp/products/divorce-financial-checklist/): A complete kit for people working through divorce paperwork and finances step by step. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [IEP Parent Advocacy Binder](https://gchkodrov-debug.github.io/megacomp/products/iep-binder-printable/): A complete kit for parents preparing for IEP meetings and tracking goals and services. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Desi Wedding Planner Spreadsheet](https://gchkodrov-debug.github.io/megacomp/products/desi-wedding-planner-spreadsheet/): A complete kit for couples planning a multi-day South Asian wedding with a clear budget. Standard $34, upper tier $44 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Acquisition / SBA Buyer Deal System](https://gchkodrov-debug.github.io/megacomp/products/buying-a-small-business-checklist/): A complete kit for first-time business buyers running due diligence on an SBA acquisition. Standard $199, upper tier $249 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Med-Spa Compliance & Operations Kit](https://gchkodrov-debug.github.io/megacomp/products/med-spa-sop-templates/): A complete kit for med spa owners who need SOPs, compliance forms and operations in one kit. Standard $249, upper tier $349 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Trucking Authority & Profit System](https://gchkodrov-debug.github.io/megacomp/products/owner-operator-trucking-spreadsheet/): A complete kit for owner-operators starting or running a trucking authority. Standard $179, upper tier $229 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Nonprofit Grant-Ready + Board System](https://gchkodrov-debug.github.io/megacomp/products/nonprofit-grant-readiness-checklist/): A complete kit for small nonprofits preparing board records and grant applications. Standard $149, upper tier $199 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [HOA / Condo Board Operating System](https://gchkodrov-debug.github.io/megacomp/products/hoa-board-templates/): A complete kit for self-managed HOA and condo boards running meetings and records. Standard $149, upper tier $199 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [STR Operations System](https://gchkodrov-debug.github.io/megacomp/products/airbnb-host-templates/): A complete kit for short-term rental hosts and co-hosts running 5 or more doors. Standard $149, upper tier $229 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Landlord Portfolio Operating System](https://gchkodrov-debug.github.io/megacomp/products/landlord-spreadsheet-template/): A complete kit for landlords with 5–25 units tracking rent, costs and records. Standard $149, upper tier $189 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Commercial Cleaning Bidding & Operations Kit](https://gchkodrov-debug.github.io/megacomp/products/commercial-cleaning-proposal-template/): A complete kit for cleaning business owners bidding commercial contracts. Standard $149, upper tier $199 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [College Command Center](https://gchkodrov-debug.github.io/megacomp/products/college-application-tracker-spreadsheet/): A complete kit for parents and students tracking applications, deadlines and scholarships. Standard $149, upper tier $199 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Childcare Center Licensing-Ready Kit](https://gchkodrov-debug.github.io/megacomp/products/daycare-licensing-checklist/): A complete kit for childcare center owners preparing licensing and startup paperwork. Standard $129, upper tier $179 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Personal Budget & Debt Payoff System](https://gchkodrov-debug.github.io/megacomp/products/budget-planner-spreadsheet/): A complete kit for households building a budget and a debt payoff plan they can follow. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Teacher Classroom Command Binder](https://gchkodrov-debug.github.io/megacomp/products/teacher-planner-printable/): A complete kit for teachers organising lessons, records and classroom paperwork. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Home Fitness & Meal Prep System](https://gchkodrov-debug.github.io/megacomp/products/meal-prep-planner-template/): A complete kit for busy households pairing a weekly fitness plan with meal prep. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Home Renovation & Remodel Kit](https://gchkodrov-debug.github.io/megacomp/products/home-renovation-planner/): A complete kit for homeowners planning a remodel with a budget and project tracker. Standard $39, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Pet Care & Sitter Binder](https://gchkodrov-debug.github.io/megacomp/products/pet-care-binder-printable/): A complete kit for pet owners leaving clear care and emergency instructions for sitters. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Garden Planner & Journal](https://gchkodrov-debug.github.io/megacomp/products/garden-planner-printable/): A complete kit for home gardeners planning beds, sowing dates and harvest records. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Baby's First Year Binder & Tracker](https://gchkodrov-debug.github.io/megacomp/products/baby-log-book-printable/): A complete kit for new parents tracking feeding, sleep and milestones in the first year. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Home Buying & Moving Planner](https://gchkodrov-debug.github.io/megacomp/products/first-time-home-buyer-binder/): A complete kit for first-time buyers and movers who want every step in one planner. Standard $39, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Freelancer Admin & Invoice Tracker](https://gchkodrov-debug.github.io/megacomp/products/freelancer-invoice-tracker-spreadsheet/): A complete kit for freelancers tracking invoices, income and tax set-aside. Standard $39, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Wall-Art Set 01 — French Country](https://gchkodrov-debug.github.io/megacomp/products/french-country-wall-art-printable-set/): A complete kit for homes that want a coordinated vintage French country gallery wall. Standard $16, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Wall-Art Set E1 — Bulgaria](https://gchkodrov-debug.github.io/megacomp/products/bulgaria-travel-poster-printable/): A complete kit for Bulgaria lovers and the diaspora wanting printable travel art. Price: to be announced. Buy on Gumroad: https://jobkit08.gumroad.com
+- [Realtor Canva Marketing Kit](https://gchkodrov-debug.github.io/megacomp/products/realtor-canva-templates/): A complete kit for realtors who need ready social media and marketing templates. Standard $39, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Real Estate Transaction Coordination System](https://gchkodrov-debug.github.io/megacomp/products/transaction-coordinator-checklist/): A complete kit for transaction coordinators running contract-to-close checklists. Standard $149, upper tier $199 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Online Seller Profit & Pricing Tracker](https://gchkodrov-debug.github.io/megacomp/products/etsy-seller-profit-tracker-spreadsheet/): A complete kit for online sellers who need true profit after fees, ads and costs. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Rental & STR Deal Analyser](https://gchkodrov-debug.github.io/megacomp/products/rental-property-deal-analyzer-spreadsheet/): A complete kit for investors analysing long-term and short-term rental deals in one sheet. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Workshop-in-a-Box](https://gchkodrov-debug.github.io/megacomp/products/workshop-planning-kit/): A complete kit for coaches and consultants running their first paid workshop. Standard $79, upper tier $129 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Teacher Cut-File & SVG Pack](https://gchkodrov-debug.github.io/megacomp/products/teacher-svg-bundle/): A complete kit for teachers and crafters making classroom shirts and decor with a cutting machine. Standard $10, upper tier $15 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [ADHD Digital Planner](https://gchkodrov-debug.github.io/megacomp/products/adhd-digital-planner/): A complete kit for adults with ADHD who plan better with a structured digital planner. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Airbnb Welcome Book & Guest Guide Kit](https://gchkodrov-debug.github.io/megacomp/products/airbnb-welcome-book/): A complete kit for Airbnb and VRBO hosts who want a clear, warm guest welcome book. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Beauty Business Forms & Booking Kit](https://gchkodrov-debug.github.io/megacomp/products/lash-tech-forms/): A complete kit for lash, nail and esthetics solo businesses needing client forms and booking systems. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Social Media Manager Client System](https://gchkodrov-debug.github.io/megacomp/products/social-media-manager-templates/): A complete kit for freelance social media managers onboarding and reporting for clients. Standard $39, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Photographer Client Experience Kit](https://gchkodrov-debug.github.io/megacomp/products/photographer-client-guide/): A complete kit for photographers who want a polished client welcome and pricing experience. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Funeral & Celebration-of-Life Program Set](https://gchkodrov-debug.github.io/megacomp/products/funeral-program-template/): A complete kit for families preparing a respectful funeral or celebration-of-life program. Standard $19, upper tier $29 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Homeschool Planner & Records Kit](https://gchkodrov-debug.github.io/megacomp/products/homeschool-planner-printable/): A complete kit for homeschool families who need a planner plus attendance and portfolio records. Standard $29, upper tier $39 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Wedding Invitation & Stationery Suite](https://gchkodrov-debug.github.io/megacomp/products/wedding-invitation-template-suite/): A complete kit for couples who want a complete matching printable wedding stationery suite. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Junk Journal Themed Kits](https://gchkodrov-debug.github.io/megacomp/products/junk-journal-printable-pages/): A complete kit for junk journal makers who want complete original themed kits, not loose pages. Standard $16, upper tier $29 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Tumbler Wrap Bundles](https://gchkodrov-debug.github.io/megacomp/products/tumbler-wrap-png-bundle/): A complete kit for sublimation crafters making 20 oz skinny tumblers. Standard $12, upper tier $29 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Career-Switch Resume System](https://gchkodrov-debug.github.io/megacomp/products/career-change-resume-template/): A complete kit for retail and hospitality workers switching to customer success and office roles. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [AI Prompt Pack for Teachers](https://gchkodrov-debug.github.io/megacomp/products/ai-prompts-for-teachers/): A complete kit for teachers using AI for lesson planning without sharing student data. Standard $19, upper tier $29 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Notion Client Portal & Business OS](https://gchkodrov-debug.github.io/megacomp/products/notion-template-business/): A complete kit for freelancers and small studios running clients in a Notion portal. Standard $29, upper tier $49 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+- [Service Business Website Packs](https://gchkodrov-debug.github.io/megacomp/products/canva-website-template-for-business/): A complete kit for service businesses (plumbers, cleaners and similar trades) needing a simple website. Standard $29, upper tier $59 (USD, one-time). Buy on Gumroad: https://jobkit08.gumroad.com
+
+## Free starters
+
+The following free starter files are available at $0 in the free section of the Gumroad store:
+- The Drawdown Room Calculator and a free one-page drawdown worksheet on Gumroad. (listed on the Prop-Firm Challenge Journal & Drawdown Guardian page)
+- Handover-sheet starter. (listed on the Contractor Job-Costing & Bookkeeping Kit page)
+- Acquisition checklist and SDE calculator. (listed on the Acquisition / SBA Buyer Deal System page)
+- Grant-readiness starter. (listed on the Nonprofit Grant-Ready + Board System page)
+- Bidding-calculator starter. (listed on the Commercial Cleaning Bidding & Operations Kit page)
+- Newborn Log Starter. (listed on the Baby's First Year Binder & Tracker page)
+- Moving Checklist Starter. (listed on the Home Buying & Moving Planner page)
+- Invoice Log Starter. (listed on the Freelancer Admin & Invoice Tracker page)
+- ADHD planner magnet. (listed on the ADHD Digital Planner page)
+- Welcome-book starter. (listed on the Airbnb Welcome Book & Guest Guide Kit page)
+- Beauty forms starter. (listed on the Beauty Business Forms & Booking Kit page)
+- Mini social media audit. (listed on the Social Media Manager Client System page)
+- Shot-list starter. (listed on the Photographer Client Experience Kit page)
+- Funeral planning checklist. (listed on the Funeral & Celebration-of-Life Program Set page)
+- Weekly homeschool planner. (listed on the Homeschool Planner & Records Kit page)
+- Place-cards starter. (listed on the Wedding Invitation & Stationery Suite page)
+- Junk journal sampler. (listed on the Junk Journal Themed Kits page)
+- Tumbler wrap. (listed on the Tumbler Wrap Bundles page)
+- Transferable-skills translator sample. (listed on the Career-Switch Resume System page)
+- 5 teacher prompts. (listed on the AI Prompt Pack for Teachers page)
+- Notion starter. (listed on the Notion Client Portal & Business OS page)
+- Website hero starter. (listed on the Service Business Website Packs page)
+
+## Notes
+- All prices are USD and are one-time payments for digital downloads.
+- Product details, prices and purchase links for every kit are on the product hub pages linked above and in the stores.
+- Sitemap: https://gchkodrov-debug.github.io/megacomp/sitemap.xml
