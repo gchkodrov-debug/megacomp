@@ -32,10 +32,10 @@ jobs:
           cp tools/drawdown-calculator/index.html _site/tools/drawdown-calculator/index.html
           cp sitemap.xml _site/sitemap.xml
           cp robots.txt _site/robots.txt
-          cp llms.txt _site/llms.txt
           cp google2b6737130bb8aa62.html _site/google2b6737130bb8aa62.html
           cp -r products _site/products
-          cp -r guides _site/guides
+          cp -r digistore24 _site/digistore24
+          cp -r legal-information _site/legal-information
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,5 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-# 2026-11-12: blog launch — 2 new guides (drawdown tracker + estate paperwork) staged from gh-pages
