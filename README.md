@@ -118,3 +118,13 @@ All changes are documented here. To revert:
 
 ---
 *Tracked via GitHub. All optimizations are free software tweaks — no hardware costs.*
+
+## OneJobKits GitHub Pages hub
+
+This repo also hosts the OneJobKits hub site (https://gchkodrov-debug.github.io/megacomp/).
+The live site content (homepage, products/, guides/, tools/) lives on the `gh-pages` branch.
+The workflow `.github/workflows/deploy-pages.yml` runs on pushes to `main` (or manual dispatch),
+checks out the `gh-pages` content, stages it, and deploys it to GitHub Pages.
+
+_2026-11-12: every hub product page now shows its kit's real cover image; the unpublished
+Wall-Art Set E1 — Bulgaria entry was removed from the hub, sitemap and llms.txt._
