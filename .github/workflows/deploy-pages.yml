@@ -46,3 +46,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+# 2026-11-12: blog launch — 2 new guides (drawdown tracker + estate paperwork) staged from gh-pages
