@@ -151,3 +151,5 @@ Wall-Art Set E1 — Bulgaria entry was removed from the hub, sitemap and llms.tx
 Hub winner-shape rebuild phase 2 (batch 3: Med Spa, Trucking, Nonprofit, HOA pages) — 2026-11-14.
 
 Hub winner-shape rebuild phase 2 (batch 4: STR, Landlord, Cleaning, College pages + HOA related-link fix) — 2026-11-14.
+
+Hub winner-shape rebuild phase 2 (batch 5: Childcare, Teacher, Meal/Fitness, Renovation pages) — 2026-11-14.
