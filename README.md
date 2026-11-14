@@ -147,3 +147,5 @@ Wall-Art Set E1 — Bulgaria entry was removed from the hub, sitemap and llms.tx
   desi-wedding-planner-spreadsheet, buying-a-small-business-checklist.
   Each page's free starter file was added beside its page. This commit
   exists to trigger the Pages deploy workflow for that gh-pages content.
+
+Hub winner-shape rebuild phase 2 (batch 3: Med Spa, Trucking, Nonprofit, HOA pages) — 2026-11-14.
