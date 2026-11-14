@@ -38,6 +38,7 @@ jobs:
           cp -r legal-information _site/legal-information
           cp -r guides _site/guides
           cp llms.txt _site/llms.txt
+          cp CNAME _site/CNAME
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
