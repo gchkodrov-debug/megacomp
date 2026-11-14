@@ -138,3 +138,12 @@ Wall-Art Set E1 — Bulgaria entry was removed from the hub, sitemap and llms.tx
   budget-planner-spreadsheet, pet-care-binder-printable. Each page's free
   starter PDF was added beside its page. This commit exists to trigger the
   Pages deploy workflow for that gh-pages content.
+- 2026-11-14 (phase 2): Rebuilt eight more product pages on the `gh-pages`
+  branch to the same full product-page shape (free starter download on the
+  page, full contents list, filled worked example, buyer-question FAQ,
+  Product + FAQ structured data): contractor-estimate-template,
+  adhd-digital-planner, end-of-life-planner, prop-firm-challenge-tracker,
+  divorce-financial-checklist, iep-binder-printable,
+  desi-wedding-planner-spreadsheet, buying-a-small-business-checklist.
+  Each page's free starter file was added beside its page. This commit
+  exists to trigger the Pages deploy workflow for that gh-pages content.
