@@ -128,3 +128,13 @@ checks out the `gh-pages` content, stages it, and deploys it to GitHub Pages.
 
 _2026-11-12: every hub product page now shows its kit's real cover image; the unpublished
 Wall-Art Set E1 — Bulgaria entry was removed from the hub, sitemap and llms.txt._
+
+## OneJobKits GitHub Pages hub — deploy notes
+
+- 2026-11-14: Rebuilt five product pages on the `gh-pages` branch to the full
+  product-page shape (free starter download on the page, full contents list,
+  filled worked example, buyer-question FAQ, Product + FAQ structured data):
+  baby-log-book-printable, garden-planner-printable, caregiver-binder-printable,
+  budget-planner-spreadsheet, pet-care-binder-printable. Each page's free
+  starter PDF was added beside its page. This commit exists to trigger the
+  Pages deploy workflow for that gh-pages content.
