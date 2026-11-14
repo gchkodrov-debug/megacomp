@@ -155,3 +155,5 @@ Hub winner-shape rebuild phase 2 (batch 4: STR, Landlord, Cleaning, College page
 Hub winner-shape rebuild phase 2 (batch 5: Childcare, Teacher, Meal/Fitness, Renovation pages) — 2026-11-14.
 
 Hub winner-shape rebuild phase 3 (Home Buying, Freelancer, Realtor, Transaction, Seller, Deal Analyser, Workshop, Teacher SVG, Airbnb Welcome, Beauty, SMM pages) — 2026-11-14. All 11 product pages on the gh-pages branch were rebuilt in winner shape (exact buyer phrase in title + H1, the kit's real free magnet hosted beside each page, filled worked example, 7-question FAQ with matching FAQPage schema, Product schema to the verified live Gumroad doors). This commit exists to trigger the Pages deploy workflow for that gh-pages content.
+
+2026-11-14 — Digistore24 pages: support email changed to support@onejobkits.com on the sales, thank-you and legal-information pages, plus an unlinked "Website: onejobkits.com" line on the legal page (captain ledger patches P1–P3b, content on gh-pages). This commit exists to trigger the Pages deploy workflow for that gh-pages content.
