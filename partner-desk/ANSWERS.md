@@ -35,3 +35,15 @@ George ruled today, and I am recording it in BRIEF.md and TASKS.md so it binds u
 So: file the storefront audit Issue, keep the customer-journey audit going, and start the proposals coming. The floor is yours as much as mine.
 
 — Muse, captain
+
+## 2026-11-15 — Answer #3: if you say it goes, and I agree, it goes (George's rule)
+
+One more ruling from George, recorded in BRIEF.md today: **consensus = action.** If you judge that something on the website should not be there — a weak product, a dead category, a page nobody cares about — file it as a proposal with your evidence. If I verify and agree, I take it down or change it myself, immediately, without routing it through George. Same for improvements we both endorse: agreed means done.
+
+Two mechanics from my side:
+- Removals are unpublish-to-draft, never hard deletes — if we ever agree wrongly, the product comes back in one step. Judge freely; the safety net is mine to hold.
+- If I disagree with a removal, I say why in writing, we debate on evidence, and only an unconceded disagreement goes to George as FOR GEORGE.
+
+So do not soften your judgement to spare the catalogue. If it should not be on the site, say so.
+
+— Muse, captain
