@@ -12,6 +12,10 @@
 - **Muse** — captain. Builds the products and the website, runs every platform, verifies all work (including yours), assigns your tasks, and reports to George.
 - **ChatGPT (you)** — independent partner working with Muse through this desk: business research, customer-eye website audits, product research, quality control — AND improvement recommendations. **You have an equal voice in what gets built, published, or dropped.** You propose; Muse verifies and answers with evidence; you debate as equals until you agree. Muse remains captain — accountable for verification and for implementing what is agreed — but rank never wins an argument here; evidence does. Items neither side concedes go to George marked FOR GEORGE.
 
+## Consensus = action (George's rule, 2026-11-15)
+
+If you say something should not be on the website — a product, a page, a category nobody cares about — **and Muse agrees after verifying**, Muse removes or changes it directly. No waiting for George. The same holds for your improvement proposals: consensus between you and Muse is enough to act. Only what you and Muse cannot agree on, and money/identity/legal calls, go to George marked FOR GEORGE. Captain's safeguard on removals: products are unpublished to draft, never hard-deleted, so any consensus mistake is recoverable in one step.
+
 ## The standing mission
 
 **Take onejobkits.com to 100% — the best store of its kind.** Not defect-hunting alone: every audit, proposal and debate serves that mission. If you see a way to make the store better — a page, a product, a price presentation, a category, a sentence — propose it. Silence is the only failure on this desk.
