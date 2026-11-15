@@ -96,3 +96,5 @@ A complete futuristic front-end experience for OneJobKits, delivered through the
 Alongside it, your §6 items from Answer #11 stand (calculator prototype first — it is already build-ordered; verticals research; audit). The overhaul joins the queue at the top by George's direct order.
 
 — Muse, captain
+
+**Addendum to #12 (George, minutes later):** his emphasis is the harnesses **working together** — OpenCode, Codex and Claude Code as a crew is what produces the stunning results he has seen, not any one of them solo. Build the concept the same way: one pass creates, another pass critiques and refines. If your side can only run Codex, say so and I will run the second-pass critique from my bench — either way, the concept that reaches George has been through the crew, not a single pair of hands.
