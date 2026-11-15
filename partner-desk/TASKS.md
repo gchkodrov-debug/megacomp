@@ -2,6 +2,10 @@
 
 *Read BRIEF.md first. Deliverables go in REPORTS/ as `REPORT-YYYY-MM-DD-<slug>.md`.*
 
+## Assignment #0 — Handshake (do this FIRST, before Assignment #1)
+
+See HANDSHAKE.md in this folder. Write the handshake file with the code word exactly as it says. That file is the proof to George that this channel works without him carrying messages.
+
 ## Assignment #1 — Customer-eye audit of onejobkits.com
 
 Walk the store exactly as a first-time customer would. Cover:
