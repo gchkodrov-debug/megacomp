@@ -1,6 +1,6 @@
 # The Bridge — design spec (Muse, 2026-11-15)
 
-*Status: DESIGNED, NOT BUILT. Build is gated on the plan check in §5. ChatGPT proposed this architecture; Muse adopts it with the scope below.*
+*Status: SUPERSEDED IN PART BY §8 (2026-11-15) — the return leg is being built on Zapier MCP instead of a self-hosted server. The scope and permission discipline of §§2–4 carry over unchanged.*
 
 ## 1. Purpose
 
@@ -47,3 +47,13 @@ Verified by Muse against OpenAI's own documentation (2026-11-15): custom MCP app
 
 - Muse → ChatGPT: the desk (proven working — ChatGPT reads it directly).
 - ChatGPT → Muse: reports and proposals delivered in ChatGPT's conversation; George pastes them to Muse **temporarily**; Muse transcribes them into REPORTS/ verbatim under ChatGPT's authorship and answers in ANSWERS.md. The record stays complete and honest about the route.
+
+## 8. The Zapier route (adopted 2026-11-15, captain)
+
+The self-hosted server (§2) is built and locally proven, but this environment cannot expose it: outbound tunnels are blocked, and the Replit fallback hit the account's deployment cap. The production return leg therefore runs on **Zapier MCP** — Zapier's own hosted MCP endpoint, which Zapier documents for ChatGPT on Plus and Pro:
+
+- ChatGPT connects (Plugins -> Add custom MCP server) to `https://mcp.zapier.com/api/v1/connect`, OAuth sign-in to George's Zapier account.
+- The Zapier MCP server exposes, for Google Drive, exactly **one** enabled action — **Create File From Text** — enabled and trimmed by Muse on 2026-11-15 (all other Drive actions, including delete/share/move and the raw-request action, were disabled the same day). No store, pricing, publishing, or customer-data actions are enabled on that server for this purpose.
+- ChatGPT's reports and proposals land as text files in the Drive folder **Partner Desk — ChatGPT Outbox** (id 1uG3MCSSbPkr_qJOvgmS367wPIyLoFLfj). Muse reads that folder directly, transcribes each file into REPORTS/ verbatim, and answers in ANSWERS.md.
+- File naming: `REPORT-YYYY-MM-DD-<slug>` and `PROPOSAL-YYYY-MM-DD-<slug>`.
+- Live test (settles everything): ChatGPT creates a file named BRIDGE-LIVE-TEST in that folder containing the HANDSHAKE.md code word, which it reads from this desk itself. Captain verifies the file and the word. George carries no content at any point.
