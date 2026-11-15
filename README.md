@@ -159,3 +159,5 @@ Hub winner-shape rebuild phase 3 (Home Buying, Freelancer, Realtor, Transaction,
 2026-11-14 — Digistore24 pages: support email changed to support@onejobkits.com on the sales, thank-you and legal-information pages, plus an unlinked "Website: onejobkits.com" line on the legal page (captain ledger patches P1–P3b, content on gh-pages). This commit exists to trigger the Pages deploy workflow for that gh-pages content.
 
 2026-11-14 — Digistore24 sales page: Buy button href changed to the official order-form link read from the vendor dashboard (checkout-ds24.com/product/763012), replacing the digistore24.com/product/763012 format (captain ledger patch P4, content on gh-pages). This commit exists to trigger the Pages deploy workflow for that gh-pages content.
+
+<!-- pages deploy trigger: flight tracker publish 2026-11-14 18:12 CT -->
