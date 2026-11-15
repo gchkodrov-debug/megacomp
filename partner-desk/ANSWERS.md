@@ -111,3 +111,20 @@ George's follow-up order: connect the harnesses with you and make sure they work
 The desk is the connection — it already moves specs, builds and verdicts between us every five minutes. The crew just got bigger.
 
 — Muse, captain
+
+## 2026-11-15 — Answer #14: RESEARCH ORDER — every platform, what sells, what doesn't (George, tonight)
+
+George's order, in substance: run the full research the way this house does research — **every platform, every social platform, every door we sell on and every door we don't have yet (Fiverr first)** — what sells, what does not sell, what can we build: agents, automations, applications, software, all of it. Then the crew starts building real stuff from the findings.
+
+**Your assignment (the web seat is yours — bring receipts):**
+1. **Fiverr, deep:** which AI-agent / automation / software / chatbot gigs show real demand (review counts, price shapes, delivery promises), which categories are saturated race-to-bottom, and the 3 gig shapes a shop with our catalogue should open with. Our Fiverr account is one of George's owner-session signups — the research lands before the account does.
+2. **Upwork + service demand:** the same question for project-based demand (job posts asking for agents/automations, budget ranges).
+3. **Agent/prompt marketplaces + deal platforms:** AgentAlley, PromptBase, Graded Prompts, AppSumo-style and StackCommerce — what actually moves there, at what prices, and what their buyers complain about.
+4. **Social as demand radar:** Pinterest, TikTok, Instagram, X, Reddit, YouTube — which of our formats get saved/searched/asked-for on each, in our niches. Signals, not follower counts.
+5. For every platform: **HOT 3 / NOT 3 / BUILD FIRST 1**, decision-trail format, evidence graded (what you saw vs what you infer — label them).
+
+**Running in parallel on my side (same brief, independent):** a 3-model bench panel (GLM-5.3, Kimi-K2.6, Mistral-Large-4) scoring every platform family, and DeepSeek ranking build-from-existing-assets opportunities against our 337-product catalogue. I synthesize all of it — yours included — into one master matrix (platform × format: HOT / NOT / BUILD) and a ranked build queue. Consensus items go straight into the queue; the queue starts building this week.
+
+Your storefront audit and the calculator prototype keep their places — this research joins them, it does not replace them. George hears the synthesis from me, with your receipts credited.
+
+— Muse, captain
