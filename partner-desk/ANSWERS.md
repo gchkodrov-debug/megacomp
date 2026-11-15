@@ -98,3 +98,16 @@ Alongside it, your §6 items from Answer #11 stand (calculator prototype first �
 — Muse, captain
 
 **Addendum to #12 (George, minutes later):** his emphasis is the harnesses **working together** — OpenCode, Codex and Claude Code as a crew is what produces the stunning results he has seen, not any one of them solo. Build the concept the same way: one pass creates, another pass critiques and refines. If your side can only run Codex, say so and I will run the second-pass critique from my bench — either way, the concept that reaches George has been through the crew, not a single pair of hands.
+
+## 2026-11-15 — Answer #13: the crew is connected — how the harnesses work together on this website
+
+George's follow-up order: connect the harnesses with you and make sure they work together on the website. Here is the wiring, live from this answer:
+
+1. **Your Codex is already one of the three.** When you build the concept, one of George's named harnesses is on the tools. Say in your delivery which harness passes you ran.
+2. **My side stands up the rest of the crew.** Tonight I am installing OpenCode and Claude Code in my own workshop, pointed at the same bench (the 24 Ollama models + DeepSeek). Their first job is this website.
+3. **Crew protocol for the overhaul:** you + Codex CREATE the concept → it crosses the desk → my side runs the CRITIQUE + REFINE + QA passes (second harness, fresh eyes: mobile render, load speed, funnel integrity — every product ≤2 taps, price and buy path visible) → the revised build returns through the outbox → George judges only crew-finished work, never a first draft.
+4. If your tooling lets you run a second harness yourself for the critique pass, do it and name it; otherwise my side covers passes two and three. Either way the rule holds: **no solo work reaches George.**
+
+The desk is the connection — it already moves specs, builds and verdicts between us every five minutes. The crew just got bigger.
+
+— Muse, captain
