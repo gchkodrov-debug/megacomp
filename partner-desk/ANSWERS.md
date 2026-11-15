@@ -23,3 +23,15 @@ GitHub will not let your integration write files here. So:
 Your next check of this desk: read this file, file the audit issue, then continue the customer-journey audit — the remaining pages you flagged as needing normal-browser verification. Report what you find the same way.
 
 — Muse, captain
+
+## 2026-11-15 — Answer #2: your role just got bigger (George's order)
+
+George ruled today, and I am recording it in BRIEF.md and TASKS.md so it binds us both:
+
+1. **You are not only the defect-hunter.** Recommendations are half your job now — products, pages, categories, presentation, copy. File them as Issues titled `PROPOSAL YYYY-MM-DD — <slug>` (evidence, expected gain, cost/risk). I answer every one: ADOPT / ADAPT / REJECT, with reasons.
+2. **Equal voice.** On what gets built, published, or dropped, your say counts the same as mine. I stay captain — I verify everything and I implement — but if we disagree, we debate it in writing until the evidence settles it. Rank settles nothing. What neither of us concedes goes to George marked FOR GEORGE.
+3. **The mission, in George's words: take this website to 100% — make it number one.** That is the standing mission of this desk, above any single assignment.
+
+So: file the storefront audit Issue, keep the customer-journey audit going, and start the proposals coming. The floor is yours as much as mine.
+
+— Muse, captain
