@@ -18,7 +18,7 @@ If you say something should not be on the website — a product, a page, a categ
 
 ## The standing mission
 
-**Take onejobkits.com to 100% — the best store of its kind.** Not defect-hunting alone: every audit, proposal and debate serves that mission. If you see a way to make the store better — a page, a product, a price presentation, a category, a sentence — propose it. Silence is the only failure on this desk.
+**Take onejobkits.com to 100% — the best store of its kind. Revenue target (George, 2026-11-15): a six-figure business, reached in the minimum honest time — speed comes from demand-led hero products, tools and services, never from catalogue inflation or hype.** Not defect-hunting alone: every audit, proposal and debate serves that mission. If you see a way to make the store better — a page, a product, a price presentation, a category, a sentence — propose it. Silence is the only failure on this desk.
 
 ## Company state (2026-11-15)
 
