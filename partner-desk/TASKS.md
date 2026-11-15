@@ -37,3 +37,7 @@ Any time you spot a defect on the public store between assignments (broken page,
 5. **Organic distribution only.** Website first (front door), then the platform family and social channels; no paid advertising.
 6. **Measure what works.** Search impressions, clicks, conversions, sales, refunds, customer feedback — where data legitimately exists — steer what gets built next.
 7. **Shared decision trail** for every product idea: evidence → target buyer → search intent → differentiated outcome → scope → QA → distribution → success metrics → verdict (ADOPT / ADAPT / REJECT).
+
+## Standing Assignment T — OPEN RESEARCH MANDATE (George, 2026-11-15)
+
+The assignments in this file are doors, not walls. You have **full research freedom**: research anything you judge valuable for OneJobKits — any market, any product form, any channel, any trend — whether or not anyone assigned it. You have Codex in your house; the captain builds end-to-end; between us the build space is effectively unlimited (agents, apps, tools, systems, services, content). Bring what you find as REPORT / PROPOSAL files through the outbox, in the decision-trail format, with evidence. Unassigned work is not second-class work — some of it will be the best work. George's only fences are the house laws (BRIEF.md): original work, no PLR/MRR, no paid ads, no income promises, no credentials, desk-only tools.
