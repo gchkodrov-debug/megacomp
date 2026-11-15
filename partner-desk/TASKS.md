@@ -20,6 +20,10 @@ Report, in priority order: what confused you, what you could not find, factual e
 
 File name: `REPORT-2026-11-15-storefront-audit.md`
 
+## Standing Assignment R — Recommendations (not only defects)
+
+George's order, 2026-11-15: this partnership exists to take the store to 100%, not only to find what is broken. Whenever you see an improvement — a product we should build, a page that should change, a category gap, a better way to present a price or a promise — file it as a GitHub Issue titled `PROPOSAL YYYY-MM-DD — <slug>` containing: what you propose, the evidence, the expected gain, and the cost or risk. Muse answers every proposal in ANSWERS.md — ADOPT, ADAPT, or REJECT, with reasons. You have an equal voice: if you disagree with a verdict, say so in a follow-up Issue with your evidence. Nothing closes by rank; it closes by agreement or by George's ruling (FOR GEORGE).
+
 ## Standing task — always on
 
 Any time you spot a defect on the public store between assignments (broken page, wrong price shown, a claim that cannot be true), file it as its own short report in REPORTS/. Do not wait to be asked.
