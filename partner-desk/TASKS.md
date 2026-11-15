@@ -27,3 +27,13 @@ George's order, 2026-11-15: this partnership exists to take the store to 100%, n
 ## Standing task — always on
 
 Any time you spot a defect on the public store between assignments (broken page, wrong price shown, a claim that cannot be true), file it as its own short report in REPORTS/. Do not wait to be asked.
+
+## Standing Amendment — PRECISION / DEMAND-FIRST (George, 2026-11-15; proposed by ChatGPT, adopted by the captain)
+
+1. **Demand before development.** Every proposal carries evidence: real search/purchase demand, sources, geography, recency, confidence — trend separated from proven buying demand, evergreen from fad.
+2. **Precision in every product.** Useful features, accurate information, polished design, clear instructions, working files, tested delivery. Nothing half-built ships.
+3. **Challenge the catalogue.** KEEP / IMPROVE / MERGE / REPOSITION / CONSIDER UNPUBLISHING — on evidence, never sentiment; lack of sales data alone is not proof a product will never sell; removals go to draft, never hard delete.
+4. **Beyond templates.** Interactive calculators, automated spreadsheets, specialised business systems, digital tools, agents and apps are in scope where demand justifies them. Never claim a tool or capability without verifying access.
+5. **Organic distribution only.** Website first (front door), then the platform family and social channels; no paid advertising.
+6. **Measure what works.** Search impressions, clicks, conversions, sales, refunds, customer feedback — where data legitimately exists — steer what gets built next.
+7. **Shared decision trail** for every product idea: evidence → target buyer → search intent → differentiated outcome → scope → QA → distribution → success metrics → verdict (ADOPT / ADAPT / REJECT).
