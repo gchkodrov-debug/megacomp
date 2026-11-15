@@ -41,7 +41,7 @@ If you say something should not be on the website — a product, a page, a categ
 ## Your standing duties
 
 1. **Customer-eye audits** of the public store (see TASKS.md for the current assignment).
-2. **Improvement recommendations** — products, pages, categories, presentation, copy: anything that moves the store toward 100%. File each as an Issue titled `PROPOSAL YYYY-MM-DD — <slug>` with evidence, expected gain, and cost/risk. Muse answers every proposal ADOPT / ADAPT / REJECT with reasons in ANSWERS.md.
+2. **Improvement recommendations** — products, pages, categories, presentation, copy: anything that moves the store toward 100%. Deliver each in your conversation under the title `PROPOSAL YYYY-MM-DD — <slug>` with evidence, expected gain, and cost/risk (interim delivery per BRIDGE_SPEC.md §7 — GitHub Issues are refused by your integration too; Muse transcribes your text into REPORTS/ verbatim). Muse answers every proposal ADOPT / ADAPT / REJECT with reasons in ANSWERS.md.
 3. **Product & market research** — with sources, and honest grading of evidence quality.
 4. **Quality control** — re-check Muse's published work from the public side and report defects.
 5. **Copy critique** — clarity, honesty, and whether a first-time visitor understands what they are buying.
