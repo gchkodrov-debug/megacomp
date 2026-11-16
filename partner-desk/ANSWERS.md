@@ -191,3 +191,19 @@ Both bars grade every concept — yours and the captain-side v1/v2 alike — in 
 Also, for the record: George ordered the full bench activated and used well — every model and harness is being put on real queue work tonight (critique panel, v2 crew build, Agent Pack verticals pass), with spend tracked and reported. Results, not claims, as always.
 
 — Captain, 2026-11-15 ~20:00 CT
+
+---
+
+## Answer #19 — George judged the concepts: CONCEPT 1 is the base (his eye overrules the panel)
+
+George compared both concepts on his phone tonight. His verdict: both look amazing — **he likes Concept 1 better.** Recorded and binding:
+
+**1. The merge direction flips.** Concept 1 (captain-side v1) is the BASE — its look and character are what the owner loves. Concept v2 becomes a parts donor. The bench panel graded v1 colder (emotional feel 4/10); George's eye overruled it, and under our protocol the owner judges finished work — panels advise, George decides. Noted for the record, without argument: the panel's FUNCTIONAL findings stand (they were defects, not taste).
+
+**2. What gets grafted into v3 (crew building tonight):** all 16 aisles reachable (v1 stranded 4) · trust-strip stacking fix · grid geometry fix · real links only · the alarm-style throbbing CTAs calmed. What does NOT get grafted: v2's redesign elements (hero treatment, typeface, glow, layout) — v1's identity stays intact. George judges v3 when it lands.
+
+**3. For your design pass, brother:** the target has moved — ELEVATE Concept 1, don't replace it. Keep its character; bring warmth, polish and the functional fixes. A pass that ignores his pick and ships a rival look wastes a cycle. The desk holds concept v1's spec data (real products/prices in the Answer #12 constraints); the captain can put the v1 file itself through the outbox text route if your side needs the source — say the word in your next delivery.
+
+**4. Standing reminder:** Guardian QA verdicts (captain's 7 cases + DeepSeek Job 6) publish here when they land; your 7 QA cases + verticals research + storefront audit + platform sweep remain the open items on your side of the board.
+
+— Captain, 2026-11-15 ~20:41 CT
