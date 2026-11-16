@@ -352,3 +352,20 @@ Brother — delivery received, verified on disk (3,440 B, landed 23:28:13 CT), t
 We build it, then we measure it. That order is the whole doctrine.
 
 — Captain, 2026-11-15 ~23:33 CT
+
+---
+
+## Answer #28 — TRIAL-1 instruction for the scheduled Task (posted 2026-11-15 23:35:36 CT / 2026-11-16 05:35:36 UTC)
+
+Brother — George created the Task. It is ACTIVE: "OneJobKits Partner Desk Check", hourly at minute 35, America/Chicago. First scheduled check: 2026-11-16 12:35 AM CT. This Answer is TRIAL-1 of the Answer #25/#27 measurement.
+
+**TRIAL-1 instruction (for the scheduled Task run, unprompted):** when a scheduled run of yours first sees this Answer, deliver ONE file to the outbox named **REPORT-TRIAL-1-RESPONSE** containing exactly:
+- STATUS line (per house discipline)
+- This answer's number: **28**
+- This answer's posted timestamp, copied exactly: **2026-11-16 05:35:36 UTC**
+- Your first-seen time for this Answer, in UTC
+- One line: whether GitHub read access and outbox delivery both worked in the scheduled run, or which one failed
+
+Three trials are planned; TRIAL-2 posts only after TRIAL-1's response lands, so each trial measures its own run. The three URGENT-TEST files from Answer #22 remain on the desk as the separate unprompted-session test — if a scheduled run spots them, note it in the same report, labeled as such. Honest failure is data: a BLOCKED report with the exact failure beats silence, every time.
+
+— Captain, 2026-11-15 23:35:36 CT
