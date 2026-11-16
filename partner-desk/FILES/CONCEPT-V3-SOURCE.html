@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OneJobKits — Every job. One kit.</title>
+  <meta name="description" content="Complete operating systems for real jobs — trackers, binders, planners and tools built for one specific job each. Instant download, ready today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #004C3F;
+      --accent: #95BF47;
+      --background: #04120D;
+      --surface: #061A13;
+      --text: #EDFBF3;
+      --muted: rgba(237, 251, 243, .68);
+      --line: rgba(149, 191, 71, .22);
+      --glass: rgba(10, 42, 30, .64);
+      color-scheme: dark;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(0, 76, 63, .78), transparent 34rem),
+        radial-gradient(circle at 88% 12%, rgba(149, 191, 71, .13), transparent 30rem),
+        linear-gradient(180deg, var(--background), var(--surface) 48%, var(--background));
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(149, 191, 71, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(149, 191, 71, .045) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at 50% 0%, black, transparent 72%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { width: min(1160px, 100% - 2.5rem); margin-inline: auto; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .78rem 1.15rem;
+      border: 1px solid rgba(149, 191, 71, .42);
+      border-radius: 999px;
+      font: 600 .95rem/1 Inter, sans-serif;
+      letter-spacing: .02em;
+      transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+    }
+
+    .button-primary {
+      color: #04120D;
+      background: linear-gradient(90deg, #B8E261, var(--accent));
+    }
+
+    .button-primary:hover { box-shadow: 0 0 28px rgba(149, 191, 71, .45); }
+
+    .hero-actions .button-primary { animation: glow-pulse 5s ease-in-out infinite; }
+
+    .button-ghost {
+      color: var(--text);
+      background: rgba(149, 191, 71, .08);
+    }
+
+    .button-ghost:hover { border-color: var(--accent); background: rgba(149, 191, 71, .14); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(149, 191, 71, .14);
+      background: rgba(4, 18, 13, .88);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 58px;
+    }
+
+    .wordmark {
+      font: 700 1.15rem/1 "Space Grotesk", sans-serif;
+      letter-spacing: -.025em;
+    }
+
+    .wordmark span { color: var(--accent); }
+
+    .topbar nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(.65rem, 2vw, 1.5rem);
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .topbar a:hover { color: var(--text); }
+
+    .hero {
+      padding: clamp(4.25rem, 10vw, 8rem) 0 clamp(3rem, 7vw, 5.5rem);
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 1.35rem;
+      padding: .5rem .75rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #C7E382;
+      background: rgba(149, 191, 71, .1);
+      font-size: .71rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      animation: fade-slide .7s ease both;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -.04em;
+    }
+
+    h1 {
+      max-width: 13ch;
+      margin-inline: auto;
+      font-size: clamp(3.15rem, 12vw, 6.7rem);
+      line-height: .94;
+      animation: fade-slide .7s .08s ease both;
+    }
+
+    .subline {
+      width: min(65ch, 100%);
+      margin: 1.35rem auto 2rem;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2.4vw, 1.22rem);
+      line-height: 1.65;
+      animation: fade-slide .7s .16s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .7rem;
+      animation: fade-slide .7s .24s ease both;
+    }
+
+    .stat-row {
+      margin: 2.35rem auto 0;
+      font: 600 .85rem/1.4 "Space Grotesk", sans-serif;
+      color: var(--muted);
+      animation: fade-slide .7s .32s ease both;
+    }
+
+    section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+
+    .section-head { max-width: 62ch; margin-bottom: clamp(1.75rem, 4vw, 3rem); }
+
+    .section-head p {
+      margin: .75rem 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    h2 { font-size: clamp(2.05rem, 6vw, 3.75rem); line-height: 1; }
+
+    .trust {
+      border-block: 1px solid rgba(149, 191, 71, .16);
+      background: rgba(2, 10, 7, .72);
+      padding-block: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.45;
+    }
+
+    .trust-item svg { flex: 0 0 auto; margin-top: .1rem; }
+
+    .trust-item strong { display: block; color: var(--text); font-size: .9rem; }
+
+    .trust-copy span { display: block; }
+
+    .glass {
+      border: 1px solid rgba(149, 191, 71, .18);
+      border-radius: 1.1rem;
+      background: linear-gradient(145deg, rgba(11, 46, 33, .76), rgba(5, 21, 15, .82));
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .28);
+    }
+
+    .aisle-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+    }
+
+    .aisle-tile {
+      min-height: 108px;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid rgba(149, 191, 71, .18);
+      border-radius: 1rem;
+      background: linear-gradient(145deg, rgba(9, 39, 28, .75), rgba(5, 21, 15, .88));
+      font: 600 .96rem/1.25 "Space Grotesk", sans-serif;
+      letter-spacing: -.01em;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .aisle-tile:hover {
+      border-color: rgba(149, 191, 71, .58);
+      transform: translateY(-2px);
+    }
+
+    .aisle-all { grid-column: 1 / -1; }
+
+    .aisle-tile::after {
+      content: "";
+      width: .55rem;
+      height: .55rem;
+      margin-left: auto;
+      border-top: 2px solid var(--accent);
+      border-right: 2px solid var(--accent);
+      rotate: 45deg;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1rem;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+    }
+
+    .kit-number {
+      margin: 0 0 .5rem;
+      color: #BFE27A;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .product-card h3 {
+      margin: 0 0 .65rem;
+      font: 600 1.32rem/1.15 "Space Grotesk", sans-serif;
+      letter-spacing: -.025em;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    .price {
+      margin: 1rem 0 1.15rem;
+      color: #D9F4AE;
+      font: 700 .93rem/1.3 "Space Grotesk", sans-serif;
+    }
+
+    .buy {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .library-strip {
+      display: grid;
+      gap: 1.25rem;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+
+    .library-strip h2 { margin-inline: auto; }
+
+    .footer {
+      border-top: 1px solid rgba(149, 191, 71, .16);
+      padding: 2.25rem 0;
+      color: var(--muted);
+      font-size: .83rem;
+      line-height: 1.7;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .8rem 2rem;
+    }
+
+    .footer a:hover { color: var(--accent); }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem 1.15rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a { color: var(--muted); }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    @keyframes fade-slide {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(149, 191, 71, 0); }
+      50% { box-shadow: 0 0 24px rgba(149, 191, 71, .28); }
+    }
+
+    @media (min-width: 640px) {
+      .aisle-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .trust-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .library-strip { grid-template-columns: 1fr auto; align-items: center; text-align: left; }
+      .library-strip h2 { margin-inline: 0; }
+    }
+
+    @media (min-width: 900px) {
+      .aisle-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+      .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .product-card:nth-child(2) { grid-column: span 2; }
+      .footer-grid { grid-template-columns: 1.4fr 1fr; align-items: start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="wordmark" href="#top" aria-label="OneJobKits home">OneJob<span>Kits</span></a>
+      <nav aria-label="Primary">
+        <a href="https://onejobkits.com/pages/free-library">Free Library</a>
+        <a href="mailto:support@onejobkits.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow">Job-ready systems, not blank templates</p>
+      <h1 id="hero-title">Every job. One kit. Done right.</h1>
+      <p class="subline">Complete operating systems for real jobs — trackers, binders, planners and tools built for one specific job each. Instant download, ready today.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#featured-products">Shop the kits</a>
+        <a class="button button-ghost" href="https://onejobkits.com/products/drawdown-guardian-the-funded-traders-records-field-manual-free-flagship-edition">Get the free flagship</a>
+      </div>
+      <p class="stat-row">337 products · 16 aisles · Instant delivery</p>
+    </section>
+
+    <section class="trust" aria-label="Store guarantees">
+      <div class="wrap trust-grid">
+        <div class="trust-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+          <div class="trust-copy"><strong>Instant download</strong><span>no shipping</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="1.6" aria-hidden="true"><path d="M12 3 5 6v6c0 5 3 8 7 9 4-1 7-4 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div class="trust-copy"><strong>Secure checkout</strong><span>by Shopify</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 0 0-9 9v4a3 3 0 0 0 3 3h2v-8H4"/><path d="M12 3a9 9 0 0 1 9 9v4a3 3 0 0 1-3 3h-2v-8h4"/><path d="M12 3v18"/></svg>
+          <div class="trust-copy"><strong>Broken file?</strong><span>30 days: repair, replace or refund</span></div>
+        </div>
+        <div class="trust-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="M8 10h8M8 13h5"/></svg>
+          <div class="trust-copy"><strong>Real support</strong><span>support@onejobkits.com</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="aisles-title">
+      <div class="section-head reveal">
+        <h2 id="aisles-title">Shop by aisle</h2>
+        <p>Twelve of our sixteen aisles, up front. Each tile is one tap from the right job.</p>
+      </div>
+      <div class="aisle-grid">
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/business-systems">Business Systems</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/home-and-family">Home &amp; Family</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/money-and-budget">Money &amp; Budget</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/teachers">Teachers</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/wall-art">Wall Art</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/books">Books</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/services">Services</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/health-and-care-paperwork">Health &amp; Care Paperwork</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/weddings-and-events">Weddings &amp; Events</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/baby-and-family">Baby &amp; Family</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/pets">Pets</a>
+        <a class="aisle-tile reveal" href="https://onejobkits.com/collections/garden">Garden</a>
+        <a class="aisle-tile aisle-all reveal" href="https://onejobkits.com/collections/all">All 16 aisles — the full catalogue, one tap away</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="featured-products" aria-labelledby="featured-title">
+      <div class="section-head reveal">
+        <h2 id="featured-title">The heavy hitters</h2>
+        <p>The flagship systems people come back for — with the price and the buy link always in view.</p>
+      </div>
+      <div class="products-grid">
+        <article class="product-card glass reveal">
+          <p class="kit-number">Featured kit</p>
+          <h3>Prop Firm Challenge Tracker — Kit #1</h3>
+          <p>Track FTM-style challenges, drawdown and payouts without blowing the account.</p>
+          <p class="price">$39 Standard · $69 Pro</p>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/prop-firm-challenge-tracker" aria-label="Buy Prop Firm Challenge Tracker — Kit #1">Buy now</a>
+        </article>
+
+        <article class="product-card glass reveal">
+          <p class="kit-number">Complete access</p>
+          <h3>The Everything Pass</h3>
+          <p>Every current product plus 12 months of new releases. One payment.</p>
+          <p class="price">$599</p>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/everything-pass" aria-label="Buy The Everything Pass">Buy now</a>
+        </article>
+
+        <article class="product-card glass reveal">
+          <p class="kit-number">Printable art</p>
+          <h3>Wall Art Atlas Sets</h3>
+          <p>120-design printable art sets by place and theme, 300 DPI, six sizes.</p>
+          <p class="price">$16 Personal · $49 Commercial</p>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/wall-art-atlas-sets" aria-label="Buy Wall Art Atlas Sets">Buy now</a>
+        </article>
+
+        <article class="product-card glass reveal">
+          <p class="kit-number">Done for you</p>
+          <h3>Budget Set Up For You</h3>
+          <p>We build your budget system for you: accounts, bills, sinking funds, done.</p>
+          <p class="price">$39 / $59 / $89 tiers</p>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/budget-set-up-for-you" aria-label="Buy Budget Set Up For You">Buy now</a>
+        </article>
+
+        <article class="product-card glass reveal">
+          <p class="kit-number">Featured free kit</p>
+          <h3>Drawdown Guardian — FREE Flagship Manual</h3>
+          <p>The funded trader's records field manual. Our flagship, free.</p>
+          <p class="price">$0</p>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/drawdown-guardian-the-funded-traders-records-field-manual-free-flagship-edition" aria-label="Download Drawdown Guardian — FREE Flagship Manual">Download free</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="library-title">
+      <div class="glass library-strip reveal">
+        <h2 id="library-title">33 free tools in the Free Library</h2>
+        <a class="button button-ghost" href="https://onejobkits.com/pages/free-library">Visit the Free Library</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p>OneJobKits · <a href="mailto:support@onejobkits.com">support@onejobkits.com</a> · Telegram <a href="https://t.me/OneJobKitsBot">@OneJobKitsBot</a></p>
+        <p>Powered by Shopify.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="https://onejobkits.com/pages/faq">FAQ</a></li>
+          <li><a href="https://onejobkits.com/pages/about">About</a></li>
+          <li><a href="https://onejobkits.com/pages/affiliates">Affiliates (earn 30%)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('a[href^="#"]');
+        if (!link) return;
+        var target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      var revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealItems.forEach(function (item) { observer.observe(item); });
+      } else {
+        revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+      }
+    })();
+  </script>
+</body>
+</html>
