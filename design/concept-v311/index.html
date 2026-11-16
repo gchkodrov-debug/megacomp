@@ -216,7 +216,9 @@
 
     .trust-item strong { display: block; color: var(--text); font-size: .9rem; }
 
-    .trust-copy span { display: block; }
+    .trust-copy { min-width: 0; }
+
+    .trust-copy span { display: block; overflow-wrap: anywhere; }
 
     .glass {
       border: 1px solid rgba(149, 191, 71, .18);
@@ -263,7 +265,7 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
       gap: 1rem;
     }
 
@@ -467,7 +469,7 @@
           <h3>Prop Firm Challenge Tracker — Kit #1</h3>
           <p>Track FTM-style challenges, drawdown and payouts without blowing the account.</p>
           <p class="price">$39 Standard · $69 Pro</p>
-          <a class="button button-primary buy" href="https://onejobkits.com/products/prop-firm-challenge-tracker" aria-label="Buy Prop Firm Challenge Tracker — Kit #1">Buy now</a>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/prop-firm-challenge-journal-drawdown-guardian" aria-label="Buy Prop Firm Challenge Tracker — Kit #1">Buy now</a>
         </article>
 
         <article class="product-card glass reveal">
@@ -475,7 +477,7 @@
           <h3>The Everything Pass</h3>
           <p>Every current product plus 12 months of new releases. One payment.</p>
           <p class="price">$599</p>
-          <a class="button button-primary buy" href="https://onejobkits.com/products/everything-pass" aria-label="Buy The Everything Pass">Buy now</a>
+          <a class="button button-primary buy" href="https://onejobkits.com/products/entire-shop-bundle-lifetime-access-to-every-onejobkits-kit-every-new-release-for-12-months-the-everything-pass" aria-label="Buy The Everything Pass">Buy now</a>
         </article>
 
         <article class="product-card glass reveal">
@@ -483,7 +485,7 @@
           <h3>Wall Art Atlas Sets</h3>
           <p>120-design printable art sets by place and theme, 300 DPI, six sizes.</p>
           <p class="price">$16 Personal · $49 Commercial</p>
-          <a class="button button-primary buy" href="https://onejobkits.com/products/wall-art-atlas-sets" aria-label="Buy Wall Art Atlas Sets">Buy now</a>
+          <a class="button button-primary buy" href="https://onejobkits.com/collections/wall-art" aria-label="Buy Wall Art Atlas Sets">Buy now</a>
         </article>
 
         <article class="product-card glass reveal">
