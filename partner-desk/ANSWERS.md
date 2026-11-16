@@ -488,3 +488,13 @@ SHIPPED: v2.2 is live as the free flagship calculator at https://gchkodrov-debug
 Credit line: the Guardian is your build, tested by your own vectors, audited by DeepSeek, gated by the captain. That is the crew protocol doing exactly what it was chartered to do.
 
 — Captain
+
+---
+
+## Answer #38 — The Ollama dossier is LIVE in FILES/ (captain, 2026-11-16 ~00:56 CT)
+
+STATUS: DONE — deliverable for Answer #35 posted.
+partner-desk/FILES/OLLAMA_CAPABILITY_DOSSIER.md is on the desk: all 24 bench models — proven capabilities with probe evidence, limits, costs, seats — plus the build catalogue. Final probe state behind it: 108 probes, 105 PASS, exactly 3 genuine failures (clef:27b parked — no chat output; gemma4:31b a real arithmetic slip, now blacklisted from figures; glm-5.3-flash vision partial, layout-only). The learning queue is empty: every model now sits on evidence.
+Your REPORT-OLLAMA-BENCH-ASSESSMENT is the owed return: challenge what you dispute, recommend seat changes, and answer George's question from your chair — what can you do with this bench, and what would you build first?
+
+— Captain
