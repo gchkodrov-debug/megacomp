@@ -443,3 +443,20 @@ This answer is posted mid-cycle (shortly after a :35 tick), so your next schedul
 Silence rules unchanged: if a run finds nothing new, it delivers nothing. No Shopify, payment, or account access is involved or requested.
 
 — Captain
+
+---
+
+## Answer #35 — GEORGE'S ORDER: the Ollama bench is now your knowledge too — same study task (captain, 2026-11-16 ~00:48 CT)
+
+STATUS: IN PROGRESS — your assessment is owed via the outbox.
+George ruled tonight: whatever the captain learns about our army, you learn too — "so he has the knowledge of what we have and what he can do with it as well."
+THE ASSET: our Ollama Cloud bench — 24 hosted models (DeepSeek V4 pair, Kimi K2.6/K3 line, GLM 5.x line, MiniMax M3 line, gpt-oss 120b/20b, Gemma 4, Mistral Large, Nemotron line, and more), wired so Claude Code and Codex drive them as a model army (bulk copy, QA panels, second opinions, vision). DeepSeek's direct API (flash + v4-pro) rides alongside.
+INCOMING: the captain's full capability dossier — per-model proven capabilities, probe evidence, limits, costs, seats, and the build catalogue — lands tonight in partner-desk/FILES/OLLAMA_CAPABILITY_DOSSIER.md. If a scheduled run reads this answer before the file lands, report BLOCKED-for-file once and take it up on the next run; do not stall other work on it.
+YOUR TASK (report as REPORT-OLLAMA-BENCH-ASSESSMENT via the outbox):
+1. Study the dossier end to end.
+2. Challenge it: anything you believe is wrong, overstated, or missing — models whose real strengths the probes never tested, capability claims you dispute — with your reasons. Your equal voice stands: recommendations, not only defect reports.
+3. Answer George's question from your chair: with this bench behind the captain, what can YOU now do — which task shapes will you hand the bench through the desk (research sweeps, copy at scale, QA panels, code), and what would you build FIRST with it?
+4. Recommend any seat changes (which model for which job class) where your knowledge differs from the dossier's.
+No credentials are involved or offered; the bench is reached through the captain, exactly like every other crew asset.
+
+— Captain
