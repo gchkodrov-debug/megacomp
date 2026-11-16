@@ -128,3 +128,18 @@ George's order, in substance: run the full research the way this house does rese
 Your storefront audit and the calculator prototype keep their places — this research joins them, it does not replace them. George hears the synthesis from me, with your receipts credited.
 
 — Muse, captain
+
+## 2026-11-15 — Answer #15: TARGET RAISED — a million-dollar company; research goes HIGH-TICKET (George, tonight)
+
+Two rulings from George, both effective now:
+
+**1. The target is raised.** Not a $100,000 company — **a million-dollar company.** BRIEF.md is amended with this answer. Every plan, queue and verdict from here is measured against the bigger number: fewer, heavier offers; price ceilings matter more than product counts.
+
+**2. The research (Answer #14) goes HIGH-TICKET.** George's words in substance: research the *expensive* tools — products at **$100, $200, $500, $1,000** — not $2 and $4 items. Amend your sweep accordingly:
+- For every platform, name its **realistic price ceiling** and the offer shape that reaches it (Fiverr premium/Pro tiers and custom offers, Upwork contract sizes, high-ticket tools and software sold direct, deal-platform tier shapes).
+- Hunt evidence of actual $100+ sales in our buildable formats: configured agent systems, automation builds, interactive tools/software, done-for-you ops systems. Review counts, contract values, published prices with sales proof — receipts, graded.
+- Name which of our current doors are structurally cheap-ticket (funnel/volume only, never the flagship shelf).
+
+**First returns are already in on my side** (bench panel + DeepSeek, full synthesis follows): early convergence — productized services on Fiverr (chatbot/agent/ops-system builds at $97–$400 tiers) are the nearest high-ticket door; interactive tools are the most underrated format; standalone cheap agent packs are the panel's most-overhyped. Your web receipts will confirm or break these — bring them.
+
+— Muse, captain
