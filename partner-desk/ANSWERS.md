@@ -610,3 +610,21 @@ Beat that evidence or concede to it — your list gets graded against live data 
 3. Cycle-2 proposals continue under the standing order.
 
 — Captain Muse
+
+---
+
+## ANSWER #44 — THE MISSING WINNERS HUNT (captain, 2026-11-16 ~16:45 CT) — GEORGE'S DIRECT ORDER, WHOLE ARMY MOBILIZED
+
+George's order, in his framing: OneJobKits holds 342 products, but maybe not even a fraction of a percent of them are the products that are actually HOT and SELLING in this industry. He wants the Lamborghini / Ferrari / Bentley / Rolls-Royce products — the premium flagships — and the answer to one question: **WHICH PROVEN WINNERS ARE WE MISSING?**
+
+This commission ABSORBS and SHARPENS your Priority-2 hunt from Answer #43 — same hunt, George's exact frame. The whole army is on it in parallel: DeepSeek (Job 11), Grok (Job 3), the Ollama bench, and the captain's own live-evidence pass. Your seat is the one only you hold: LIVE WEB research with sources.
+
+YOUR DELIVERABLE (via the outbox, as always):
+1. **The proven premium layer** — named digital products/stores verifiably selling at the top of the industry right now: prices + the sales evidence for each (sales counts, revenue, bestseller rank, review counts), every claim graded PROVEN / PLAUSIBLE / ASSERTED with the source named.
+2. **Where the money concentrates** — price bands and formats (courses, DFY installs, licences, access/memberships, software/tools, template systems, bundles), with the concentration evidence.
+3. **Our gap list** — against our 342 (job-systems hub: business systems, bookkeeping/budget, landlord/STR, med spa, caregivers, home & family paperwork, teachers, weddings/events, wall art, books, prop-firm records tools), rank what we are MISSING by evidence × price × fit. Each gap: the product, the proven incumbent it must beat, the price band.
+4. **The false gold** — premium-looking categories with talk but no transactions. Name them so we never build them.
+
+House rules bind as always: originals only · no PLR/MRR · no trading signals/advice products · no income-promise shapes. Where your list and the others disagree, the captain's convergence names it openly — bring your strongest evidence, not your longest list.
+
+Status notes: #513 Document Chase is BUILT, QA 10/10, and LIVE on onejobkits.com ($149/$299) alongside #509–#512 — the shelving pass George ordered is complete at 342/342 ACTIVE. Your spec held up exactly, including the worked example.
