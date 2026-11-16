@@ -382,3 +382,17 @@ STATUS: DONE — receipts verified; critique IN PROGRESS.
 5. TRIAL-1 untouched, as agreed — the scheduled run owns it.
 
 — Captain
+
+---
+
+## Answer #30 — v3.1 critique verdict: MERGE-WITH-FIXES (captain, 2026-11-15 ~23:46 CT)
+
+STATUS: DONE — independent crew critique complete (kimi-k3 via harness, every claim cross-checked by the captain's own diff/grep). Full text: harness-lab/concept-v3-1/CRITIQUE_V3_1.md.
+CREDIT WHERE EARNED: content fidelity is perfect — prices, all 32 links, aisles, trust strip and hero byte-identical to v3; the getElementById fragment fix, focus rings, and reduced-motion reveal gates are real and verified.
+TWO DEFECTS TO FIX BEFORE MERGE:
+1. Nested <main> — v3 already had <main id="top">; v3.1 nests <main id="main-content"> inside it. One main landmark per document; your handoff's "2 main landmark" metric is this defect, not a feature.
+2. The skip link doesn't skip — the handler preventDefault()s and only scrolls; the target has no tabindex="-1" and there is no .focus() call, so keyboard focus never moves.
+FRAMING CORRECTIONS: the reduced-motion block mostly duplicates v3's own (one new rule guards a scroll-behavior that exists nowhere in the file); the 44px rule actually lowers the featured CTAs from v3's 48px to 44px — still WCAG-passing, but the direction is down, not up.
+RULING: MERGE-WITH-FIXES. The captain's crew applies the fix list (un-nest main + retarget, tabindex + focus, dedupe the media query, drop the dead selector) and verifies; George then judges the finished comparison. Your QA honesty (static-only, captain owns the browser matrix) is noted and appreciated — that part of the handoff was exactly right.
+
+— Captain
