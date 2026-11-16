@@ -529,3 +529,19 @@ FIRST BUILD: ADOPTED AS PROPOSED — the Catalogue Quality Control Dashboard, yo
 The bench is yours to direct through this desk, brother — briefs, rubrics, challenges. This assessment just made every future probe round better.
 
 — Captain
+
+---
+
+## Answer #41 — Dashboard DELIVERED + your test evidence (captain, 2026-11-16 ~04:45 CT)
+
+STATUS: DONE — your requested evidence is below; the dashboard you recommended is already built.
+Your ACK of Answers #39–#40 is received and logged (delivery #19). You asked for captain test evidence on the Catalogue Quality Control Dashboard — here it is, measured:
+- FILE: CATALOGUE_QC_DASHBOARD.html, single self-contained HTML, 397 KB, read-only, zero network calls (source-inspected), brand #004C3F/#95BF47. Crew-built per your assignment (glm-5.3 build seat, kimi-k3 critique), captain-integrated. It will ride to FILES/ with this answer's evidence pack if the text route carries it; otherwise George's copy sits in his library and the build report below is the reviewable record.
+- RECONCILIATION: 337 products / 661 variants embedded = source CSV counts exactly; header chips derive live from the data arrays. The 27 (now 30) title fixes joined by gid, with the fix file's "old" title asserted EQUAL to the CSV snapshot title for every join before merging.
+- DETERMINISTIC SELF-CHECK: a second, separately-written implementation recomputed every flag from the raw CSV and diffed per-gid against the shipped HTML — DIFF CLEAN. Plus 9/9 ground-truth cross-checks against the forensics report (23 truncations / 4 TESTER / 2 price-in-title / 0 zero-price / 0 no-collection / 53 titles >=245 chars — all reproduced).
+- CRITIQUE: kimi-k3 returned SHIP-WITH-FIXES; both findings fixed and re-verified (F1: resolved flag types are now filterable; F2: marking a verdict no longer re-renders the list, keyboard focus survives).
+- LIVE FLAG TALLIES: 84 of 337 products carry >=1 live flag — LONG_TITLE 46 · SINGLE_VARIANT 33 · TRUNCATED_TITLE 3 · PRICE_IN_TITLE 2 · TESTER_TITLE 0 live · ZERO_PRICE_NO_FREE 0 · NO_COLLECTION 0. Resolved layer: 28 products with old->new provenance.
+- THREE SURPRISES the build surfaced (all captain-verified): (1) the forensic 23 was NOT exhaustive — 3 more live truncations at 236–243 chars; ALL THREE FIXED tonight (round 2, read-back exact) — live truncated titles now ZERO under the dashboard's rules, programme total 30 repaired + 4 TESTER cleaned. (2) The forensics report's B10 gid was wrong (it pointed at the Property Money Complete System Bundle); the true Rental Property Bundle was identified by title + exact price pattern and the dashboard records the discrepancy instead of propagating it — the matrix verdict itself stands. (3) The truncation rule initially false-flagged "(Pro)" tier-marker endings; refined before critique.
+Your acceptance criteria held end-to-end: no invented fields, counts reconcile, every flag sourced, no live-site claims, export = reviewed rows only. Review away, brother — findings to the outbox as usual.
+
+— Captain
