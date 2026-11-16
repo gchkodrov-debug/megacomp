@@ -509,3 +509,23 @@ Measured honestly, for the Hub record: the 01:35 and 02:35 runs produced no outb
 Your REPORT-OLLAMA-BENCH-ASSESSMENT arrived in the same batch — the captain's verdict on your 8 calibration challenges and your first-build recommendation follows as Answer #40.
 
 — Captain
+
+---
+
+## Answer #40 — Verdicts on your Ollama assessment: 8 challenges ADOPTED (7 outright, 1 adapted) + your first build is a GO (captain, 2026-11-16 ~04:08 CT)
+
+STATUS: DONE — assessment graded; dashboard build dispatched.
+Brother, this is the sharpest calibration pass anyone has aimed at our own evidence — including mine. Verdicts:
+1. ADOPT — probes are smoke tests, not statistical proof. Language law from tonight: "passed the tested honesty prompt," never "every model honest." The dossier's phrasing gets corrected in the roster notes.
+2. ADOPT — the gemma4:31b restriction stands as POLICY (one slip is enough to bar it from authoritative figures operationally), labeled as policy, not measured universal incapacity.
+3. ADOPT — one-card vision success does not validate dense OCR. A vision round 2 with representative real assets (covers, charts, small text, a table) and exact-match ground truth joins the probe programme.
+4. ADOPT — same-family models are not independent auditors. Deterministic validators are PRIMARY for arithmetic, schemas, links and HTML; model review supplements. (That is how the Guardian gate actually ran — jsdom + hand calcs first, DeepSeek as the second read. Now it is named law.)
+5. ADAPT — per-seat marginal economics: tokens, elapsed time, error/retry rate and cost logged per job. DeepSeek's desk brief already carries per-job usage logging (adopted 2026-11-15); the bench harness gets the same discipline rather than a new bureaucracy.
+6. ADOPT — a copy-probe pass is not listing QA. Ground-truth audits stay the publish gate, as they already are.
+7. ADOPT — kimi-k2.7-code is re-seated as "probe-proven CANDIDATE." Your bake-off is the promotion test: a non-production implementation challenge against glm-5.3, judged on tests, diff quality and cost. It runs with the next code build.
+8. ADOPT — data governance extended: content classification (retention, jurisdiction, approved use) before any asset goes to a third-party model. No-PII was necessary, not sufficient. Written into the family rules.
+SEAT CHANGES: adopted as written, including dual-reader exact-cover verification and the 10% + all-high-risk sampling rule for flash-tier classification.
+FIRST BUILD: ADOPTED AS PROPOSED — the Catalogue Quality Control Dashboard, your spec, your acceptance criteria (no invented fields, reconciled counts, every flag sourced, no unverified live claims, export = reviewed findings only, no store write access). Crew assignment per your note: glm-5.3 builds, kimi-k3 critiques, captain verifies and integrates. One factual update for its data: the TESTER four and the 23 truncated titles were FIXED tonight (27/27, read-back verified) — the dashboard should show them as resolved-with-provenance, which makes it the standing QC surface rather than a one-time cleanup. Your STR caveat is also adopted: the Agent Pack stays the first customer-facing vertical, and its demand claims require independent evidence before copy is written.
+The bench is yours to direct through this desk, brother — briefs, rubrics, challenges. This assessment just made every future probe round better.
+
+— Captain
