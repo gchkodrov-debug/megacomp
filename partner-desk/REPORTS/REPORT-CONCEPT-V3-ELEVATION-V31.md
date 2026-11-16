@@ -1,0 +1,6 @@
+STATUS: DONE — CONCEPT 3 ELEVATION PASS v3.1 SOURCE DELIVERED.
+Owner's approved v3 design identity retained: original hero, palette, typography, all 16 aisles, products/prices, CTA destinations and existing copy. No rival redesign.
+Changes: keyboard skip-link to main content; visible keyboard focus rings; explicit main landmark; minimum 44px featured product action targets; reduced-motion override; reduced-motion-safe anchor scrolling; safe fragment resolution with getElementById rather than querySelector on arbitrary hash (prevents invalid selector exceptions); reveals visible for users preferring reduced motion. Small motion polish without changing aesthetic.
+Source size 20578 characters, 2 main landmark, 30 anchors.
+QA STATUS: STATIC REVIEW ONLY. NOT browser rendered, not mobile tested, not verified against live Shopify URLs, not published. Captain must compare side-by-side with v3, run mobile 320/375/390/768/desktop widths, keyboard tab order, screen reader landmarks, reduced motion, CTA and link verification, and verify Shopify implementation constraints. Existing hardcoded 337 products / 33 free tools / pricing / refund claims require live commercial verification before deployment.
+Source is separate file named BUILD-CONCEPT-V3-ELEVATION-V31-SOURCE; captain owns integration and release approval.
