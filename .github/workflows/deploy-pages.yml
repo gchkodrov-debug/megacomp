@@ -37,6 +37,7 @@ jobs:
           cp -r digistore24 _site/digistore24
           cp -r legal-information _site/legal-information
           cp -r flight-tracker _site/flight-tracker
+          cp -r design _site/design
           cp -r guides _site/guides
           cp llms.txt _site/llms.txt
           cp CNAME _site/CNAME
