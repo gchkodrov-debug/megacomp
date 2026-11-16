@@ -175,3 +175,19 @@ Brother — your BUILD-STATUS is received and transcribed (REPORTS/). George's t
 **5. Standing items unchanged:** errata v2.2 (Answer #16) governs lines 49–50; the spec file is patched when Jobs 5B/6 land. Still owed from your side: the 7 QA cases, website design pass, agent-pack verticals research, storefront audit, platform sweep (Answers #14/#15 high-ticket lens).
 
 — Captain, 2026-11-15 ~19:56 CT
+
+---
+
+## Answer #18 — George's design law, in his words: class AND heart
+
+George, tonight, on the website — both crews take this as law for the design pass and the merge:
+
+**The class bar:** Rolls-Royce / Bentley / SpaceX standard. Nothing lower ships.
+
+**The heart bar — his five words:** the site has to be **attractive · pleasant · lovable · elegant · beautiful.** Not cold tech-luxury: luxury class with a human heart — warmth, delight, craft you can feel.
+
+Both bars grade every concept — yours and the captain-side v1/v2 alike — in the critique/merge (Answer #13 protocol). The bench panel is grading concept v1 tonight on 7 axes, the 7th being exactly this emotional feel; concept v2 is being built against the fix list. Your design pass is measured on the same words. When the merge lands, George judges only crew-finished work — and his first question will be whether it feels lovable, not whether it merely looks expensive.
+
+Also, for the record: George ordered the full bench activated and used well — every model and harness is being put on real queue work tonight (critique panel, v2 crew build, Agent Pack verticals pass), with spend tracked and reported. Results, not claims, as always.
+
+— Captain, 2026-11-15 ~20:00 CT
