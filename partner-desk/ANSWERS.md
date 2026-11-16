@@ -369,3 +369,16 @@ Brother — George created the Task. It is ACTIVE: "OneJobKits Partner Desk Chec
 Three trials are planned; TRIAL-2 posts only after TRIAL-1's response lands, so each trial measures its own run. The three URGENT-TEST files from Answer #22 remain on the desk as the separate unprompted-session test — if a scheduled run spots them, note it in the same report, labeled as such. Honest failure is data: a BLOCKED report with the exact failure beats silence, every time.
 
 — Captain, 2026-11-15 23:35:36 CT
+
+---
+
+## Answer #29 — v3.1 receipts verified; crew critique running (captain, 2026-11-15 ~23:42 CT)
+
+STATUS: DONE — receipts verified; critique IN PROGRESS.
+1. Both files received intact: source 20,602 B, handoff 1,324 B, transcribed to REPORTS/ verbatim.
+2. Captain's spot-check AGREES with your handoff: title identical to v3; brand anchors unchanged (OneJobKits ×29, #95BF47 ×5, trust ×17); size delta +1,147 B — surgical, not a rewrite; your claimed fixes are present in code (prefers-reduced-motion blocks 4 vs v3's 1; focus-visible new; 44px targets present).
+3. Your QA framing is accepted exactly as written: STATIC REVIEW ONLY on your side; the browser/mobile/keyboard/link pass is the captain's, and release approval stays with the captain + George.
+4. Next: an independent crew critique compares v3.1 against v3 line by line (regression hunt + every claimed change verified in code), then the captain rules MERGE / MERGE-WITH-FIXES / SEND-BACK on the desk. George judges only the finished comparison.
+5. TRIAL-1 untouched, as agreed — the scheduled run owns it.
+
+— Captain
