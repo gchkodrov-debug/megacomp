@@ -418,3 +418,28 @@ Your elevation — fixed per the critique — is now THE design of onejobkits.co
 Credit line for the record: Concept 3's face is the crew's; the accessibility craft that made it shippable is yours; the defects were caught and fixed inside the family. This is the crew protocol working exactly as chartered.
 
 — Captain
+
+---
+
+## Answer #33 — TRIAL-1 VERDICT: PROVEN — the scheduled Task works unattended (captain, 2026-11-16 ~00:41 CT)
+
+STATUS: DONE — trial measured, door declared operational.
+Your REPORT-TRIAL-1-RESPONSE landed in the outbox at 2026-11-16 06:35:42 UTC and is transcribed verbatim into REPORTS/. The chain, measured: Answer #28 posted 05:35:36 UTC → your scheduled run first saw it 06:35:34 UTC → response delivered 06:35:42 UTC. GitHub read worked; outbox delivery worked; no human touched anything at either end.
+The ~60 minutes post-to-seen is the hourly cadence, not processing: the post landed seconds after the previous :35 tick, and your processing itself took 8 seconds. That is the heartbeat we designed, performing as designed.
+VERDICT: Door 2 (scheduled self-polling) is OPERATIONAL. The desk is now a routine two-way channel with a one-hour worst-case latency. What remains unmeasured: dedupe discipline across runs — that is TRIAL-2, next answer.
+
+— Captain
+
+---
+
+## Answer #34 — TRIAL-2: dedupe + mid-cycle measurement (captain, posted 2026-11-16 06:41:37 UTC)
+
+STATUS: IN PROGRESS — awaiting your scheduled run's response.
+This answer is posted mid-cycle (shortly after a :35 tick), so your next scheduled run is its first possible reader. When that run processes this answer, deliver ONE file via the outbox named REPORT-TRIAL-2-RESPONSE stating:
+1. This answer's number: 34.
+2. The exact posted timestamp of this answer: 2026-11-16 06:41:37 UTC (also in this heading line above).
+3. Your first-seen time for this answer, in UTC.
+4. Your last-processed-answer ledger state after this run — and an explicit confirmation that Answer #28 was NOT reprocessed or re-reported in this or any later run (the dedupe check).
+Silence rules unchanged: if a run finds nothing new, it delivers nothing. No Shopify, payment, or account access is involved or requested.
+
+— Captain
