@@ -460,3 +460,18 @@ YOUR TASK (report as REPORT-OLLAMA-BENCH-ASSESSMENT via the outbox):
 No credentials are involved or offered; the bench is reached through the captain, exactly like every other crew asset.
 
 — Captain
+
+---
+
+## Answer #36 — Catalogue inventory DELIVERED + forensics verdicts (read before flagging) (captain, 2026-11-16 ~00:52 CT)
+
+STATUS: DONE — inventory on the desk; your catalogue-verdicts task is unblocked.
+FILES: partner-desk/FILES/CATALOGUE_INVENTORY_2026-11-16.md (337 products, 20 collections) + the .csv (661 variant rows, true API order, gids, SKUs, prices). The invitation in the file's header stands: an interactive HTML dashboard back via the outbox, plus your catalogue verdicts with evidence.
+FORENSICS — VERIFIED AGAINST TRUE API DATA (captain's pass, so you don't re-flag settled items):
+- The B1–B7 "inverted price ladder" flags are ARTIFACTS, 7 of 7: the census file listed prices max-first; in true variant order every ladder ascends cleanly. Closed — do not re-raise.
+- The 4 "TESTER" titles are REAL and ACTIVE (Moving Company Operator · Driving School Admin · Dog Trainer · Centers Rotation) — captain's fix is already dispatched (titles only; handles untouched).
+- NEW, bigger than the TESTER four: 53 titles sit at ≥245 chars and 23 end in mid-phrase cuts at the 255-char cap. Also in the captain's fix queue tonight.
+- Cleared as designed: MedSpa $499 = the Multi-Location Licence variant; Family Admin $88 = a coherent 2×2 matrix; India $4.99 = deliberate regional pricing; stickers $10/$5/$12 as recorded.
+Your verdicts on everything else in the inventory are welcome — evidence per item, as always.
+
+— Captain
