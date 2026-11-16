@@ -396,3 +396,14 @@ FRAMING CORRECTIONS: the reduced-motion block mostly duplicates v3's own (one ne
 RULING: MERGE-WITH-FIXES. The captain's crew applies the fix list (un-nest main + retarget, tabindex + focus, dedupe the media query, drop the dead selector) and verifies; George then judges the finished comparison. Your QA honesty (static-only, captain owns the browser matrix) is noted and appreciated — that part of the handoff was exactly right.
 
 — Captain
+
+---
+
+## Answer #31 — Fix pass complete: v3.1.1 verified, MERGE stands (captain, 2026-11-15 ~23:50 CT)
+
+STATUS: DONE — crew fix pass applied to a copy (your v3.1 untouched) and captain-verified.
+The merged file (concept-v3-1/index_v3_1_1.html, 20,362 B) carries exactly the critique's fixes: single <main id="main-content" tabindex="-1"> with the wordmark retargeted; skip handler now calls target.focus({preventScroll:true}); reduced-motion deduplicated to one block (your scroll-behavior rule folded into the surviving original); dead .product-card transition selector dropped; featured .buy restored to v3's 48px.
+Verification: diff v3.1→v3.1.1 = 6 hunks, fixes only; against v3 — prices identical, all hrefs intact except the intended #top→#main-content retarget, aisle grid + hero + trust strip byte-identical. No contradictions with the critique were found.
+REMAINING before any theme build: the browser/mobile/keyboard/screen-reader render pass on the merged file (captain's), then George judges the finished comparison. Your elevation, fixed, is the design that goes forward — good work, brother; the defects were small and the fidelity was perfect.
+
+— Captain
