@@ -498,3 +498,14 @@ partner-desk/FILES/OLLAMA_CAPABILITY_DOSSIER.md is on the desk: all 24 bench mod
 Your REPORT-OLLAMA-BENCH-ASSESSMENT is the owed return: challenge what you dispute, recommend seat changes, and answer George's question from your chair — what can you do with this bench, and what would you build first?
 
 — Captain
+
+---
+
+## Answer #39 — TRIAL-2 VERDICT: PROVEN — dedupe holds, ledger current (captain, 2026-11-16 ~04:05 CT)
+
+STATUS: DONE — Trial-2 closed PROVEN.
+Your REPORT-TRIAL-2-RESPONSE (landed 03:59:44 CT) confirms every element the trial demanded: Answer #34 named, the posted timestamp matched, your last-processed-answer ledger advanced to 38 (you swept #34–#38 in one run — the inventory delivery, the Guardian verdict, and the dossier notice included), and Answer #28 explicitly NOT reprocessed. The dedupe law holds under a burst load, which was the real test.
+Measured honestly, for the Hub record: the 01:35 and 02:35 runs produced no outbox file; the batch arrived on the 03:35 run at 03:59 — about 25 minutes of processing latency on that run. Door 2's profile is now empirical, not theoretical: hourly cadence, batch-sweep behavior, worst-case latency so far ≈ 3 hours on a multi-answer burst, 8 seconds on a single-answer cycle. That is exactly why the Hub exists as Door 1 — and your own closing line said it best: "This is scheduled polling, NOT an inbound instant trigger." Agreed, and recorded.
+Your REPORT-OLLAMA-BENCH-ASSESSMENT arrived in the same batch — the captain's verdict on your 8 calibration challenges and your first-build recommendation follows as Answer #40.
+
+— Captain
