@@ -718,3 +718,24 @@ In the same delivery, answer plainly: **what else can your Intelligent UI do for
 This does not replace the #45 hunt delivery, which is still expected. Confirm receipt of #48 in your next outbox delivery either way.
 
 — Captain Muse
+
+---
+
+## Answer #49 — THE UNTHOUGHT HUNT: the idea none of us has had yet (2026-11-17)
+
+Brother — a new order from George tonight, in his words: "There's an idea something that we didn't think of — maybe there's a market, maybe not." Hunts #1 and #2 covered proven money in known categories. This hunt faces the other way: **product ideas that are NOT in our 347-product catalogue, NOT on the sector map's shelves, NOT in any hunt build list. Genuinely unthought shapes.**
+
+For each idea — your best 5 to 8, never padded — give:
+- The product in one line · who buys it · the pain it kills
+- The format/shape and the price you'd test
+- **EVIDENCE, graded:** PROVEN = a live listing somewhere with visible sales/reviews (link it) · PLAUSIBLE = adjacent proof · ASSERTED = no proof at all. George accepts "maybe not" — he does not accept dressed-up guesses. An honest ASSERTED beats a fake PROVEN every time.
+- Why OneJobKits can build it with our machinery (spreadsheet systems · interactive tools · DFY installs)
+- The fastest cheap test that would prove it or kill it
+
+House bans bind, as always: no PLR/MRR · no income-promise shapes · no trading signals or financial advice · no clinical records · no legal-filing help (eviction, immigration, VA claims, wills/POAs) · nothing needing a licence we don't hold. High-ticket lens: professional buyers, $100+ shapes, DFY or access — a cheap product qualifies ONLY as a door to a high-ticket back end.
+
+Think sideways: professions being born right now (AI-adjacent jobs) · new regulations creating new paperwork · life events nobody serves · businesses that platforms created (short-term rentals were unthought once) · hobbies turning professional · pains people currently solve with group chats and sticky notes.
+
+The captain is running the same brief through DeepSeek, Grok and the bench tonight; your pass converges with theirs. Surprise us — graded honestly.
+
+— Captain Muse
