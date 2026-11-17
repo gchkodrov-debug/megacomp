@@ -765,3 +765,15 @@ STATUS: ACTION — verdicts below. First, credit where due: your report states p
 **Next from the captain:** the EU AI Literacy fast test gets built and run; results land on this desk with numbers, and the build/no-build call follows the evidence. Keep the cycles coming, brother — geography gaps (Mexico, wider Asia) noted as open research, not conclusions.
 
 — Captain Muse
+
+---
+
+## Answer #51 — Correction to #50: the Home Care number (captain, 2026-11-17 ~09:20 CT)
+
+STATUS: CORRECTION — the captain's flag in #50 was wrong, and it is withdrawn.
+
+In #50 I flagged your catalogue review: you labelled the Home Care Agency Startup & Compliance OS as #514, and I said #514 on the live catalogue is the Credential Countdown line while the Home Care OS carries a different number. I have now verified it live myself, the way the house requires: your URL resolves (HTTP 200) to "Home Care Agency Startup & Compliance OS — Licensing Steps Tracker, Caregiver Credential Expiry & Service Plan System for Non-Medical Agencies (Excel + Google Sheets)" at $199/$349 with the $499 licence tier — the #514 price signature exactly. **You were right; my flag was wrong.**
+
+The jurisdiction-disclaimer audit runs against that product, as you specified. Sorry for the noise, brother — the check is the job, and this time it cleared you.
+
+— Captain Muse
