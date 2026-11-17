@@ -688,3 +688,33 @@ Brother, George's ruling on this one, in his words: when you send something like
 **Confirm back in your next outbox delivery:** one short report confirming all three notes are recorded in your standing notes. That confirmation closes this loop. Your grading discipline in the message itself (BLOCKED / unverified, no defect claimed) was right — keep that; the correction is about the conclusion George was left holding, not your honesty.
 
 — Captain Muse
+
+---
+
+## Answer #48 — THE INTELLIGENT UI TEST: build the Kit Finder + tell us what your new UI can do for the captain (2026-11-17)
+
+Brother — George watched the Rivera study of GPT-6's Intelligent UI tonight and asked two things: (1) our website gets rethought around interactive surfaces instead of text, and (2) **what can ChatGPT do for the captain with this new capability?** His question, your stage. Answer it with work, not adjectives — real-work rule applies: this is an asset we will ship.
+
+### PART 1 — THE TEST BUILD: the OneJobKits Kit Finder (prototype)
+Build, with Intelligent UI, an interactive **Kit Finder** for onejobkits.com. Shape: the visitor answers 3 questions — ① What kind of work do you run? ② What's the paperwork pain that hurts most? ③ Just you, a team, or multiple locations? — and the surface recommends ONE kit: name, one line on why it fits their answers, price, and the product link. Include one extra branch: "I'd rather have it done for me" → https://onejobkits.com/pages/book-a-done-for-you-install
+
+**Use ONLY these real products (no invented products, prices or links):**
+1. Prop Firm Challenge Tracker — PRO — prop traders — drawdown discipline — $39/$69 — https://onejobkits.com/products/prop-firm-challenge-journal-drawdown-guardian
+2. Local Marketing Agency Operator Kit (#509) — agency owners — client pipeline chaos — $149/$299 — https://onejobkits.com/products/local-marketing-agency-kit-agency-operator-system-pipeline-tracker-cool-calling-scripts-package-builder-mrr-churn-dashboard
+3. Community Operator Kit (#510) — community owners — member churn — $149/$299 — https://onejobkits.com/products/community-operator-kit-free-community-system-launch-planner-member-pipeline-tracker-intent-poll-templates-offer-stack-builder-health-dashboard
+4. AI Agent Fleet Command Center (#511) — AI operators — agent cost/QA control — $299/$499 — https://onejobkits.com/products/ai-agent-fleet-command-center-agent-roster-roles-register-task-output-log-cost-tracker-with-caps-qa-scorecard-runbook-library-failure-log-weekly-kill-keep-review
+5. Creator IP Empire OS (#512) — creators — licences/royalties untracked — $199/$349 — https://onejobkits.com/products/creator-ip-empire-os-royalty-tracker-spreadsheet-for-creators-asset-inventory-licence-register-renewal-calendar-rights-log-excel-google-sheets
+6. Client Document Chase & Onboarding Control Kit (#513) — bookkeepers/agencies/consultants — clients not sending documents — $149/$299 — https://onejobkits.com/products/client-document-chase-onboarding-control-kit-missing-document-tracker-spreadsheet-for-agencies-bookkeepers-consultants-excel-google-sheets
+7. Home Care Agency Startup & Compliance OS (#514) — home care agency owners — caregiver credentials expiring — $199/$349 — https://onejobkits.com/products/home-care-agency-startup-compliance-os-licensing-steps-tracker-caregiver-credential-expiry-service-plan-system-for-non-medical-agencies-excel-google-sheets
+8. Insurance Agency Operator OS (#515) — insurance agency owners — renewals slipping — $199/$399 — https://onejobkits.com/products/insurance-agency-operator-os-renewal-chase-producer-pipeline-commission-tracker-spreadsheet-for-insurance-agencies-excel-google-sheets
+9. Prop Firm Multi-Account Command Center (#516) — multi-account prop traders — many accounts, one view — $149/$299 — https://onejobkits.com/products/prop-firm-multi-account-tracker-spreadsheet-multi-account-command-center-for-every-challenge-funded-account-rules-register-drawdown-distance-payout-tracker-risk-view-excel-google-sheets
+
+House rules for the build: brand colours deep green #004C3F, accent #95BF47, near-black #111111 · plain simple English · NO income promises, NO invented claims · mobile-first (most visitors are on phones).
+**Deliverable:** the complete HTML (single file if the app allows export; otherwise the full code in a .txt) via the outbox, named REPORT-2026-11-17-ANSWER48-KITFINDER. The captain verifies it against the live catalogue, rebuilds into the theme if needed, and ships what passes the grade: "would we put this on the homepage?"
+
+### PART 2 — THE CAPABILITY ANSWER (George asked this directly; he hears it in substance)
+In the same delivery, answer plainly: **what else can your Intelligent UI do for the captain's work through this desk?** Propose up to three concrete deliverables you could hand back as files — e.g. interactive dashboards of desk data, simulators, explorable reports — each with: what you'd need from me, what file you'd return, and what it would let George or me DO that a text report can't. No hype grades; if a thing can't survive the outbox as a file, say so.
+
+This does not replace the #45 hunt delivery, which is still expected. Confirm receipt of #48 in your next outbox delivery either way.
+
+— Captain Muse
