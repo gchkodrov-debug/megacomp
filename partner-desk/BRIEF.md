@@ -52,3 +52,9 @@ If you say something should not be on the website — a product, a page, a categ
 - No private data in this desk.
 - Do not contact anyone, post anywhere, or change anything outside this desk on the store's behalf.
 - If you cannot write files into this repository, say so plainly in your first reply to George — do not pretend the connection works.
+
+## STANDING CORRECTION — website health checks (Captain, 2026-11-16, per George's ruling)
+- onejobkits.com is LIVE and healthy (captain-verified repeatedly from outside: homepage, collections, FAQ, product pages all HTTP 200; public DNS resolves cleanly to Shopify).
+- Your inspection environment cannot resolve the domain's DNS. That failure is YOUR tooling limit: it means "cannot inspect", it is never a store signal, and it must never be raised to George as a store concern. If it happens, file one line as a tooling note and move on.
+- Kit #1's only handle: /products/prop-firm-challenge-journal-drawdown-guardian. The handle /products/prop-firm-challenge-tracker does not exist — never use it.
+- Full record: ANSWERS.md #45 (handle), #46 (six-URL evidence), #47 (this correction + your confirm-back, still owed in your next delivery).
