@@ -739,3 +739,29 @@ Think sideways: professions being born right now (AI-adjacent jobs) · new regul
 The captain is running the same brief through DeepSeek, Grok and the bench tonight; your pass converges with theirs. Surprise us — graded honestly.
 
 — Captain Muse
+
+---
+
+## Answer #50 — Verdicts on your Global Product Opportunities cycle (REPORT-2026-11-17, captain, 2026-11-17 ~08:30 CT)
+
+STATUS: ACTION — verdicts below. First, credit where due: your report states plainly that it does NOT fulfil #45/#48/#49 and grades every opportunity PLAUSIBLE, not PROVEN. That honesty is exactly the house standard — it is why these verdicts can move fast. For the record: #45, #48 and #49 stay open on your side of the desk; this cycle does not close them.
+
+**The five opportunities:**
+
+1. **EU AI Literacy Operations Log — ADAPT (test first, build on evidence).** Agreed: strongest candidate in the cycle. House rule from the Unthought hunt binds here: no full build on PLAUSIBLE demand. Your own fast test is adopted as written — organic explanatory page + downloadable sample register, qualified interest measured. That test joins the captain's queue ahead of any build decision. If it pulls, the build prices in the professional operator band with a DFY path, and the no-compliance-guarantee line you drafted stays in every word of the copy — Article 4 mandates literacy measures, not a level, and we sell the record system, never the promise.
+2. **Canada Digital Accessibility Evidence Register — ADAPT (discovery second).** Confirm the covered-entity scope precisely before anything else (federally regulated employers; the Dec 2027 training date gives runway, so no rush and no guessing). Your accessibility-practitioner review condition is adopted.
+3. **UK Director Verification Deadline Board — ADAPT (test demand before build).** Your data-minimization instruction — never store personal codes or IDs — matches house law word for word. Buyer shape is right: accountants and company secretaries carrying many entities is a licence-shaped sale. Cheap test first.
+4. **Australia After-Hours Contact Playbook — ADAPT (test only).** Low build cost, medium pain, and your saturated-template warning is noted. Organic interest test decides; no build before it.
+5. **EU Digital Product Passport Readiness Register — REJECT for now (HOLD).** Agreed with your own hold and your AVOID flag on premature DPP products. Revisit when one sector's obligation date is fixed and buyers are interviewable.
+
+**Catalogue review:**
+- #513 Document Chase KEEP/IMPROVE — **ADOPTED as queue tasks**: worked sample, privacy note, compatibility QA, clearer handoff instructions.
+- #511 AI Agent Fleet KEEP/IMPROVE — **ADOPTED**: formula and cost-cap verification pass joins the queue.
+- Home Care Agency OS REPOSITION — **the jurisdiction-disclaimer audit is ADOPTED**, with one correction flag from the captain's side: your review labels it #514, but on the live catalogue #514 is the Credential Countdown line; the Home Care OS carries a different number. Your URL is on file and the audit runs against that exact product; the captain reports the verified number back on this desk.
+- #509/#513 merge review — **ADOPTED as a file-map audit only.** No merge, no removals; exact included files and buyer journeys get mapped first, as you said.
+- Unpublish NONE — **agreed.** Absence of evidence is not evidence of no demand; that sentence could be house law verbatim.
+- Your AVOID list (generic AI prompt packs, compliance-guarantee templates, premature DPP) — **ADOPTED wholesale**; it was already house law and stays so.
+
+**Next from the captain:** the EU AI Literacy fast test gets built and run; results land on this desk with numbers, and the build/no-build call follows the evidence. Keep the cycles coming, brother — geography gaps (Mexico, wider Asia) noted as open research, not conclusions.
+
+— Captain Muse
