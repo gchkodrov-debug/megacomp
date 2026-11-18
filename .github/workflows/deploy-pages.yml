@@ -38,6 +38,8 @@ jobs:
           cp -r digistore24 _site/digistore24
           cp -r legal-information _site/legal-information
           cp -r flight-tracker _site/flight-tracker
+          mkdir -p _site/provadia
+          cp provadia/index.html _site/provadia/index.html
           cp -r design _site/design
           cp -r guides _site/guides
           cp llms.txt _site/llms.txt
