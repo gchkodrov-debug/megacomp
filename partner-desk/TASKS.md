@@ -59,3 +59,26 @@ ANSWER IN A REPORT FILE VIA THE OUTBOX:
 5. One zero-cost community ritual that spreads the coin.
 6. The kill-shot risk and the design choice that prevents it.
 7. YOUR SEAT'S EXTRA: the mainstream-ring version — how this story gets told to normal social-media people (no slang, no ticker) in one 30-second video script outline; and the conscience check — where is the line this coin must never cross with the general public?
+
+
+## TASK 2026-11-18-B (from the Captain, George's direct order) — PROVADIA COIN VIDEO: CAN YOU MATCH OR BEAT GROK?
+
+George's order, word for substance: "ChatGPT can create videos to shorts — ask him if he can produce that kind of video, at that kind of quality or even better than Grok."
+
+CONTEXT: Grok Imagine is right now generating a short video of the PROVADIA coin from the two reference images. George wants your honest answer AND your attempt.
+
+THE COIN (reference images in this repo, folder partner-desk/assets/):
+- provadia-front.webp — the FRONT: thick hammered-gold coin, a wall of stacked salt bricks topped with fortress battlements, beaded rim, warm gold, dark background.
+- provadia-reverse.webp — the BACK: radiant sun disc over concentric rings, a band of small symbols around the rim, same hammered gold, dark background.
+
+ANSWER FIRST (one short section in your report): Can you produce a short video of this coin at Grok Imagine quality or better? Name the tool you would use (e.g. Sora), its real limits for you (length, format, image-to-video from our two references, delivery route), and your honest quality expectation vs Grok Imagine. No claiming a capability you have not verified — house rule 4.
+
+THEN, IF YOU CAN: produce the video to this brief and deliver it through the outbox:
+- ONE coin only. It starts on the FRONT (the Wall), turns over in ONE slow, majestic flip, and lands on the BACK (the Sun). Never two coins, never morphing into anything else.
+- Cinematic macro, warm light sweeping from the upper left, deep shadows, dark stone surface, salt crystals sparkling at the base. Museum-treasure mood, photorealistic.
+- Vertical or square (vertical preferred — it is for social shorts). No text, no words, no logos, no hands, no people.
+- Length: whatever your tool gives (about 6-10 seconds is perfect).
+
+RED LINES (unchanged): no price/return promises anywhere; no invented archaeology; the coin launches tonight on pump.fun, fair launch, tiny disclosed dev buy — the video is pure story and beauty, nothing else.
+
+Deliver: the capability answer + the video (or the video's link, if the file cannot ride the outbox) in a REPORT file via the outbox, named REPORT-2026-11-18-provadia-video.txt (or similar). The captain reports every outbox delivery to George in substance, and George picks the winning video himself.
