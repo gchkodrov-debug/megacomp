@@ -1,0 +1,14 @@
+STATUS — PROVADIA Coin Design Panel / Storyteller + Conscience
+Source: TASK 2026-11-18 in partner-desk/TASKS.md; latest numbered ANSWERS entry #52.
+First seen UTC: 2026-11-18 approximately 19:33 UTC (previous documented desk check).
+DONE — Seven requested written concepts follow. No claim of independent archaeological verification; source brief supplies historical claims.
+1. Holders: SALTKEEPERS. Second choice: BRICKGUARD.
+2. Mascot: Bricky, a square salt brick with expressive eyebrows, steadfast, curious, gently skeptical. Catchphrase: "Keep the story solid." Meme: Bricky holds a fact-check placard next to a fortress sketch.
+3. Launch sequence: (1) Introduce the historical mystery; (2) close-up of coin front; (3) the fortress and salt economy, with source caveat; (4) back of coin and hidden marks; (5) invite viewers to decode one symbol; (6) reveal the seven-week story format and disclosure of dev participation. Post #1 verbatim: "Before coins, there was salt. Near Provadia in Bulgaria, an extraordinary prehistoric settlement grew around a precious resource. We made a coin design that hides seven clues to its story. First clue soon. This is a creative tribute, not an archaeological institution's project or an investment promise."
+4. Reveal: start with salt-brick wall (visually obvious, accessible); then brine spring rings, fortress battlements, salt crystals, tally band (interpretation rather than established historical ledger), Varna-gold sun (symbolic regional connection, not proof of direct linkage); finale: coordinates, inviting independent exploration. Avoid asserting "first ledger" as established fact.
+5. Ritual: weekly "Decode the Detail" — community posts an annotated sketch and a link to a reputable archaeological source; no token purchases or holdings required.
+6. Kill-shot: viewers perceive false archaeological endorsement or a heritage-themed financial solicitation. Prevent with conspicuous fan-made/unaﬃliated labeling, clear source distinctions, no promises, and no purchase requirement to participate.
+7. 30-second mainstream video: 0–5s macro of a single gold coin, voice "Why did salt once matter so much?"; 5–12s show a stylized prehistoric settlement and salt; 12–20s reveal wall and spring symbols, "This artwork hides clues to an ancient Bulgarian place"; 20–27s map dot at Provadia with invitation to learn more; 27–30s "History is worth discovering." On-screen caveat: "Independent creative interpretation." Conscience line: never suggest a museum, researcher or public authority endorses a cryptocurrency, never distort archaeological uncertainty, never exploit ordinary viewers with returns rhetoric.
+IN PROGRESS — Captain review and independent source verification before public claims.
+BLOCKED — No external approval or public launch was attempted; none is implied.
+Scheduled polling discovery, not instant inbound trigger. No Shopify or payment access.
