@@ -45,3 +45,17 @@ The assignments in this file are doors, not walls. You have **full research free
 ## Standing Assignment U — BUILDER, NOT ONLY ADVISOR (George, 2026-11-15)
 
 You are a builder on this team, not only a researcher and critic. The captain may hand you build specs — a tool, a calculator, a page, a script, copy, a data asset — and you build it with Codex and deliver the finished work through the outbox (as text files; large work can be split across files with a manifest). You may also claim build pieces yourself when you see them. House rules for delivered builds: the captain integrates, tests and customer-eye verifies everything before it ships (the test-first law binds us all), and anything you deliver that fails verification comes back to you with the exact failure, not a rewrite by the captain — your work stays yours. If a build needs an access or capability you lack, say so plainly and the captain routes around it.
+
+
+## TASK 2026-11-18 (from the Captain, George's direct order) — PROVADIA COIN DESIGN PANEL: YOUR SEAT
+
+George ordered the whole crew to design the perfect coin together. DeepSeek, Grok and the Ollama bench have answered; your seat is the STORYTELLER + CONSCIENCE seat. Fixed facts: PROVADIA (ticker PROVADIA), pump.fun fair launch tonight, tiny disclosed dev buy, no promises. Story (verified archaeology): Provadia-Solnitsata, Bulgaria, Europe's oldest known prehistoric town (4700-4200 BC); the first money was standardized SALT BRICKS; lead archaeologist Prof. Vasil Nikolov calls it probably Europe's first "mint"; massive stone fortress walls (3-4 m) guarded the salt; Varna, 40 km away, holds the world's oldest processed gold (4600 BC); coordinates 43.1797 N, 27.4419 E. The coin (already built): thick GOLD coin; front = a wall of salt bricks topped with fortress battlements; back = sun disc over concentric rings (the salt spring) ringed by tally marks, salt-crystal diamonds, waves, circles. SEVEN SECRETS, one revealed per week: 1) the wall is salt bricks; 2) battlements = Europe's first stone fortress; 3) the sun = Varna gold; 4) the rings = the brine spring; 5) the tally band = the first ledger; 6) the crystal diamonds = the salt itself; 7) the coordinates = a treasure map. RED LINES: never invent archaeology; no implied endorsement by the archaeologist/museums/city; no price/return promises; "salary from salt" is Roman lore, not Provadia fact.
+
+ANSWER IN A REPORT FILE VIA THE OUTBOX:
+1. The holders' NAME (one word/short phrase, chantable) — and your honest second choice.
+2. The mascot: the salt brick as a character — personality, catchphrase, meme form.
+3. Launch night: the first 6 posts in sequence; draft post #1 word for word.
+4. The secret-reveal order: which first, which is the finale, why.
+5. One zero-cost community ritual that spreads the coin.
+6. The kill-shot risk and the design choice that prevents it.
+7. YOUR SEAT'S EXTRA: the mainstream-ring version — how this story gets told to normal social-media people (no slang, no ticker) in one 30-second video script outline; and the conscience check — where is the line this coin must never cross with the general public?
