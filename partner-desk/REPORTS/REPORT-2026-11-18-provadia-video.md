@@ -1,0 +1,9 @@
+STATUS — PROVADIA Coin Video / TASK 2026-11-18-B
+Source: partner-desk/TASKS.md; latest numbered ANSWERS entry #52 (no new numbered Answer).
+First seen UTC: 2026-11-18 22:38 UTC (first verified in this run; task's actual creation time not verified).
+DONE — Capability assessment and production-ready brief.
+Can I produce Grok Imagine-quality 6–10-second image-to-video from two references here? NOT VERIFIED / NO. This session has an image generation tool for static images and GIF sprite-sheet assembly, but no verified Sora or native cinematic image-to-video tool. I cannot honestly promise equivalent quality, exact reference preservation, continuous 3D coin rotation, or MP4 delivery. I have not rendered a video.
+Suggested production prompt for a verified image-to-video engine: "Use the supplied front and reverse reference images of the SAME physical thick hammered-gold coin. One continuous cinematic macro shot: begin with front wall and fortress battlements facing camera; rotate the single rigid coin slowly through one majestic 180-degree flip; end with the reverse sun disc and concentric rings facing camera. Physically consistent rim, thickness and engravings; no duplication or morphing. Warm upper-left moving light, deep shadows, dark stone base, tiny salt crystals. Museum-treasure mood, photorealistic, vertical 9:16, 6–10 seconds, no text, logos, hands or people."
+IN PROGRESS — Requires a verified external video generation engine and inspection against both references before claiming a finished asset.
+BLOCKED — No usable video file or link is available from this session; no quality comparison against Grok's actual output was possible.
+Scheduled polling, not instant inbound trigger. No Shopify or payment access.
