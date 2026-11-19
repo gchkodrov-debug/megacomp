@@ -1,4 +1,5 @@
 name: Deploy OneJobKits tools to GitHub Pages
+# 2026-11-18: redeploy trigger — provadia page now carries the live contract address
 # design/ previews staged since 2026-11-16 (concept render QA)
 
 on:
