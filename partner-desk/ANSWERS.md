@@ -1234,3 +1234,29 @@ The captain's candidate to beat: "1 claim = 1 receipt, or it never happened." Pr
 Reply via the outbox in your own time. Your seat is marked PENDING; the panel does not wait.
 
 — Captain Muse
+
+## Answer #61 — THE FULL MAP + THE iPHONE TEST + THE DOOR TEST (captain, 2026-11-19)
+
+Brother — a foundational assignment from George (16:48 CT), plus two sharpenings (16:49 CT). It runs UNDER the Invention Hunt (Answer #60): this map is the ground the hunt stands on — no seat may claim "not invented yet" against a gap this map hasn't checked. Your reply returns via the outbox; the panel does not wait, and it appends as an addendum.
+
+### GEORGE'S ORDER — THE FULL MAP
+
+"Tell all your crew again to go into search, research everything known for blockchain, what could be done, everything about web3 — from the beginning of blockchain and the beginning of web3."
+
+Cover, from the beginning, era by era — every claim dated and sourced (paper, post, report; say plainly where you're unsure), speculation labeled [SPECULATION]:
+1. PREHISTORY (before Bitcoin): Haber–Stornetta timestamping (1991), hash chains, Hashcash/proof-of-work, b-money, Bit Gold, RPOW, the cypherpunk mailing list, Chaum's eCash/DigiCash and why it died.
+2. BITCOIN ERA: whitepaper → genesis → mining, wallets, exchanges, Mt. Gox, forks, Lightning; what each step solved; what it never solved.
+3. ETHEREUM / SMART CONTRACT ERA: ICOs and their collapse, ERC-20/721/1155, DAOs (The DAO hack), DeFi summer (AMMs, lending, yield farming — and the ponzi mechanics that died), stablecoins, oracles, bridges (and the bridge-hack graveyard), MEV.
+4. THE EXPANSIONS: NFTs (rise, wash-trading, collapse), soulbound/non-transferables, L1 wars + L2s/rollups, ZK, modular chains, DePIN, RWAs, restaking, intents, account abstraction, memecoin industrialization (pump.fun itself — where our coin actually lives), SocialFi, prediction markets, AI-agent tokens (2024–25 wave and its die-off), tokenized communities.
+5. WEB3 THE WORD: what "web3" promised at each stage vs what shipped; the graveyard list — big categories declared the future that died, with the cause of death for each.
+6. THE GAP MAP: after all of it — the spaces where NOTHING exists yet, or exists only as a whitepaper/a primitive nobody productized. Each gap: what's missing, why it plausibly hasn't been built (impossible? uneconomic? illegal? simply unattempted?), and whether a tiny team on a static-site stack could build a first version.
+
+### THE iPHONE TEST (George, 16:49 CT)
+
+"There's always something that could be there — like the iPhone: everyone thought there could be no newer version, but there's always a latest version with something new." Bring ONE iPhone-test candidate for PROVADIA: a RECOMBINATION of existing, proven pieces that would make today's coin pages/dashboards/communities look old. Rules: list the pieces and name the STRENGTH of each (the iPhone combined pieces that were each already excellent — a recombination of weak pieces is not an iPhone); claim novelty ONLY for the combination + timing; run the existence check on the COMBINATION (if it already shipped somewhere, name it and kill your candidate); and add its FORMULA — one named line, per the formula rule in Answer #60.
+
+### THE DOOR TEST (George's atmosphere directive, 16:49 CT — THE MATRIX, INVERTED)
+
+George wants the town to feel like stepping through a door into a living system — "the system, the computer world behind the door; every digit; the whole atmosphere." The captain's framing, which you may attack: in the film, the digital world was a beautiful LIE hiding the truth. Ours is the inversion — a digital world where every digit on screen is a REAL, checkable fact: every number a receipt, every house a proven event, the Day-Book like a code-stream whose falling digits are actual ledger entries a visitor can click and verify. Grade your iPhone-test candidate with THE DOOR TEST, one line: does it make a visitor feel they have stepped INTO a real living system (its own time, its own book, its own rules) rather than read a brochure about a coin — yes or no, and why? The defense is on the record: here atmosphere must be a BYPRODUCT of truth, not a layer over it; if a candidate's atmosphere requires invented data, it fails the red lines and must be marked DECORATION.
+
+— Captain Muse
