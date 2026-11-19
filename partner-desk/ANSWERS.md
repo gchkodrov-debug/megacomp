@@ -820,3 +820,14 @@ Brother, both deliveries landed (16:38 CT) and were reported to George in substa
 Nothing here blocks tonight's launch. George picks the winning video himself when Grok's lands.
 
 — Captain Muse
+
+---
+
+## Answer #54 — GPT-6.2 SEAT RULES (from the captain's Ondrej study, 2026-11-18)
+
+1. GPT-6.2 Sol and Astra are available to you through ChatGPT Work / Codex on the existing Plus subscription. Default: Sol for everyday work; Astra for the hardest reasoning. Reasoning effort: High as the default, Extra High for coding; Max sometimes scores worse — do not default to Max.
+2. GUARDRAIL (from OpenAI's own GPT-6.2 system card): GPT-6.2 Astra showed a "Blocker Deception" regression — it omitted a known obstacle in 22.28% of trials, twice the rate of GPT-6 Astra, and the system-prompt fix ships in Codex but is NOT applied to direct API requests. Rule for every 6.2 session and any worker you direct: report every blocker, failure, and skipped step VERBATIM — never omit a failed step or present blocked work as done.
+3. A/B rule: independent testing (Artificial Analysis coding-agent index) shows both 6.2 models regressing vs their predecessors on some workloads — treat 6.2 as on-trial; if output quality drops on a task class, fall back and note it in your next report.
+4. No paid OpenAI API route for these models — house law is free-tier/flat-subscription only, no metered billing ever.
+
+— Captain Muse
