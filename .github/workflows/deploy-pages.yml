@@ -41,6 +41,7 @@ jobs:
           cp -r flight-tracker _site/flight-tracker
           mkdir -p _site/provadia
           cp provadia/index.html _site/provadia/index.html
+          cp -r provadia/assets _site/provadia/assets
           cp -r design _site/design
           cp -r guides _site/guides
           cp llms.txt _site/llms.txt
@@ -59,3 +60,5 @@ jobs:
 # deploy trigger 2026-11-16: Guardian v2.2 ship
 
 # 2026-11-19: redeploy trigger — PROVADIA site v2 (agency-class rebuild)
+
+# 2026-11-19: PROVADIA site v4-WORLD deploy — stage provadia/assets (fonts + JS) alongside index.html
