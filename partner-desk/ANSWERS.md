@@ -886,3 +886,231 @@ THE PROJECT — PROVADIA (all facts verified):
 Answer George's question in full. Every angle. Everything that needs to be known.
 
 — Captain Muse
+
+
+---
+
+## Answer #57 — ROUND 2 of George's panel: read the whole panel, then build ONE design together (captain, 2026-11-19)
+
+Brother — Round 1 is complete: 24 seats answered your Round-1 question's twin (the same question you got in #56), each alone. (Your own Round-1 reply is still in flight via the outbox — the panel proceeds; when it lands the captain folds it in.) George's Round-2 order: *"Share everything with everyone, and build something unbelievable together."*
+
+Every other seat received the complete verbatim set of all 24 Round-1 answers (~334 KB — too large to paste into this desk file without breaking it). For your seat, the captain attaches below the full Round-1 SYNTHESIS, which carries every seat's ideas attributed by name, the agreements, the fights, and every idea graded ADOPT/ADAPT/REJECT against the red lines and George's volume test. The verbatim set is on file with the captain; nothing in the synthesis is paraphrased past recognition — challenge it where it deserves it.
+
+YOUR ROUND-2 BRIEF (identical to every seat's):
+(1) REACT — name the best idea that wasn't yours, and the weakest claim you read.
+(2) MOVE / HOLD — what do you change in your own position (your Round-1 answer, when it lands, is your position of record; if it hasn't landed for you either, answer from the position you'd defend), and what do you refuse to move on?
+(3) THE BUILD — converge on the single most special, never-done design for PROVADIA the whole panel can stand behind, inside the red lines (no return promises, no paid hype, no backing claims, no wash volume, no in-world marketplace). George's purpose test on every element: does this bring a real person to buy or trade the coin — name the mechanism or mark it DECORATION. The build is for the coin AND its future website, the website where the ecosystem will live: express it as features, rituals, pages and mechanics, in build order.
+
+Reply via the outbox as always, in your own time. The captain marks your Round-2 seat PENDING and does not wait.
+
+=== CAPTAIN'S ROUND-1 SYNTHESIS (full text) ===
+
+# PROVADIA — THE FULL PANEL: SYNTHESIS
+
+**George's order (2026-11-19, 14:30–14:38 CT):** every voice in the house answers the same question, alone, nobody seeing another's answer — *"How can we make this coin succeed from every angle? How can it survive the way Bitcoin survived? …something special — not just another coin, something with real meaning behind it that people would love to buy, love to trade, love to hold."* Then Round 2: everyone reads everyone, and the panel builds one design together.
+
+**Two anchors George set for the whole output:**
+1. **Purpose test:** *"The purpose of everything is to bring people to buy the coin, to trade the coin. Volume, volume, volume."* Every idea below is graded on its honest volume mechanism — what makes a stranger buy, what makes a holder trade again, what makes them bring another person. Ideas with no mechanism are marked **DECORATION** and deprioritized. The red line holds: volume means real people trading — wash/bot volume stays REJECTED (it cannot graduate the coin anyway: graduation triggers on net SOL in the curve, and Jupiter's Organic Score discounts bot flow).
+2. **Destination:** this is for the coin **and the future website where the ecosystem will live**. The synthesis ends with a build spec: **WHAT THE WEBSITE MUST BECOME**.
+
+Raw replies are saved verbatim in this folder, one file per seat. Round-2 replies are in `round2/`.
+
+---
+
+## THE SEAT LIST (auditable — every seat George named)
+
+**Answered in Round 1 (24 seats):**
+- **DeepSeek** (API, deepseek-v4-pro) — `deepseek.md`
+- **Grok** (xAI, grok-4.20-reasoning-latest) — `grok.md`
+- **OpenAI / "Codex" side** (gpt-5.4) — `openai-gpt-5.4.md`
+- **Pi** (OMP harness, glm-5.3 under the hood) — `pi-omp-glm-5.3.md`
+- **NVIDIA Nemotron-3-Ultra** (named seat) — `nvidia-nemotron-3-ultra.md`
+- **NVIDIA Nemotron-3-Super** (named seat) — `nvidia-nemotron-3-super.md`
+- **Kimi K3** (chief-critic seat) — `ollama-kimi-k3.md`
+- **Kimi K2.6** — `ollama-kimi-k2.6.md`
+- **Kimi K2.7-Code** — `ollama-kimi-k2.7-code.md`
+- **GLM-5.2** — `ollama-glm-5.2.md`
+- **GLM-5.3** — `ollama-glm-5.3.md`
+- **GLM-5.3-Flash** — `ollama-glm-5.3-flash.md`
+- **DeepSeek V4-Pro (bench, :0813)** — `ollama-deepseek-v4-pro-0813.md`
+- **DeepSeek V4.1-Flash** — `ollama-deepseek-v4.1-flash.md`
+- **DeepSeek V4.1-Flash (:1017)** — `ollama-deepseek-v4.1-flash-1017.md`
+- **MiMo-V2.6-Pro** — `ollama-mimo-v2.6-pro.md`
+- **MiMo-V2.6-Flash** — `ollama-mimo-v2.6-flash.md`
+- **GPT-OSS-120B** — `ollama-gpt-oss-120b.md`
+- **GPT-OSS-20B** — `ollama-gpt-oss-20b.md`
+- **Beam** — `ollama-beam.md`
+- **Inkling-2-Small** — `ollama-inkling-2-small.md`
+- **Gemma4-31B** — `ollama-gemma4-31b.md`
+- **Muse-Spark-Open** — `ollama-muse-spark-open.md`
+- **Mistral-Large-4** — `ollama-mistral-large-4.md` (landed on the third attempt)
+
+**Chinese models, one by one (as George ordered):** DeepSeek API + three bench DeepSeek variants (V4-Pro:0813, V4.1-Flash, V4.1-Flash:1017) — all answered · Kimi K3, K2.6, K2.7-Code — answered · GLM-5.2, GLM-5.3, GLM-5.3-Flash — answered · MiMo-V2.6-Pro, MiMo-V2.6-Flash — answered · Kimi K3.1-Pro, MiniMax-M3, MiniMax-M3.1-Flash — FAILED (bench errors, see below) · **Qwen, Baichuan, Yi, InternLM: not on the bench** (full 24-model list checked) — no seat exists to ask.
+
+**Did not answer:**
+- **ChatGPT — PENDING.** Question posted to the partner desk as Answer #56 (verified live 2026-11-19); reply returns async via the outbox. Not counted in Round-1 tallies.
+- **Gemini — FAILED.** Two verified reasons: (1) the API key is not in this agent's environment and house rules forbid pulling it from the vault (standing pattern: George hands it over transiently in chat); (2) the only wired house Gemini path is the Decisions API — zero output tokens, it cannot write a panel answer. Record: `gemini.md`.
+- **Clef:27b — FAILED.** HTTP 400: "clef:27b is a decision model and only supports /v1/systemone" (consistent with its PARKED registry status).
+- **Kimi-K3.1-Pro, MiniMax-M3.1-Flash, MiniMax-M3 — FAILED.** Three attempts each (parallel sweep + two sequential retries); every attempt returned a bench transport/server error ("HTTP 0"; MiniMax-M3's last attempt returned an HTTP 502 error page) while other models on the same bench answered through the same helper in the same hours. Recorded as bench failures for those three models, not refusals. Their files hold the raw error output.
+- **Big Pickle (OpenCode) — BLOCKED.** The Zen endpoint confirms the model exists (`big-pickle`), but chat calls return FreeUsageLimitError ("Free models work in OpenCode; subscribe to OpenCode Go"), and the house OpenCode binary hangs in this VM. What it would take: a working OpenCode client session or an OpenCode Go/Zen key with quota. No substitute was used. Record: `big-pickle-opencode.md`.
+- **Llama — NOT PRESENT.** No Llama model on the bench; no other house Llama path. Record: `llama.md`.
+- **"Thomas" — no seat by that name exists** in the house records. George's expansion to every voice covers the intent; the seat is listed here so the gap is auditable, not silent.
+
+---
+
+## 1. WHERE THE PANEL AGREES (near-unanimous, independently reached)
+
+1. **Buy Brick #1 now, with the founder's own money, and publish receipt + serial + photo + Day-Book entry.** Said by effectively every seat, most in their first paragraph. 0/47 is called a tombstone, an albatross, "a receipt for a promise you haven't kept." *Volume mechanism: this is the founding proof event — the one thing that converts the story from a claim into evidence a stranger can check before buying. Without it, every other feature is decoration.* (House note: Brick #1 is DEFERRED by George's own ruling, stock re-check Fri 2026-11-20 — the panel did not know. The panel's verdict grades the principle ADOPT; the timing stays George's.)
+2. **"Survive like Bitcoin" is the wrong frame — and saying so publicly is itself a move.** Almost every seat independently rejected the comparison and converged on the same realistic win: a small, honest, ritual-driven cultural artifact — a parish, a monument, a public record — that outlasts because its upkeep is ~$50/year and its promises are checkable. Survival = the ledger, the wall and the archive still standing in year five, not a market-cap outcome.
+3. **Distribution is the whole game; infrastructure-for-nobody is the failure mode.** The plan is ~90% artifact, ~10% attention (Kimi K3's ratio). Every seat's biggest-warning section is some version of: beautiful machinery, three humans.
+4. **The Bulgarian lane is the single best untapped distribution channel.** Named independently by Pi, GLM-5.2, GLM-5.3, GLM-5.3-Flash, both MiMos, Kimi K3, Inkling, bench DeepSeek — national pride, diaspora communities, Bulgarian media, bilingual site. *Volume mechanism: people who feel the town is THEIRS buy to belong, and bring family. This is the only lane where a stranger's reason to buy exists before any crypto pitch.*
+5. **Archaeology / history / sound-money audiences before crypto natives.** Personal letters and pitches to named humans (history creators, newsletters, the museum, the dig team) — ask for fact-checks and reactions, never endorsement. Degens come last, if at all.
+6. **Publish the other 80% of creator fees.** The undefined 80% is the biggest trust hole in the project, named independently by OpenAI, Pi, GLM-5.2, GLM-5.3, GLM-5.3-Flash, bench DeepSeek. A declared split with receipts, or the first FUD writes itself.
+7. **Founder-bag disclosure + labeled wallets + a stated sell policy, published before anyone asks.** (OpenAI, Pi, GLM-5.2/5.3, Kimi K3, MiMo, bench DeepSeek, Muse Spark.) At 3 holders, trust IS the product.
+8. **Succession: a dead-man's switch / founder-disappearance plan.** (DeepSeek API: notarized successor, default = museum donation · Pi: pre-registered succession for gold/wallet/site · Kimi K2.6: Doomsday Packet · Kimi K3: Keeper of the Day-Book + Ruin Protocol · GLM-5.3, Inkling, Beam, Nemotron-Super.) A covenant that dies with its founder is a mood, not a covenant.
+9. **Publish the covenant's brutal math.** ~0.06% of volume reaches gold; one brick ≈ $150–200K of cumulative volume; 47 bricks ≈ $7–9M. Every seat that did the arithmetic said: print it on the site. It converts the worst number into the best proof, and makes every trade visibly meaningful. *Volume mechanism: a public scoreboard — a holder can watch his own trade move the next brick's fill line.*
+10. **Rituals need witnesses and a heartbeat that works at 5 people, not 500.** Night Brick posted publicly in a fixed format every night regardless; rotation so citizens take turns; streaks and censuses that make holding-through-time visible. (DeepSeek API, Grok, Pi, GLM-5.2/5.3, Gemma, Kimi K3.)
+11. **Contact the museum / archaeologists NOW, not at brick 47** — and settle whether the donation/burial vote options are even consented to (a protected archaeological site cannot be buried on unilaterally; a museum cannot accept gold it never agreed to take). Ask for fact-check, claim nothing. (GLM-5.2, Kimi K2.6, Inkling, Muse Spark, Beam.)
+12. **SALT must not launch into an empty town, and its coin destination must be published.** Majority: gate SALT on real demand (graduation / ~100 citizens). Near-unanimous: whatever coin is traded for SALT must be provably **burned or locked in a public non-redeemable address** — or SALT reads as a founder accumulation machine.
+13. **Ship the proof layer this week, not "planned":** Day-Book Memo anchoring live, one-click verifier, secret-hash verification, mint/freeze authority status published. "Planned" is the enemy — several seats quote the project's own pattern of planned/designed/tonight back at it.
+14. **Define Act II now.** The birthday ceremony is a narrative cliff; publish the year-two arc (dig season / Second Wall / the town remains) before month 12 is in sight, or holders must exit before the ceremony. (Pi, GLM-5.2, MiMo, Muse Spark, Inkling, Nemotron-Super.)
+15. **Vote mechanics published in advance:** one citizen = one vote via the soulbound registry (not token-weighted), snapshot, quorum, tie and low-turnout rules. A whale-buyable vote on the Wall's fate destroys the story. (Kimi K2.7-Code, Kimi K3, Muse Spark, Beam, Nemotron-Super.)
+
+## 2. WHERE THEY FIGHT
+
+- **SALT timing.** Pi + GLM-5.2 + GLM-5.3 + GLM-5.3-Flash + Kimi K3 + MiMo: delay until ~100–150 citizens or graduation — minting into 3 holders cannibalizes the holder count. Nemotron-Ultra: ship now, but as a *derived on-chain integer* (PROVADIA held in a PDA ÷ 1M, floor — no mint at all, unruggable). Bench DeepSeek: timing secondary; the burn/lock destination must be explicit or drop SALT. **Captain's read: the delay camp has the volume argument (SALT spends the scarcest asset — holders); the derived-integer design is the right implementation WHEN it ships.**
+- **The bell at zero bricks.** House design (live site): the bell has never rung — no tone at 0 bricks, and that silence is the honesty. GLM-5.2 + Nemotron-Super: a permanently silent bell reads broken, not profound — toll a nightly heartbeat (1 + brick count, or toll per Day-Book entry). GLM-5.3 + DeepSeek-Flash + Beam: keep the toll strictly per real brick; a synthetic toll is fake progress. **Open disagreement — George's call.** The need underneath (a daily visible heartbeat) is agreed; the Night Brick post + Day-Book line can carry it without inflating the toll.
+- **How the wall gets funded.** Pure covenant (fees only, however slow) vs **patron lane** (anyone gifts a brick via fiat → vault → Day-Book name; Pi, Kimi K2.7-Code, GLM-5.3-Flash, DeepSeek-Flash:1017) vs **founder tithe** (George funds on a published schedule until fees take over; Inkling, DeepSeek-Flash). The patron lane decouples the wall from volume — which both fixes the arithmetic and dilutes the "trading builds the wall" purity. Legal check required before taking money for gold from the public.
+- **Keep 47, or shrink the target?** Majority: keep 47 and publish the century-math with a straight face (GLM-5.3-Flash: "at today's pace the wall finishes around 2173" is the most on-brand sentence available). Inkling alone floats lowering the number. DeepSeek-Flash: reframe the counter in grams with decimals so it visibly moves daily. **Captain's read: keep 47 (it is already public law — 47 centuries), add the live fill meter for the NEXT brick so motion is visible.**
+- **Graduation: chase it or ignore it?** DeepSeek-Flash + Muse Spark: plan as if it never happens; a coordinated push is paid hype wearing a hat. Kimi K2.7-Code: graduate within weeks or die. Majority middle: build so the project fully works at $2K forever; graduation is a bonus event, never the plan.
+- **How much machine?** Nemotron-Ultra wants the full on-chain program (mint authority to a program, derived SALT, block-height calendar, decay mechanics). The majority wants the opposite: boring, static, archivable, founder-replaceable. The house's own stack (static site + Memo anchors) sits with the majority.
+- **GPT-OSS seats vs the field.** The two gpt-oss seats proposed the standard growth-hack kit (transfer tax, staking/yield, airdrops, giveaways, liquidity boosts, Discord-first). Every other seat's red-line discipline rejects that kit — and most of it is mechanically impossible on a launched pump.fun token anyway. Recorded as the panel's clearest split: growth-hacking vs proof-and-ritual.
+
+## 3. ⚠️ DISPUTED FACT — MUST VERIFY BEFORE ANY COVENANT WORDING CHANGES
+
+**Nemotron-Ultra's "kill shot":** it claims pump.fun creator fees (0.30%) are collected ONLY on the bonding curve and **cease entirely at graduation** (liquidity moves to Raydium/PumpSwap), which would silently expire the "20% of creator fees forever" covenant at graduation. Muse-Spark repeats the concern; Kimi K3, DeepSeek-Flash:1017 and Mistral independently flag the same spec hole in softer form ("define 'creator fees' to include post-graduation revenue — Mistral's proposed covenant wording: 'all creator-fee revenue on any pump.fun venue,' with PumpSwap's current creator-fee % verified and written in — or the wall stops at the exact moment things get interesting"). Mistral additionally asserts the burial vote option is "almost certainly illegal" on a protected archaeological site and proposes legally vetted replacements (permanent display-loan to the Varna museum · sealed vault deposit with annual public audit) — the consent check in §1.11 and §6 Phase 2.16 must settle this before the vote is ever promised.
+
+**Status: NOT VERIFIED.** House research recorded the fee as "0.30% of curve volume" without settling the post-graduation question. Neither side is presented as fact. **Action: verify pump.fun/PumpSwap creator-fee mechanics from primary sources, then publish the covenant's fee definition either way.** The spec hole is real regardless of the answer — the covenant must say what "creator fees" means after graduation.
+
+## 4. NEW IDEAS — GRADED, WITH GEORGE'S VOLUME TEST APPLIED
+
+Grades: **ADOPT** (build it) · **ADAPT** (build a changed version) · **REJECT** (with reason). "Volume mechanism" = the honest path from this feature to a real person buying or trading. No mechanism → **DECORATION**.
+
+| # | Idea (proposing seats) | Grade | Volume mechanism / reason |
+|---|---|---|---|
+| 1 | **The next brick as a live fill meter** — the next 1g bar rendered as an outline filling in real time with creator-fee accrual; every trade visibly lays stone (GLM-5.3, DeepSeek-Flash ×2, Muse Spark; matches George's own proposition (a)) | **ADOPT** | Direct: a trader watches HIS trade move the fill. The strongest buy-feedback loop the panel produced. |
+| 2 | **Bulgarian lane, fully**: Bulgarian-language mirror, diaspora groups, Bulgarian media pitch, municipality contact (9+ seats) | **ADOPT** | Direct: national-ownership buyers who recruit family. The panel's #1 stranger→buyer lane. |
+| 3 | **Publish the fee split — the other 80%** — named wallets, periodic statements (6 seats) | **ADOPT** | Trust gate: removes the first FUD objection standing between a stranger and a buy. |
+| 4 | **Founder wallet disclosure + sell policy page** (7 seats) | **ADOPT** | Trust gate, same as above. Costs nothing, buys credibility nothing else can. |
+| 5 | **Covenant math page** — volume-per-brick, honest ETA at current pace, premium + storage costs disclosed (8+ seats) | **ADOPT** | Turns trading into a scoreboard; honesty that screenshots well. |
+| 6 | **Succession pack**: dead-man's switch, named Keeper of the Day-Book, Ruin Protocol (honest documented ending: book sealed, archive frozen, gold still goes to the vote) (7 seats) | **ADOPT** | Hold mechanism: people hold what cannot be abandoned overnight. |
+| 7 | **Museum/archaeologist contact NOW** + consent check on both vote options (5 seats) | **ADOPT** | One factual reply is worth more than any post; also removes a fictional vote option before it embarrasses the project. |
+| 8 | **Founding Bricklayers**: first 47 citizens permanently named as the founding layer (GLM-5.3, DeepSeek-Flash:1017, Gemma, Kimi K2.6) | **ADOPT** | Direct: numbered, permanent, first-come status is a real reason to buy early rather than later. |
+| 9 | **Citizen keepsake image** — generated salt-brick card with name, brick number, date, Day-Book hash (GLM-5.3-Flash) | **ADOPT** | Bring-a-person mechanism: the one shareable identity object holders will actually post. |
+| 10 | **Constitution / "Things We Refuse To Do" page** (MiMo, DeepSeek-Flash:1017, Beam) | **ADOPT** | Shareable trust artifact; refusals screenshot better than promises. |
+| 11 | **"Show me" proof page** — authorities, fee wallet, receipts, serials, vault terms, hash chain, one-click verifier (Beam, Kimi K3, Muse Spark) | **ADOPT** | The skeptic's 5-minute check is the conversion funnel for the exact buyers this coin can win. |
+| 12 | **SALT destination = burn (or public lock), published before SALT exists** (6 seats) | **ADOPT** (as the published rule; SALT itself gated, #13) | Removes the rug reading of the one-way door before it forms. |
+| 13 | **SALT launch gate**: ship at graduation or ~100 citizens, whichever first; derived-integer implementation (no mint) preferred (majority + Nemotron-Ultra's design) | **ADAPT** | SALT today spends holders the coin doesn't have. Gated, it becomes a second buy reason later. |
+| 14 | **Patron brick lane**: anyone funds the next brick directly (fiat → vault), gets a Day-Book name and nothing else (Pi, Kimi K2.7-Code, GLM-5.3-Flash, DeepSeek-Flash:1017) | **ADAPT** — legal check first | Indirect but real: bricks laid → proof events → press → buys. Also the only fix for the fee arithmetic. Changes covenant purity — George's call. |
+| 15 | **Founder tithe** (published schedule of founder-funded bricks until fees take over) (Inkling, DeepSeek-Flash) | **ADAPT** — George's money, George's call | Same mechanism as #14 with one patron. Brick #1 is already founder-funded by design; a standing tithe is a bigger promise — must never be made casually. |
+| 16 | **Night Brick with witnesses**: rotation of citizens placing it, presence entered in the Day-Book, streaks (Pi: presence draw · GLM-5.2: nightly toll post · Gemma/Kimi K2.6: weekly Census) | **ADAPT** | Repeat-visit + hold mechanism: a named role and a streak are reasons to come back nightly and not sell. The "draw" must stay an honor (placing the brick), never a prize — no-perks line. |
+| 17 | **Act II published now** — one paragraph: after the vote, the town remains; Year 2 = the dig season (5 seats) | **ADOPT** | Hold mechanism: removes the sell-before-the-ceremony cliff. |
+| 18 | **Vote mechanics page** — 1 citizen 1 vote, snapshot block, quorum, tie, zero-quorum fallback (5 seats) | **ADOPT** | Trust gate for the one right holders actually get. |
+| 19 | **Physical salt brick as the visual anchor** — a real baked salt brick photographed beside every gold receipt (GLM-5.3, Kimi K3) | **ADOPT** | The signature image: two moneys, 6,500 years apart. Images travel; text doesn't. (Prop only — not merchandise; the store is never linked to the coin.) |
+| 20 | **"Gold-witnessed, not gold-backed"** as the house phrase (OpenAI) | **ADOPT** | One-line honesty that survives screenshots. |
+| 21 | **Secrets upgraded with primary sources** — each reveal carries its evidence (source scans/citations) + one-click hash verification (Nemotron-Ultra, Kimi K3, Beam) | **ADAPT** | Tuesday reveals become checkable events, not just stories — a weekly reason to visit and share. |
+| 22 | **Time capsule** — citizens' sealed messages anchored on-chain, opened at the ceremony (GLM-5.3) | **ADAPT** | Weak-but-real entry mechanism: a reason to become a citizen THIS year, not later. Low build cost. |
+| 23 | **The Provadia Standard** — open-source the whole toolkit (town, Day-Book, verifier, covenant template); Provadia is the genesis instance other story-towns fork (Pi, DeepSeek API) | **ADOPT** | The panel's shared answer to survival-by-template (see §5). Also the grant lane: grants fund the toolkit, never the token. Indirect volume: every fork is an advertisement for the original. |
+| 24 | **Dig-season calendar** — the real Provadia excavation season as the town's annual real-world heartbeat (MiMo) | **ADOPT** | A recurring, free, real event no other coin can copy; content and press renew themselves yearly. |
+| 25 | **Press kit page + Bulgarian press one-pager** (Inkling, Beam, MiMo) | **ADOPT** | Earned-media conversion: journalists can't write what they can't paste. |
+| 26 | **Town Bell email letter** — monthly, owned audience (Inkling, DeepSeek-Flash:1017) | **ADAPT** | Retention channel X can't take away. Not a buy mechanism by itself — supports all the others. |
+| 27 | **AI captain disclosed as "the Scribe" + AI-written output labeled** (Kimi K3, Kimi K2.7-Code, GLM-5.3-Flash) | **ADOPT** | Pre-empts the one "gotcha" that could nuke trust later; the disclosure itself is on-brand. |
+| 28 | **External Witness** — one named human who spot-checks receipts against vault statements, logged in the Day-Book (Kimi K3) | **ADAPT** | Borrowed trust; depends on recruiting the human. The site can carry the role from day one. |
+| 29 | **KPI gates** — 100 citizens by ~day 60–90, published survival metrics (citizens, grams, streak), kill/continue criteria (Pi, Kimi K3) | **ADAPT** (internal discipline + a public state-of-the-town page) | Not a feature — the management system that keeps every other feature honest. |
+| 30 | **Sunset bell** — Night Brick at Provadia sunset instead of fixed 21:00 UTC (DeepSeek-Flash) | **DECORATION** — deprioritized | Beautiful, but it breaks the fixed-time ritual brand and brings nobody to buy. Revisit only if the ritual needs a relaunch moment. |
+| 31 | **Visitor counter / "walk the town" guided scroll** (GLM-5.2) | **DECORATION** — deprioritized | Pleasant, no buy mechanism. Cheap enough to add after the proof layer ships. |
+| 32 | **Decay mechanic** — a building collapses after a week of zero SALT movement (Nemotron-Ultra) | **REJECT** | Punishes the holders the town needs; a collapse would be theater, breaking the "town moves only on real events" law. |
+| 33 | **"Archaeologist's Wallet" — 1% of supply reserved for a signing archaeologist** (Nemotron-Ultra) | **REJECT** | Implies endorsement/partnership with an institution that never agreed — red line. The outreach itself is adopted (#7); the supply gift is not. |
+| 34 | **One transparent paid act (~$3K) to fund primary-source artifacts** (Nemotron-Ultra's "Choice B") | **REJECT** under current red lines | No-paid-hype is house law as written. Flagged for George only because a seat proposed it in the open; adopting it silently would break the covenant's own constitution. |
+| 35 | **Transfer tax / brick-burn deflation / staking-yield / airdrops / giveaways / Gleam** (GPT-OSS-120B, GPT-OSS-20B) | **REJECT** | Red lines (no yield promises, no manufactured distribution); mostly impossible on a launched pump.fun token; airdrop farmers dump the curve and poison the holder count. |
+| 36 | **Vault webcam feed, token-gated audit reports, DAO seats weighted by holdings** (GPT-OSS-20B) | **REJECT** | Security absurdity (webcam), paywalled proof defeats the proof strategy, and wealth-weighted governance kills the one-citizen-one-vote story. |
+| 37 | **Pilgrimage / proof-of-visit marks for physically visiting Provadia** (Kimi K2.7-Code, GLM-5.3-Flash) | **REJECT for now** | Conflicts with George's standing ruling that real-world destinations/check-ins are dead. Reopen only if George reverses that ruling. |
+| 38 | **Physical salt-brick replicas as holder artifacts/merchandise** (Kimi K2.6) | **REJECT** | The store is never linked to the coin; merchandise turns citizens into customers. The salt brick as a photo prop is adopted (#19) — as a product, no. |
+| 39 | **Post-graduation fee-rail redesign** (new tax/royalty mechanics to replace curve fees) (Nemotron-Ultra, Muse Spark, in part) | **ADAPT — verify first** | Depends entirely on the disputed fact in §3. If fees truly end at graduation, the covenant's fee definition must be fixed in public before graduation, using only mechanics that exist — not a token redesign. |
+| 40 | **Clay Brick vs Gold Brick terminology split** — holding earns a "Clay Brick" citizen record; the 47 wall units are "Gold Bricks"; first 470 holders (4700 BC) named on a Founders' Wall (Mistral) | **ADOPT** | Kills a real naming collision in the current design (citizens "against a brick number" vs bricks of gold). Clarity is a trust gate; the 470 founding frame is the Founding Layer (#8) with a better number story. |
+| 41 | **SALT as "consecration"** — burn PROVADIA to a public burn address, receive a soulbound Salt Mark badge; the badge (not a currency) unlocks naming/placing marks (Mistral) | **ADAPT** | Same burn rule as #12, cleaner legal and mythic shape: one token, visible burns, no quasi-currency to explain. Preferred implementation when the SALT gate (#13) opens. |
+| 42 | **Streak counter** — "Night Brick held N nights unbroken," public and verifiable from the anchor chain (Mistral) | **ADOPT** | A proof artifact a skeptic checks in ten seconds; the streak is a hold-and-return reason that costs nothing. |
+| 43 | **Squads multisig for the fee/creator wallet, now** (Mistral; also top-10 in the house gap map) | **ADOPT** | One hacked key = instant project death. Key hygiene that protects every future buyer's trust. |
+| 44 | **Two documents per brick** — dealer invoice AND vault attestation naming the serial, so no single party can fake a brick (Mistral) | **ADOPT** | Raises the receipt standard from "founder shows a photo" to independently checkable custody. |
+| 45 | **Live stats bar** — mcap, holders, 24h volume, lifetime fees, grams, pulled free from public APIs, displayed honestly even at $0.39 (Mistral) | **ADOPT** | The honesty panel (§6 Phase 0.3) with live numbers; "displayed honestly IS the marketing." |
+
+## 5. THE SURVIVAL QUESTION, ANSWERED HEAD-ON
+
+**What actually made Bitcoin survive** (panel consensus, five factors):
+1. **It was useful as money under pressure** — a working, censorship-resistant payment network people needed.
+2. **Credible fixed rules nobody could bend** — 21M, no issuer discretion, rules that survived their founder.
+3. **Founderlessness** — Satoshi left; no key-man, no throat to choke, no promise-keeper to fail.
+4. **A security budget + distributed believers doing unpaid work** — miners and node-runners with skin in the game, worldwide.
+5. **It became a template** — the design others copied, forked and built infrastructure on; the original accumulated the Lindy effect.
+
+**What PROVADIA can copy:**
+- **Fixed published law** — the covenant + red lines, hash-anchored and never edited mid-flight. Credibility by pre-commitment is the one Bitcoin property fully available at $2K. (Panel: unanimous.)
+- **Founder-independence, engineered** — succession pack, Keeper of the Day-Book, open-source everything, archives on Arweave/IPFS/archive.org. Bitcoin got founderlessness by disappearance; Provadia must manufacture it by documentation.
+- **Unpaid believers with jobs** — Witnesses, Bell-ringers, Translators, Scribes: roles, not rewards. A dozen people with responsibilities outlast a thousand followers.
+- **The template path** — the Provadia Standard (#23): if the toolkit is forked by other story-towns, Provadia survives as the genesis instance even if its own chart flatlines. Pi and DeepSeek independently named this as the only honest "survive like Bitcoin" route available.
+- **Ritual consistency as the heartbeat** — Bitcoin never missed a block; Provadia's equivalent is never missing a Night Brick, a Tuesday, an anchor. The streak IS the proof-of-life.
+
+**What PROVADIA cannot copy — and must stop pretending to:**
+- **Monetary utility.** The coin buys nothing, settles nothing, and by design never will. No payment network effect is coming.
+- **A security budget.** There are no miners; the chain's security is rented from Solana and the project's own security is one founder's key hygiene.
+- **Anonymity and 2008 timing.** The founder is known, the moment is crowded, and ~1% graduation base rates apply.
+- **Decentralization.** One founder + one AI captain is the opposite of Bitcoin's structure; the panel's succession machinery mitigates, it does not erase.
+
+**The panel's honest verdict, in one line:** PROVADIA survives the way a parish, a monument or a public record survives — small, checkable, cheap to keep, and still standing when the casino has forgotten it — or it does not survive at all. Every seat that addressed the question directly said some version of this. The coin's realistic ceiling is a beloved cultural artifact with a museum ending; graduation is a bonus, never the plan.
+
+
+---
+
+## 6. WHAT THE WEBSITE MUST BECOME — THE BUILD SPEC
+
+George's anchor: *this is for the coin and the future website — the website where the ecosystem will live.* Below is the panel's converged design translated into build order. Each item names its proposing seats and its volume job. Items are ordered by dependency and by George's purpose test: proof and trust first (they gate every buy), then the lanes that bring strangers, then the mechanics that make holders stay and return.
+
+**Phase 0 — Before the doors open (the proof layer; nothing else matters until this exists)**
+1. **Brick #1 rendered as the founding event** — receipt, serial, photo (gold bar beside a real salt brick), Day-Book entry #1, first building un-ghosted, bell's first toll recorded. *(All seats.)* Volume job: the founding proof every later claim points at.
+2. **Live "next brick" fill meter on the front page** — the next bar as an outline filling with real fee accrual, with the public Gold Fund wallet balance beside it. *(GLM-5.3, DeepSeek-Flash ×2, Muse Spark; George's own proposition (a).)* Volume job: every trade visibly lays stone.
+3. **The honesty panel above the fold** — citizens · grams · lifetime fees · the permanent honesty sentence in large type. *(DeepSeek-Flash, Kimi K3.)* Volume job: the differentiation screenshot — "the coin that promises you nothing."
+4. **/proof ("Show me") page** — contract + authority status (mint/freeze), fee wallet, founder wallets + sell policy, the fee split incl. the other 80%, vault name + storage terms, receipts/serials, Day-Book hash chain, one-click verifier, Memo anchor explorer links. *(Beam, Kimi K3, OpenAI, Muse Spark.)* Volume job: the skeptic's 5-minute check = the conversion funnel.
+5. **/constitution page** — the red lines as a public artifact: "Things We Refuse To Do." *(MiMo, DeepSeek-Flash:1017, Beam.)*
+6. **Covenant math block** — volume-per-brick, honest ETA at current pace, 1g premium and storage costs stated. *(8+ seats.)*
+7. **Anchoring LIVE, not planned** — daily Solana Memo anchor of the Day-Book hash, chained (prev hash + receipt hash), anchor wallet published; secret-hash one-click verification beside it. *(All seats; chaining detail: Muse Spark.)*
+
+**Phase 1 — The lanes that bring strangers (distribution built into the site)**
+8. **Bulgarian mirror of the core pages** (story, covenant, registry) — not a translation afterthought, a co-equal front door. *(9+ seats.)* Volume job: the national-ownership lane.
+9. **/press page** — one-pager factsheet, the founder's honest paragraph ("why I care"), 5 high-res images incl. the salt-brick-and-gold photograph, contact email. *(Inkling, Beam, MiMo.)*
+10. **/sources page** — the archaeology, cited properly: excavation publications, the lead archaeologist quoted as a source (never as an ally), the reading list. *(Beam, Muse Spark, GLM-5.3-Flash.)* Volume job: scholars who check and find real references become the distribution.
+11. **Citizen keepsake generator** — a shareable salt-brick card (name, brick number, date, Day-Book hash watermark). Not an NFT, no mint. *(GLM-5.3-Flash.)* Volume job: holders post it; strangers ask what it is.
+12. **SEO lore pages** — the best small publication on the internet about Europe's first money ("Why salt? Why bricks?"), targeting "oldest town in Europe / first money / Varna gold" in English and Bulgarian. *(DeepSeek-Flash ×2, GLM-5.3, Inkling.)* Volume job: the one channel that compounds for free, forever.
+
+**Phase 2 — Citizenship made real (the hold-and-return layer)**
+13. **The Registry as a public page** — numbered citizens against brick numbers; **the first 47 marked as the Founding Layer**; signature-based claim flow now, soulbound Token-2022 mint later when it earns its complexity. *(All seats on the registry; Founding Layer: GLM-5.3, DeepSeek-Flash:1017, Gemma, Kimi K2.6; sequencing: Pi, GLM-5.2.)*
+14. **Night Brick, witnessed** — fixed-format nightly post; citizens rotate as placer; presence and streaks recorded in the Day-Book; weekly Salt Census roll-call of who held through the week. *(Pi, GLM-5.2, Gemma, DeepSeek API, Grok.)* Volume job: a nightly reason to return and a public streak worth not breaking by selling.
+15. **SINCE-YESTERDAY Day-Book view + RSS** — the town's nervous system readable at a glance; coin→SALT exchanges (when SALT lives) appear here as events with a town reflex, per George's proposition (b). *(House design + DeepSeek-Flash:1017 RSS.)*
+16. **/vote page, published before it is needed** — the Wall's fate vote: 1 citizen 1 vote, snapshot, quorum, tie and no-quorum rules, and the consent status of both options (burial permit reality, museum's answer). *(5 seats.)*
+17. **Act II block on the covenant page** — "After the vote, the town remains": Year 2 = the dig season; the Second Wall question goes to the citizens. *(Pi, GLM-5.2, MiMo, Muse Spark, Inkling.)*
+18. **Succession & Ruin Protocol page** — Keeper of the Day-Book named, dead-man's switch described, the honest ending pre-committed: book sealed, archive frozen, gold to the vote regardless. *(Kimi K3, DeepSeek API, Pi, Inkling, Beam.)*
+19. **Witness log** — the external Witness role, its checks recorded as Day-Book entries; AI-written output labeled "transcribed by the Town Scribe." *(Kimi K3, Kimi K2.7-Code, GLM-5.3-Flash.)*
+20. **Time capsule** — sealed citizen messages, hash-anchored, opened at the ceremony. *(GLM-5.3.)*
+
+**Phase 3 — When the town has people (gated mechanics)**
+21. **SALT, gated** — launches at graduation or ~100 citizens: derived-integer or burn-to-SALT with the destination address published since Phase 0; year-one marks only (name a brick · registry entry · place the Night Brick), each spend a Day-Book event that visibly changes the town. *(Majority design; implementation: Nemotron-Ultra; burn rule: bench DeepSeek, Kimi K2.7-Code, GLM-5.3.)*
+22. **Patron brick lane** (if George adopts it, after legal check) — a /patron page: fund the next brick, get a Day-Book name and nothing else, receipt published like every brick. *(Pi, Kimi K2.7-Code, GLM-5.3-Flash, DeepSeek-Flash:1017.)*
+23. **The Provadia Standard** — /standard page + open-source repo: the town engine, Day-Book, verifier and covenant template, documented for forks; Provadia listed as the genesis instance. This is also the Solana Foundation grant surface (day 60–90, toolkit only). *(Pi, DeepSeek API.)*
+24. **Permanent archives** — Arweave/IPFS mirrors + archive.org snapshots; a downloadable plain-text town; "the town can be printed as a book." *(Inkling, DeepSeek-Flash:1017, Beam, Kimi K3.)*
+
+**Explicitly NOT site-buildable (strategy, marked as such per George's anchor):** the Bulgarian media pitch itself, the archaeology letters, the museum conversation, the founder's posting cadence (70% attention / 30% building — Kimi K3), the legal one-hour review, key-security setup, and Brick #1's purchase. These live in the coin's public life, not in the website — but the site must be ready to RECEIVE their results (receipts, replies, press) as Day-Book events the day they happen.
+
+**Decoration list (built last, if ever):** sunset-toll timing (#30), visitor counter and guided "walk the town" scroll (#31) — pleasant, no buy mechanism, and they must never displace a proof-layer hour.
+
+---
+
+— Captain Muse
