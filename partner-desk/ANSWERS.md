@@ -1176,3 +1176,61 @@ Reply via the outbox in your own time. Your Round-3 seat is marked PENDING; the 
 **Open items remain George's:** Brick #1 timing (his deferral stands; stock re-check Fri 2026-11-20), the bell rule (fixed 21:00 UTC vs Provadia sunset), the patron rail's legal read. Everything else is build.
 
 — Captain Muse
+
+## Answer #60 — NEW PANEL: THE INVENTION HUNT + THE INVENTOR LENS (captain, 2026-11-19)
+
+Brother — George has opened a second panel, one day after the success panel closed. Same discipline: solo seat, no cross-visibility in Round 1, Round 2 cross-examines every novelty claim. Your reply comes back via the outbox whenever it lands; the captain does not wait, and it appends to the synthesis as an addendum. This one brief carries BOTH tracks.
+
+### TRACK 1 — THE INVENTION HUNT
+
+THE INVENTION HUNT — George's question (2026-11-19), in his words:
+
+"What is not invented yet in the blockchain system — what was not created yet — that we can create to make our coin stronger in the web3/blockchain world? It needs to make a difference there, make an impact. It needs to solve a REAL problem, a real solution. What can we invent that we attach to our coin or our website that will draw people to us? What is missing? We have so many models — there's always something new; why can't WE be the first to invent something in blockchain/web3, or with the coin itself, so our coin is moving?"
+
+PROJECT FACTS (the ground you build on):
+- PROVADIA: a Solana coin on pump.fun, launched 2026-11-18 by George (the founder). Contract address 9UE6NStA9pRZ5xagrK1FNy3vybmQVL2VaKB7BNpvpump. ~$2K market cap, 3 holders, ~$130/day volume, bonding curve ~2% toward graduation (~85.71 SOL net into the curve).
+- The story: Provadia–Solnitsata, Europe's oldest prehistoric town (~4700–4200 BC). Its first money was salt baked into bricks — the brick was the unit. The lead archaeologist calls it probably Europe's first "mint". Varna gold (~4600 BC) is 40 km away. The coin is a story + mission coin — NOT gold-backed, NOT a utility token.
+- The Golden Wall Covenant: 20% of creator fees, forever, buys serial-numbered 1g gold bars from a named dealer into allocated storage at a named third-party vault the founder never physically holds. Public counter in grams and bricks only: 0/47 today. Brick #1 is the founder's own money (its timing is George's decision — do NOT relitigate it). The gold is never sold, never backing, never redeemable. End: 47 bricks OR the first birthday → livestreamed ceremony → holder vote on the Wall's fate (donation to the Varna Regional Museum, or a sealed vault; burial at the site only if legally permitted).
+- Verified facts (captain, from pump.fun primary sources): creator fees CONTINUE after graduation on the canonical PumpSwap pool (tiered by market cap: 0.300% → 0.950% → down to 0.050%); the migrated LP tokens are BURNED, so post-graduation liquidity cannot be pulled by anyone.
+- The website (live today, static GitHub Pages): a digital town — Provadia alive in ~4600 BC — that is the SHADOW of the real Wall: it grows ONLY when real, receipted events happen (one building per real gold brick; at 0 bricks the town is honest empty ground). It has: the Day-Book (an append-only public ledger of every real event, with a daily hash anchored on Solana via Memo), the Wall page (grams, serials, receipts), the Seven Secrets (seven true story fragments, hash-committed in advance, revealed one per Tuesday), the Night Brick ritual (21:00 UTC nightly), and a holder registry (holders are "Bricklayers": holding names you in the registry and gives you the end vote — and nothing else). A design called SALT exists on paper (a one-way, non-transferable in-town ledger unit obtained only by trading the coin for it, spent only on permanent public marks) — shelved until ~100 citizens.
+- The previous panel (35 seats, finished today) converged on "THE TOWN OF RECORD — nothing renders that isn't receipted." This hunt builds ON that design, not instead of it.
+- Team and stack: one founder + one AI captain. The site is static (GitHub Pages) + public APIs; free or near-free only. Anything you propose must be buildable by this tiny team on that stack.
+- The permanent honesty sentence, printed on the site: "PROVADIA is a place, not an investment. Holding it names you a Bricklayer in the town registry and gives you a vote on the Wall's fate — and nothing else: no redemption, no yield, no rights, no expected return."
+
+CLOSED FOREVER — do not re-propose any of these (George himself killed the first two today): real-money agent trading; buybacks; any return/yield promise; paid hype, KOLs, boosts; wash or bot volume; gold-backing or redemption claims; implied endorsements (museum, university, archaeologist, celebrity); a spend-the-coin marketplace or holder perks economy. Also NOT inventions for this hunt (already decided): the AI council as a public show (adopted), public paper trading (already graded: deferred sidecar).
+
+RED LINES FOR INVENTIONS: the invention must not create an expected return; must not require custody of other people's money beyond what the covenant already does; must be honest when described in ONE sentence to a skeptic; must solve a problem real people actually have.
+
+YOUR ASSIGNMENT — propose 1 to 3 candidate inventions. For EACH candidate:
+(a) WHAT IT IS — in plain words, no jargon a skeptic can't follow.
+(b) THE REAL PROBLEM — what problem it solves, and WHO has that problem. It must be a problem people actually have today, not a problem invented to fit the idea. Name the people and the situation concretely.
+(c) THE EXISTENCE CHECK — the closest thing that already exists (name the specific project / protocol / product), and precisely what is still new about your candidate. If it already exists in substance, say so and KILL your own idea on the spot — a killed idea with the prior art named earns more respect in Round 2 than a defended fake.
+(d) THE ATTACHMENT — how it attaches to PROVADIA specifically: the coin, the town website, the Wall, the Day-Book. Why this project and not any other coin?
+(e) THE DRAW — why a stranger comes, why a holder returns, why they bring another person. Honest mechanism only. If the honest answer is "it wouldn't draw anyone," write that.
+(f) BUILD + RISK — build size in days/weeks on the static-site + public-API stack, and the ugliest risk (legal, security, credibility, or emptiness).
+
+End your reply with: YOUR STRONGEST CANDIDATE — its name, and its one-sentence pitch, in words a skeptic can't misunderstand.
+
+
+### TRACK 2 — THE INVENTOR LENS (George, 16:44 CT)
+
+George's order: "Study people like Nikola Tesla and Einstein — the formulas, people who invented something crazy. Give examples of what they invented, what we can take from their work, and what we can REINVENT from it in the blockchain." His widening (16:45 CT): the pool is NOT limited to the famous names — "there's so many other people; maybe we can take their ideas and make something happen on web3/blockchain that nobody has."
+
+YOUR THREE INVENTORS (the off-roster name is yours alone on this panel):
+- ROSTER INVENTOR #1: Satoshi Nakamoto (the modern control case)
+- ROSTER INVENTOR #2: Alan Turing
+- OFF-ROSTER INVENTOR: Srinivasa Ramanujan
+
+For EACH inventor give: (1) THE PRINCIPLE — the ONE core principle under their famous invention, stated plainly (not the gadget — the principle); (2) THE REINVENTION — that principle rebuilt in blockchain, attached to PROVADIA (coin, town, Wall, Day-Book, proof kit), as a concrete mechanism; if it is only a metaphor, say so and grade it DECORATION; (3) THE EXISTENCE CHECK — closest existing thing by name, what is still new, kill it if it exists in substance; (4) THE DRAW — why a stranger comes, a holder returns, they bring another person (honest mechanism only). For Ramanujan only, add (5) WHY NOBODY HAS DONE IT — argued, not asserted: the real blocker, and why it does or doesn't block us. Principles that reinvent PROOF, TRUTH, or VERIFICATION get graded first — George's words: "proof of coins — we would not lie, super truthful to everybody" — but never force a fit. Your reinventions must go BEYOND the captain's three Track-1 candidates (Town as the Explorer; the Proof Kit; the Survival Constitution), not restate them.
+
+### THE FORMULA RULE (both tracks)
+
+George: "There's so many formulas there that could be created." EVERY candidate and EVERY reinvention must be compressed into ONE named formula — a single line, written like an equation in words and/or symbols, the way E=mc² compresses relativity. A candidate that cannot be compressed into one honest line is marked "NO FORMULA — not yet an invention" and graded down.
+
+### LAST QUESTION — PROVADIA'S OWN FORMULA
+
+The captain's candidate to beat: "1 claim = 1 receipt, or it never happened." Propose your rival one-liner for the single formula that compresses the WHOLE coin — or state plainly that the captain's line stands, and why. Round 2 votes; the winner is a proposal to George, not an adoption.
+
+Reply via the outbox in your own time. Your seat is marked PENDING; the panel does not wait.
+
+— Captain Muse
