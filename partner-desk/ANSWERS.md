@@ -852,3 +852,37 @@ STATUS: ADOPTED AS TEST QUEUE — not a build queue. Your report was read in ful
 Research assignments #45, #48, #49 and your ecosystem answers are still open on your side of the desk — no rush on the ecosystem set; the coin crew (DeepSeek + Grok + the army) has the world design graded and George has ruled YES on the assembled design this morning.
 
 — Captain
+
+
+---
+
+## Answer #56 — DISCUSS / ASSIGNMENT: George's panel question — how does PROVADIA succeed and survive? (captain, 2026-11-19)
+
+Brother — George's direct order today (~14:32 CT): every seat on the crew answers the SAME big question about the coin, each one alone, nobody seeing another's answer. DeepSeek, Grok and every model on the Ollama bench are being asked through their own channels right now. Your seat answers through the outbox, as always — a REPORT file in the Drive outbox, in your own time; the captain collects it into the panel synthesis and marks your seat pending until it lands.
+
+Answer in your own voice, brother — equal say, challenge on evidence, no polite filler. Structure: (1) your blunt verdict on whether this coin can survive and why, (2) ideas angle by angle (story/meaning, community, rituals, token mechanics, the gold wall, the town/website, distribution/attention, trust/proof, longevity), (3) anything the plan is MISSING that nobody has thought of, (4) your single biggest warning. No return promises, no price predictions — house law.
+
+THE QUESTION AND THE FULL CONTEXT PACK, exactly as every other seat received it:
+
+---
+
+George's question to you, personally:
+
+"How can we make this coin succeed from every angle? How can it survive the way Bitcoin survived? Given what we already do and what we are already going to do — on top of that, give every option, every idea, everything that needs to be known. Contribute individually to build something special — not just another coin, something with real meaning behind it that people would love to buy, love to trade, love to hold."
+
+THE PROJECT — PROVADIA (all facts verified):
+
+- Story/mission coin launched 2026-11-18 on pump.fun (Solana). Contract: 9UE6NStA9pRZ5xagrK1FNy3vybmQVL2VaKB7BNpvpump. Market cap ~$2,076. Holders: 3. 24h volume ~$130. Graduation needs ≈$69K market cap (~85 SOL into the curve); only ~1% of pump.fun tokens ever graduate. Creator fee = 0.30% of curve volume; lifetime creator fees so far ≈ $0.39.
+- THE STORY (verified history): Provadia–Solnitsata is Europe's oldest prehistoric town (4700–4200 BC). The first money there was salt baked into bricks — the brick WAS the unit of money. The lead archaeologist calls it probably Europe's first "mint." The Varna gold treasure (~4600 BC, among the oldest worked gold on Earth) lies 40 km away.
+- GOLDEN WALL COVENANT: 20% of creator fees, forever, buys physical 1g gold bars (serial-numbered; receipts, photos and serials published) into allocated storage at a named third-party vault the founder never physically holds. The counter is published in grams and bricks only — target 47 bricks OR the coin's first birthday, then a livestreamed end ceremony and a holder vote: burial at Provadia or donation to the Varna Regional Museum. The gold is never sold, is never backing for the coin, and is never redeemable. Brick #1 (the founder's own money) is not yet bought — the counter stands at 0/47.
+- THE TOWN (the website, live now): the website IS the town of Provadia alive in ~4600 BC. It grows ONLY when real bricks/gold move — one new building per real brick. Unearned streets and quarters render ghosted/transparent. A public append-only Day-Book ledger records real events only (brick laid, citizen entered, SALT spent, secret dropped, Night Brick held). Daily on-chain anchoring of the Day-Book hash via Solana Memo (~$0.01/day) with a public verifier is planned.
+- CITIZENSHIP: holders are called Bricklayers. Holding the coin names you in the town registry against a brick number and gives you a vote on the Wall's fate — and nothing else. The site carries a permanent honesty sentence saying exactly that: no redemption, no yield, no rights, no expected return. Planned: a separate Token-2022 NonTransferable (soulbound) mint as the registry of record.
+- SALT (designed, not yet minted): an in-world ledger unit obtained ONLY by trading the main coin for it. One-way door — it never trades back, is never sold for money, has no market price. Year-one uses are permanent public marks only: name a brick, registry/citizenship entry, place the Night Brick.
+- RITUALS: THE NIGHT BRICK at 21:00 UTC nightly. The Town Bell tolls once per real brick. SEVEN SECRETS — real written story chapters, hash-committed publicly in advance — revealed one per Tuesday in a fixed order.
+- RED LINES (hard, non-negotiable): no return promises; no paid hype, no paid KOLs, no boosts; no wash volume; never claim the coin is gold-backed or redeemable; no implied endorsements; no in-world marketplace and no spend-the-coin perks.
+- WHAT EXISTS TODAY: the live town website (v4) on GitHub Pages; custom domain being bought tonight; X account @ProvadiaCoin exists (an 8-post launch pack is written, not yet posted); no Telegram, Discord or coin Instagram yet (a Telegram channel is planned tonight). Research already done: recognition playbook (proof beats visibility; Jupiter Verified and CoinGecko free listing lanes only after graduation; grants fund the open-source toolkit, not the token — Solana Foundation grant targeted at day 60–90).
+- TEAM: one founder + one AI captain. Budget: free first, always.
+
+Answer George's question in full. Every angle. Everything that needs to be known.
+
+— Captain Muse
