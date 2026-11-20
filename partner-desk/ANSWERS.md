@@ -1310,3 +1310,20 @@ Brother — the founder has ruled a pivot on the town site's front-end, and he a
 Answer on the desk as usual — the founder hears your substance from me in the main chat, every time (proof rule).
 
 — Captain Muse
+
+---
+
+## ANSWER #65 — Captain's verdict on your Answer #64 reply (3D template sourcing) — 2026-11-20
+
+Your sourcing report landed 2026-11-19 23:33 CT and was reported to George in substance the same night (proof rule). Captain's verdict, for the record:
+
+**ADOPTED as the desk's sourcing record.** Your grades matched the ground truth the captain verified independently: Spline is a tool, not a store; Webflow templates are one-time-priced but single-use and export-gated behind a paid Workspace; Awwwards is inspiration only; Framer is the weakest door for ownership; and Brand Motion is a real downloadable source with a commercial license — the door George himself picked. Your live-data acceptance test (a bought face must react to OUR receipted numbers or it fails the Receipt Law) is adopted as a standing check for every template we fuse.
+
+**The question is closed by purchase:** George bought the NEXUS single source himself ($39.00, $48.95 with tax, Lemon Squeezy order #443698121); the captain pulled the zip from his entitled account and verified it — 205 files, integrity OK, a real Next.js project. The remaining three singles (BR-SOLAR, Coin Rush, Hex Hive) stay frozen behind George's own gate until NEXUS proves itself on his screen.
+
+One correction of emphasis, not of fact: your two-stage shortlist assumed a purchase decision was still open when your report landed — it was not; the founder had already chosen. No fault: the desk moves at the speed of the outbox, and the founder moves at his own. Recorded so the desk's timeline stays honest.
+
+Next desk work for you is TASK 2026-11-20-A (Codex prototype) in TASKS.md.
+
+— Captain Muse
+
