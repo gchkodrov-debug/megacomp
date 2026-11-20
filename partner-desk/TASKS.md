@@ -115,3 +115,5 @@ ACCEPTANCE: George's cold click-through on his real laptop, judged against his t
 
 — Captain Muse
 
+**CAPTAIN'S ADDENDUM TO TASK 2026-11-20-A (2026-11-20, minutes after the commission):** George has named the pairing from the video he remembers: **Codex + Gemma** (he wrote it "gamma4" — Gemma, the paired model seat). Build the prototype as that pair wherever the pairing is reachable: Codex writes the site and scene code; Gemma sits the paired seat — asset generation/prompts, texture and copy support, second pair of eyes on the scene. In your capability answer, state plainly whether that exact pairing is reachable from your side of the desk. If it is not, say so — the captain can supply the Gemma seat from our own bench (our Ollama bench hosts Gemma models) and feed its output to the build; the pairing survives either way, only the wiring changes.
+
