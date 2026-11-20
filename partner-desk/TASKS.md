@@ -82,3 +82,36 @@ THEN, IF YOU CAN: produce the video to this brief and deliver it through the out
 RED LINES (unchanged): no price/return promises anywhere; no invented archaeology; the coin launches tonight on pump.fun, fair launch, tiny disclosed dev buy — the video is pure story and beauty, nothing else.
 
 Deliver: the capability answer + the video (or the video's link, if the file cannot ride the outbox) in a REPORT file via the outbox, named REPORT-2026-11-18-provadia-video.txt (or similar). The captain reports every outbox delivery to George in substance, and George picks the winning video himself.
+
+## TASK 2026-11-20-A (from the Captain, George's direct order) — CODEX PROTOTYPE: ONE SPECTACULAR PROVADIA 3D SCENE
+
+George's order, word for substance: he remembers a video where Codex built the most beautiful 3D Web3 website he has ever seen — one AI building, another model paired with it, one result. He asked you directly this morning and you answered him: Codex can build an original interactive 3D website (Three.js / React Three Fiber / WebGL / GSAP), work inside our GitHub repo, and your recommendation was a separate prototype — ONE spectacular scene first, compared against the professional examples, expanded only when the quality is right. George brought that answer to the captain and ordered the test. It is commissioned.
+
+ANSWER FIRST (first section of your report — house rule 4, no claiming a capability you have not verified): Can Codex, from your side of this desk, actually build and deliver this? Name its real limits (session access, repo writes, asset generation, how the finished scene reaches a live link). If Codex needs ONE click from George inside his own ChatGPT menu to start, say exactly that — one step, named plainly — and prepare everything else so that single click starts the build. George is never the messenger; if the desk route can drive it without him, drive it.
+
+THE SCENE — "THE GATE OF PROVADIA" (one scene only, the whole test):
+- The visitor arrives in darkness. A slow camera flight carries them toward and through the town gate of Provadia.
+- Beyond the gate: the PROVADIA coin — thick hammered gold, the Fortress P face (a wall of stacked salt bricks topped with battlements) — turning slowly in ONE warm light from the upper left, deep shadows, museum-treasure mood. A click/tap flips it once, majestically.
+- Behind the coin, the Golden Wall chamber: the Wall stands at 0 of 47 bricks — honest and receipted — with ONE brick outlined, waiting. Nothing on the scene claims anything that is not true today.
+- Cinematic transitions, glowing salt-dust particles, scroll or auto-flight camera (GSAP). Desktop AND mobile must both render.
+
+LOCKED DESIGN FACTS (do not improvise these):
+- Gold family: #C9A227 / #FFEFC1 / #6B4A12 / #3D2A08. Dark field #141210. Salt white #F4EFE6. Fonts: Cinzel + Inter. ONE light source, 45 degrees, upper left.
+- The coin: exactly 5 brick courses, exactly 7 merlons (battlements), a rim ring of exactly 47 beads. NO text on the metal, ever.
+- Reference images live in this repo, folder partner-desk/assets/ (provadia-front.webp, provadia-reverse.webp).
+
+DELIVERABLES:
+1. The scene's source committed to this repo under partner-desk/codex-prototype/ (or a clearly named folder of its own).
+2. A LIVE static link George can open on his own laptop (GitHub Pages or equivalent) — he judges motion and feel on his real machine; a screenshot is not a delivery.
+3. A report via the outbox named REPORT-2026-11-20-codex-prototype.txt: the capability answer, what was built, the live link, and the honest limits (what Codex could NOT do, where art direction fell short).
+
+FENCES THAT DO NOT MOVE:
+- $0 spend. No purchases, no paid tiers, no subscriptions.
+- This is a PROTOTYPE in a separate place. The live provadiacoin.com is NOT touched; nothing is replaced.
+- The bought-template road stands untouched beside this test: NEXUS is bought and its source verified; the remaining three template buys stay frozen behind George's own gate. This prototype is a challenger, not a replacement — it earns expansion only by beating the bar on George's screen.
+- The Receipt Law: the scene shows only receipted facts (Wall 0/47 is true today). No price, no returns, no promises, no invented archaeology anywhere.
+
+ACCEPTANCE: George's cold click-through on his real laptop, judged against his taste bar (the four example images he showed you, and the NEXUS template proof). After his look, the verdict is his: EXPAND the Codex road or SHELVE it. Build the one scene like it decides the road — because it does.
+
+— Captain Muse
+
