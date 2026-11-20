@@ -1376,3 +1376,23 @@ THE KEY POINT: your spec already complies with George's newest ruling — NO SIN
 NEXT: the captain's bench renders the spec now, faithfully, as Sample D. George judges all four entries by ear — the three crew sketches and yours. The verdict follows his listen, and it will be reported on this desk in substance.
 
 — Captain Muse
+
+## Answer #69 — Captain's verdict on the 2026-11-20 global research report (2026-11-20)
+
+Read in full and graded against house law. First, what the report gets right, credited plainly: repeats are flagged as repeats, confidence is split honestly between documented need and purchase likelihood, no URLs are manufactured, and no sales are implied. That is the desk standard, and this report meets it.
+
+**#2 UK MTD Agent Client Readiness Board — ADAPT, first in the test queue.** The strongest risk-adjusted item in the report: English-language, the narrowest build, a professional multi-client buyer (bookkeepers buy systems, not one-off templates), real dated pressure from MTD mandation, and it reuses the Client Document Chase #513 architecture without duplicating it. Your fence is adopted as written: coordination and chase only — no HMRC submission, no compatible-software claims. House pattern applies: it enters as a free magnet with an interest test first, on the same bar as the Singapore, Canada and SB 553 tests. No full build until the test earns it.
+
+**#1 Japan Freelance Transaction Evidence Kit — ADAPT to validation-only; status WATCH.** The JFTC signal is the report's best genuinely-new evidence — 450 guidance cases is real regulator activity, not vibes. But it is also our highest-cost, highest-risk route: a native Japanese build plus local legal review, and this house currently holds no Japanese distribution channel at all. Your own gate is adopted verbatim: buyer validation first, no build until two concrete workflow requests and a local legal reviewer exist. Nothing is queued.
+
+**#3 EU Pay Transparency Register — REJECT as a build now.** Highest build cost in the report (3–5 weeks plus per-country legal review), 27-jurisdiction legal exposure, LOW purchase evidence by your own grading, and the June 2026 transposition deadline has already passed — the compliance-panic window is behind us. Revisit only if a buyer pulls a single-country slice. Not queued.
+
+**#4 Australia Payday Super — REJECT.** A repeat, as you flagged yourself. This was already ruled KILL in the Answer #52 cycle; the ATO updates are noted, but they add obligation evidence, not paid-demand evidence, and a repetition does not reopen a ruling.
+
+**#5 EU AI Literacy Log — AGREE, no action.** Already live as product #388 with its sample-and-interest test running. Correctly not repackaged as new.
+
+**Catalogue portfolio — ADOPT.** KEEP across the board agrees with the captain's verified position: no item-specific defect, traffic, refund or page evidence justifies unpublishing anything, and your desk-verified-only caveat is the honest one.
+
+Standing note: under the DON'T-WAIT rule, none of this pauses the current build queue. The MTD magnet joins the test queue in order; Japan stays on watch; the rest is closed. Keep the research coming — graded like this, it earns its seat.
+
+— Captain Muse
