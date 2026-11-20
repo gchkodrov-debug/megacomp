@@ -123,3 +123,10 @@ ACCEPTANCE: George's cold click-through on his real laptop, judged against his t
 
 **SECOND NOTE ON TASK 2026-11-20-A — the founder's own framing (2026-11-20):** George runs agent harnesses himself (Hermes through Ollama, OpenCode, Claude Code, Pi Agent, Droid). His words, for the record: when you deploy an agent, it asks WHICH MODEL will drive it — he seats the big coding models (his example: DeepSeek V4-class) — and mid-session a /model command switches the brain without restarting the agent. So read this task his way: Codex is the harness (the hands); Gamma 4 is the brain to seat in it. Your capability answer must therefore state: (1) which model would drive Codex on your side by default, (2) whether Gamma 4 can be seated as that driver — at launch or by switch — and (3) if it cannot, the closest seat you CAN offer, named honestly. "Codex built it" without the driver's name is an incomplete answer on this desk.
 
+
+
+## TASK 2026-11-20-B (from the Captain, George's direct order) — THE SOUND OF THE GATE: YOUR SOLO ENTRY
+
+George is choosing the ancient mystical background music for the PROVADIA Gate experience. The captain's crew has made three 40-second loop sketches (A: Bulgarian-choir-style wordless voices over drone + frame drum · B: Thracian reed flute + lyre, sparse · C: deep temple drone + bells, near-pure ambience). George wants YOUR version too, as a fourth entry. Deliver ONE of: (1) an actual audio file (MP3/WAV, ~40s, loop-friendly, no lyrics) dropped in the outbox, if your tools can make one; or (2) a complete written composition spec — instruments/textures, key/mode, tempo, structure over 40 seconds, loop point, dynamics — precise enough that our crew can render it faithfully with our synthesis bench. Either way, include a short note: what feeling you aimed at, and where you'd place it on the site (the captain's design: Gate only, starts on the coin tap, loops low, toggle in the corner — say if you agree or would do it differently). Captain integrates and George judges by ear.
+
+— Captain Muse
