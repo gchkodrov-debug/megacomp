@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Gate of Provadia — prototype</title><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"><style>
+html,body{margin:0;background:#141210;color:#F4EFE6;font-family:Inter,sans-serif;overflow:hidden}canvas{display:block}#ui{position:fixed;inset:0;pointer-events:none}header{position:absolute;top:5%;left:5%;letter-spacing:.24em;font:700 clamp(16px,2vw,28px) Cinzel;color:#FFEFC1}#hint{position:absolute;bottom:6%;width:100%;text-align:center;font:14px Inter;color:#FFEFC1}#wall{position:absolute;right:5%;bottom:12%;text-align:right;font:14px Inter;color:#F4EFE6}#wall strong{display:block;font:28px Cinzel;color:#C9A227}button{pointer-events:auto;background:#3D2A08;border:1px solid #C9A227;color:#FFEFC1;padding:12px 20px;font:600 13px Inter;cursor:pointer}#flip{position:absolute;left:5%;bottom:8%}#status{position:absolute;top:14%;left:5%;font-size:11px;color:#a9a49b}
+</style></head><body><div id="ui"><header>THE GATE OF PROVADIA</header><div id="status">Standalone visual prototype · no live ledger connected</div><button id="flip">FLIP THE COIN</button><div id="wall"><strong>0 / 47</strong>Golden Wall · illustrative placeholder, verify before publishing</div><div id="hint">Drag to look · Tap the coin to flip</div></div><script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color('#141210');scene.fog=new THREE.FogExp2('#141210',.018);
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,250);camera.position.set(0,2.4,29);
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;document.body.appendChild(renderer.domElement);
+scene.add(new THREE.AmbientLight('#6B4A12',.26));const key=new THREE.DirectionalLight('#FFEFC1',3.2);key.position.set(-8,12,9);scene.add(key);
+const stone=new THREE.MeshStandardMaterial({color:'#25201a',roughness:.94});const salt=new THREE.MeshStandardMaterial({color:'#F4EFE6',roughness:.9});const gold=new THREE.MeshStandardMaterial({color:'#C9A227',metalness:.9,roughness:.29});const shadowGold=new THREE.MeshStandardMaterial({color:'#6B4A12',metalness:.8,roughness:.38});
+function block(w,h,d,x,y,z,mat=stone){let o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);o.position.set(x,y,z);scene.add(o);return o}
+block(32,.3,70,0,-2,1);for(let s of [-1,1]){block(3.5,12,5,s*5.3,3,-3);for(let i=0;i<6;i++)block(.6,.5,5,s*(3.8+i*.55),9,-3)}
+block(12,2,5,0,9,-3);for(let i=0;i<9;i++)block(1,1,5,-5+i*1.25,10.5,-3);
+for(let i=0;i<18;i++){let z=-8-i*2;block(1.2,3,1,-11,0,z);block(1.2,3,1,11,0,z)}
+const coin=new THREE.Group();scene.add(coin);coin.position.set(0,2,-14);
+let body=new THREE.Mesh(new THREE.CylinderGeometry(3.2,3.2,.38,96),gold);body.rotation.x=Math.PI/2;coin.add(body);
+for(let side of [-1,1]){let disc=new THREE.Mesh(new THREE.CircleGeometry(3.03,96),side===1?gold:shadowGold);disc.position.z=side*.202;if(side===-1)disc.rotation.y=Math.PI;coin.add(disc)}
+const face=new THREE.Group();face.position.z=.22;coin.add(face);
+for(let r=0;r<5;r++){for(let c=0;c<5;c++){let brick=new THREE.Mesh(new THREE.BoxGeometry(.79,.26,.11),salt);brick.position.set((c-2)*.82+(r%2)*.13,-1.12+r*.32,0);face.add(brick)}}
+for(let i=0;i<7;i++){let merlon=new THREE.Mesh(new THREE.BoxGeometry(.42,.54,.14),gold);merlon.position.set((i-3)*.76,.85,0);face.add(merlon)}
+for(let i=0;i<47;i++){let a=i*Math.PI*2/47;let bead=new THREE.Mesh(new THREE.SphereGeometry(.083,8,8),gold);bead.position.set(Math.cos(a)*2.86,Math.sin(a)*2.86,.28);coin.add(bead)}
+const reverse=new THREE.Group();reverse.position.z=-.24;reverse.rotation.y=Math.PI;coin.add(reverse);for(let radius of [.55,1.12,1.75,2.28]){let ring=new THREE.Mesh(new THREE.TorusGeometry(radius,.045,8,72),gold);reverse.add(ring)}let sun=new THREE.Mesh(new THREE.SphereGeometry(.43,24,16),gold);sun.scale.z=.17;reverse.add(sun);
+for(let i=0;i<47;i++){let a=i*Math.PI*2/47;let b=new THREE.Mesh(new THREE.SphereGeometry(.055,6,6),gold);b.position.set(Math.cos(a)*2.83,Math.sin(a)*2.83,0);reverse.add(b)}
+for(let row=0;row<5;row++)for(let col=0;col<10;col++){let w=block(1.25,.48,.6,(col-4.5)*1.36,-1.5+row*.52,-24,row===0&&col===0?gold:stone);w.rotation.y=.02}
+const dustCount=180,coords=new Float32Array(dustCount*3);for(let i=0;i<dustCount;i++){coords[i*3]=(Math.random()-.5)*25;coords[i*3+1]=Math.random()*11-2;coords[i*3+2]=-Math.random()*50}let geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(coords,3));let particles=new THREE.Points(geo,new THREE.PointsMaterial({color:'#FFEFC1',size:.045,transparent:true,opacity:.65}));scene.add(particles);
+let flipping=false,flipStart=0,flipFrom=0;document.querySelector('#flip').onclick=()=>{if(!flipping){flipping=true;flipStart=performance.now();flipFrom=coin.rotation.y}};renderer.domElement.addEventListener('click',()=>document.querySelector('#flip').click());
+let start=performance.now();function animate(now){requestAnimationFrame(animate);let t=(now-start)/1000;camera.position.z=29-24*(1-Math.exp(-t/5));camera.position.y=2.4+Math.sin(t*.16)*.15;camera.lookAt(0,1,-15);coin.rotation.y+=.0025;coin.position.y=2+Math.sin(t*.65)*.18;if(flipping){let p=Math.min((now-flipStart)/1800,1);coin.rotation.y=flipFrom+Math.PI*(p*p*(3-2*p));if(p===1)flipping=false}particles.rotation.y=t*.005;renderer.render(scene,camera)}requestAnimationFrame(animate);
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+</script></body></html>
