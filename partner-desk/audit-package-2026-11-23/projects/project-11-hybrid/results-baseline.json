@@ -1,0 +1,163 @@
+{
+  "target": "project-11-hybrid/",
+  "mode": "baseline",
+  "gates": [
+    {
+      "gate": "unit",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "the product counts its parts honestly",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the model facts are the cleanup gate’s filed numbers",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the sequence sets sit inside the frame budgets",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "every callout names a real part, in a sane window",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the film’s acts are contiguous and complete",
+          "ok": true,
+          "detail": "spec passed"
+        }
+      ]
+    },
+    {
+      "gate": "e2e",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "step 1: click [data-view=\"front\"]",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 2: expectText #part-title",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 3: click #lamp-film",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 4: wait",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 5: expectVisible #journey",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 6: expectVisible #lamp-canvas",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "zero console/page errors across the journey",
+          "ok": true,
+          "detail": "none"
+        }
+      ]
+    },
+    {
+      "gate": "visual",
+      "status": "BASELINE-CREATED",
+      "checks": [
+        {
+          "name": "baseline written for project-11-hybrid",
+          "ok": true,
+          "detail": "/home/hatch/workspace/newwave/tools/crew-university/track7-artifacts/project-11-hybrid/qa/baselines/project-11-hybrid.png"
+        }
+      ]
+    },
+    {
+      "gate": "a11y",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "document language declared",
+          "ok": true,
+          "detail": "lang=\"en\""
+        },
+        {
+          "name": "every role=img carries an accessible name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "every img carries an alt attribute",
+          "ok": true,
+          "detail": "0 missing"
+        },
+        {
+          "name": "every form control is labelled",
+          "ok": true,
+          "detail": "0 unlabelled"
+        },
+        {
+          "name": "every link and button has a name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "exactly one h1, heading levels never skip",
+          "ok": true,
+          "detail": "h1=1 skip=false"
+        },
+        {
+          "name": "body text contrast ≥ 4.5:1 (computed styles)",
+          "ok": true,
+          "detail": "14.65:1"
+        }
+      ]
+    },
+    {
+      "gate": "perf",
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "layout reads during the journey ≤ 50",
+          "ok": true,
+          "detail": "24 reads"
+        },
+        {
+          "name": "long-task total ≤ 250 ms (lab)",
+          "ok": false,
+          "detail": "9476 ms"
+        },
+        {
+          "name": "CLS ≤ 0.1 (lab trace)",
+          "ok": true,
+          "detail": "CLS 0"
+        },
+        {
+          "name": "LCP ≤ 2500 ms (lab trace)",
+          "ok": true,
+          "detail": "LCP 208 ms"
+        }
+      ],
+      "metrics": {
+        "reads": 24,
+        "longTaskMs": 9476,
+        "cls": 0,
+        "lcpMs": 208
+      }
+    }
+  ],
+  "verdict": "FAIL"
+}
