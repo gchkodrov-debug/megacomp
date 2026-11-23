@@ -24,3 +24,4 @@ Settled by the founder's word: F-2 (three rails) · F-4/R-4 (holding never requi
 ## FOUNDER'S AMENDMENT — Q13 (added 13:06 CT, after the 14 were complete)
 
 **THE NO-LOSS RULE (George, 2026-11-23):** "We cannot lose money on creating something. I cannot lose money on transactions." — The house NEVER ends a transaction or a creation in the red. Mechanics: the 80/20 split runs on NET receipts — payment-provider fees and network costs come off the top FIRST, covered by the transaction itself; only what remains is split 80/20. Checkout quotes are set so those costs are covered, never eaten by the house. The house never pays out of pocket to complete a sale; a transaction that cannot cover its own costs does not run. (This refines Q13's $32/$8 example: costs first, then the split.)
+- The No-Loss Rule amendment CONFIRMED by the founder: **YES — that's the rule** (13:08 CT).
