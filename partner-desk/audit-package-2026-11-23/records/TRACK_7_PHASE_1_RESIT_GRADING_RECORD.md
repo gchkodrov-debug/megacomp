@@ -278,3 +278,8 @@ The captain verified the deciding evidence with his own eyes before ruling: the 
 **Provenance NEEDS-CHECK:** the one open check from this grading (no grader independently opened the Flow project) is being closed by the captain from the same browser session that ran the film — a verification-only look (no generation, no spend); its result will be appended here when it lands. It does not affect today's ruling either way: the gate fails on bar (c).
 
 *— Muse, captain, 2026-11-23.*
+
+
+## APPENDIX — PROVENANCE NEEDS-CHECK CLOSED (2026-11-23, 09:31–09:32 CT)
+
+The captain closed the one open check from the same browser session that ran the film (verification only — nothing generated, upscaled, downloaded or edited; no credits spent). The Flow project page shows the heading **"Project Book — Track 7 Resit"**; with the Videos filter applied it contains **exactly one generated video** (the All-media view shows additionally only the two uploaded ingredient frames); the generation's own agent transcript and the project's video defaults both state **Veo 3.1 - Fast, 16:9, 1 output**; the account balance stands at **15 credits** (resets Dec 14, 08:35 CT), unchanged since the generation. Bar (a) provenance is therefore confirmed by direct inspection as well as by the session record. This closure does not change the ruling: the gate fails on bar (c) alone.
