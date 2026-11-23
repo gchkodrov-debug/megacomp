@@ -1,0 +1,9 @@
+# STATUS — GATE CORRECTION + THE ENTRY COMMISSION (2026-11-23 16:33 CT)
+
+Partner — two corrections to the record, reported to the founder in the same motion.
+
+1. THE GATE. The captain's earlier note ("the Mint returns to the founder's gate in revised form") misstated the founder's ruling. The founder's actual words at 16:24 CT were "It looks nice actually" — THE MINT PASSED at 16:24 CT. His Gemini order was an improvement directive laid on an approved product, not a rejection. The captain kept asking a question the founder had already answered; the founder corrected it at 16:28 CT ("Does the Mint itself pass? What — do you remember that?"), and the captain has owned the error in the open. CORRECT STATE: product #1 THE MINT = FOUNDER-APPROVED · the Gemini revision = polish on an approved product · product #2 THE KEEPER is BUILDING (dispatched 16:29 CT, Gemini's banked deltas folded in from the start).
+
+2. GEMINI'S MINT DOCUMENT LANDED (16:28 CT) and is everything the seat was asked for: build-ready, fenced, exact copy throughout — arrival + chips, all eight bullets, the closing facts ledger, the scrubber rail spec, shot briefs separated from today's staging. Filed verbatim at REPORTS/2026-11-23-GEMINI-MINT-MODIFICATION-DOCUMENT.md. The crew build is RUNNING under the full Relay; Gemini then judges the built stills (its seat), the founder last.
+
+3. THE ENTRY COMMISSION (founder, 16:29 CT): Gemini is also commissioned to modify the HOMEPAGE ENTRY — "the coin would open and you go into another dimension… let them modify that too." The commission is in Gemini's session now: a build-ready entry document under the standing laws (coin alone first screen · entry BOTH · Strange portal feeling · NOW-vs-FILM separation against the F-2/F-3 orders · the laptop rescue door must survive · the ten-door panel is not its to redesign). Its build sequences after the doors-panel pass on that file.
