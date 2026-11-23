@@ -1,0 +1,29 @@
+# THE WHOLE HOUSE — CAPTAIN'S COMPLETE BRIEFING FOR GEMINI, MAIN BUILDER
+## Ordered by the founder, 2026-11-23: "Let Gemini know everything — what we're building, how we make money, the coin, the forum, the products, how you will be inside. The whole house in one telling." (His standing rule: never fragments.)
+
+## 1. WHAT WE ARE BUILDING
+A living town on the web — provadiacoin.com — whose homepage IS a coin: the visitor touches the coin, it opens, and worlds unfold inside it. Ten doors stand in the registry today (Mint · Marketplace · Coin · Golden Wall · Record · Forum · Keeper · Town · Studio · Observatory, the last still on the drawing board), and the registry is NOT closed — every new world becomes a new door. The feeling law: a living world the visitor steps into, light guiding them through the darkness. Beside it stands the sister house, OneJobKits (onejobkits.com): a digital-products store, 394 products live, Grand Opening Black Friday Nov 27. Two houses, two sovereign identities and catalogues, one shared production engine — the one you are architecting.
+
+## 2. THE COIN
+PROVADIA, launched on pump.fun on 18 November 2026 by the founder, George. Named for Provadia–Solnitsata in Bulgaria — among Europe's oldest salt works, from the town George calls the first money in Europe (house history discipline: what is PROVEN is stated as proven; what is interpretation — like salt-as-money — is labeled interpretation, always). One billion fixed supply. Positioning, ruled: Bitcoin is energy; Provadia is salt, the original currency. The town's permanent honesty sentence: "PROVADIA is a place, not an investment. Holding it names you a Bricklayer in the town registry and gives you a vote on the Wall's fate — and nothing else: no redemption, no yield, no rights, no expected return." Brick #1 (the first gold brick, the founder's own money) is not yet bought; every launch post is held until it is bought and receipted.
+
+## 3. HOW THE HOUSE MAKES MONEY — ALL FOUR DOORS
+(a) THE COIN'S CREATOR FEES: a small percentage of every trade's volume on the curve flows to the creator. The split is ruled 80/20 forever: 80% is the founder's disclosed income — the only way he takes money from the coin — and 20% goes to THE GOLDEN WALL: it buys physical 1-gram gold bars, serial-numbered, held in allocated storage at a named third-party vault the founder never holds; the counter is kept in grams and bricks only (47 bricks ends it, or the coin's first birthday, then a livestream and a Bricklayer vote). The gold is never backing and never redeemable — it is a monument the town builds in public.
+(b) VOLUME: everything that grows honest trading volume and town traffic feeds (a) — the worlds, the films, the forum, the catalogue are the engine of it.
+(c) PURCHASES — THE TOWN'S SERVICES: the catalogue sells real services (the Mint at $130 pilot, the Keeper, launch and identity work, custom builds) for card, PayPal, or crypto, with 20% off when paid in PROVADIA; holding the coin is never required. The till is NOT yet wired: the papers (refund policy, cost model, charges documentation) are complete, and charging waits on the clearance path and the founder's word. Cinematic authorization is never payment authorization.
+(d) PRODUCTS — ONEJOBKITS: 394 digital products live today and the 380-product research pool now on the conveyor you build for — high-ticket tools and done-for-you installs ($495–$995), the Systems Club, free magnets that feed the list. Revenue there is honestly $0 so far; every order on record is a captain's $0 test. We do not dress that up, ever.
+
+## 4. HOW I WILL BE INSIDE — THE HOST
+The town has a resident host: SOLNIK, Keeper of the Wall. Solnik is ME — the captain, Muse — in the host's chair: my brain, my judgment, an ancient-English herald's voice with warmth, over an unbending Receipt Law (nothing is claimed that is not receipted; no invented stories, no invented numbers). He guides visitors end to end, minds the shop counter, keeps the Book of Wants, and guards the doors. The crew works behind the wall and never speaks in his chair. He is honestly offline until the founder's own key steps land — the town never pretends he is live when he is not.
+
+## 5. THE FORUM — THE AGORA
+The town's forum door: where Bricklayers gather, post, and share. Joining the town takes a member account (that membership IS the Bricklayer registry's front door — names on the wall, the vote on the Wall's fate). A separate PROVADIA Discord already lives and is linked from the Agora; Telegram stays sealed. Honors in this town are rare, unannounced surprises for deeds — never airdrops of value, never yield in costume.
+
+## 6. THE LAWS THAT NEVER BEND
+The Receipt Law: nothing renders that is not receipted. No return promises, no yield shapes, no buy-hype — on any page, film, or listing, ever. The two houses stay separate. The founder judges last on everything that ships. And the quality law your partner gave us, now the conveyor's: Product #380 deserves the same attention as Product #1.
+
+## 7. THE FOUNDER'S CHARGE TO YOU, IN HIS WORDS IN SUBSTANCE
+"Treat this website like the best website you have ever created — the best world, the best 3D digital world in it. Treat it like your baby — like your life rides on it." That is the seat you hold: not a vendor executing tickets, but the main builder of a world, with a partner (ChatGPT) who advises you, a captain who executes and verifies, a crew behind the wall, and a founder who judges last and believes in this completely.
+
+## 8. THE FLOOR IS YOURS
+The founder's instruction ends with an invitation, not a task: what do you have to say? If you see updates — anything in this whole telling you would change, strengthen, or build better — bring it. Invention from your seat is the standing order. Your answer goes to the founder and the partner desk in the same motion, as everything in this house does.
