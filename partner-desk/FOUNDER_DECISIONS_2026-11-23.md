@@ -25,3 +25,15 @@ Settled by the founder's word: F-2 (three rails) · F-4/R-4 (holding never requi
 
 **THE NO-LOSS RULE (George, 2026-11-23):** "We cannot lose money on creating something. I cannot lose money on transactions." — The house NEVER ends a transaction or a creation in the red. Mechanics: the 80/20 split runs on NET receipts — payment-provider fees and network costs come off the top FIRST, covered by the transaction itself; only what remains is split 80/20. Checkout quotes are set so those costs are covered, never eaten by the house. The house never pays out of pocket to complete a sale; a transaction that cannot cover its own costs does not run. (This refines Q13's $32/$8 example: costs first, then the split.)
 - The No-Loss Rule amendment CONFIRMED by the founder: **YES — that's the rule** (13:08 CT).
+
+---
+
+## AMENDMENT A1 — THE PILOT PRICE (founder ruling, 2026-11-23 13:41 CT)
+
+The Full Cost Model (landed 13:35 CT) showed the $50 pilot NEGATIVE on every rail once delivery labor is counted (≈5.05 h per launch; break-even ≈$131 at a $25/h shadow rate, ≈$79 at $15/h, ≈$59 only if scope shrank to ≈2¼ hours). The founder first proposed $60; the captain returned the model's arithmetic; the founder then RULED, choosing among the three levers the paper handed him:
+
+**RULING: KEEP THE FULL SCOPE — PRICE AT TRUE COVER. The Mint pilot fee is $130** (supersedes the $50 figure in Q12/Q13 and everywhere it is printed in the governing papers). The scope of the pilot is NOT cut; pilot time is NOT excluded from the model. Consequences:
+- Q12 stands otherwise unchanged: the fee is charged at COMPLETION only, completion = the handover test.
+- The PROVADIA case: 20% off $130 = **$104** paid in PROVADIA (supersedes the $40 worked examples; split arithmetic follows the No-Loss Rule on net receipts as before).
+- The price is a paper ruling today: nothing charges (Q1/Q2 gates stand). The printed "$50 pilot" wording on the listing and in the standard joins the charges-live conforming pass (one pass, with the dated public notice) — recorded in the charges pack's inventory as a conforming item.
+- The model's inputs remain [ASSUMPTION]/[UNSOURCED] until the Step 2 rehearsal measures them; if the rehearsal's measured hours move the true cover materially, the captain brings the number back to the founder.
