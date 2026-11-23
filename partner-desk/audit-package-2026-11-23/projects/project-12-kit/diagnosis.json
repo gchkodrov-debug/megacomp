@@ -1,0 +1,81 @@
+{
+  "broken": {
+    "viewer": {
+      "azimuth": 0.6139562784669406,
+      "polar": 1.05,
+      "distance": 4.2,
+      "targetAzimuth": 0.6314999999999995,
+      "targetPolar": 1.05,
+      "targetDistance": 4.2,
+      "drawCalls": 8,
+      "triangles": 3824,
+      "modelTriangles": 4108,
+      "fps": 18,
+      "selected": null,
+      "lastLatencyMs": null,
+      "autoRotate": true,
+      "destroyed": false,
+      "visible": true
+    },
+    "warmBrightSharePct": 0.03,
+    "seqFrameBeforeScroll": 1,
+    "seqFrameAfterScroll": 1,
+    "seqLoaded": 120
+  },
+  "fixed": {
+    "viewer": {
+      "azimuth": 0.6276200707387528,
+      "polar": 1.05,
+      "distance": 4.2,
+      "targetAzimuth": 0.6489999999999992,
+      "targetPolar": 1.05,
+      "targetDistance": 4.2,
+      "drawCalls": 8,
+      "triangles": 3824,
+      "modelTriangles": 4108,
+      "fps": 0,
+      "selected": null,
+      "lastLatencyMs": null,
+      "autoRotate": true,
+      "destroyed": false,
+      "visible": true
+    },
+    "warmBrightSharePct": 0.31,
+    "seqFrameBeforeScroll": 1,
+    "seqFrameAfterScroll": 120,
+    "seqLoaded": 120
+  },
+  "shipped": {
+    "viewer": {
+      "azimuth": 0.6276200707387528,
+      "polar": 1.05,
+      "distance": 4.2,
+      "targetAzimuth": 0.6489999999999992,
+      "targetPolar": 1.05,
+      "targetDistance": 4.2,
+      "drawCalls": 8,
+      "triangles": 3824,
+      "modelTriangles": 4108,
+      "fps": 0,
+      "selected": null,
+      "lastLatencyMs": null,
+      "autoRotate": true,
+      "destroyed": false,
+      "visible": true
+    },
+    "warmBrightSharePct": 0.31,
+    "seqFrameBeforeScroll": 1,
+    "seqFrameAfterScroll": 120,
+    "seqLoaded": 120
+  },
+  "canvasDiff": {
+    "brokenVsShipped": {
+      "diffPct": 4.61,
+      "strongPixels": 12275
+    },
+    "fixedVsShipped": {
+      "diffPct": 0,
+      "strongPixels": 0
+    }
+  }
+}
