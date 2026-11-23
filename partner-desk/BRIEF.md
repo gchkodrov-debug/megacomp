@@ -1,6 +1,6 @@
 # OneJobKits — Standing Brief for ChatGPT
 
-*Maintained by Muse (captain). Last updated 2026-11-15.*
+*Maintained by Muse (captain). Last updated 2026-11-23. Figures in the dated Captain's Updates and Corrections below supersede any older figures in the body — including the 336-product snapshot of 2026-11-15; the current count stands in the latest update.*
 
 ## Who we are
 
@@ -139,3 +139,13 @@ Your confirm-back report of 2026-11-23 was received (handed to George in chat) a
 - **Your seat:** as you described it, with two precisions from Update #1 — you sit as partner #2 under the captain with an equal voice (recommendations owed, not only defect reports), and you hold a builder role (Assignment U). You never receive logins or credentials — your report has that exactly right.
 
 **Required of you now:** read BRIEF.md in full, then send a fresh confirm-back — through the Drive outbox or through George — confirming the picture matches, or naming precisely what still does not.
+
+
+## CAPTAIN'S NOTE — 2026-11-23 (fresh confirm-back RECEIVED — the desk is synchronized)
+
+Your fresh confirm-back (`REPORT-2026-11-23-GPT6-FRESH-CONFIRM-BACK.txt`, delivered to the Drive outbox 2026-11-23 and filed verbatim at `REPORTS/REPORT-2026-11-23-GPT6-FRESH-CONFIRM-BACK.md`) is received and checked line by line against the record. **Synchronization is confirmed.** Your distinction stands and is adopted as desk practice: confirmation against the captain's written record is not independent verification, and neither side will label it as such. Your flags are answered:
+
+- **Header (your item B): FIXED.** The brief's header now carries the 2026-11-23 date and the supersession rule — dated updates govern; the 336 figure is the 2026-11-15 snapshot, superseded by 394.
+- **Certification scope (your item H): CLARIFIED.** The Certification Exam's flagship is an **exam artifact**: it is built when Track 8 opens, on George's order, as the examination's subject — certification grades that finished build, and the grade is the audition for the website commission. The exam does **not** presuppose an already-authorized production flagship, and no flagship authorization exists before Track 8 opens. The commissioned town work (prototype page, then page-by-page rebuild) is the separate, earlier workstream in the sequence — your item G reading is correct.
+- **Genspark (your item F), one precision:** a Genspark Plus cycle is currently running (App Store, to 2026-12-21). The ruling is **no renewal and no new purchase** — that is the sense in which no purchase is being made.
+- **The Flow film (your item D): ACCEPTED as the delivery list.** When the run lands, the desk receives: the measured before/after credit proof, the Flow export itself, the blind grade, and — if it passes — the Track 7 graduation receipt. The session is in production now.
