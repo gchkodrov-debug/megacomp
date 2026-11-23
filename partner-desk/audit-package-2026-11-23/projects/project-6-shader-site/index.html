@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Project 6 — Shader-Driven Transitions · Track 7 M10</title>
+<style>
+  :root { --ink:#141210; --gold:#C9A227; --cream:#FFEFC1; --paper:#F4EFE6; --dim:#6B4A12; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+  main { max-width: 1020px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 29px; color: var(--cream); margin: 0 0 6px; }
+  h2 { font-size: 20px; color: var(--gold); margin: 30px 0 8px; }
+  p, li { line-height: 1.55; font-size: 16px; }
+  .sub { color:#cbbd93; margin-top:0; }
+  .stage { position: relative; background:#0d0b08; border:1px solid var(--dim); border-radius: 10px; padding: 14px; }
+  canvas { display:block; width:100%; height:auto; border-radius: 6px; }
+  .fallback-stack { position: relative; display: none; border-radius: 6px; overflow: hidden; }
+  .fallback-stack img { display:block; width:100%; height:auto; }
+  .fallback-stack img.top { position:absolute; inset:0; opacity:0; transition: opacity 1.4s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) { .fallback-stack img.top { transition: none; } }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; align-items:center; }
+  button, select { font: inherit; font-size: 14.5px; background:#2a2317; color:var(--paper);
+    border:1px solid var(--gold); border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+  button[aria-pressed="true"] { background: var(--gold); color: var(--ink); }
+  label { font-size: 14.5px; color:#cbbd93; }
+  .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; }
+  .readout { color:#cbbd93; }
+  .fence { border-left: 3px solid var(--gold); padding: 4px 0 4px 12px; color:#cbbd93; font-size: 14.5px; }
+  pre { background:#0d0b08; border:1px solid #3D2A08; border-radius: 6px; padding: 10px; overflow-x:auto;
+    font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Scenes That Melt Into Each Other</h1>
+  <p class="sub">Track 7 · Module M10 (Shader Engineering) · Master Project 6. Two transitions written
+  for this page as original GLSL — a noise dissolve with a gold burn edge, and a swirl that winds one
+  scene out and the other in. If this browser has no WebGL, the page does not go blank: it crosses
+  over to a plain crossfade, and says so on the readout.</p>
+
+  <section class="stage">
+    <canvas id="stage" width="960" height="540"></canvas>
+    <div class="fallback-stack" id="fallback-stack" aria-hidden="true">
+      <img id="fb-bottom" src="assets/scene-a.png" alt="">
+      <img id="fb-top" class="top" src="assets/scene-b.png" alt="">
+    </div>
+    <div class="controls">
+      <button id="btn-a" aria-pressed="true">Scene A — Dawn</button>
+      <button id="btn-b" aria-pressed="false">Scene B — The Wall</button>
+      <label>Transition
+        <select id="sel-kind">
+          <option value="dissolve" selected>Dissolve</option>
+          <option value="swirl">Swirl</option>
+        </select>
+      </label>
+      <span class="mono readout" id="readout">loading…</span>
+    </div>
+  </section>
+
+  <h2>How the dissolve works</h2>
+  <p>Every pixel is given a fixed height from a noise field — four octaves of value noise, summed.
+  The transition is one number, a threshold, sweeping from below the field's floor to above its
+  ceiling. A pixel shows the old scene while its height stands above the threshold and the new scene
+  once the threshold passes it; where the two are within a hair, the pixel burns gold. The whole
+  effect is this comparison, run a million times in parallel:</p>
+  <pre>float h = fbm(p * 5.0) * 0.85 + vnoise(p * 22.0) * 0.15;   // the pixel's fixed height
+float t = uProgress * 1.12 - 0.06;                          // the sweeping threshold
+vec3 col = mix(toC, fromC, step(t, h));                      // below: new · above: old
+col = mix(burnGold, col, smoothstep(0.0, 0.035, abs(h - t))); // the burning edge</pre>
+
+  <h2>How the swirl works</h2>
+  <p>Each scene's coordinates are rotated around the centre by an angle that grows with the sine of
+  the progress — strongest mid-transition, zero at both ends — and falls off with distance from the
+  centre. The outgoing scene winds one way, the incoming unwinds from the other, and a radial mask
+  hands the picture over at the peak. No pixel is ever blended from a third, invented image; both
+  scenes are only ever re-addressed.</p>
+
+  <h2>The fallback is shipped, not promised</h2>
+  <p>Before the stage is built, the pack asks the browser for a throwaway WebGL context. No context,
+  no shader stage: the two scenes stand as stacked images and the same buttons crossfade them with
+  CSS. The readout names the mode the page is actually in. The exam harness visits this page twice —
+  once normally, once with WebGL disabled — and grades both.</p>
+
+  <p class="fence">Study build: Track 7's M10 exam artifact, served locally for grading. The two
+  scenes are drawn study art (a dawn, a wall), made for this page. Nothing here is a production page
+  and nothing is for sale.</p>
+
+<script src="../engine/shaders/shader-pack.js"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const readout = $('readout');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let stage = null;         // the shader stage, when WebGL holds
+  let fb = null;            // fallback state, same shape as the stage's
+  const SCENES = ['assets/scene-a.png', 'assets/scene-b.png'];
+
+  function setPressed(idx) {
+    $('btn-a').setAttribute('aria-pressed', String(idx === 0));
+    $('btn-b').setAttribute('aria-pressed', String(idx === 1));
+  }
+  function go(idx) {
+    const kind = $('sel-kind').value;
+    if (stage) { stage.transitionTo(idx, kind, 1600); setPressed(idx); return; }
+    // Fallback path: the top image is scene B; crossfade its opacity.
+    fb.from = fb.current; fb.to = idx; fb.kind = 'crossfade'; fb.startedAt = performance.now();
+    $('fb-top').style.opacity = idx === 1 ? '1' : '0';
+    fb.current = idx; setPressed(idx);
+  }
+  $('btn-a').addEventListener('click', () => go(0));
+  $('btn-b').addEventListener('click', () => go(1));
+
+  function printState() {
+    if (stage) {
+      const s = stage.getState();
+      readout.textContent = `mode shader · scene ${s.current} · progress ${s.progress.toFixed(2)} · ${s.kind} · ${s.fps} fps`;
+      return;
+    }
+    if (fb) {
+      const done = reduceMotion || performance.now() - fb.startedAt > 1500;
+      readout.textContent = `mode fallback (no WebGL) · scene ${fb.current} · ${done ? 'at rest' : 'crossfading'}`;
+    }
+  }
+
+  if (window.ShaderPack.supported()) {
+    stage = window.ShaderPack.createShaderStage($('stage'), {});
+    if (stage.mode !== 'shader') stage = null;
+  }
+  if (stage) {
+    window.__stage = stage;
+    stage.loadScenes(SCENES).then(() => { setInterval(printState, 250); printState(); });
+  } else {
+    $('stage').style.display = 'none';
+    $('fallback-stack').style.display = 'block';
+    fb = { mode: 'fallback', current: 0, from: 0, to: 0, kind: 'crossfade', startedAt: 0,
+           getState() { return { mode: 'fallback', current: this.current, from: this.from, to: this.to, kind: this.kind }; } };
+    window.__stage = fb;
+    setInterval(printState, 250); printState();
+  }
+})();
+</script>
+</body>
+</html>
