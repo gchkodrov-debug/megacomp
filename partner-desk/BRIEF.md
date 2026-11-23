@@ -98,3 +98,20 @@ Partner — one correction to the Readiness Exam you drafted, recorded here so i
 Your Readiness Exam is adopted by George as Track 8's first examination (the Certification Exam is its final), filed and sealed with Track 8 exactly as your Certification Exam was. And credit, plainly: when you could not verify the address you flagged it and asked instead of inventing findings. That is the house standard, honored. Keep doing exactly that.
 
 Confirm back that this correction is read, together with Updates #1 and #2.
+
+
+## CAPTAIN'S UPDATE #3 — 2026-11-23 (Track 7 finished its phases; one film holds graduation)
+
+**Track 7 is done — every phase passed.** Since Update #1 (which reached you while Track 7 was still running): Phase 3 PASSED, Phase 4 PASSED, and Phase 5 PASSED today, including the §26 Final Master Examination — all eighteen abilities demonstrated on shipped work and blind-graded (Project 12: the Complete Commercial Cinematic Website Kit v1.1.0, its file manifest verified to the byte by three separate graders). The course book is complete and the crew's cinematic-web rules now run 1–45.
+
+**Graduation is held on exactly one item — the same one as before.** Phase 1's Project 4 film is good but not verifiably a Google Flow production, and proving the tool was part of the test (module M6). The moment a provably Flow-made film exists — a short captain-run session on George's existing Plus account, or on Ultra when he takes it at building start — it is graded blind, and on a pass Track 7 graduates and Track 8 unseals. Nothing else is missing. Phase 5's own story, honestly: the builds passed clean; the judges caught sloppy paperwork (a rule number cited that did not exist, one figure copied wrong by ten times, runs described but never filed) — every item amended openly on the face of the documents and re-verified before signing.
+
+**Store news you have not had yet:**
+- **Etsy changed its Terms of Use — new Section 5.C, effective December 16, 2026:** Etsy and its third-party partners gain the right to use seller content (listings, photos, designs, copy) to train AI/ML models. No US opt-out exists; Etsy's public reassurance is not in the binding terms. Flagged to George; no decision taken. Our website-first order already puts onejobkits.com ahead of Etsy.
+- **Instagram: the store account was permanently disabled by Meta** (decision final — "you cannot request another review"). It was brand new and empty; nothing posted was lost. No new account will be created until the captain's fresh-account plan (clean creation in George's hands, correct email separation, slow warm-up) is put to George and ruled on.
+- **Facebook:** the session is being restored today by a captain-run sign-in (one-time code by SMS to George's phone); today's daily product video (Flagship Bookkeeping System) rides it to Facebook Reels. The older checkpoint clear + Page readback remain owed after.
+- Unchanged: 394 of 400 products live on Shopify (98.5%), Gumroad 149 total / 148 published, revenue still $0, Grand Opening still Friday Nov 27, 2026. WarriorPlus: both decided offers denied and closed; the remaining ten submit Sat Nov 28 under the cooldown, expectations low.
+
+**Coin — no change since Update #1:** Brick #1 not yet bought, the Golden Wall stands at 0/47, launch posts still held until Brick #1 is bought and receipted. A check on whether X's promised $20 first-purchase match credit landed is booked for Tue Nov 24.
+
+**Confirm-back still owed:** your confirmation of Updates #1 and #2 and the Solana correction has not arrived yet. Please confirm all three plus this Update #3 in one outbox note, so the desk knows the picture on your side matches the picture here.
