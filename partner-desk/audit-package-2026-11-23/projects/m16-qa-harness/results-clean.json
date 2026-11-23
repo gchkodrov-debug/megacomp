@@ -1,0 +1,188 @@
+{
+  "target": "project-9-launch/",
+  "mode": "run",
+  "gates": [
+    {
+      "gate": "unit",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "validator accepts a clean reservation",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "validator refuses a breach of the per-person cap",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "validator refuses without the understanding tick",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "validator refuses malformed emails",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "pacing: skip completes the schedule in published order",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "pacing: a step cannot fire twice, an unknown step is refused",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the book numbers in sequence and a refused entry takes no number",
+          "ok": true,
+          "detail": "spec passed"
+        }
+      ]
+    },
+    {
+      "gate": "e2e",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "step 1: click #skipReveal",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 2: type #f-name",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 3: type #f-email",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 4: select #f-pieces",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 5: click #f-consent",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 6: click .submit",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 7: expectVisible #confirmation",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 8: expectText #confirmationText",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 9: expectText #confirmationText",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "zero console/page errors across the journey",
+          "ok": true,
+          "detail": "none"
+        }
+      ]
+    },
+    {
+      "gate": "visual",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "screenshot matches the filed baseline",
+          "ok": true,
+          "detail": "diff ratio 0.000% within 1.00%"
+        }
+      ]
+    },
+    {
+      "gate": "a11y",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "document language declared",
+          "ok": true,
+          "detail": "lang=\"en\""
+        },
+        {
+          "name": "every role=img carries an accessible name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "every img carries an alt attribute",
+          "ok": true,
+          "detail": "0 missing"
+        },
+        {
+          "name": "every form control is labelled",
+          "ok": true,
+          "detail": "0 unlabelled"
+        },
+        {
+          "name": "every link and button has a name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "exactly one h1, heading levels never skip",
+          "ok": true,
+          "detail": "h1=1 skip=false"
+        },
+        {
+          "name": "body text contrast ≥ 4.5:1 (computed styles)",
+          "ok": true,
+          "detail": "15.26:1"
+        }
+      ]
+    },
+    {
+      "gate": "perf",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "layout reads during the journey ≤ 50",
+          "ok": true,
+          "detail": "1 reads"
+        },
+        {
+          "name": "long-task total ≤ 250 ms (lab)",
+          "ok": true,
+          "detail": "0 ms"
+        },
+        {
+          "name": "CLS ≤ 0.1 (lab trace)",
+          "ok": true,
+          "detail": "CLS 0"
+        },
+        {
+          "name": "LCP ≤ 2500 ms (lab trace)",
+          "ok": true,
+          "detail": "LCP 96 ms"
+        }
+      ],
+      "metrics": {
+        "reads": 1,
+        "longTaskMs": 0,
+        "cls": 0,
+        "lcpMs": 96
+      }
+    }
+  ],
+  "verdict": "PASS"
+}
