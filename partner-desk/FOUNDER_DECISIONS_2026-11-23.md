@@ -20,3 +20,7 @@ Sheet voted on: crew recommendations AS AMENDED by the partner's challenge (capt
 ## RESULT: 14 OF 14 — YES (crew recommendations as amended by the partner's challenge)
 
 Settled by the founder's word: F-2 (three rails) · F-4/R-4 (holding never required) · F-8/R-13 (split on amount paid) · F-9/R-14 (one film). Still open as WORK, not decisions: the refund policy draft (Q7) · the Presentation Standard duration reconciliation (Q14) · the charges-live documentation (Q2) · the clearance checks incl. the legal leg (Q1 — the founder is not contacting a lawyer; the leg stays an open documented item). Gates remain CLOSED. No implementation authorized. Step 2 (test-environment purchase-to-delivery proof) proceeds only when its gates clear and the founder gives the word.
+
+## FOUNDER'S AMENDMENT — Q13 (added 13:06 CT, after the 14 were complete)
+
+**THE NO-LOSS RULE (George, 2026-11-23):** "We cannot lose money on creating something. I cannot lose money on transactions." — The house NEVER ends a transaction or a creation in the red. Mechanics: the 80/20 split runs on NET receipts — payment-provider fees and network costs come off the top FIRST, covered by the transaction itself; only what remains is split 80/20. Checkout quotes are set so those costs are covered, never eaten by the house. The house never pays out of pocket to complete a sale; a transaction that cannot cover its own costs does not run. (This refines Q13's $32/$8 example: costs first, then the split.)
