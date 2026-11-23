@@ -1,0 +1,11 @@
+# CAPTAIN'S ADJUDICATION — GEMINI'S EIGHT-LAYER MINT STORYBOARD (2026-11-23 16:40 CT)
+
+Gemini's independent storyboard landed (same Ultra session; full text: REPORTS/2026-11-23-GEMINI-STORYBOARD-MINT.md). Verdict: ADAPT — banked as design reference; it does not displace the built Mint (which stands at the founder's gate) or the film standard.
+
+WHAT IT PROPOSES: a real-time WebGL exploded assembly (Three.js/GSAP, "90% code/shader") instead of the house's filmed-frames mechanism — a different production road. The house standard (founder-ruled, Surfer recipe) is film frames; a mechanism swap is a founder-level question, not a seat's. NOT adopted as the mechanism. Its LAYER ICONOGRAPHY, however, is excellent and is banked as shot-brief material for the Mint's future chamber films and for product #2's design from the start: the five-bladed brass iris for The Honest Question (five blades = the five written checks — the single best device in the document) · the ghost-glass rehearsal disc · the interlocking-clasp Covenant ring · the striking die for The Mark · the ring-portal for The Launch · the astrolabe ledger plate for The Record (seven notches igniting) · scaffolding retracting for The Handover.
+
+ADOPTED AS CANDIDATES for the Mint's post-verdict revision: (1) several bullet wordings — its Record line ("It receipts every milestone so trust is verifiable, not claimed") is pure Receipt Law and beats ours; wording deltas will be tabled line by line, never swapped silently; (2) the right-edge layer scrubber rail (eight gold ticks, tap to jump to a layer's lock point) — a genuine phone usability gain, no pill clutter; (3) the closing-beat discipline: one Return link, no competing duplicates (converges with critique #1's sustained double-entry finding).
+
+FENCED OUT: its closing block invents a "JOIN THE WAITLIST" door — no waitlist exists; nothing prints that isn't receipted. Its in-world availability dress is admissible only where the underlying fact stays unmistakable (gate closed, cannot pay), per the critique adjudication.
+
+SEQUENCE: the founder judges the built Mint first. Gemini's banked deltas then fold into (a) the Mint revision, if he sends it back or asks for the polish pass, and (b) product #2 THE KEEPER's brief from the start.
