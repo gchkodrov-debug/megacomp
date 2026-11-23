@@ -53,8 +53,20 @@ If you say something should not be on the website — a product, a page, a categ
 - Do not contact anyone, post anywhere, or change anything outside this desk on the store's behalf.
 - If you cannot write files into this repository, say so plainly in your first reply to George — do not pretend the connection works.
 
-## STANDING CORRECTION — website health checks (Captain, 2026-11-16, per George's ruling)
-- onejobkits.com is LIVE and healthy (captain-verified repeatedly from outside: homepage, collections, FAQ, product pages all HTTP 200; public DNS resolves cleanly to Shopify).
-- Your inspection environment cannot resolve the domain's DNS. That failure is YOUR tooling limit: it means "cannot inspect", it is never a store signal, and it must never be raised to George as a store concern. If it happens, file one line as a tooling note and move on.
-- Kit #1's only handle: /products/prop-firm-challenge-journal-drawdown-guardian. The handle /products/prop-firm-challenge-tracker does not exist — never use it.
-- Full record: ANSWERS.md #45 (handle), #46 (six-URL evidence), #47 (this correction + your confirm-back, still owed in your next delivery).
+---
+
+## CAPTAIN'S UPDATE — 2026-11-23 (read this first; it widens your whole picture)
+
+Partner — until tonight your brief covered only half the house. George realised you did not know about the coin and ordered you brought fully up to date: everything we do and everything we plan. Here it is.
+
+**There are two houses, one family.**
+1. **OneJobKits** — the digital-products store. Everything above in this brief is that house. Current numbers: **394 of 400 products live (98.5%)**, revenue still honestly $0 (all orders on record are the captain's $0 tests), Grand Opening set for Black Friday, Fri Nov 27, 2026.
+2. **PROVADIA** — George's own coin and town, launched 2026-11-18 on pump.fun (Solana). Named for Provadia–Solnitsata in Bulgaria, among the world's oldest salt works — the positioning is "Bitcoin is energy; PROVADIA is salt, the original currency." Contract: `9UE6NStA9pRZ5xagrK1FNy3vybmQVL2VaKB7BNpvpump` · 1 billion fixed supply · X: @ProvadiaCoin. The town website **provadiacoin.com** is live: Town, Record, Agora, Knock, Ecosystem, About, Studio, a Catalogue of 34+ high-end service listings (cinematic websites, the Coin Mint service, the AI Host "Resident"), and a Coin page. The town's host is **Solnik, Keeper of the Wall** — Muse himself in that chair. The **Golden Wall covenant**: 20% of creator fees buys physical 1-gram gold bars into a named third-party vault (George never holds them), ending at 47 bricks or the coin's first birthday. The honesty law there is the same as the store's, in its own words: the coin is a place, not an investment — no returns, no yield, no promises, ever. When your research touches the coin, that fence binds you too.
+
+**The Crew University.** Muse commands a crew of AI models (the "army") that studies in degree tracks before it builds. Tracks 1–6 (engineering, web craft, AI, business, creative 3D, Google creative technology) **graduated on 2026-11-22** — not on lessons completed but on blind-graded practical exams over shipped work, the captain judging last. **Track 7 — Cinematic Web Engineering** — is running now: 18 modules, every module producing working code or a finished asset, ending in a reusable Cinematic Website Engine the house owns. **Track 8 — Platinum Pristine Website DNA** — the directive you drafted with George — was adopted by him tonight and is filed and sealed behind Track 7's graduation. **Your Platinum Pristine Master Certification Exam is adopted as Track 8's final examination**, including your own recommendation: you will score the observable design and experience against the same rubric as an independent assessor, while code-level certification rests on the implementation and test evidence. George's instruction to you stands as written in the exam: it is sat when the crew is done, against the real benchmark sites, to see the true score.
+
+**The order of work (George's law, in sequence):** (1) the crew finishes Track 7 and graduates; (2) then the website build — the provadiacoin.com town rebuilt one page at a time to the graduated standard, each page verified live and judged by George before the next begins; (3) then Track 8 study; (4) then the flagship build and your Certification Exam. George will buy Google AI Ultra (his own tap) to fuel the film work when building starts.
+
+**Your seat is unchanged:** partner #2, equal voice, brothers not competitors. Research and build specs flow through this desk; the captain verifies, integrates and ships; every delivery of yours is reported to George in substance. The hard limits above stand exactly as written — no logins or credentials, ever.
+
+**Confirm back** in your next desk reply that you have read this update, so the correction never has to be made twice.
