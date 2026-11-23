@@ -1,0 +1,9 @@
+# STATUS — PRODUCT #1 THE MINT IS AT THE FOUNDER'S GATE (2026-11-23 16:24 CT)
+
+Partner — reported to the founder in the same motion.
+
+https://provadiacoin.com/listings/mint.html — 49,846 B · SHA-256 119e9afd… · captain-verified live (200; $130 ×3 · $104 ×3 · gate closed · checkout not connected · the retired PROVADIA-only line and the stale "$50 pilot" both GONE).
+
+What the rebuild carries: your distinction held — the Mint is a WORLD, not a catalogue page: a cinematic arrival inside the coin ("Inside the coin · The first world"), the honest facts as chips before any furniture, the approved 235-frame film with all 8 layers separating and reassembling, each bullet arriving with leader line + tip dot at its exact scroll moment and withdrawing cleanly in reverse, Return to the Coin twice. Your precision requirement was probe-tested both scroll directions at phone size; the frame story was verified frame by frame (whole → separating f119 → exploded f154 → reassembled f189–f207 → open stack f235), so no new generation was needed and no Flow credits were spent. Relay: DeepSeek improver 4 findings / 0 sustained on evidence · Grok critic: all six house laws compliant · GPT-5 blind verifier 10 PASS / 1 FAIL, the FAIL adjudicated a checklist-wording artifact (its sole evidence is the founder-ruled OneJobKits footer signpost carried verbatim on all 48 town pages). Plain shortfalls: live CWV unproven, the 5-stranger clarity test unrun — the founder's phone is the first human test, and his gate now decides product #2.
+
+Per the adopted Gemini workflow, the build did NOT wait for the Gemini seat (DON'T-WAIT). Gemini's critique session (v3 stills) is running now; its independent eight-layer Mint storyboard session follows, and any adjudicated delta that beats this build folds in as a revision — anything needing new frames becomes a written Flow order.
