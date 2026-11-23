@@ -1,0 +1,40 @@
+ONEJOBKITS / PROVADIA — GPT-6 FRESH CONFIRM-BACK
+2026-11-23 | For George and Captain Muse
+Source read in full: gchkodrov-debug/megacomp / partner-desk/BRIEF.md (22,690 characters), including Captain's Update #1, Update #2, Captain's Correction (Solana), Update #3, and Captain's Correction #2.
+Status: CONFIRMED AGAINST CAPTAIN'S WRITTEN BRIEF, with clearly labeled verification limits.
+
+1. COIN SUPPLY AND FOUNDER BUY — CONFIRM AS REPORTED. PROVADIA launched 2026-11-18 on Solana pump.fun, contract 9UE6NStA9pRZ5xagrK1FNy3vybmQVL2VaKB7BNpvpump. Captain reports fixed 1,000,000,000 supply; founder's disclosed purchase 0.1 SOL for 3,520,918.75 tokens, mathematically 0.352091875% of 1 billion (rounded ~0.35%). Correction #2 reports Token-2022 and revoked mint, freeze and metadata-update authorities. These are captain-record facts, not an independent on-chain verification performed in this pass. The 0.1 SOL token purchase is distinct from Brick #1's physical-gold purchase.
+
+2. BRICK #1 / GOLDEN WALL — CONFIRM. Brick #1 NOT bought, Wall 0/47, launch posts held until first brick is bought and receipted. Covenant: 20% of creator fees allocated to serial-numbered 1g physical gold bars in third-party vault, target 47 bricks or first anniversary, end ceremony and holder vote. Gold not token backing, never redeemable; no yield or return promises. Timing of founder-funded Brick #1 remains George's decision. Latest status as of Captain Correction #2 on Nov 23, not independently verified by vault receipt.
+
+3. STORE COUNT / REVENUE — CONFIRM AS CAPTAIN'S OPERATIONAL RECORD. 394 of 400 products live on Shopify = 98.5%. Gumroad 149 total / 148 published. Etsy approximately 94. Other doors Payhip, Whop, Ko-fi, Fourthwall, and Fiverr (4 gigs); Shopify onejobkits.com is the home. Revenue to date $0, all recorded orders captain's $0 tests. Do not misrepresent catalog count as revenue, nor approximate Etsy count as exact. Old BRIEF opening says 336 as of Nov 15; newer dated Nov 23 update supersedes it.
+
+4. FRIDAY NOV 27 — CONFIRM: OneJobKits GRAND OPENING on Black Friday, Friday 2026-11-27. This is a scheduled event, not evidence it has occurred.
+
+5. PLATFORMS — CONFIRM CAPTAIN-REPORTED STATE. Etsy: captain reports Terms §5.C effective Dec 16, 2026 allowing AI/ML training use of seller content and no US opt-out; flagged to George, no decision. This legal reading requires separate source/legal verification before treating as settled. Instagram: store account permanently disabled by Meta, no further review; fresh-account plan requires George's decision. Facebook: Correction #2 supersedes Update #3's pending restoration — One Job Kits Page reactivated Nov 23 and product Reel posted as Page. Social hourly rotation paused by George; separate six-hour cycle on functioning doors continues, according to Update #2.
+
+6. UNIVERSITY TRACKS 1–6 — CONFIRM: graduated Nov 22 on blind-graded practical exams over shipped work, not mere lesson completion. This is captain-reported certification, not independently regraded here.
+
+7. TRACK 7 — CONFIRM WITH ONE EXACT BLOCKER: all six phases passed, 18/18 abilities including §26 Final Master Exam, Project 12 commercial kit v1.1.0 verified. Graduation withheld solely because Project 4's film is not verifiably made with Google Flow, which was required for module M6. A provably Google Flow-made film, with measured before/after credit use, must be produced and blind-graded to pass. Captain-run session using George's existing Plus account is reported in production Nov 23. No evidence in BRIEF that it has yet passed. The film's origin is a provenance requirement, not a visual-quality complaint. Track 7 is NOT graduated yet.
+
+8. TRACK 8 — CONFIRM: Platinum Pristine Website DNA training is adopted and sealed until Track 7 graduation. Solana.com, not sorana.com, is the correct benchmark. Benchmark set: Lamborghini, Bentley, Rolls-Royce, Mercedes-Benz, SpaceX, Apple, Bitcoin.com, Solana.com. Readiness Exam is Track 8's first exam; Platinum Pristine Certification Exam is final. My seat independently grades observable visual/experience categories; code-level certification depends on implementation and test evidence. Track 8 has not started according to BRIEF.
+
+9. WEBSITE SEQUENCE — CONFIRM THE LATEST, MOST SPECIFIC CAPTAIN CORRECTION #2: Track 7 graduation -> George elects to buy Google AI Ultra -> ONE prototype page -> George judges -> rebuild provadiacoin.com town one page at a time, each live-verified and George-approved -> Track 8 study -> Readiness Exam -> flagship build -> Certification Exam, audition for website commission. This is more precise than Update #1. No authorization to skip the gates or build full flagship now.
+
+10. NEXUS — CONFIRM: George REJECTED NEXUS BODY on Nov 21. Purchased source tree remains untouched until explicit founder go-ahead. Gate prototypes are closed historical experiments, not the current production direction. Earlier discussion treating NEXUS as active contender was stale.
+
+11. RELAY AND MY SEAT — CONFIRM: builder -> improver -> different-family critic -> blind verifier -> captain judges last; captain may improve personally. Shared roster ~135 model seats across six agent harnesses; engine/model is distinct from transmission/harness. I am partner #2, with equal voice on evidence and a builder/spec role including Assignment U; Muse remains accountable for verification and shipping. Consensus may drive ordinary store improvements; George retains money/identity/legal decisions and unresolved disputes. I never receive credentials/logins, private data, or automatically all local/private crew activity.
+
+12. GAPS / DISPUTES / DOCUMENT ISSUES:
+A. No substantive contradiction found in the later captain updates on the requested facts; the missing updates were in BRIEF.md, not ANSWERS.md. My prior claim they were not received was a retrieval mistake; corrected.
+B. BRIEF.md header still says 'Last updated 2026-11-15' while Nov 23 updates follow. Update header metadata to avoid future stale-reading errors. Its 336-product Nov 15 snapshot is historical, superseded by 394 Nov 23.
+C. Update #1 and Update #3 were written at different times; the latter updates Track 7 phase completion; Correction #2 updates Facebook restoration and NEXUS. Use last dated correction as current.
+D. Track 7 graduation and Google Flow film are pending in the Nov 23 brief; captain should supply measured credit proof, actual Flow export, blind grade and graduation receipt when done.
+E. Supply, authority revocations, founder holdings, $0 revenue, live doors, Facebook recovery and Etsy policy have been confirmed against the captain's report, NOT independently audited on-chain, in commerce dashboards, or on Etsy's binding terms in this pass. Avoid labeling source-report confirmation as independent verification.
+F. The projected Ultra 10-credit film cost and ~4,000 credits for ~400 products in Update #2 are estimates based on reported pricing, not confirmed future actual consumption. Ultra purchase has not occurred. Genspark Plus purchase also not made.
+G. Website schedule may be misread: town prototype/rebuild happens before Track 8; flagship build and Certification Exam happen after Track 8. These are distinct workstreams/stages.
+H. If 'Platinum Pristine Certification Exam' is the audition for website commission, it must assess a representative independent build rather than presuppose completion of the actual commissioned flagship; clarify deliverable scope before exam so certification precedes production authorization.
+I. Exact current product counts, revenue, social platform statuses and Brick #1 could change after the Nov 23 update; request a new receipt rather than assume permanent state.
+
+CONFIRMATION: I have now read all five named update/correction sections in BRIEF.md and accept the captain's latest recorded picture as the operational baseline, with the verification qualifications above. I do not dispute the reported facts without contrary evidence. I will no longer substitute ANSWERS.md/TASKS.md for BRIEF.md when asked for the captain's standing updates.
+— GPT-6, partner #2
