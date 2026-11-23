@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Project 5 — The Keeper's Coin Viewer · Track 7 M9</title>
+<style>
+  :root { --ink:#141210; --gold:#C9A227; --cream:#FFEFC1; --paper:#F4EFE6; --dim:#6B4A12; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+  main { max-width: 1020px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 29px; color: var(--cream); margin: 0 0 6px; }
+  h2 { font-size: 20px; color: var(--gold); margin: 30px 0 8px; }
+  p, li { line-height: 1.55; font-size: 16px; }
+  .sub { color:#cbbd93; margin-top:0; }
+  .stage { background: radial-gradient(120% 120% at 50% 30%, #2a2113 0%, #171310 62%, #0d0b08 100%);
+    border:1px solid var(--dim); border-radius: 10px; padding: 14px; }
+  canvas { display:block; width:100%; height: 520px; border-radius: 6px; touch-action: none; cursor: grab; }
+  canvas:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; align-items:center; }
+  button { font: inherit; font-size: 14.5px; background:#2a2317; color:var(--paper);
+    border:1px solid var(--gold); border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+  button[aria-pressed="true"] { background: var(--gold); color: var(--ink); }
+  .panel { background:#1d1913; border:1px solid var(--dim); border-radius: 10px; padding: 14px 16px; margin-top: 14px; }
+  .panel h3 { margin: 0 0 4px; font-size: 17px; color: var(--cream); }
+  .panel p { margin: 4px 0; font-size: 15px; }
+  .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; }
+  .readout { color:#cbbd93; }
+  .fence { border-left: 3px solid var(--gold); padding: 4px 0 4px 12px; color:#cbbd93; font-size: 14.5px; }
+  kbd { background:#2a2317; border:1px solid var(--dim); border-radius: 4px; padding: 0 5px; font-family: ui-monospace, monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>The Keeper's Coin, in Your Hands</h1>
+  <p class="sub">Track 7 · Module M9 (Three.js &amp; Real-Time 3D) · Master Project 5. The town's coin
+  as a real-time 3D object: drag it, scroll to zoom, click a face to inspect it — or do all of it from
+  the keyboard. The viewer is the Engine's own component; this page is only its exam room.</p>
+
+  <section class="stage">
+    <canvas id="stage" tabindex="0" role="application"
+      aria-label="Interactive 3D coin viewer. Use left and right arrow keys to orbit, up and down arrows to tilt, plus and minus to zoom, zero to reset."></canvas>
+    <div class="controls" role="group" aria-label="Inspect a part">
+      <button data-part="front">Front face</button>
+      <button data-part="reverse">Reverse face</button>
+      <button data-part="edge">The edge</button>
+      <button data-part="home">Reset view</button>
+      <span class="mono readout" id="readout" aria-live="off">loading…</span>
+    </div>
+  </section>
+
+  <section class="panel" aria-live="polite">
+    <h3 id="part-title">The whole coin</h3>
+    <p id="part-body">One billion struck, none more coming — but this page makes no claims about the
+    coin; it demonstrates a viewer. Choose a part above, or click the coin itself, and the camera will
+    take you there.</p>
+  </section>
+
+  <h2>How to drive it</h2>
+  <p><strong>Pointer:</strong> drag to orbit · wheel to zoom · two-finger pinch on touch screens ·
+  click a face or the edge to inspect it.<br>
+  <strong>Keyboard:</strong> focus the coin, then <kbd>←</kbd> <kbd>→</kbd> orbit, <kbd>↑</kbd>
+  <kbd>↓</kbd> tilt, <kbd>+</kbd> <kbd>−</kbd> zoom, <kbd>0</kbd> reset. The part buttons above are
+  ordinary buttons — the whole experience is completable without a pointer.</p>
+
+  <h2>What the numbers on the readout are</h2>
+  <p>They are printed from the viewer's own state, twice a second: camera angles and distance, the
+  renderer's own draw-call and triangle counts for the last frame, a frames-per-second average the
+  viewer measures itself, and the latency of your last input — the time from the viewer hearing it to
+  the next frame carrying it. Nothing on the line is recomputed by the page.</p>
+
+  <p class="fence">Study build: this is Track 7's M9 exam artifact, served locally for grading. It is
+  not a production page and sells nothing. The coin model is procedural — a cylinder wearing the two
+  anchored face textures — because the exam grades the viewer, not a sculpted asset; M8's optimized
+  models load through the same component's GLB reader.</p>
+
+<script src="vendor/three.min.js"></script>
+<script src="../engine/3d-viewer/viewer.js"></script>
+<script>
+(function () {
+  'use strict';
+  const canvas = document.getElementById('stage');
+  const PARTS = {
+    front: { title: 'The front face', body: 'The obverse — the face the market knows. In the viewer it is one of three named parts; the raycaster reports which one your click met, by the face\'s own material slot.' },
+    reverse: { title: 'The reverse face', body: 'The second anchored face. The camera\'s preset swings a half-turn to meet it — the same smoothing chase as every other movement, never a cut.' },
+    edge: { title: 'The edge', body: 'The coin\'s rim: in this procedural model a smooth band 0.14 units thick on a 2-unit diameter. The edge view sets the camera level with the coin\'s plane.' },
+    home: { title: 'The whole coin', body: 'Back to the resting view. Every movement on this page — drag, key, button — steers one target, and the camera chases it at the house rate, so nothing ever teleports.' },
+  };
+  const viewer = window.CineViewer.createViewer(window.THREE, {
+    canvas,
+    model: { kind: 'coin', frontUrl: 'assets/coin-front.webp', reverseUrl: 'assets/coin-reverse.webp' },
+    onInspect: (part, via) => {
+      if (!part || !PARTS[part]) return;
+      document.getElementById('part-title').textContent = PARTS[part].title;
+      document.getElementById('part-body').textContent = PARTS[part].body;
+      document.querySelectorAll('[data-part]').forEach((b) =>
+        b.setAttribute('aria-pressed', String(b.dataset.part === part)));
+    },
+  });
+  window.__viewer = viewer;
+  document.querySelectorAll('[data-part]').forEach((b) =>
+    b.addEventListener('click', () => viewer.focusPart(b.dataset.part)));
+  const readout = document.getElementById('readout');
+  const deg = (r) => Math.round(r * 180 / Math.PI);
+  setInterval(() => {
+    const s = viewer.getState();
+    readout.textContent =
+      `az ${deg(s.azimuth)}° · polar ${deg(s.polar)}° · dist ${s.distance.toFixed(2)} · ` +
+      `${s.drawCalls} draw calls · ${s.triangles} tris · ${s.fps} fps · ` +
+      `input latency ${s.lastLatencyMs === null ? '—' : Math.round(s.lastLatencyMs) + ' ms'}`;
+  }, 500);
+  viewer.ready.then(() => { readout.textContent = 'ready'; });
+})();
+</script>
+</body>
+</html>
