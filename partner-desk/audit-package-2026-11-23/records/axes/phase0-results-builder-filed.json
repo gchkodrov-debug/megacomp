@@ -1,0 +1,190 @@
+{
+  "checks": [
+    {
+      "name": "unit: priorityOrder opens [1, 60, 31] (first, last, midpoint)",
+      "ok": true,
+      "detail": "1,60,31,30,15,45"
+    },
+    {
+      "name": "unit: priorityOrder covers 1..60 uniquely",
+      "ok": true,
+      "detail": "len 60"
+    },
+    {
+      "name": "unit: quartiles load before eighths",
+      "ok": true,
+      "detail": "pos15=4 pos8=6 pos45=5 pos52=9"
+    },
+    {
+      "name": "unit: nearestLoadedIndex exact hit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unit: nearestLoadedIndex nearest wins",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unit: nearestLoadedIndex nothing loaded -> -1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unit: bad frames.count throws the named error",
+      "ok": true,
+      "detail": "scroll-sequence-player config.frames.count: an integer >= 2 is required"
+    },
+    {
+      "name": "unit: missing progressSource throws the named error",
+      "ok": true,
+      "detail": "scroll-sequence-player config.progressSource: a function () => 0..1 is required"
+    },
+    {
+      "name": "unit: missing canvas throws the named error",
+      "ok": true,
+      "detail": "scroll-sequence-player config.canvas: a <canvas> element is required"
+    },
+    {
+      "name": "site: zero console errors on load",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "site: FPS meter is live",
+      "ok": true,
+      "detail": "fps=53"
+    },
+    {
+      "name": "paper: priority preload completes in view",
+      "ok": true,
+      "detail": "60/60 frames"
+    },
+    {
+      "name": "paper: settles at the Fold beat",
+      "ok": true,
+      "detail": "displayed=0.250 currentFrame=16"
+    },
+    {
+      "name": "paper: Fold callout + leader fully present",
+      "ok": true,
+      "detail": "callout=1 leader=1.000"
+    },
+    {
+      "name": "paper: Fold leader dot lands on the part (cover-fit)",
+      "ok": true,
+      "detail": "error=0.0px dot=(640,417.6) expected=(640.0,417.6)"
+    },
+    {
+      "name": "paper: readouts print the real state",
+      "ok": true,
+      "detail": "progress=25% target=16 shown=16 loaded=60"
+    },
+    {
+      "name": "paper: Flight callout + leader fully present at its beat",
+      "ok": true,
+      "detail": "currentFrame=32"
+    },
+    {
+      "name": "paper: Flight leader dot lands on the part",
+      "ok": true,
+      "detail": "error=0.0px"
+    },
+    {
+      "name": "paper: Landing callout fully present at its beat",
+      "ok": true,
+      "detail": "currentFrame=49"
+    },
+    {
+      "name": "paper: Landing leader dot lands on the part",
+      "ok": true,
+      "detail": "error=0.0px"
+    },
+    {
+      "name": "paper: only one beat at a time (Fold gone by Landing)",
+      "ok": true,
+      "detail": "fold opacity=0"
+    },
+    {
+      "name": "paper: chase is real (intermediate frames on a jump)",
+      "ok": true,
+      "detail": "35 distinct displayed values across 44 samples"
+    },
+    {
+      "name": "web: same player, second config settles mid-sequence",
+      "ok": true,
+      "detail": "currentFrame=25 of 48"
+    },
+    {
+      "name": "web: Act 2 callout present at its beat",
+      "ok": true,
+      "detail": "opacity=1"
+    },
+    {
+      "name": "site: quiz scores a correct set 6 of 6",
+      "ok": true,
+      "detail": "Score: 6 of 6 — full marks. The page taught what it promised."
+    },
+    {
+      "name": "network: zero requests mention the specimen product",
+      "ok": true,
+      "detail": "128 requests total"
+    },
+    {
+      "name": "network: the paper sequence was really loaded",
+      "ok": true,
+      "detail": "60 paper-frame requests"
+    },
+    {
+      "name": "site: zero console errors after full interaction",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "reduced: exactly one frame per player",
+      "ok": true,
+      "detail": "paper=1 web=1"
+    },
+    {
+      "name": "reduced: no leader lines are built",
+      "ok": true,
+      "detail": "svg count=0"
+    },
+    {
+      "name": "reduced: players report reduced + first frame",
+      "ok": true,
+      "detail": "reduced=true currentFrame=1"
+    },
+    {
+      "name": "reduced: zero console errors",
+      "ok": true,
+      "detail": "none"
+    },
+    {
+      "name": "responsive: no horizontal overflow at 390px",
+      "ok": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "mobile: player settles at the Flight beat (thinned order)",
+      "ok": true,
+      "detail": "displayed=0.530 orderLength=31"
+    },
+    {
+      "name": "responsive: no horizontal overflow at 768px",
+      "ok": true,
+      "detail": "overflow=0px"
+    },
+    {
+      "name": "responsive: no horizontal overflow at 1280px",
+      "ok": true,
+      "detail": "overflow=0px"
+    }
+  ],
+  "notes": [],
+  "summary": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0
+  }
+}
