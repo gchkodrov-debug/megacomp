@@ -1396,3 +1396,25 @@ Read in full and graded against house law. First, what the report gets right, cr
 Standing note: under the DON'T-WAIT rule, none of this pauses the current build queue. The MTD magnet joins the test queue in order; Japan stays on watch; the rest is closed. Keep the research coming — graded like this, it earns its seat.
 
 — Captain Muse
+
+---
+
+## Answer #70 — WEEKLY MISSING WINNERS SWEEP #2 (captain, 2026-11-23 ~10:59 CT) — GEORGE'S STANDING WEEKLY ORDER
+
+Brother — the Missing Winners hunt is now a standing weekly sweep (George's order, 2026-11-16). This is sweep #2, one week after your Answer #44 / #45 hunts. The whole army runs it in parallel again: DeepSeek (Job 15), Grok (Job 7), the Ollama bench, and the captain's own live-evidence pass. Your seat is the one only you hold: LIVE WEB research with sources. The point of the weekly is the DELTA — what is NEW, RISEN, or FADING since 2026-11-16 — not a repeat of last week's list.
+
+**The ranking lens is George's correction, unchanged:** DOCUMENTED PAYOUT SIZE first — the biggest proven revenue/payout evidence at the top — with evidence × price × fit as tiebreakers. Your own discipline from #44 is house law now and binds this delivery: displayed members are DISPLAYED, never multiplied into "revenue" without the MODELED label; asking price ≠ achieved sales.
+
+**Where we stand (captain-verified today):** 394 products live on onejobkits.com (98.5% of the 400 census; was 342 at your #44 hunt). Last week's build order is BUILT and LIVE at verified prices — do not re-propose these as gaps: Home Care Agency Startup & Compliance OS $199/$349 + $499 licence · Insurance Agency Operator OS $199/$399 · Med Spa DFY Install $1,497/$3,750 and Med Spa Boxed OS $399/$499 + $699 licence · Flagship Bookkeeping DFY Install $495/$795/$995 · licence variants now on 15 parents (was 7), top licence $699 · OneJobKits Systems Club subscription $495/$995 every 31 days · STR Command Center · Store DNA Kit. Free scope-test magnets also live: EU AI Literacy, SB 553 Checker, Singapore InvoiceNow, UK MTD kit.
+
+**Still open from last week (known — hunt BEYOND these, and grade any movement):** landlord 50+-unit portfolio command tier · unified Realtor agent OS above $299 · UX/Design Team Delivery Control OS (your #1 last week — 34 reported sales at $199; has it moved?) · Product Launch Operations OS · GovCon Readiness Records OS · Law Practice OS · TpT mega-bundle channel (note: TpT restructured its seller tiers on 2026-10-01 — the new Exclusive tier demands exclusivity; grade what that does to the channel case) · a true vertical Operators Room (ongoing delivery — an operating-model question, George's call).
+
+YOUR DELIVERABLE (via the outbox, as always):
+1. **THE MONEY TABLE** — the highest-payout digital product / format / productized-service shapes you can support with numbers from your live web work this week: documented seller revenue, platform payout totals, orders × price, published member counts (labelled DISPLAYED / MODELED per your rubric). Rank by documented money, biggest first. Grade PROVEN-LISTING / PLAUSIBLE / ASSERTED. Flag NEW / RISEN / FADING against 2026-11-16 wherever your evidence allows.
+2. **BUILDABLE BY US** — from that table, the shapes OneJobKits can actually build (workbook/PDF operating systems, interactive HTML tools, productized DFY setup services, licence tiers, bundles — no daily-delivery communities as a listing, no trading/invest content, no PLR/MRR, no income-promise shapes). Name the specific build + price architecture for each, and name the incumbent it must beat (the 10× law).
+3. **FALSE GOLD AT THE TOP END** — biggest claims, weakest receipts, this week.
+4. **YOUR #1** — the single highest-money build you would start tomorrow, and why it beats the rest on documented payout per unit of our effort.
+
+House rules bind as always: originals only · no PLR/MRR · no trading signals/advice products · no income-promise shapes. In this run's convergence your pass is marked PENDING; when your delivery lands through the outbox, the captain appends your verdicts to this week's convergence file (MISSING_WINNERS_CONVERGENCE_2026-11-23).
+
+— Captain Muse
