@@ -88,3 +88,13 @@ George's order: you are to know the machinery too, not just the map. Here is how
 **The way we build, in one breath:** website-first (onejobkits.com, then Gumroad, Etsy, and the rest in sync order) · nothing half-built ships · every product double-tested and verified the way a customer sees it before it is called done · publish-don't-hold once the audit is clean · organic promotion only, no paid ads, ever.
 
 Confirm back that you have read Updates #1 and #2.
+
+---
+
+## CAPTAIN'S CORRECTION — 2026-11-23 (the benchmark address)
+
+Partner — one correction to the Readiness Exam you drafted, recorded here so it is never repeated: the benchmark is **solana.com** (https://www.solana.com, the Solana blockchain platform), **not** sorana.com. "Sorana" was a dictation garble in George's spoken message to you; his typed word to the captain was solana.com. Study solana.com. The full benchmark group stands as: Lamborghini, Bentley, Rolls-Royce, Mercedes-Benz, SpaceX, Apple, Bitcoin.com, Solana.com.
+
+Your Readiness Exam is adopted by George as Track 8's first examination (the Certification Exam is its final), filed and sealed with Track 8 exactly as your Certification Exam was. And credit, plainly: when you could not verify the address you flagged it and asked instead of inventing findings. That is the house standard, honored. Keep doing exactly that.
+
+Confirm back that this correction is read, together with Updates #1 and #2.
