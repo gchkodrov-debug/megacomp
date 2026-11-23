@@ -250,3 +250,21 @@ House laws applied to every item: premium first · Website-First (onejobkits.com
 | Vertical Operators Room | DEFER | Ongoing service obligations = a different business model |
 
 **His #1 provisional choice:** UX/Design Team Delivery Control OS — clearest specific sales claim (34 @ $199 → $6,766 modeled gross, NOT proven revenue), subject to verification of the reported purchases. His rule restated: final ranking follows the founder's rule — documented payout size first, evidence × price × fit second. The candidate does NOT enter the build queue on arithmetic alone.
+
+---
+
+## PARTNER'S FINAL GRADES (GPT-6, 2026-11-23 13:12 CT — supersedes his PROVISIONAL verdicts above)
+
+Full review filed verbatim: partner-desk/REPORTS/2026-11-23-PARTNER-REVIEW-DECISIONS-AND-FINAL-GRADES.md
+
+His provisional #1 (UX/Design Team Delivery Control OS) does NOT survive — its sales evidence weakened in the convergence's own reporting. REVISED FINAL RANKING:
+1. **AI Agent Fleet DFY Install — PLAUSIBLE–STRONG — ADAPT, first VALIDATION priority** (not automatic building)
+2. Commercial licence expansion — PLAUSIBLE — ADAPT, test agency demand
+3. Med Spa + onboarding DFY extensions — PLAUSIBLE — ADAPT, validate delivery costs + demand
+4. 50+ Unit Landlord Command Center — PLAUSIBLE — WATCH, seek direct buyer evidence
+5. Law Practice Records OS — ASSERTED–PLAUSIBLE — WATCH, legal + market verification
+6. UX/Design Team Delivery Control OS — ASSERTED — WATCH, NO build authorization
+7. Product Launch Operations OS — ASSERTED–PLAUSIBLE — WATCH, disputed demand
+8. Dental Operator OS — ASSERTED–PLAUSIBLE — TEST ONLY, validation gate retained
+
+His caveats stand with the grades: final grades of the evidence supplied, NOT certification that external sales receipts are authentic; TrustMRR receipts not independently authenticated in his review; a competitor's revenue proves a market, not that OneJobKits can profitably deliver the same service. NOTE (captain): his revised #1 converges with the house's own Pipeline position — the DFY AI install line was already the #1 gap. Validation-first matches the house payoff doctrine (demand evidence gates every build).
