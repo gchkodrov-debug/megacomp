@@ -1,0 +1,168 @@
+{
+  "target": "project-11-hybrid/",
+  "mode": "run",
+  "gates": [
+    {
+      "gate": "unit",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "the product counts its parts honestly",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the model facts are the cleanup gate’s filed numbers",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the sequence sets sit inside the frame budgets",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "every callout names a real part, in a sane window",
+          "ok": true,
+          "detail": "spec passed"
+        },
+        {
+          "name": "the film’s acts are contiguous and complete",
+          "ok": true,
+          "detail": "spec passed"
+        }
+      ]
+    },
+    {
+      "gate": "e2e",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "step 1: click [data-view=\"front\"]",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 2: expectText #part-title",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 3: click #lamp-film",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 4: wait",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 5: expectVisible #journey",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "step 6: expectVisible #lamp-canvas",
+          "ok": true,
+          "detail": "done"
+        },
+        {
+          "name": "zero console/page errors across the journey",
+          "ok": true,
+          "detail": "none"
+        }
+      ]
+    },
+    {
+      "gate": "visual",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "screenshot matches the filed baseline",
+          "ok": true,
+          "detail": "diff ratio 0.004% within 1.00%"
+        }
+      ]
+    },
+    {
+      "gate": "a11y",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "document language declared",
+          "ok": true,
+          "detail": "lang=\"en\""
+        },
+        {
+          "name": "every role=img carries an accessible name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "every img carries an alt attribute",
+          "ok": true,
+          "detail": "0 missing"
+        },
+        {
+          "name": "every form control is labelled",
+          "ok": true,
+          "detail": "0 unlabelled"
+        },
+        {
+          "name": "every link and button has a name",
+          "ok": true,
+          "detail": "0 unnamed"
+        },
+        {
+          "name": "exactly one h1, heading levels never skip",
+          "ok": true,
+          "detail": "h1=1 skip=false"
+        },
+        {
+          "name": "body text contrast ≥ 4.5:1 (computed styles)",
+          "ok": true,
+          "detail": "14.65:1"
+        }
+      ]
+    },
+    {
+      "gate": "perf",
+      "status": "PASS",
+      "checks": [
+        {
+          "name": "layout reads during the journey ≤ 50",
+          "ok": true,
+          "detail": "24 reads"
+        },
+        {
+          "name": "long-task total ≤ 12000 ms (class W lab ceiling — a regression ceiling in a software-GL lab, not a hardware figure)",
+          "ok": true,
+          "detail": "8855 ms"
+        },
+        {
+          "name": "CLS ≤ 0.1 (lab trace)",
+          "ok": true,
+          "detail": "CLS 0"
+        },
+        {
+          "name": "LCP ≤ 2500 ms (lab trace)",
+          "ok": true,
+          "detail": "LCP 192 ms"
+        },
+        {
+          "name": "off-screen long-task accrual ≤ 0 ms (class W — the stage pauses itself, Rule 34)",
+          "ok": true,
+          "detail": "0 ms accrued during a 1200 ms dwell with the stage off screen (scrolled past the stage)"
+        }
+      ],
+      "metrics": {
+        "reads": 24,
+        "longTaskMs": 8855,
+        "cls": 0,
+        "lcpMs": 192
+      }
+    }
+  ],
+  "verdict": "PASS"
+}
