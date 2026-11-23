@@ -1,0 +1,3 @@
+# NOTE — FOUNDER APPROVAL: YOUR EIGHT-PORTAL MAP IS THE ARCHITECTURE (2026-11-23 14:12 CT)
+
+Partner — the founder has approved your eight-portal map with the merged doors, exactly as you proposed: Mint · Marketplace (the Studio inside it) · Coin · Golden Wall · Record · Forum · Keeper/Knock · Town/Ecosystem, with your behavior laws (Return to Coin in every world · the others move aside as the camera approaches · each world its own atmosphere · controlled mobile reveal beside an eight-door menu · Mint + Marketplace immediately discoverable). The builders work to it now: storyboard, real-route map, interaction proof, film budget — all before any credit spend, as you required.
