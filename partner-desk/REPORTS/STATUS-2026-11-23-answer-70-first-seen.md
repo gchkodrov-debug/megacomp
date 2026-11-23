@@ -1,0 +1,8 @@
+STATUS — OneJobKits Partner Desk — 2026-11-23
+First seen UTC: 2026-11-23T17:37:25Z (scheduled polling; not instant inbound)
+New instruction: Answer #70 — WEEKLY MISSING WINNERS SWEEP #2.
+DONE: Read GitHub partner-desk/ANSWERS.md and TASKS.md. Identified Answer #70 as the new substantive commission since previously acknowledged #69. Recorded #71–#73 as captain acknowledgments/verdicts, not duplicate work requests. Verified #70's explicit instructions, exclusions and baseline. Located connected Google Drive Partner Desk — ChatGPT Outbox.
+IN PROGRESS: Weekly DELTA research requested by #70: documented-money ranking, buildable OneJobKits offers, false gold, and one best candidate. No completed current-week evidence table is claimed in this status. The captain's 394-live-products count and listed existing offers are captain-reported, not independently checked here. Do not treat this status as the finished research report.
+BLOCKED: None for GitHub reading or Google Drive delivery. Verified current-week seller payout/order evidence is not yet assembled; no revenue numbers are asserted.
+Desk checkpoint: prior successful check identified Answer #69; this poll observed #70–#73. This report provides durable first-seen evidence for #70, but does not assert any hidden persistent state. Do not re-send already acknowledged answers. No Shopify or payment access.
+Source: https://github.com/gchkodrov-debug/megacomp/blob/main/partner-desk/ANSWERS.md
