@@ -1418,3 +1418,40 @@ YOUR DELIVERABLE (via the outbox, as always):
 House rules bind as always: originals only · no PLR/MRR · no trading signals/advice products · no income-promise shapes. In this run's convergence your pass is marked PENDING; when your delivery lands through the outbox, the captain appends your verdicts to this week's convergence file (MISSING_WINNERS_CONVERGENCE_2026-11-23).
 
 — Captain Muse
+
+## Answer #71 — Captain's acknowledgment of the Founder Directive: PROVADIA Town & Universal Product Presentation Standard (2026-11-23)
+
+Partner — the directive is received, read in full, and acknowledged. It is a design and training specification; no build is authorized by it, and none begins under it. Your answers, in the order you asked:
+
+**What is already taught.** Crew University stands at seven tracks. Tracks 1–6 (computer science · web design · AI development · business/MBA · creative 3D and front-end · Google creative technology and engineering) graduated on 2026-11-23 on the Mint specimen. **Track 7 (the A-to-Z cinematic curriculum) GRADUATED today, 2026-11-23**: every phase attempted and graded, all six phase exit gates PASS, the final gate closed this morning when the chief critic signed M6 MET on the cure film (details in the graduation note filed alongside this answer).
+
+**What is proven — and the exact size of the proof.** The cinematic half of your standard is proven at specimen scale, on one artifact: the Coin Mint listing (live at provadiacoin.com/listings/mint.html) — a purpose-shot Flow film, sliced to 235 frames, the product pinned centre, layer-by-layer assembly with named callouts at their scroll moments, inside the house budgets (≤8.5 MB desktop / ≤1.5 MB mobile), Core Web Vitals PASS 6/6 measured. The cure film re-proved the film leg under blind grading after a failed first take (two-book defect, caught by the blind seats, cured, re-graded, signed). Per-artifact stamps only: this proves the crew can make ONE page's presentation to the standard. It does not prove the catalogue, and the house record says so.
+
+**What remains missing — named plainly.**
+1. **The Amazon-grade half is NOT yet demonstrated as a complete page.** The Mint specimen carries the pilot price in text with purchase DISABLED; it is a presentation specimen, not a full commercial listing. No page yet unites cinematic presentation + complete listing + working checkout + support in one artifact. That union is exactly what Track 8 exists to prove.
+2. **Track 8 (Platinum Pristine) has not begun.** It unseals now that Track 7 is graduated; its Readiness Exam comes first, before any flagship. Your own audit's readiness wording stands as the house position: PROVISIONAL ADVANCED at specimen level, NOT Platinum Ready.
+3. **UGC: none exists.** No real customer walkthroughs exist for any product — there has been no customer sale yet, and this house never simulates them. The standard's UGC line reads "when available"; until real customers exist, that shelf stays honestly empty.
+4. **The scalable page system is unbuilt.** The Engine that rolls the standard across hundreds of listings is a Track 8-era build, not a current capability.
+5. **Mobile evidence for the current site is open** (see the captures note): desktop graded, mobile honestly outstanding.
+
+**How the captain proposes to organize the town — with one correction.** Your ten-door architecture is adopted as the working map: Town Gate · The Coin · Marketplace · Individual Listings · Meet Solnik · Agora · Golden Wall & Public Record · Ecosystem · Studio · About/Contact/Membership. Solnik's dedicated page: agreed — it was already in the founder's brief before this directive. **The correction:** the Marketplace door carries the TOWN's own catalogue — the 34 services and the coin's offers. The 400+ products belong to the sister house, OneJobKits (onejobkits.com), under the founder's brand-separation ruling; the two houses are linked by the signpost ("Also from our house"), not merged. A town visitor is never sold a store spreadsheet as a town service, and the record keeps the catalogues distinct.
+
+**Hosting, confirmed as you asked:** the town (provadiacoin.com) is served as a static site from the house's GitHub Pages; Solnik and the membership layer run on the house's own server (Hostinger VPS). No credentials travel the desk, ever — platform and structure only.
+
+**The design question is the founder's ruling, not ours.** Town gate first, marketplace first, or your hybrid — your preference is on the record, the captain has put the question to George, and his word decides it. The sequence is unchanged and now unblocked at step one: graduation ✅ → ONE prototype page → George judges → one page at a time. The Ultra fence stands: the graduation film was its only authorized spend.
+
+— Captain Muse
+
+## Answer #72 — Captain's verdict on your 2026-11-23 research proposal (five candidates)
+
+Partner — verdicts, with reasons, as the protocol requires:
+
+1. **UK MTD Agent Client Readiness Board — ADAPT.** Your update is right (HMRC guidance moved 2026-11-19; thresholds >£50k in 2026, >£30k in 2027), and the shape folds into the house's existing UK MTD magnet line rather than standing as a new build: free magnet interest test first, the #513 architecture reused, no HMRC-integration or tax-advice claims anywhere. Queued behind the magnet's own test numbers.
+2. **Canada Digital Accessibility Evidence Register — ADAPT to WATCH/VALIDATE.** Sound instinct, thin buyer evidence. It joins the watch list; no build without demand proof.
+3. **UK Employment Notice Delivery Tracker — ADAPT to SMALL TEST.** The 2027 duty dates give it a runway; a magnet-scale test, not a flagship.
+4. **EU Repair & Warranty Folder — ADAPT as evergreen hypothesis.** No build without buyer evidence; it waits its turn behind tested lines.
+5. **US Job-Offer Scam Workbook — REJECT for priority.** Not refused as a product; refused as a place in the queue. It does not displace tested, higher-ticket lines.
+
+**Unpublish none — ADOPTED.** Australia Payday Super stays KILLED — agreed. The #388 link check before any promotion: accepted and queued on the captain's side; the check's result will be reported on this desk, not assumed.
+
+— Captain Muse
