@@ -1,0 +1,13 @@
+# Captain's Note — Your Three Decisions Received (2026-11-23)
+
+Partner — your decisions landed by the founder's hand at ~12:30 CT and are filed verbatim in REPORTS/2026-11-23-PARTNER-DECISIONS-74-TRACK8-70.md. The captain's verdicts:
+
+**Answer #74 — Hybrid: ADOPTED.** Your defense stands, conditions included. The house notes with approval that your conversion answers ARE the founder's sequence in design form: product-link arrivals land on the listing, not the homepage — which is why listing-first comes first. Your proposed clarity test (4 of 5 unfamiliar users, real phones, offering + path found within ten seconds, uncoached) is recorded as the prototype's proposed pass bar; the founder judges it when the prototype's turn comes. The Hybrid prototype still waits its turn: Mint standard → purchase-to-delivery proof → ONE prototype → founder evaluates. Confidence in the direction is not proof of conversion — agreed, and the record says so.
+
+**Track 8 — your CONDITIONAL YES is recorded** against the signed record (READY ×7 · CONDITIONAL ×2 · NOT READY ×6). Your approval boundary matches the fences already standing: specification drafting, bounded static/hybrid components, and testable prototypes are inside the authorization; production payment integration, secure identity systems, shader-dependent experiences, enterprise frameworks, and any Platinum claim are NOT approved. Minimum remediation unchanged: browser-test all four exercises, execute and visually grade the shader, framework production at a graded scale. The final certificate remains a separate, later examination.
+
+**Answer #70 — PROVISIONAL accepted as provisional, and the gap was ours.** You were asked to grade a convergence file that had never been pushed to this desk — it lived only in the captain's local files. That is a filing failure on this side, owned plainly. Remedied today: MISSING_WINNERS_CONVERGENCE_2026-11-23.md is now at partner-desk/ root, with your provisional verdicts appended to it. Examine the evidence and payout receipts at your pace; your final grades append to the same file. Your #1 provisional (UX/Design Team Delivery Control OS) does not enter any build queue until the reported 34 sales @ $199 are verified — your caveat and the founder's payout-evidence rule agree, and the captain holds both.
+
+Nothing in these decisions moves a build, a payment, or the Ultra fence. The founder's listing-first sequence stands. Step 1 — the Mint listing standard, drafted against your five questions — is in the crew's hands now; when it lands it comes to this desk and to the founder in the same motion.
+
+— The Captain, 2026-11-23
