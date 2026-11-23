@@ -1,0 +1,373 @@
+{
+  "artifact": "m13-performance",
+  "method": "Labelled local lab trace (captain’s F-P3-2 ruling): headless Chrome via puppeteer, localhost, 1280×900, in-page probes installed before load; scripted journey = full document in 60 steps over ~6 s; two runs per build; envelopes across runs.",
+  "filedAt": "2026-11-23T11:30:21.079Z",
+  "runs": [
+    {
+      "variant": "broken",
+      "loadPhase": {
+        "domContentLoadedMs": 366,
+        "loadEventMs": 902,
+        "longtasks": [
+          164,
+          95
+        ],
+        "appJsScriptMs": [
+          164
+        ],
+        "indexPrintedAtMs": 364,
+        "indexValue": "1270607",
+        "lcpMs": 812,
+        "cls": 0.6042
+      },
+      "scrollPhase": {
+        "layoutReads": {
+          "rect": 331,
+          "offsetHeight": 3055,
+          "offsetWidth": 0,
+          "clientHeight": 0,
+          "clientWidth": 0,
+          "total": 3386
+        },
+        "longtasksDuringScroll": [],
+        "fpsMean": 59.7,
+        "frameGapP95Ms": 16.8,
+        "frameGapMaxMs": 50,
+        "player": {
+          "target": 1,
+          "targetFrame": 72,
+          "displayed": 1,
+          "currentFrame": 72,
+          "loadedCount": 72,
+          "failedCount": 0,
+          "orderLength": 72,
+          "totalFrames": 72,
+          "reduced": false,
+          "settled": true
+        },
+        "clsTotal": 0.6056
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "broken",
+      "loadPhase": {
+        "domContentLoadedMs": 212,
+        "loadEventMs": 654,
+        "longtasks": [
+          140
+        ],
+        "appJsScriptMs": [
+          140
+        ],
+        "indexPrintedAtMs": 211,
+        "indexValue": "1270607",
+        "lcpMs": 688,
+        "cls": 0
+      },
+      "scrollPhase": {
+        "layoutReads": {
+          "rect": 331,
+          "offsetHeight": 3043,
+          "offsetWidth": 0,
+          "clientHeight": 0,
+          "clientWidth": 0,
+          "total": 3374
+        },
+        "longtasksDuringScroll": [],
+        "fpsMean": 60,
+        "frameGapP95Ms": 16.8,
+        "frameGapMaxMs": 16.8,
+        "player": {
+          "target": 1,
+          "targetFrame": 72,
+          "displayed": 1,
+          "currentFrame": 72,
+          "loadedCount": 72,
+          "failedCount": 0,
+          "orderLength": 72,
+          "totalFrames": 72,
+          "reduced": false,
+          "settled": true
+        },
+        "clsTotal": 0.0014
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "fixed",
+      "loadPhase": {
+        "domContentLoadedMs": 120,
+        "loadEventMs": 120,
+        "longtasks": [
+          82
+        ],
+        "appJsScriptMs": [
+          81
+        ],
+        "indexPrintedAtMs": 8581,
+        "indexValue": "1270607",
+        "lcpMs": 144,
+        "cls": 0.0004
+      },
+      "scrollPhase": {
+        "layoutReads": {
+          "rect": 0,
+          "offsetHeight": 0,
+          "offsetWidth": 0,
+          "clientHeight": 0,
+          "clientWidth": 0,
+          "total": 0
+        },
+        "longtasksDuringScroll": [],
+        "fpsMean": 60,
+        "frameGapP95Ms": 16.7,
+        "frameGapMaxMs": 16.8,
+        "player": {
+          "target": 1,
+          "targetFrame": 72,
+          "displayed": 1,
+          "currentFrame": 72,
+          "loadedCount": 72,
+          "failedCount": 0,
+          "orderLength": 72,
+          "totalFrames": 72,
+          "reduced": false,
+          "settled": true
+        },
+        "clsTotal": 0.0014
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "fixed",
+      "loadPhase": {
+        "domContentLoadedMs": 167,
+        "loadEventMs": 168,
+        "longtasks": [
+          70
+        ],
+        "appJsScriptMs": [
+          69
+        ],
+        "indexPrintedAtMs": 8382,
+        "indexValue": "1270607",
+        "lcpMs": 152,
+        "cls": 0.0004
+      },
+      "scrollPhase": {
+        "layoutReads": {
+          "rect": 0,
+          "offsetHeight": 0,
+          "offsetWidth": 0,
+          "clientHeight": 0,
+          "clientWidth": 0,
+          "total": 0
+        },
+        "longtasksDuringScroll": [],
+        "fpsMean": 60,
+        "frameGapP95Ms": 16.7,
+        "frameGapMaxMs": 16.8,
+        "player": {
+          "target": 1,
+          "targetFrame": 72,
+          "displayed": 1,
+          "currentFrame": 72,
+          "loadedCount": 72,
+          "failedCount": 0,
+          "orderLength": 72,
+          "totalFrames": 72,
+          "reduced": false,
+          "settled": true
+        },
+        "clsTotal": 0.0014
+      },
+      "consoleErrors": []
+    }
+  ],
+  "summary": {
+    "broken": {
+      "layoutReadsTotal": {
+        "min": 3374,
+        "max": 3386
+      },
+      "layoutReadsRect": {
+        "min": 331,
+        "max": 331
+      },
+      "fpsMean": {
+        "min": 59.7,
+        "max": 60
+      },
+      "frameGapP95Ms": {
+        "min": 16.8,
+        "max": 16.8
+      },
+      "longtaskCountLoad": {
+        "min": 1,
+        "max": 2
+      },
+      "longtaskMaxLoadMs": {
+        "min": 140,
+        "max": 164
+      },
+      "appJsLongestScriptMs": {
+        "min": 140,
+        "max": 164
+      },
+      "indexPrintedAtMs": {
+        "min": 211,
+        "max": 364
+      },
+      "indexValue": [
+        "1270607",
+        "1270607"
+      ],
+      "longtaskCountScroll": {
+        "min": 0,
+        "max": 0
+      },
+      "lcpMs": {
+        "min": 688,
+        "max": 812
+      },
+      "cls": {
+        "min": 0.0014,
+        "max": 0.6056
+      },
+      "domContentLoadedMs": {
+        "min": 212,
+        "max": 366
+      },
+      "playerSettledFrame": [
+        72,
+        72
+      ],
+      "consoleErrors": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fixed": {
+      "layoutReadsTotal": {
+        "min": 0,
+        "max": 0
+      },
+      "layoutReadsRect": {
+        "min": 0,
+        "max": 0
+      },
+      "fpsMean": {
+        "min": 60,
+        "max": 60
+      },
+      "frameGapP95Ms": {
+        "min": 16.7,
+        "max": 16.7
+      },
+      "longtaskCountLoad": {
+        "min": 1,
+        "max": 1
+      },
+      "longtaskMaxLoadMs": {
+        "min": 70,
+        "max": 82
+      },
+      "appJsLongestScriptMs": {
+        "min": 69,
+        "max": 81
+      },
+      "indexPrintedAtMs": {
+        "min": 8382,
+        "max": 8581
+      },
+      "indexValue": [
+        "1270607",
+        "1270607"
+      ],
+      "longtaskCountScroll": {
+        "min": 0,
+        "max": 0
+      },
+      "lcpMs": {
+        "min": 144,
+        "max": 152
+      },
+      "cls": {
+        "min": 0.0014,
+        "max": 0.0014
+      },
+      "domContentLoadedMs": {
+        "min": 120,
+        "max": 167
+      },
+      "playerSettledFrame": [
+        72,
+        72
+      ],
+      "consoleErrors": {
+        "min": 0,
+        "max": 0
+      }
+    }
+  },
+  "interaction": {
+    "broken": {
+      "samples": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        40,
+        48,
+        56,
+        152,
+        200,
+        200,
+        304,
+        360,
+        376
+      ],
+      "worstMs": 376,
+      "medianMs": 32
+    },
+    "fixed": {
+      "samples": [
+        16,
+        16,
+        40,
+        48,
+        56
+      ],
+      "worstMs": 56,
+      "medianMs": 40
+    }
+  },
+  "clsProbes": {
+    "broken": [
+      0.6042,
+      0.6045
+    ],
+    "fixed": [
+      0,
+      0
+    ]
+  }
+}
