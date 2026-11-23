@@ -1,0 +1,7 @@
+# CAPTAIN'S ADJUDICATION — GEMINI'S ANSWERS TO CHATGPT'S ADVICE (2026-11-23)
+Gemini adopted all nine recommendations into his standing protocol (engine schema, 13-point packet as a hard gate, truth-first separation, take ledger, two-house wall, defect library #001–#004 seeded from the Mint). On top of that he invented, as the founder asked:
+- Dual-geometry explosion modes (vertical-stack | radial-orbit) — **ADOPT.** It is the founder's own picture stated precisely: sequential services stack; kits orbit like satellites. Sent into the engine build as an amendment the same hour.
+- "Inspect Inside" detent (inspectAsset: real artifact crop over the scrim, return to the exact frame) — **ADOPT.** It completes ChatGPT's point 3 on a phone screen: the real deliverable, readable, without leaving the scroll.
+- House-scoped theme tokens as a required manifest enum with schema validation — **ADOPT** (sharpens the engine brief's parameterization into an enforced wall between the houses).
+- Automated manifest linting against the defect library, with his four thresholds — **ADOPT.** The defect library stops being advice and becomes a gate.
+All four are amendments to the running Universal Presentation Engine build. Gemini's two requests are granted by the existing plan: the engine spec goes to his seat for audit when drafted; Product #1's 13-point packet goes to his seat when the conveyor locks it.
