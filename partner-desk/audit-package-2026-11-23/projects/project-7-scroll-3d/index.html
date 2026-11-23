@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Project 7 — The Wall, Approached · Track 7 M11</title>
+<style>
+  :root { --ink:#141210; --gold:#C9A227; --cream:#FFEFC1; --paper:#F4EFE6; --dim:#6B4A12; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+  .track { height: 620vh; position: relative; }
+  .stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
+    background: radial-gradient(120% 120% at 50% 28%, #2a2113 0%, #171310 62%, #0d0b08 100%); }
+  canvas { display:block; width:100%; height:100%; }
+  .caption { position:absolute; left: 22px; bottom: 22px; max-width: 430px;
+    background: rgba(13,11,8,0.82); border:1px solid var(--dim); border-radius: 10px; padding: 14px 16px; }
+  .caption h1 { font-size: 21px; color: var(--cream); margin: 0 0 4px; }
+  .caption p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--paper); }
+  .hud { position:absolute; right: 22px; top: 18px; font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px; color:#cbbd93; background: rgba(13,11,8,0.7); padding: 6px 10px; border-radius: 6px; }
+  .after { max-width: 1020px; margin: 0 auto; padding: 40px 20px 70px; }
+  .after h2 { font-size: 20px; color: var(--gold); margin: 26px 0 8px; }
+  .after p, .after li { line-height: 1.55; font-size: 16px; }
+  .fence { border-left: 3px solid var(--gold); padding: 4px 0 4px 12px; color:#cbbd93; font-size: 14.5px; }
+  .beats-static { display:none; }
+  body.reduced .beats-static { display:block; }
+  body.reduced .track { height: auto; }
+  body.reduced .stage { position: relative; height: 92vh; }
+</style>
+</head>
+<body>
+<div class="track" id="track">
+  <section class="stage" aria-label="Scroll-driven 3D scene: a coin before a wall of forty-seven bricks">
+    <canvas id="stage"></canvas>
+    <div class="hud" id="hud">t=0.00</div>
+    <div class="caption">
+      <h1 id="beat-title">The Wall, Approached</h1>
+      <p id="beat-body">Scroll. The camera flies the path the rig was given — no cuts, because the
+      path is one curve. The wall has forty-seven bricks: the Golden Wall's own number.</p>
+    </div>
+  </section>
+</div>
+
+<main class="after">
+  <div class="beats-static">
+    <h2>The journey, as text (the reduced-motion presentation)</h2>
+    <ol>
+      <li><strong>The approach.</strong> From the street, the town is a wall and a coin.</li>
+      <li><strong>The coin.</strong> The camera closes and swings around it; it turns as you descend.</li>
+      <li><strong>The lighting.</strong> Course by course, the wall's bricks light in order.</li>
+      <li><strong>The whole.</strong> Forty-seven bricks lit; the camera rises and withdraws.</li>
+    </ol>
+  </div>
+
+  <h2>How the flight works</h2>
+  <p>The director's instructions are five keyframes — a scroll position, a camera position, and a
+  point to look at. Between them the rig flies a Catmull-Rom curve: it passes through every keyframe
+  with the same tangent leaving as arriving, so there is no corner to catch on and no cut to hide.
+  Scroll position is the only input; the pose is a pure function of it, which is why scrolling back
+  up flies the same path home. Continuity here is by construction, and the exam harness measures it
+  anyway: forty landings down the page, and no step may jump.</p>
+  <p>The objects take their cues from the same scroll: the coin's turning is a function of the
+  scroll position, and the bricks light in a fixed order across the third leg of the flight —
+  camera, coin, and wall reading one clock.</p>
+
+  <p class="fence">Study build: Track 7's M11 exam artifact, served locally for grading — the
+  scroll-driven upgrade pattern for a certain coin page, demonstrated here and deployed nowhere.
+  The coin is the same procedural model as Project 5's; the wall is forty-seven boxes and one idea.</p>
+</main>
+
+<script src="vendor/three.min.js"></script>
+<script src="../engine/camera/camera-choreography.js"></script>
+<script>
+(function () {
+  'use strict';
+  const THREE = window.THREE;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) document.body.classList.add('reduced');
+
+  const KEYFRAMES = [
+    { at: 0.00, position: [0, 2.4, 12.5], target: [0, 1.7, 0] },
+    { at: 0.30, position: [3.2, 1.5, 6.5], target: [0, 1.6, 1.2] },
+    { at: 0.55, position: [-3.6, 0.9, 5.2], target: [0, 1.9, -1.2] },
+    { at: 0.80, position: [0, 5.2, 8.0], target: [0, 1.6, -1.2] },
+    { at: 1.00, position: [0, 3.4, 13.0], target: [0, 1.8, -0.5] },
+  ];
+  const rig = window.CameraRig.createRig(KEYFRAMES);
+  window.__rig = rig;
+  window.__rigConfig = KEYFRAMES;
+
+  const canvas = document.getElementById('stage');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  if ('outputColorSpace' in renderer && THREE.SRGBColorSpace) renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+
+  // Environment for the metal, same softbox recipe as the viewer.
+  {
+    const envScene = new THREE.Scene();
+    envScene.add(new THREE.Mesh(new THREE.BoxGeometry(20, 20, 20),
+      new THREE.MeshBasicMaterial({ side: THREE.BackSide, color: 0x1a1409 })));
+    const panel = (w, h, color, k, pos) => {
+      const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h),
+        new THREE.MeshBasicMaterial({ color: new THREE.Color(color).multiplyScalar(k) }));
+      m.position.set(...pos); m.lookAt(0, 0, 0); envScene.add(m);
+    };
+    panel(8, 5, 0xffe9b0, 9, [-6, 7, 6]);
+    panel(10, 4, 0xbfd4ff, 3, [7, 3, -6]);
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(envScene, 0.04).texture;
+    pmrem.dispose();
+  }
+  scene.add(new THREE.AmbientLight(0xfff2d8, 0.5));
+  const key = new THREE.DirectionalLight(0xffe9b0, 1.1); key.position.set(4, 6, 6); scene.add(key);
+
+  // The wall: 47 bricks in six courses (8·5 + 7), reading order
+  // bottom course first — the order they light in.
+  const BRICKS = 47;
+  const brickGeo = new THREE.BoxGeometry(0.92, 0.42, 0.3);
+  const unlitMat = new THREE.MeshStandardMaterial({ color: 0x6e5626, metalness: 0.3, roughness: 0.7 });
+  const litMat = new THREE.MeshStandardMaterial({ color: 0xa87f22, metalness: 0.6, roughness: 0.35, emissive: 0xc9a227, emissiveIntensity: 0.85 });
+  const bricks = [];
+  {
+    let idx = 0;
+    for (let row = 0; row < 6 && idx < BRICKS; row++) {
+      const inRow = row === 5 ? 7 : 8;
+      for (let col = 0; col < inRow && idx < BRICKS; col++) {
+        const b = new THREE.Mesh(brickGeo, unlitMat);
+        b.position.set((col - (inRow - 1) / 2) * 1.02, 0.35 + row * 0.5, -1.2);
+        b.name = `brick-${idx}`;
+        scene.add(b); bricks.push(b); idx++;
+      }
+    }
+  }
+  // The coin, floating before the wall.
+  const coin = (() => {
+    const loader = new THREE.TextureLoader();
+    const face = (url) => {
+      const tex = loader.load(url);
+      if ('colorSpace' in tex && THREE.SRGBColorSpace) tex.colorSpace = THREE.SRGBColorSpace;
+      return new THREE.MeshStandardMaterial({ map: tex, metalness: 0.55, roughness: 0.34 });
+    };
+    const edge = new THREE.MeshStandardMaterial({ color: 0xa87f22, metalness: 0.9, roughness: 0.38 });
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(1.05, 1.05, 0.15, 96), [edge, face('assets/coin-front.webp'), face('assets/coin-reverse.webp')]);
+    m.position.set(0, 1.7, 1.2);
+    m.rotation.order = 'YXZ'; // spin about the coin's own axis first, then tip
+    m.rotation.x = Math.PI / 2 - 0.35; // face tipped toward the approaching camera
+    scene.add(m);
+    return m;
+  })();
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(60, 60),
+    new THREE.MeshStandardMaterial({ color: 0x171310, roughness: 1 }));
+  ground.rotation.x = -Math.PI / 2; ground.position.y = 0; scene.add(ground);
+
+  const BEATS = [
+    { until: 0.28, title: 'Beat 1 — The approach', body: 'From the street, the town is a wall and a coin. The camera starts far and high, the way a visitor first sees it.' },
+    { until: 0.52, title: 'Beat 2 — The coin', body: 'The flight swings in around the coin. It turns as you descend — one full turn across the journey, geared to the scroll.' },
+    { until: 0.82, title: 'Beat 3 — The lighting', body: 'Course by course, the bricks take fire in reading order — the wall being built as you watch.' },
+    { until: 1.01, title: 'Beat 4 — The whole', body: 'Forty-seven bricks lit. The camera rises and withdraws, and the town stands complete.' },
+  ];
+  let curBeat = -1;
+  const hud = document.getElementById('hud');
+
+  let scrollT = 0;
+  function readScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollT = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+  }
+  window.addEventListener('scroll', readScroll, { passive: true });
+  readScroll();
+
+  function applyPose(t) {
+    const pose = rig.poseAt(t);
+    camera.position.set(...pose.position);
+    camera.lookAt(...pose.target);
+    coin.rotation.y = -t * Math.PI * 4; // the face turns about the coin's own axis
+    const litTarget = Math.round(BRICKS * Math.min(1, Math.max(0, (t - 0.45) / 0.40)));
+    bricks.forEach((b, i) => { b.material = i < litTarget ? litMat : unlitMat; });
+    // The HUD's number is counted back off the scene's own
+    // materials — what is printed is what is standing.
+    const lit = bricks.reduce((n, b) => n + (b.material === litMat ? 1 : 0), 0);
+    const beat = BEATS.findIndex((b) => t < b.until);
+    if (beat !== curBeat && beat >= 0) {
+      curBeat = beat;
+      document.getElementById('beat-title').textContent = BEATS[beat].title;
+      document.getElementById('beat-body').textContent = BEATS[beat].body;
+    }
+    hud.textContent = `t=${t.toFixed(2)} · seg ${pose.segment} · lit ${lit}/${BRICKS}`;
+    return pose;
+  }
+
+  function resize() {
+    const w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const FIXED_T = 0.35;
+  function tick() {
+    applyPose(reduceMotion ? FIXED_T : scrollT);
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // The state is read from the scene itself — camera transform,
+  // brick materials, coin rotation — never recomputed.
+  window.__state = () => {
+    const lit = bricks.filter((b) => b.material === litMat).length;
+    const pose = rig.poseAt(reduceMotion ? FIXED_T : scrollT);
+    return {
+      t: reduceMotion ? FIXED_T : scrollT,
+      position: camera.position.toArray(),
+      target: pose.target,
+      segment: pose.segment,
+      litCount: lit,
+      coinRotY: coin.rotation.y,
+      drawCalls: renderer.info.render.calls,
+    };
+  };
+})();
+</script>
+</body>
+</html>
