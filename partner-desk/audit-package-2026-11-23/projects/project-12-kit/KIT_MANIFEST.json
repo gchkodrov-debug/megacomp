@@ -1,0 +1,358 @@
+{
+  "engine": "OneJobKits Cinematic Website Engine",
+  "product": "Complete Commercial Cinematic Website Kit",
+  "version": "1.1.0",
+  "assembled": "Track 7 Phase 5 (Project 12)",
+  "files": [
+    {
+      "path": "BUDGETS.md",
+      "source": "authored in the kit",
+      "sha256": "1f8ced403e7a3f385f2d0935bb6858576de4e0ffbd08281f6bf226cd1084fa2f",
+      "bytes": 10266,
+      "bornIn": "Project 12 · Phase 5"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "source": "authored in the kit",
+      "sha256": "0879d2bf50645af3b0760224ed0b9d03b9470917e2f26e49c209e17b37b7ff01",
+      "bytes": 3488,
+      "bornIn": "Project 12 · Phase 5"
+    },
+    {
+      "path": "CUSTOMIZE.md",
+      "source": "authored in the kit",
+      "sha256": "9de26cd0f19c1a8924175a5dc4e718557846bdd8879a8d4d0c9664b305509c64",
+      "bytes": 4879,
+      "bornIn": "Project 12 · Phase 5"
+    },
+    {
+      "path": "INSTALL.md",
+      "source": "authored in the kit",
+      "sha256": "0ec3612713acd57f145a30e600f2146f933a3b1dba09898532b0640c3759a3a0",
+      "bytes": 2716,
+      "bornIn": "Project 12 · Phase 5"
+    },
+    {
+      "path": "kit/engine/3d-viewer/viewer.js",
+      "source": "tools/crew-university/track7-artifacts/engine/3d-viewer/viewer.js",
+      "sha256": "52e650d7fabfe6d125a4855c189f5f061de085c9b9fd8afcba934fd5e65e6b6a",
+      "bytes": 20102,
+      "bornIn": "M9 · Project 5 (visibility pause landed Phase 4, M15)"
+    },
+    {
+      "path": "kit/engine/accessibility/example.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/engine/accessibility/example.html",
+      "sha256": "0c5500da7ff7c0e4a80f525534eb5f44436eb8cb8ca7e3e10bed96d2f36c3301",
+      "bytes": 1942,
+      "bornIn": "M15 · Phase 4 (the layer as a build mode; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/engine/accessibility/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/engine/accessibility/README.md",
+      "sha256": "9b112695c8dd9f7ab07de525a1ccc93b4f3c65757d6b4326fc773a3f8226cbfa",
+      "bytes": 3552,
+      "bornIn": "M15 · Phase 4 (the layer as a build mode; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/engine/animation/animation-system.js",
+      "source": "tools/crew-university/track7-artifacts/engine/animation/animation-system.js",
+      "sha256": "294eb593a9c8faaf09dab76aa6e8cbd4b149fc912235437427bd21300bea4a51",
+      "bytes": 6907,
+      "bornIn": "M4 · Project 2"
+    },
+    {
+      "path": "kit/engine/budgets.json",
+      "source": "tools/crew-university/track7-artifacts/project-12-kit/kit-src/budgets.json",
+      "sha256": "a63c916603ca33bcb9558df8ffc3a0784c03515074681af547ec27fbe61d4fd6",
+      "bytes": 2286,
+      "bornIn": "Project 12 · Phase 5 (the standing bars, per page class)"
+    },
+    {
+      "path": "kit/engine/camera/camera-choreography.js",
+      "source": "tools/crew-university/track7-artifacts/engine/camera/camera-choreography.js",
+      "sha256": "44f5f1311d6ab294777e2af2b42ab325ab5845416abe9c1a30e76fb56ddc45b1",
+      "bytes": 4337,
+      "bornIn": "M11 · Project 7"
+    },
+    {
+      "path": "kit/engine/components/callout-leaders.css",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/components/callout-leaders.css",
+      "sha256": "129451b4c075879e510e3d1d227aaa13c5fc3a0f71d7184849c3c316ea501b86",
+      "bytes": 3406,
+      "bornIn": "M7 · Project 3"
+    },
+    {
+      "path": "kit/engine/components/callout-leaders.js",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/components/callout-leaders.js",
+      "sha256": "b24a698d561e25e7ba61abb0db5953481bb06173c4237469b572937f9f4f8985",
+      "bytes": 8017,
+      "bornIn": "M7 · Project 3"
+    },
+    {
+      "path": "kit/engine/components/scroll-sequence-player.css",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/components/scroll-sequence-player.css",
+      "sha256": "618437f220ccb12439af569262d1c247209d5d7b6c22f841051c305b4f86200d",
+      "bytes": 1754,
+      "bornIn": "M7 · Project 3"
+    },
+    {
+      "path": "kit/engine/components/scroll-sequence-player.js",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/components/scroll-sequence-player.js",
+      "sha256": "e54eb5477a71243e539522f1c2675919aa36b9b60bf51f845ae7f63ccfc5a941",
+      "bytes": 14655,
+      "bornIn": "M7 · Project 3 (H-15 fix landed Phase 3, M13)"
+    },
+    {
+      "path": "kit/engine/foundation/base.css",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/base.css",
+      "sha256": "20ae35440acce349675fdaedd86cac150efe3011f65828f0114a298168520f8b",
+      "bytes": 4523,
+      "bornIn": "M1 · Project 1"
+    },
+    {
+      "path": "kit/engine/foundation/tokens.css",
+      "source": "tools/crew-university/track7-artifacts/project-1-engine-skeleton/engine/tokens.css",
+      "sha256": "84fb640c5e0aca636a80ce542a9752db0a97f42e5afa766c78a7756d2e7ac6a0",
+      "bytes": 1271,
+      "bornIn": "M1 · Project 1"
+    },
+    {
+      "path": "kit/engine/frame-pipeline/PIPELINE.md",
+      "source": "tools/crew-university/track7-artifacts/engine/frame-pipeline/PIPELINE.md",
+      "sha256": "e5078add9c831c8eac8b73f08babf477dfb83cd5bdb4bb6902b805717d4e0a89",
+      "bytes": 2974,
+      "bornIn": "M5+M6 · Projects 3–4"
+    },
+    {
+      "path": "kit/engine/interaction/scene-nav.js",
+      "source": "tools/crew-university/track7-artifacts/engine/interaction/scene-nav.js",
+      "sha256": "f47c1db21c350255635456f4716bb647b00fd4ca754aedd71092af3925a8411b",
+      "bytes": 4220,
+      "bornIn": "M12 · Project 10"
+    },
+    {
+      "path": "kit/engine/interaction/state-machine.js",
+      "source": "tools/crew-university/track7-artifacts/engine/interaction/state-machine.js",
+      "sha256": "513f50bbce6d114f55e69b1c0960ca6c60565e0de2c03c7215854f63c7001114",
+      "bytes": 3474,
+      "bornIn": "M12 · Projects 8+10"
+    },
+    {
+      "path": "kit/engine/launch/pacing.js",
+      "source": "tools/crew-university/track7-artifacts/engine/launch/pacing.js",
+      "sha256": "7348b51d01a886332ad07ab86b9d528f01d6f7ca658e28b928786e03ef270ac2",
+      "bytes": 3089,
+      "bornIn": "M12 · Project 9"
+    },
+    {
+      "path": "kit/engine/launch/reserve-book.js",
+      "source": "tools/crew-university/track7-artifacts/engine/launch/reserve-book.js",
+      "sha256": "03598cb5082c902977e96c15b90cea39269084ac7dd8cec6da11f10ffb76e01c",
+      "bytes": 2720,
+      "bornIn": "M12 · Project 9 (reshaped by M14)"
+    },
+    {
+      "path": "kit/engine/qa-harness/example.config.mjs",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/example.config.mjs",
+      "sha256": "f7ae49f30a1fcee8414e5062b95a70789d58bcccfcf687ce06caf34015415cb5",
+      "bytes": 2381,
+      "bornIn": "M15 · Phase 4 (perf shape corrected Phase 5, Project 12)"
+    },
+    {
+      "path": "kit/engine/qa-harness/gates/a11y.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/gates/a11y.js",
+      "sha256": "118295277a413cd290e0c11ba9b280f7716789d7ae4c643e1549d3b5a53eb0d9",
+      "bytes": 3407,
+      "bornIn": "M16"
+    },
+    {
+      "path": "kit/engine/qa-harness/gates/e2e.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/gates/e2e.js",
+      "sha256": "5fc1a4261a2d77d39b95bba58a5fad148a1a3be8fe1820a86b22d35be7b71db3",
+      "bytes": 2819,
+      "bornIn": "M16"
+    },
+    {
+      "path": "kit/engine/qa-harness/gates/perf.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/gates/perf.js",
+      "sha256": "92831714cb85bf0371a29b454554d425b71902b1f3081b597db9d7585f5d3407",
+      "bytes": 9981,
+      "bornIn": "M16 (page classes + the off-screen probe landed Phase 5, Project 12)"
+    },
+    {
+      "path": "kit/engine/qa-harness/gates/unit.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/gates/unit.js",
+      "sha256": "a2eb8209d4be73e64bb1d9536aa3755dd688db7822e11657983799b443102346",
+      "bytes": 1245,
+      "bornIn": "M16"
+    },
+    {
+      "path": "kit/engine/qa-harness/gates/visual.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/gates/visual.js",
+      "sha256": "9d945aaed760e99323c220da5f4ddc30e871041b15559802ddb3bc381bdf5b42",
+      "bytes": 3357,
+      "bornIn": "M16"
+    },
+    {
+      "path": "kit/engine/qa-harness/qa-harness.js",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/qa-harness.js",
+      "sha256": "bbff70b4de31491e316e24b7271e406ac54b1dde21bb9e56b7479974474f183a",
+      "bytes": 4345,
+      "bornIn": "M16 (contract comment carries the page classes, Phase 5)"
+    },
+    {
+      "path": "kit/engine/qa-harness/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/README.md",
+      "sha256": "741263e77d9814f69a1e776f627ccf0f35bc23e24702bb8b18c6cb0d5787a661",
+      "bytes": 3673,
+      "bornIn": "M16 (page classes documented Phase 5, Project 12)"
+    },
+    {
+      "path": "kit/engine/qa-harness/run-example.mjs",
+      "source": "tools/crew-university/track7-artifacts/engine/qa-harness/run-example.mjs",
+      "sha256": "bfd5c02db8a3591e8d23247d08290f05e05e7b6ef82fe9cb7c8a3a66470154ac",
+      "bytes": 1541,
+      "bornIn": "M15 · Phase 4 (the worked example)"
+    },
+    {
+      "path": "kit/engine/shaders/shader-pack.js",
+      "source": "tools/crew-university/track7-artifacts/engine/shaders/shader-pack.js",
+      "sha256": "80ccad5e728a4f9a9071386710fc48bf1977074cf46e9e552f6ba4c52b146a11",
+      "bytes": 11443,
+      "bornIn": "M10 · Project 6"
+    },
+    {
+      "path": "kit/templates/A-image-sequence/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/A-image-sequence/index.html",
+      "sha256": "e4f779fe0cc0b8be47a6a6e6857e83725945a53274b64e34db214c68778e2eb7",
+      "bytes": 4512,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/A-image-sequence/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/A-image-sequence/README.md",
+      "sha256": "9e115c30b2f56a55b6d636c3a9de08771337e5716d9c7e388db0e502836b8194",
+      "bytes": 1065,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/B-video-driven/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/B-video-driven/index.html",
+      "sha256": "91a7a1cddb79bfd6a46e7ae30dd8f549a2fa0f4f7c8bdec243b23a2c9956f688",
+      "bytes": 2471,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/B-video-driven/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/B-video-driven/README.md",
+      "sha256": "172147908baf1c728ffbb8ee1ba8726b5a1ceadf6f48d0c955081816e8c899d3",
+      "bytes": 932,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/C-realtime-3d/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/C-realtime-3d/index.html",
+      "sha256": "552111f3520e9dcdf6b523e6a4edbf5495ddcff9db078060f84a2944a57216dd",
+      "bytes": 3170,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/C-realtime-3d/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/C-realtime-3d/README.md",
+      "sha256": "1a77be08f67d61770ad1e2098cfb7d955bf4e9b593374cda89bfb950f1db8f50",
+      "bytes": 959,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/D-shader-driven/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/D-shader-driven/index.html",
+      "sha256": "f3e8a52a23d2115a273ab999232115c85cba39f3b06635b05f9500f29182a936",
+      "bytes": 3713,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/D-shader-driven/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/D-shader-driven/README.md",
+      "sha256": "6e4ad1f91a2bc9b123f8a4fe870306baf19b51882b3a7322e543de4a24277452",
+      "bytes": 976,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/E-hybrid/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/E-hybrid/index.html",
+      "sha256": "b4a0e480a1e42d149dfc46a49b41cb703c480328c22e9dad26f59876ab928562",
+      "bytes": 6134,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/E-hybrid/page-config.js",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/E-hybrid/page-config.js",
+      "sha256": "6333386b4ef1253da8f6927d5384c9359ef554624b3f5f75520886346e840161",
+      "bytes": 721,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/E-hybrid/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/E-hybrid/README.md",
+      "sha256": "a2d6386db40a76272a78edce5663d0c1bb1b6aaed4e58c81a0b68ecf7e0448ac",
+      "bytes": 1177,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/F-configurator/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/F-configurator/index.html",
+      "sha256": "ed9212d54801bbde891cc2c85fdc318f63d2988178948e3b89df12d054792a7d",
+      "bytes": 3936,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/F-configurator/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/F-configurator/README.md",
+      "sha256": "e7da89fd36deae003984da6e413c5ed3dcaf3d40d974b2d7d7b504fe8110bb4a",
+      "bytes": 980,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/G-immersive-storytelling/index.html",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/G-immersive-storytelling/index.html",
+      "sha256": "a92f9664ca5d397c53e1a058e785a4ecf898ca873d63ec2b1663c067c9b9cce7",
+      "bytes": 4298,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/templates/G-immersive-storytelling/README.md",
+      "source": "tools/crew-university/track7-artifacts/engine-package/package/templates/G-immersive-storytelling/README.md",
+      "sha256": "2bd15bf8fde5786efc4f729db7df1e341cfc5b8e79f4dc6ce84a7e10a28f077a",
+      "bytes": 1197,
+      "bornIn": "M17 · Phase 4 (starting configurations; carried into the Kit unchanged)"
+    },
+    {
+      "path": "kit/vendor/gsap.min.js",
+      "source": "tools/crew/vendor/gsap.min.js",
+      "sha256": "28033e449a31ebcc396e5be8b13b63152bf03094288fb5867034321927bce087",
+      "bytes": 72214,
+      "bornIn": "vendored · GSAP 3.12.5"
+    },
+    {
+      "path": "kit/vendor/ScrollTrigger.min.js",
+      "source": "tools/crew/vendor/ScrollTrigger.min.js",
+      "sha256": "ad33c2df9ada8a663c2147357828f980d0b7ca731ef33eb3c6e4f327c3b2cda5",
+      "bytes": 43380,
+      "bornIn": "vendored · GSAP 3.12.5"
+    },
+    {
+      "path": "kit/vendor/three.min.js",
+      "source": "tools/crew/vendor/three.min.js",
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+      "bytes": 669884,
+      "bornIn": "vendored · Three.js r160 UMD"
+    },
+    {
+      "path": "README.md",
+      "source": "authored in the kit",
+      "sha256": "753b05d27c673310e55d8163f056b7170792c5c22d79151c1201e228d703709d",
+      "bytes": 3604,
+      "bornIn": "Project 12 · Phase 5"
+    }
+  ]
+}
