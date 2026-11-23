@@ -27,3 +27,8 @@
 ## STATUS
 
 Filed for blind re-grade 2026-11-23. Graduation is NOT declared here.
+
+
+## APPENDIX — CORRECTION (2026-11-23, after the blind re-grade)
+
+The inspection line above — "the start and end resting frames read as one book" — was written from a contact-sheet-scale read and is **corrected**: at full resolution, the final resting frames (t=6.5–7.8) show **two complete books** (two spines, two separate gold page blocks). FL-R1, disclosed in this same record, is therefore not a transient mid-movement read: the film does not close back into the single object it opened from. The blind re-grade (`TRACK_7_PHASE_1_RESIT_GRADING_RECORD.md`) ruled M6 **NOT MET on film quality alone** on this evidence; provenance, measured credits and the pipeline slice passed. This appendix corrects the sentence; nothing above it is edited.
