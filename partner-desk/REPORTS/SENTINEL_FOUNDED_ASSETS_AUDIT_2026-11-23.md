@@ -1,0 +1,68 @@
+# SENTINEL FOUNDED-ASSETS AUDIT — Days 1–15, step 1 (2026-11-23)
+
+READ-ONLY. No code edited, nothing deployed, no outreach. Question: the Sentinel intelligence service (reconciled strategy, step 1) is the commercial form of two founded instruments — **the Verifier (FVR-12)** and **the Fee Card (FVR-19)**. For each: what was founded, what actually exists in files today, and the gap between them. Every "exists" names a file. Every "missing" states where I looked.
+
+Sources read: `FOUNDATIONAL_VISION_REGISTER.md` (FVR-12, FVR-19) · `FOUNDATIONAL_AUDIT_2026-11-23.md` (§1.14, §1.19, §2) · the founding document both cite, the Invention Hunt synthesis `~/workspace/video-studies/coin-panel/panel_invention_2026-11-19/SYNTHESIS.md` (#1, #5, §7) · `~/workspace/video-studies/coin-panel/FEE_VERIFICATION.md`. (The other two founding-era documents, `ECOSYSTEM.md` and `WAR_BOOK.md` in the same folder, were grepped for "verifier"/"fee card": no hits — the Verifier and Fee Card are founded in the Hunt synthesis, not in those two texts; WAR_BOOK Part 2 names "an open Verifier" only as part of the Night Brick settlement, FVR-15.)
+
+---
+
+## 1 · THE VERIFIER (FVR-12)
+
+### FOUNDED
+- Register, FVR-12: "THE VERIFIER = the public page + open script that re-derives the Wall count, grams, and Day-Book from raw sources, renders green/red/pending per claim, renders NOTHING for a figure it cannot reconcile, and stores its proof pack off the founder's server." It is the fourth component of THE FOUNDATION (the Minimum Viable Record: Brick #1 receipt + Charter + Day-Book genesis entry + Verifier). "Nothing leapfrogs the receipt."
+- Hunt synthesis #1, verbatim core: "a public page and an open script that rebuild PROVADIA's Wall count, grams, and Day-Book from the raw sources — pump.fun fee history, Solana Memo anchors, published receipt hashes — and show **nothing** if the numbers don't reconcile. A stranger with no wallet gets green / red / pending in under a minute: covenant published? fee withdrawals real? each brick carrying a dealer invoice and a vault certificate with matching serial? every receipt anchored permanently, with the proof pack stored **off the founder's server** (Irys + Memo)? counter adds up?"
+- Hunt synthesis §7(a), the v1 scope: "v1 ships *with* the pour and reconciles exactly the Foundation's contents: Brick #1's two documents (dealer invoice + vault certificate, serial named), the Charter, the Day-Book genesis entry, the 0/47 → 1/47 counter. It re-derives each from raw sources (public Solana RPC / Helius free tier for Memo anchors and fee flows; the published receipt hashes; DexScreener's free API for pool facts)… The proof pack is stored permanently off the founder's server (Irys + a Memo anchor) from the first run… The open script is published with the page — anyone can re-run it; that is the point."
+- Its rules of record: the Crown Rule (claim − displaced evidence must equal zero) and the Mold Law (a page is true only if a stranger can re-pour it and get identical bytes).
+
+### EXISTS
+- **The in-page Day-Book verifier** — `record.js` on the live `/record/` page. Live copy evidenced at `~/workspace/newwave/next-build/honors-fix-work/live-record-after.js`, sha256 `e397046aec16c29a16ccdb162cd71575bec6b4fd0d589c41a4f3dc6458118a6a` (matches the live hash in the honors-fix record). What it actually does, from the code:
+  - `verifyDaybook()` fetches `daybook.json` + `root.json` **from the town's own server**, recomputes every entry's SHA-256 over `prev|date|title|text` with `crypto.subtle` in the visitor's browser, checks each `prev` link, and checks the computed root (SHA-256 of the last entry's hash) against `root.json`. Renders per-entry "✓ recomputed match / ✗ MISMATCH" and the verdict "CHAIN INTACT".
+  - `verifyVaults()` / `verifyVaultChain()` additionally verify two sub-ledgers carried **inside the same daybook.json**: Vault I (tithe book) and Vault II (gold book), hash-chained to the Day-Book root over its first 5 entries. In the current book (`~/workspace/newwave/next-build/t4b-work/mirror/record/daybook.json`, 6 entries, root `5940566625fb8d53…` in `root.json` beside it) **both vault ledgers are empty** (`"tithe": {"entries": []}`, `"gold": {"entries": []}`).
+  - Its price face reads DexScreener's keyless API. Its anchor display shows the root + the exact Memo payload; the file's own header states: "No tx hash or signature is ever shown unless one exists. None does yet."
+- **The Wall ledger file** — `/data/golden-wall.json` (build copy: `~/workspace/newwave/next-build/wall-nexus-work/build/data/golden-wall.json`): bricksLaid 0, gramsTotal 0, status AWAITING_BRICK_1, and a `signature` block carrying a SHA-256 `digest` over the file's canonical JSON. **Nothing verifies that digest:** the only consumer found, `wall.js` in the same build, fetches and renders the file and contains no digest/SHA-256/recompute code at all (grepped: zero hits).
+- **A raw-source read precedent** — `~/workspace/newwave/next-build/pulse-work/pulse.js` (Pulse Slice 1, live on `/coin/`): browser-side Solana JSON-RPC reads (`getSignaturesForAddress`, `getTransaction`) against the **public** endpoint `https://api.mainnet-beta.solana.com`. It proves the house can read raw chain data client-side — but it is a price/activity instrument, not a claim reconciler, and its own spec assigns these reads to a house Helius endpoint that is not yet provisioned (defect D1 on its build record).
+
+### GAP — what the founded Verifier demands that does not exist
+1. **No standalone Verifier.** No separate public page, and no published open script a stranger can run outside our own site. Searched: `find ~/workspace -iname "*verifier*"` — no house verifier script exists (hits were third-party tooling in `~/workspace/tools/` and an unrelated store document, `VERIFIER_BRIEF.md`, in the Gumroad goal's hidden files).
+2. **No re-derivation from raw sources.** The existing check verifies the *internal consistency of our own file, served by our own server* (daybook.json + root.json from the same origin). It never reads pump.fun fee history, never reads a Memo anchor on-chain, never compares the Wall counter to fee flows or to dealer/vault documents. The founded instrument checks our CLAIMS against the world; the built one checks our file against itself.
+3. **No per-claim green/red/pending.** The built verdict is one chain-level verdict plus per-entry match/mismatch. There is no claim list (covenant published? fee withdrawals real? brick serials matching across two documents?) and no pending state.
+4. **No fail-closed rendering of figures.** The founded rule "renders NOTHING for a figure it cannot reconcile" is not implemented anywhere: `/wall/` renders golden-wall.json's published numbers as-is, and its digest is verified by no code.
+5. **No off-server proof pack.** No Irys/Arweave code exists in the town's code (grepped `irys|arweave` across `~/workspace/newwave/next-build` *.js: zero hits). All proof artifacts live on the same GitHub Pages hosting as the claims themselves — exactly the failure the founding WL6 wish ("why does every project's proof die with its hosting?") was written against.
+6. **Two of v1's four reconciliation targets don't exist yet.** Brick #1 is not bought (gold book empty; no dealer invoice, no vault certificate) and the Charter is unpublished as an object (Register FVR-12 status). A Verifier built tomorrow could reconcile the genesis entry and the 0/47 counter — and would have to render *pending*, honestly, for the rest.
+
+### LICENSE
+`record.js`, `pulse.js`, `wall.js` are house-authored (house header comments, house build records) and carry **no license statement in the files**; no LICENSE file exists in the site trees searched (`~/workspace/video-studies/provadia-site`, `~/workspace/newwave/next-build`, depth 2). `daybook.json`, `root.json`, `golden-wall.json` are house data files with no license fields. Provenance: ours, evidenced by headers and build records. License: **not evidenced in the files.** Third-party inputs are public APIs named by URL in the code (DexScreener, public Solana RPC); their terms are not recorded in the files.
+
+---
+
+## 2 · THE FEE CARD (FVR-19)
+
+### FOUNDED
+- Register, FVR-19: "paste ANY pump.fun coin's contract address → exactly where that creator's fee money went (held, sent, or sold), transaction by transaction, in plain words. PROVADIA's own card is the reference — the only one that ends in receipted gold. Built second: our card as a room first (it reads through the Verifier), then the universal street."
+- Hunt synthesis #5, verbatim core: "paste **any** pump.fun coin's contract address and see exactly where that creator's fee money went — held, sent, or sold — transaction by transaction, in plain words. PROVADIA's own card is the reference: on ours, 20% of fees become receipted gold, and the card proves it." Assembly step 7 (§7): "Our own card first, as a room in the town (it reads through the Verifier). Then the universal street: paste any pump.fun CA, get its fee trail in plain words — every foreign card carrying the reference card beside it. *Proof: our card reconciles; the first foreign card rendered.*"
+
+### EXISTS
+- **The fee FACTS, researched and re-verified** — `~/workspace/video-studies/coin-panel/FEE_VERIFICATION.md`: primary-source findings (curve creator fee 0.30% · post-graduation PumpSwap creator fee tiered by market cap · migrated LP burned · 1B fixed supply), with a 2026-11-21 re-verification pass run "for the Genspark Fee Card" — i.e., these facts back a **static printed fee card** on the site. That is fee-fact publishing, not the founded instrument: no address input, no tracing.
+- **A flow-reading primitive** — Pulse's public-RPC signature/transaction reads (`pulse-work/pulse.js`, above). Built to display our own pool's activity; it does not identify a creator wallet, does not classify fee flows, and accepts no arbitrary address.
+- Nothing else. Searched for fee-tracing code by pattern (`getSignaturesForAddress` · pump.fun API endpoints · `api.helius`) across `~/workspace/newwave`, `~/workspace/video-studies`, `~/workspace/provadia-server`: the only code hit is `pulse.js`.
+
+### GAP
+Everything functional is missing: no contract-address input anywhere · no creator-wallet identification · no held/sent/sold classification of fee flows · no transaction-by-transaction plain-words rendering · no reference-card pairing (foreign card beside ours) · and its founded dependency — "it reads through the Verifier" — does not exist yet (see §1 GAP). What exists under the Fee Card's name today is a verified set of fee *facts* printed statically; the founded Fee Card is a *tool*, and the tool is unbuilt.
+
+### LICENSE
+`FEE_VERIFICATION.md` is a house research document (sources cited inline: pump.fun's published docs/fees page); no license statement in the file. No Fee Card code exists, so there is no code license to record.
+
+---
+
+## 3 · SENTINEL READINESS — asset-side prerequisites for Days 1–15 (beyond this audit)
+
+The interviews and mock deliveries are being designed separately (Gemini) and are not covered here. On the asset side, the phase still needs:
+
+1. **A provisioned public data source the reports would read.** Today the only chain reads in the house run against the public mainnet-beta RPC (Pulse) and keyless DexScreener. The founded Verifier spec names "public Solana RPC / Helius free tier" for Memo anchors and fee flows, and the Pulse spec already assigns its reads to a house Helius endpoint that does not exist yet. A named, provisioned endpoint (free tier first) is the asset every Sentinel report stands on. (Any paid tier is the founder's tooling word, per the strategy's §5 — not assumed here.)
+2. **The standalone Verifier build itself** — page + published open script + per-claim rendering + the off-server proof-pack store (an Irys-class store, chosen and funded at pennies scale) + a run schedule (the Hunt's cost table names GitHub Actions free tier for nightly verifier runs). This is the instrument Sentinel's verification reports are the commercial form of; without it, the service sells the in-page hash check's much smaller promise.
+3. **Brick #1's two documents** (dealer invoice + vault certificate, serial named) — a founder's-step purchase, already on his list for other reasons; the Verifier v1's founded reconciliation set includes them, and the gold book stays empty until they exist.
+4. **The first Memo anchor** (FVR-15) — the pennies-wallet funding is the founder's step, awaiting his word since 2026-11-20. Anchors are one of the Verifier's three named raw sources; today zero exist, so that whole claim class renders *pending* until they do.
+5. **A creator-fee flow data path for the Fee Card** — an indexed source for a creator wallet's fee history (Helius-class). `FEE_VERIFICATION.md` supplies the verified fee *rules* a card must apply; it is a document, not a feed.
+6. **The Charter published as an object** — a Foundation component and one of the Verifier's named claim targets ("covenant published?"); it exists today only as text inside other pages.
+
+**Bottom line:** of the two founded instruments Sentinel is built on, neither exists in its founded form. What exists is real but smaller: a sound in-browser hash-chain check of our own Day-Book (plus its two empty vault ledgers), an unverified-by-anyone Wall ledger file, a verified book of fee facts, and a working public-RPC read primitive. The Days 1–15 phase can honestly sell *verification services performed by the crew* on those assets; it cannot yet point a customer at the founded instruments themselves.
