@@ -181,3 +181,35 @@ The bounded retry loop commissioned after Addendum 2 ran in full: 5 attempts spa
 - **Fallback (unchanged from Addendum 2):** run the packaged rig (`anchor-work/gate-run/`, now including `gate3.mjs`, `gate3-loop.sh`, and this loop's logs/results `gate3-loop.log` · `gate3-driver.log` · `gate3-result-attempt1–5.json` · `GATE3_BLOCKED.txt`) on any host with direct, unproxied internet — e.g. the founder's laptop, where his Phantom already lives — or re-run here only if the egress behavior materially changes. The profile on this VM still holds the wallet, the imported DEVNET GATE account, and Testnet Mode ON, so a future re-run here remains one command (`DISPLAY=:99 node gate3.mjs` with the page server + `relay.mjs` up).
 
 *Loop executed 2026-11-24 08:48–10:49 UTC (02:48–04:49 CT) under the captain's retry commission. Devnet only; the throwaway gate account only; founder wallets never involved.*
+
+## ADDENDUM 4 — 2026-11-24 ~04:55 CT: FINAL EGRESS DIAGNOSIS + BYPASS ATTEMPT — **VM-ROUTE-EXHAUSTED: NO DIRECT EGRESS EXISTS ON THIS VM**
+
+The last untested hypothesis from Addenda 2–3 was that the stall lives in the proxy path and that Chrome could be told to bypass the proxy for Phantom's backend hosts only (`--proxy-bypass-list` for `*.phantom.app` + the Blowfish proxy host), letting those connections go direct. That bypass has one precondition: a direct route off this VM must exist. This addendum tests that precondition read-only (curl only; no proxy settings, Chrome config, or system state were changed). **The precondition fails at every layer — DNS, IP, and port. The bypass attempt was therefore not run: there is nothing for a bypassed connection to travel on. Verdict: VM-ROUTE-EXHAUSTED.** No signing was attempted in this addendum; nothing was signed or broadcast; the gate standard is unchanged.
+
+### How this VM reaches the internet (measured)
+
+- **Shell/tool egress:** `http_proxy`/`https_proxy`/`all_proxy` (both cases) = `http://hatch-egress-proxy:3128` (with basic-auth credentials in the process environment; the unauthenticated form is in `/etc/environment`). The proxy resolves to IPv6 `fd8b:4f84:7d32:99::1`. CA bundle for the MITM: `/run/hatch/egress-tls/ca-bundle.pem`.
+- **Chrome's path in the rig:** Chrome → local CONNECT relay `127.0.0.1:18080` (`relay.mjs`) → `hatch-egress-proxy:3128` → internet. The relay exists because Chrome cannot resolve the proxy's internal IPv6 hostname; Node can.
+- **Routing:** default route via `198.19.0.1` dev `host0`; the VM's own address is `198.19.0.2/30`. Nameservers: `198.19.0.1` and `fd8b:4f84:7d32:99::1`.
+- **DNS is fake-IP:** the system resolver maps every public hostname into `198.18.0.0/15` (e.g. `data.phantom.app` → `198.18.128.73`, `example.com` → `198.18.128.77`, `api.devnet.solana.com` → `198.18.128.78`). Those addresses exist only inside the proxy's view of the world; they are not routable destinations.
+
+### Diagnosis numbers (2026-11-24 ~10:52–10:55 UTC)
+
+**Baseline — via the house proxy (curl, env proxy):** all four Phantom backend hosts answer with real origin responses in ~1 s, confirming Addenda 2–3:
+- `https://data.phantom.app/` — HTTP 403, total **1.30 s** (TLS 0.49 s)
+- `https://api.phantom.app/` — HTTP 403, total **1.28 s** (TLS 0.49 s)
+- `https://blowfish-blocklist-proxy.phantom.app/` — HTTP 500, total **0.98 s** (TLS 0.52 s)
+- `https://time.phantom.app/` — HTTP 404, total **1.06 s** (TLS 0.52 s)
+
+**Direct attempt 1 — `--noproxy '*'`, system DNS:** all six test URLs (`data.phantom.app`, `api.phantom.app`, `blowfish-blocklist-proxy.phantom.app`, `time.phantom.app`, `example.com`, `api.devnet.solana.com`) fail identically: TCP "connects" in ~0.001 s to remote `198.19.0.1` (the gateway, not any origin), TLS never starts, curl exit **35** (SSL connect error) at ~0.03 s total.
+
+**Direct attempt 2 — real origin IPs, DNS bypassed:** real IPs were learned out-of-band via DNS-over-HTTPS through the proxy (Cloudflare DoH): `data.phantom.app` / `api.phantom.app` → `104.18.35.227`, `172.64.152.29` (Cloudflare). With `--noproxy '*' --resolve` pinning those IPs — and likewise `example.com` → `93.184.215.14` and a literal `https://1.1.1.1/` — every connection fails **identically**: curl reports `Connected to data.phantom.app (198.19.0.1) port 443` even when dialing `104.18.35.227`, and OpenSSL aborts with `error:0A00010B:SSL routines::wrong version number` — the gateway transparently intercepts **all** outbound TCP regardless of destination IP and answers in HTTP-proxy protocol, not TLS. Total time ~0.03 s, curl exit 35, in every case.
+
+### Conclusion
+
+- **There is no direct egress from this VM.** Every outbound TCP connection is intercepted at the gateway (`198.19.0.1`); the only sanctioned way out is an HTTP CONNECT through `hatch-egress-proxy:3128`. This is a property of the VM's network cell, not of Chrome, the relay, Phantom, or VM load.
+- Consequently the Addendum 2–3 stall cannot be bypassed from inside this VM: a `--proxy-bypass-list` for Phantom's hosts would hand those connections to the same intercept, where TLS dies in ~0.03 s — strictly worse than the proxy path, which at least answers curl in ~1 s and episodically cooperates with Chrome. The bypass attempt (Step 2) was not run because its precondition is proven absent; running it could only have re-proven this section's numbers from inside Chrome.
+- **§9 item 1 remains OPEN. The founder's mainnet sign must not proceed.** The gate still passes only on a Phantom-path devnet signature verifying `verify-gate.mjs` 9/9.
+- **The VM route is exhausted.** The remaining path is the Addendum 2 fallback, now the sole recommendation: run the packaged rig in `anchor-work/gate-run/` on a host with direct, unproxied internet — e.g. the founder's laptop, where his Phantom already lives: serve `anchor-devnet.html`, fresh throwaway Phantom, import the gate key, Testnet Mode on, Connect → Sign → `node verify-gate.mjs <signature>`. Re-running on this VM is warranted only if the house egress behavior materially changes.
+
+*Diagnosis executed 2026-11-24 ~10:52–10:55 UTC (04:52–04:55 CT) under the captain's final-egress commission. Read-only network probes (curl via proxy, curl direct, DoH lookup via proxy); no settings changed anywhere; devnet-only context; no wallet touched; nothing signed.*
