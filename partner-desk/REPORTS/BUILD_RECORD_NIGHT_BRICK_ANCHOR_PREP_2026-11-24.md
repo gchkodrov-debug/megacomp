@@ -213,3 +213,32 @@ The last untested hypothesis from Addenda 2–3 was that the stall lives in the 
 - **The VM route is exhausted.** The remaining path is the Addendum 2 fallback, now the sole recommendation: run the packaged rig in `anchor-work/gate-run/` on a host with direct, unproxied internet — e.g. the founder's laptop, where his Phantom already lives: serve `anchor-devnet.html`, fresh throwaway Phantom, import the gate key, Testnet Mode on, Connect → Sign → `node verify-gate.mjs <signature>`. Re-running on this VM is warranted only if the house egress behavior materially changes.
 
 *Diagnosis executed 2026-11-24 ~10:52–10:55 UTC (04:52–04:55 CT) under the captain's final-egress commission. Read-only network probes (curl via proxy, curl direct, DoH lookup via proxy); no settings changed anywhere; devnet-only context; no wallet touched; nothing signed.*
+
+---
+
+## ADDENDUM 5 — ROUTE 3 (CLOUD BROWSER + PUBLIC TUNNEL) — 2026-11-24 ~10:56–11:08 UTC (04:56–05:08 CT)
+
+**Route design:** the cloud browser runs on different infrastructure from this VM, so Phantom's backends may answer it normally (escaping the Addendum 2–4 egress wall). Route 1 failed because (a) the page was served on the VM's localhost, unreachable from the cloud browser, and (b) the Phantom Web Store install hung. Route 3 was commissioned to fix (a) with a cloudflared quick tunnel and retry (b).
+
+**Verdict: ROUTE 3 NOT COMPLETED from this seat.** The tunnel sub-route is **proven impossible from this VM** (same egress wall, new door). The browser leg was **not executed by this seat** — a subagent has no `browser.browse` tool (the browser namespace available here exposes only search/open/find), so the cloud-browser run must be dispatched by the captain with the prepared brief (delivered with this addendum's report). No Phantom-path signature exists; `verify-gate.mjs` was not run; **§9 item 1 remains OPEN and the founder's mainnet sign must not proceed.**
+
+### What was verified locally (all read-only)
+
+- **Page server:** already running from the earlier rig — `python3 -m http.server 8741 --bind 127.0.0.1`, cwd = `anchor-work/`. Served `anchor-devnet.html` = **18,893 bytes, sha256 `0a01d7e61a88bb61c7b01d245c810d0752b2d596612cf1f92aaa2148e49465cb` — byte-identical to the file on disk.** Page bytes untouched throughout.
+- **Page dependencies are public:** `anchor-devnet.html` loads web3.js from `https://unpkg.com/@solana/web3.js@1.99.0/…` (SRI-pinned) and talks to `https://api.devnet.solana.com` — no localhost dependencies, so any public HTTPS URL serving these identical bytes works for the cloud browser.
+- **Key material located + verified:** the throwaway account's secret lives at `genesis-rehearsal/keys/faucet-buffer.json` (64-byte array, the same source every rig script uses). Its base58 form was computed in-memory and **verified to derive exactly `BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R`**. The key value is not printed in this record (it travels only inside the captain's browser brief, per the desk secrets fence).
+- **Known page quirk (for the browser brief):** the devnet copy's static text still says MAINNET (Network line + the memo's own marker); after Connect the page's functional line reads `Cluster: devnet`. Phantom must be in Testnet Mode (devnet) for the run; `verify-gate.mjs` reads only `api.devnet.solana.com`, and the account holds devnet funds only.
+
+### The tunnel attempt — cloudflared cannot leave this VM
+
+- Official binary downloaded through the proxy into `gate-run/`: **cloudflared 2026.11.2, 40,334,417 bytes** (GitHub release `cloudflared-linux-amd64`).
+- Quick tunnel (`cloudflared tunnel --url http://127.0.0.1:8741`) fails immediately, twice identically: `failed to request quick Tunnel: Post "https://api.trycloudflare.com/tunnel": tls: first record does not look like a TLS handshake` — cloudflared's API call goes direct and dies at the gateway intercept, exactly the wall Addendum 4 measured.
+- Independent confirmation that the proxy is no way out either: `curl -X POST https://api.trycloudflare.com/tunnel` **via the house proxy timed out at 20 s (http=000, no response)** — the tunnel API host joins the class of hosts that stall through this egress.
+- An approval request attached to the diagnostics run timed out unanswered; the cloudflared launch was not retried after that. The impossibility verdict does not rest on the retried action: it rests on the two independent measurements above.
+- No tunnel was ever established, so there is nothing to tear down. The pre-existing local server on 8741 remains as the earlier rig left it.
+
+### Remaining viable shape (captain's move)
+
+Serve the **identical bytes** (sha256 above) from any public HTTPS URL the cloud browser can reach — e.g. a temporary GitHub Pages location (GitHub API writes through the proxy are proven working; the desk filings used them all night) — then dispatch the cloud-browser task with the prepared brief (Phantom install from the Web Store, id `bfnaelmomeimhlpmgjnjophhpkkoljpa`; import the gate key as "DEVNET GATE"; Testnet Mode on; Connect → Sign; record the approval-screen facts; return the signature) and run `node verify-gate.mjs <signature>` here. PASS remains 9/9 on a Phantom-path signature only; the rehearsal signature `37NzKkN…` never counts.
+
+*Route 3 executed 2026-11-24 ~10:56–11:08 UTC under the captain's route-3 commission. Devnet-only context; no wallet touched; nothing signed or broadcast; page bytes unmodified; no credentials other than the throwaway devnet key handled.*
