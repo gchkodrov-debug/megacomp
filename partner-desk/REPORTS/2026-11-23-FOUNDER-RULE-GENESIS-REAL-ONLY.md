@@ -1,0 +1,4 @@
+# FOUNDER RULE — GENESIS: REAL ONLY (2026-11-23 18:20 CT)
+George: "Deploy only real ones. I don't care if they are going to [cost] — that's the whole point. This thing needs to have no fake."
+THE RULE: only REAL Genesis collectibles ever deploy — a genuine on-chain, numbered, limited, transferable NFT, with durable artwork storage and verifiable provenance. NO fake tier, NO placeholder souvenir, NO cheap substitute exists in the house. If the real shape costs more per claim than the cheapest route, the study prices the REAL shape and the founder judges the numbers — cost never buys a fake.
+BINDING ON THE STUDY (Gemini assignment #23, running): the cost model prices the transferable mint in its real form (standard vs compressed, stated honestly with per-claim numbers at scale) — the cheapest figure is never the recommendation unless it IS the real shape. The same law already governs the films (the Keeper rejection, the continuity bar).
