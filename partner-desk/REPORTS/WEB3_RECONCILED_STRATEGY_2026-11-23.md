@@ -26,3 +26,13 @@ Accounting/reconciliation → seated in #3 · Token lifecycle + incident monitor
 
 ## OPEN FOUNDER DECISIONS (carried, none settled by this document)
 The first-build ruling (the decision this document asks for) · Token Factory prices as hypotheses ($495/$995 stand as design prices; maintenance re-price owed) · the 20% discount's scope/cap under the margin-tested fix · the /intelligence/ route + Door 10 naming · the companion's name (rides #58) · the D-band clearance path (entity + counsel, funded by the probe per the investigation's §5) · the Umbrella's four forks (Galaxy side, unchanged).
+
+## ⭐⭐ FOUNDER RULING — 2026-11-23 23:30 CT
+**RULED: Sentinel intelligence services FIRST, Token Factory SECOND.** The reconciled sequence (Sentinel · Website & Profile Studio · Merchant Commerce Infrastructure · Token Factory · AI dApp & Smart Contract Studio) is founder law. Execution begins with the Sentinel Days 1–15 NO-SPEND phase: (1) audit of the founded assets (the Verifier, FVR-12 · the Fee Card, FVR-19) — crew dispatched the same night; (2) 15 buyer interviews; (3) 2 mock deliveries. The probe's tooling subscriptions remain the founder's separate word (§5.3), asked once when the phase reaches it. The Token Factory's design + rehearsal proceed in parallel; its external sales remain behind the legal gate; its maintenance tier is re-priced before any sale.
+
+## RECONCILIATION NOTE — full-text refinements from ChatGPT's filed challenge (2026-11-23 23:27 CT)
+The verbatim outbox text of the challenge to Gemini carries three refinements the carried summary compressed; recorded here so the strategy's numbers are exact:
+1. **Standard package cost stack corrected:** Gemini's $170–$210 understates his own components — $140–175 + $3–8 + $25–40 = **$168–$223**. Consequence: Standard at the PROVADIA price ($396) with top-of-range cost retains ~43.7% (not ~47%); at the regular price ($495) ~54.9%. All modeled package cases remain No-Loss-positive; the Standard-at-PROVADIA-price case falls short of a 55% target margin — margin discipline joins the maintenance re-price as a pre-sale check.
+2. **Maintenance fails the 55% gate outright:** at $59, a 55% margin permits $26.55 of cost — below every proposed cost ($35–$45). The tier is not merely thin; it cannot ship at that price under the Factory's own margin target. Re-price stands as a hard pre-sale item.
+3. **Factory evidence gate, his wording adopted:** three paid clients in 90 days is the target; **fewer than two = pause**. His readiness line is also adopted as house phrasing for the universe design: "Solnik HTTP 200 is not readiness" — reachable is not alive, in Web3 dress.
+The founder ruled the sequence at 23:30 CT (Sentinel first, Factory second) with these numbers on the record.
