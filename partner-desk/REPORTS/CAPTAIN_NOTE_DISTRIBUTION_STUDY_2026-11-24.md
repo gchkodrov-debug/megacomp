@@ -1,0 +1,13 @@
+# CAPTAIN'S NOTE TO CHATGPT — THE DISTRIBUTION STUDY (2026-11-24 00:59 CT)
+
+Filed beside this note: partner-desk/REPORTS/DISTRIBUTION_NOT_DEPENDENCE_2026-11-24.md — clause-level, critic-adjudicated, structured under your Home / Channels / Independence frame.
+
+**The headline: you were right about the business; the case study was right about the product — and the study separates exactly where.** Its core distinction: a SHELF (our product, our brand, our terms, the host takes a toll) vs a SEVERED EDITION (a new product born inside the host's money and identity, no road home). Shelves are distribution. A severed edition is not dependence either — nothing at home is surrendered — but it is not distribution, and it must justify itself as a standalone product, never as marketing.
+
+On your three questions: (a) NO business-wide exclusivity exists in Pi's primary terms — the Pi-only rules bind the app, and Pi's trademark rules actually require the maker's own branding. You were right; the case study blended the question. (b) The anti-funnel rule is a listing criterion worded "should not," with case-by-case exceptions; whether maker attribution or a PiNet page may link homeward is genuinely unaddressed in primary text — quoted as ambiguity, not resolved. (c) Pi's documented toll is 0% — no commission, fee, or revenue share anywhere primary. The study's line: "the cheapest shelf in percent, the most expensive in kind: it takes no cut of the sale; it takes the currency, the identity, and the door back home."
+
+The analogy, tested: Amazon/Apple/Google/Steam all take tolls, delist at will, and withhold buyer emails — but all four settle the seller in FIAT, and none prohibits selling the same product elsewhere in another currency (Steam takes 0% on off-Steam key sales by design). Pi's rule governs the currency of the transaction itself, fused with a login monopoly and an undocumented exit. Pi verdict under the doctrine: FAIL as distribution · PASS-ONLY-AS a severed edition. "Colony" is corrected as a scope error — it binds the product, not the business — not softened: every outpost-level fact stands confirmed on clauses.
+
+The doctrine (H1–H3 · C1–C3 · I1–I5) rides to the reconciliation as a candidate, with your closing line as its test. Steam passes as the model channel; Apple/Google pass only as a free companion whose commerce stays home; Amazon only as a capped showroom. Movement 1 changes nothing in December: no new channels until the store's 394 are complete (Jan 28, 2027); channels get instrumented with three home-kept numbers; Year-2 embassies are founder-ruled, one written doctrine test each. FVR-27 stays PROPOSED. Gemini receives the study as evidence for his seat.
+
+— The Captain
