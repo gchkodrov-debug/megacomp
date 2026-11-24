@@ -242,3 +242,89 @@ The last untested hypothesis from Addenda 2–3 was that the stall lives in the 
 Serve the **identical bytes** (sha256 above) from any public HTTPS URL the cloud browser can reach — e.g. a temporary GitHub Pages location (GitHub API writes through the proxy are proven working; the desk filings used them all night) — then dispatch the cloud-browser task with the prepared brief (Phantom install from the Web Store, id `bfnaelmomeimhlpmgjnjophhpkkoljpa`; import the gate key as "DEVNET GATE"; Testnet Mode on; Connect → Sign; record the approval-screen facts; return the signature) and run `node verify-gate.mjs <signature>` here. PASS remains 9/9 on a Phantom-path signature only; the rehearsal signature `37NzKkN…` never counts.
 
 *Route 3 executed 2026-11-24 ~10:56–11:08 UTC under the captain's route-3 commission. Devnet-only context; no wallet touched; nothing signed or broadcast; page bytes unmodified; no credentials other than the throwaway devnet key handled.*
+
+---
+
+## ADDENDUM 6 — 2026-11-24 ~14:22–14:50 UTC (08:22–08:50 CT): GO-LIVE GATE, ROUTE 4 (THE VPS — DIRECT EGRESS) — **NOT PASSED: THE PHANTOM PATH NOW COMPLETES END-TO-END, AND THE CHAIN PROOF FAILS ON PHANTOM'S OWN TRANSACTION AUGMENTATION**
+
+**Verdict: the gate does NOT pass.** `verify-gate.mjs` against the Phantom-path signature scores **4 PASS / 5 FAIL**, and the page's own post-landing verdict reads **"MEMO VERIFIED" nowhere — it reads "MEMO VERIFICATION FAILED — expected exactly 1 instruction, found 3."** §9 item 1 remains OPEN and **the founder's mainnet sign must not proceed.** But this road went further than all three before it, and the stopping point is new, precise, and not an environment failure: **the Phantom path itself works on a direct-egress host — connect, approval window, simulation, Confirm, broadcast, landing all completed through the genuine Phantom — and what fails is the shape of what Phantom submits: Phantom prepends its own ComputeBudget priority-fee instructions to the page's transaction, so the landed transaction is not the instrument's transaction.** The memo instruction inside it is byte-exact. Detail below; the decision this forces (amend the instrument vs amend the standard) belongs to the captain and the founder, not to this seat.
+
+### The rig on the VPS
+
+- Host: `root@179.66.156.223` (srv2183584, Ubuntu 26.04, 1 CPU, 4 GB) via the new SSH key door. Work dir **`/root/anchor-gate/`** — `rig/` (drivers `gate4.mjs`/`gate5.mjs`/`gate6.mjs`/`gate7.mjs`, `helpers.mjs`, `probe-vps.mjs`, the unpacked verified extension `phantom-ext/`, the persisted profile `profile/` copied from this VM's rig, results + logs) and `serve/` (`anchor-devnet.html` + `MEMO_TEXT.txt`). Page served on the VPS's own `127.0.0.1:8741` (python http.server); served bytes re-verified sha256 `0a01d7e61a88bb61c7b01d245c810d0752b2d596612cf1f92aaa2148e49465cb` — identical to disk, page bytes never modified.
+- Phantom CRX re-verified before use: sha256 `ead7273e79a57dc9e653e9a268c1b7ce2eb9efb3f3ad073909465c1125493a42`, manifest version **26.43.0** — the genuine article, same as Addenda 2–3.
+- Chrome for Testing **157.0.8103.78** (the puppeteer-pinned build, identical to the VM rig) under Xvfb :99. (Setup note: the puppeteer installer failed repeatedly on this host; the browser was laid down manually from the official Chrome-for-Testing CDN zip into the puppeteer cache layout and verified running. The VM's local CONNECT relay and `--ignore-certificate-errors` were removed from the launch args — direct egress needs neither.)
+- **Direct-egress proof, from inside Chrome** (`probe-vps.mjs`, service-worker context fetch): `api.phantom.app` **67 ms** · `data.phantom.app` **88 ms** · `time.phantom.app` **73 ms** — against ≥45 s stalls for the same hosts from Chrome on this VM (Addendum 2). The ingredient every failed road lacked is present here, and it is the difference.
+- Production services untouched: Solnik :8730 and members :8731 were listening and answering HTTP 200 before the first run and after the last; all rig processes (Chrome, Xvfb, page server) were stopped at the end. Restart: `Xvfb :99` + page server in `serve/` + `DISPLAY=:99 node gate6.mjs` in `rig/`.
+- Evidence copies (results, logs, screenshots) were pulled back into this VM's `anchor-work/gate-run/`: `gate5-result.json` · `gate6-result.json` · `gate7-result.json` · `probe-vps-result.json` · `gate5-run2.log` · `gate6-run3.log` · `gate7-run4.log` · `shot-X-approval-BEFORE.png` · `shot-X-dapp-final.png` · `shot-Y-approval-ADVANCED.png`. The decoder used below is `anchor-work/decode-gate-tx.mjs`.
+
+### Attempts (4 of the 6-attempt cap used; 2 left unspent deliberately — see the end)
+
+- **Attempt 1 (gate4 = the VM's gate3 driver, proxy args removed) — FAILED at connect, "no window" ×3.** Root cause found by the probe, and it is not egress: **the copied profile already carries Phantom's trust for origin `127.0.0.1:8741`**, granted through Phantom's real connect window in Addendum 2's one good VM run. On a trusted origin `connect()` resolves immediately with the public key and **no window is ever created** — the probe called `connect()` directly and it settled in <10 s with `BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R`, zero new targets. The VM-era driver equates "no window" with failure and never checks the page, so it exhausted its connect phase in front of an already-connected wallet. (This also retro-explains nothing about Addenda 2–3: there the trust existed from the same single good run onward, but the windows were still needed — and failing — for the *sign* step, whose approval Phantom never pre-grants.)
+- **Attempt 2 (gate5 = gate4 + a persisted-trust check: poll the page for the account string before waiting for a window) — CONNECTED, approval window reached, simulation resolved — then the driver crashed before Confirm.** Connect completed via the persisted trust (page showed the account). The approval window rendered and — first time on any route — **the simulation finished**: verbatim, "No balance changes found. Please proceed only if you trust this site. · Network · Solana · Network Fee · 0.00008 SOL". The crash was a bug in the crew's own driver, present since gate3 and never exercised because no VM run ever reached the confirm loop: `w.isClosed()` returns a boolean, not a promise, so `await w.isClosed().catch(...)` throws TypeError at the loop's first poll. Nothing was signed (chain-checked: newest signature remained the rehearsal `37NzKkN…`).
+- **Attempt 3 (gate6 = gate5 + the isClosed fix) — THE PHANTOM PATH COMPLETED.** Home check first: "DEVNET GATE · You are currently in Testnet Mode" (Testnet Mode verified ON before any sign, as in every run). Connect via persisted trust. Sign click → real approval window (`chrome-extension://bfnaelmomeimhlpmgjnjophhpkkoljpa/notification.html`) → simulation arrived, Confirm DOM-enabled → **Confirm clicked once** → window closed → page captured the signature. Run time, launch to signature: **~54 seconds** (14:41:28–14:42:22 UTC).
+- **Attempt 4 (gate7 = gate6 + a bounded Advanced-section exploration before any Confirm) — the one identified lever does not exist.** See below; the run Cancelled out of the approval window and signed nothing (chain-checked).
+
+### The landed Phantom-path transaction — decoded independently
+
+**Signature:** `1zSJeYFuAHLyuwNyEoGSArMzB3fX2bPD3kJ4HM2hEYruRPVG47zXGAice5NfZoWaofRPApMNiRTTxLzShDonxe8` · **slot 525823546** · Solscan: https://solscan.io/tx/1zSJeYFuAHLyuwNyEoGSArMzB3fX2bPD3kJ4HM2hEYruRPVG47zXGAice5NfZoWaofRPApMNiRTTxLzShDonxe8?cluster=devnet
+
+Decoded from devnet RPC by `decode-gate-tx.mjs` (this seat, chain-only evidence):
+
+- **Account keys (3):** payer `BMhv2yHk…` · `ComputeBudget111111111111111111111111111111` · `MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr`.
+- **ix[0] — ComputeBudget `SetComputeUnitPrice`: 375,000 microLamports/CU** (data `03 d8b805…`).
+- **ix[1] — ComputeBudget `SetComputeUnitLimit`: 200,000 CU** (data `02 400d0300`).
+- **ix[2] — Memo: 133 bytes, byte-for-byte equal to `MEMO_TEXT.txt`** — "PROVADIA · DAYBOOK ROOT v1 · MAINNET · 79e375edd0f466d259366c002088eb666c8e1f55464e615882c202356ec6face · 7 ENTRIES · 2026-11-23" (the chain's own log line quotes it verbatim).
+- **Fee: 80,000 lamports** = 5,000 base + 75,000 priority (375,000 µL × 200,000 CU ÷ 1,000,000). The **only** balance change is the payer's −80,000; no transfer, no approval, no other program.
+- `meta.err = null`.
+
+The two ComputeBudget instructions are **Phantom's own prepend** — the page's construction (proven byte-exact in §5–§6 through the identical module) contains neither; Phantom's approval screen disclosed the consequence in advance ("Network Fee 0.00008 SOL").
+
+### verify-gate.mjs — the gate's own judge, unmodified
+
+```
+PASS — cluster is devnet
+FAIL — instruction count == 1
+FAIL — program == Memo
+FAIL — instruction accounts == 0
+FAIL — memo bytes byte-equal MEMO_TEXT.txt (compares the sole instruction; the memo at ix[2] is byte-exact per the decode above)
+FAIL — fee == 5000 lamports (found 80000)
+PASS — fee payer == throwaway devnet account BMhv2yHk…
+PASS — meta.err == null
+PASS — slot recorded: 525823546
+→ GATE CHAIN-PROOF FAILED (exit 1)
+```
+
+The page agreed, in its own words, on its own screen: "Confirmed on-chain (devnet) but NOT verified — see the verification verdict below. The day is NOT anchored." + "MEMO VERIFICATION FAILED — expected exactly 1 instruction, found 3. Do NOT treat this day as anchored." The instrument's fail-closed design worked exactly as built — it refused to call an augmented transaction an anchor.
+
+### Attempt 4's exploration — Phantom offers no lever to remove the prepend
+
+The gate6 approval text contains an "Advanced" row. Gate7 opened it before any Confirm (and Cancelled without signing when no control appeared). What Advanced actually is in Phantom 26.43: **a read-only instruction inspector**. Verbatim from the expanded window (screenshot `shot-Y-approval-ADVANCED.png`):
+
+```
+Advanced
+set_compute_unit_price · Program Compu...11111
+set_compute_unit_limit · Program Compu...11111
+createMemo · Program MemoS...mfcHr
+memo · PROVADIA · DAYBOOK ROOT v1 · MAINNET · 79e375ed…ec6face · 7 ENTRIES · 2026-11-23 · Copy
+```
+
+No priority-fee control, no fee editor, nothing to set to none. The prepend is Phantom's fixed behavior for dapp-submitted transactions on this build; a user signing through this window cannot strip it. (Attempts 5–6 were not spent: a re-run of an identical flow against a deterministic wallet behavior has no expected value, and the brief's discipline is to document the stop point rather than loop.)
+
+### §10 founder card — Phantom-screen facts, updated from this host (superseding Addendum 2's environment-bound findings)
+
+- **Simulation summary: POPULATES on direct egress** — "No balance changes found. Please proceed only if you trust this site." Addendum 2's endless skeleton was the VM's egress, not Phantom. The founder's stop rule on unexpected movement is therefore usable as written: the section renders, and for this transaction it shows nothing moving.
+- **A fee line DOES render — and it will not read 0.000005 SOL.** Phantom displays its own total: "Network Fee 0.00008 SOL", because Phantom itself adds the priority fee. The card's expectation ("estimated network fee of ~0.000005 SOL") and its stop rule ("fee far above 0.000005 SOL → stop") **cannot both survive contact with this Phantom build**: a founder following the card literally would stop a correct sign. The card must be rewritten before the mainnet step, in whichever direction the fork below is decided.
+- **The memo IS inspectable in Phantom — under Advanced.** The main approval screen does not show it (Addendum 2 stands on that point), but Advanced → `createMemo` displays the full memo text with a Copy button. The card can offer this as the founder's in-Phantom cross-check.
+- Signing account + origin shown: confirmed again ("DEVNET GATE · Confirm Transaction · 127.0.0.1:8741"). Warning text unchanged: "Balance changes are estimated. Amounts and assets involved are not guaranteed." + "Only confirm if you trust this website."
+
+### The fork this leaves (captain/founder decision — not taken by this seat)
+
+The Phantom path is proven workable end-to-end; the instrument's shape standard is what Phantom violates. Exactly two honest ways forward:
+
+1. **Amend the instrument.** Change what the page submits so Phantom has nothing to prepend to or cannot prepend — e.g. the page pre-includes its own ComputeBudget instructions (then the construction, the rehearsal, and the verifier's shape all change together), or the page switches from `signAndSendTransaction` to `signTransaction` + self-broadcast **if** that path proves unaugmented on devnet. Either way: construction change → new devnet rehearsal → gate re-run. Unproven until run.
+2. **Amend the standard.** Redefine a valid anchor as: memo instruction byte-exact (as the final instruction), preceded by at most the standard ComputeBudget pair, fee = 5,000 + the declared priority fee, payer = ANCHOR. The anchor's evidentiary content (root + timestamp + payer) is identical; what changes is the house's shape discipline, and §3/§7 + `verify-gate.mjs` + the page's verifier would all be rewritten to say so, in the open, before any mainnet sign.
+
+Until one is chosen and executed: **§9 item 1 stays OPEN; the founder's mainnet sign must not proceed.** What this route settled permanently: the gate no longer waits on any environment. The VPS road is the road — one command re-runs the whole rig — and the remaining question is a house decision about Phantom's fee machinery, not a technical block.
+
+*Route 4 executed 2026-11-24 14:22–14:50 UTC (08:22–08:50 CT) under the captain's VPS commission. Devnet only; Testnet Mode verified ON in the wallet before every sign; the throwaway gate account only; the founder's wallets never involved; no mainnet value moved anywhere (the landed fee is 80,000 devnet lamports, valueless). Page bytes unmodified — every change across gate4–gate7 was to the crew's driver scripts, never to what would be signed or how it is verified: `verify-gate.mjs` and the page's own verifier judged the result unmodified and both said no.*
