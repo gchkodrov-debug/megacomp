@@ -1,0 +1,149 @@
+{
+ "amendment": 8,
+ "evidenceABCD": {
+  "pass": 26,
+  "total": 26
+ },
+ "evidenceHarnessSha256": "375394f066770213652589639da0106354b82497083c6d0ea12f74072cb58f8a",
+ "fixFreeze": {
+  "evidenceABCD": {
+   "logs": [
+    "evidence-run-fix.log (A 12/12; Part B crashed on egress-proxy tunnel timeouts \u2014 disclosed weather failure, gate failed closed 502)",
+    "evidence-runB-fix.log (B 6/6 standalone)",
+    "evidence-runC-fix.log (C 6/6)",
+    "evidence-runD-fix.log (D 2/2)"
+   ],
+   "pass": 26,
+   "total": 26
+  },
+  "evidenceHarnessSha256": "940f1f8165c4229da7c9b07219b8f3c5176d3c2421d8705c43330b1ccbd7871e",
+  "fixLandings": {
+   "evidenceB2": {
+    "signature": "TLCFmn6C2AgP8Ve76pnC5cXGmrCnMSNCBpDECHTqZDKAao9u29qDhYCeuKGNkiubzzvL3Fuj3qJothJgChbjpeX",
+    "slot": 526022793,
+    "verifyGate": "GATE CHAIN-PROOF PASS (verify-gate-output-fix.txt)"
+   },
+   "twinR18": {
+    "signature": "Swz11ZBZ5THSmGdpmvcYeKTWkNUybBwJPz5VfuQp9DWjcsXm6rNgZ9QbbUiQEyW8B7qUkvDVauJLQAYGE7aztnk",
+    "slot": 526021928,
+    "verifyGate": "GATE CHAIN-PROOF PASS (verify-gate-output-fix-twin.txt)"
+   }
+  },
+  "fixes": [
+   "P1 (server): send door no longer calls the record-creating claimAnchorLock (removed); new authorizeAnchorSend forwards a night-brick sendTransaction ONLY when the derived signature equals the recorded signature of a live CLAIMED or BROADCAST (bound-claimed) record \u2014 null record, RESERVED, EXPIRED_UNCLAIMED, FAILED_ONCHAIN, DEAD_PREFLIGHT, CONFIRMED, or signature mismatch all refused 403 in the duplicate-prevention shape, zero forwards. CLAIMED->BROADCAST durable stamp + stamped flag preserved; A7 getTransaction convergence KEPT (read-path only, full landed byte-match evidence required \u2014 adjudicated in FIX_REPORT.md)",
+   "P2 (pages, both): evaluateAnchorGate gains the released-reservation convergence \u2014 server EXPIRED_UNCLAIMED with NO signature + local SIGNED_UNCONFIRMED mirror whose blockhash equals the released stamp OR whose reservationId matches -> mirror cleared, gate stands down fresh, honest notice surfaced in both Sign and reissue handlers; any ambiguity falls through to the locked reconciliation"
+  ],
+  "frozenAt": "2026-11-25T04:03:18Z",
+  "frozenCore": {
+   "anchorTx": "920a695952fa30796d1bce958f1674e27ebae733250a8ec6d1def7963a44d6fc",
+   "feeLamports": 5000,
+   "memoBytes": 133,
+   "memoText": "a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28",
+   "payer": "6jA1JSoenG9Z4j8ufq3FWp659ZmAXJFRKiR6jaLH12iE",
+   "verifyGate": "1801d5c332c86ea96a0b536dda1f128e2ff2350798b311838860a1b9a7fbabfc"
+  },
+  "gatehouseSha256": "c4010ed628ccd21f21d15ee0899b30b108d426878b329283a1daae688f86d07f",
+  "originalsUntouched": {
+   "anchor-work/anchor-devnet.html": "37407d10a599d295c159852a456f61bf98d22c7d2f4837fc0aa5feef7a1eee0d",
+   "gatehouse-work/anchor-v6.html": "be558a0495c1cba04e282c5ddfc23edd11e0cf1ce25e355594b9fc47773bf418",
+   "gatehouse-work/gatehouse.mjs": "2b16dfd069146fc4abc74c7becac78be1baf73917bf3a8ab13f0758f3a0357c7"
+  },
+  "pageBadge": "e72aaae3",
+  "pageSha256": "900323c367a6af95500eba1edf198e7ff4497867388d3732cebfbea72644d4ba",
+  "regression": {
+   "note": "32/32 twice consecutively on the fix-frozen bytes (27 inherited + R24-R28 new). First fix run (regression-run-fix1.log) was 30/32: R24 leg 3 hit the send rate bucket (429) before the authorization door and R27 asserted a new signature where the deterministic stub blockhash makes the fresh tx byte-identical \u2014 both harness fixture defects, fixed and named in FIX_REPORT.md, candidate untouched.",
+   "pass": 32,
+   "runs": [
+    "regression-run-fix2.log",
+    "regression-run-fix3.log"
+   ],
+   "total": 32
+  },
+  "regressionHarnessSha256": "57e3fba5930ae16cbb5c8aca1b536c6c8b0c0e8cd7721f8f57b1a1e1e23e87aa",
+  "report": "FIX_REPORT.md",
+  "seat": "FIX (Relay Law fix round \u2014 critic P1/P2 CONFIRMED findings)",
+  "twinPageBadge": "ce8823ec",
+  "twinPageSha256": "40eb08b46744f9f307790837c53907e160fdc7a5ecab9fed306e40e974f13887",
+  "walletFence": "re-read in fix Part A run: 69,099,009 lamports, exactly 1 signature \u2014 unchanged; no mainnet transaction made"
+ },
+ "frozenAt": "2026-11-25T03:11:05.162896+00:00",
+ "frozenCore": {
+  "anchorTx": "920a695952fa30796d1bce958f1674e27ebae733250a8ec6d1def7963a44d6fc",
+  "feeLamports": 5000,
+  "memoBytes": 133,
+  "memoText": "a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28",
+  "payer": "6jA1JSoenG9Z4j8ufq3FWp659ZmAXJFRKiR6jaLH12iE",
+  "verifyGate": "1801d5c332c86ea96a0b536dda1f128e2ff2350798b311838860a1b9a7fbabfc"
+ },
+ "gatehouseSha256": "e49932c5aace63c499045e1af16d983f817ec45f6cd36180a207f2e1d63e0ce5",
+ "improverFreeze": {
+  "evidenceABCD": {
+   "logs": [
+    "evidence-run-improver.log",
+    "evidence-runB-improver.log"
+   ],
+   "note": "A 12/12, C 6/6, D 2/2 in evidence-run-improver.log; Part B's first attempt in that log crashed on egress-proxy tunnel timeouts (gate failed closed 502 \u2014 the builder's disclosed weather failure), then passed 6/6 standalone in evidence-runB-improver.log. B2 landing on improver bytes: ZTvLyAu1JVoM6NuAA3xBYPcsLkmwXfeafvePiGJ9yv4s4czJJdoH29g6Rg85tSsU3dNV7JAhwNA84DxuUGnf4ts.",
+   "pass": 26,
+   "total": 26
+  },
+  "evidenceHarnessSha256": "940f1f8165c4229da7c9b07219b8f3c5176d3c2421d8705c43330b1ccbd7871e",
+  "fixes": [
+   "FIX-1 challenge issuance: reserve blockhash must base58-decode to exactly 32 bytes",
+   "FIX-2 reserve door: server-observed stamp window (stamped lastValidBlockHeight within +/-1000 of server-observed getBlockHeight; observation unavailable -> 502, nothing reserved)",
+   "FIX-3 release door: post-await disk refresh before the freeing re-check"
+  ],
+  "frozenAt": "2026-11-25T03:32:00Z",
+  "gatehouseSha256": "5e53421677280de76bbd1ba3ca5e4a24f237aed194cccafd6f6cab882ad08875",
+  "improverProbes": "4/4 PASS (improver-probes.log) \u2014 N5 deploy-window: deployed A7 binary fails closed on v2 RESERVED and v2 EXPIRED_UNCLAIMED records; candidate loads v1 and v2 records",
+  "improverProbesSha256": "786dbbb286666065dfa1d8c616ca083483dc2f0a3abaa723b4c6b86c0d467564",
+  "pageBadge": "05ba62bc",
+  "pageSha256": "e7bf2ec09fc5ee9645270fe94e01870d84ba5cae722a67f218f8e99932d2e3a5",
+  "pagesChangedByImprover": false,
+  "regression": {
+   "note": "27/27 twice consecutively on the improver-frozen bytes. Improver run 1 (regression-run-improver1.log) was 26/27 \u2014 R14 failed on a harness fixture that mixed a real-devnet stamp with a stub-upstream gate (the candidate's FIX-2 correctly refused it as cross-cluster); fixture fixed and disclosed in IMPROVER_REPORT.md.",
+   "pass": 27,
+   "runs": [
+    "regression-run-improver2.log",
+    "regression-run-improver3.log"
+   ],
+   "total": 27
+  },
+  "regressionHarnessSha256": "b6bbedb91b09afc8f495de88ba9d460c272bf3276aab0dcd58360aeecae10ff0",
+  "report": "IMPROVER_REPORT.md",
+  "seat": "IMPROVER (Relay Law seat 2)",
+  "twinLanding": {
+   "cluster": "devnet",
+   "note": "R18 landing from regression run improver3 (final bytes); verify-gate GATE CHAIN-PROOF PASS in verify-gate-output-improver-twin.txt. B2 landing chain-proof in verify-gate-output-improver.txt.",
+   "page": "anchor-devnet.html",
+   "signature": "5e4B1J1yUshsV2eehBAJgRpoqkEXSApTghFSdS64ykz9J1Y1gRApf5RKyQWFoFT8nZ7Khb1oNvtxbjq7MoyNfqoV"
+  },
+  "twinPageBadge": "879d69fc",
+  "twinPageSha256": "76d611f652856781ade74776a993d3143a37bcc7df8c6a5b7df34bed8968d0ed",
+  "walletFence": "re-read in improver Part A run: 69,099,009 lamports, exactly 1 signature \u2014 unchanged; no mainnet transaction made"
+ },
+ "originalsUntouched": {
+  "anchor-work/anchor-devnet.html": "37407d10a599d295c159852a456f61bf98d22c7d2f4837fc0aa5feef7a1eee0d",
+  "gatehouse-work/anchor-v6.html": "be558a0495c1cba04e282c5ddfc23edd11e0cf1ce25e355594b9fc47773bf418",
+  "gatehouse-work/gatehouse.mjs": "2b16dfd069146fc4abc74c7becac78be1baf73917bf3a8ab13f0758f3a0357c7"
+ },
+ "pageBadge": "05ba62bc",
+ "pageSha256": "e7bf2ec09fc5ee9645270fe94e01870d84ba5cae722a67f218f8e99932d2e3a5",
+ "regression": {
+  "note": "BUILDER freeze (superseded by the improver freeze below): 22/22 twice consecutively in place (run3 + run4). Runs 1-2 (20/22) are kept as regression-run.log / regression-run2.log with their failure causes named in BUILDER_REPORT.md.",
+  "pass": 22,
+  "runs": [
+   "regression-run3.log",
+   "regression-run4.log"
+  ],
+  "total": 22
+ },
+ "regressionHarnessSha256": "96a81e351419303bc43960476f5c441040d1949ea079cd53be28bd9f0e034eea",
+ "twinLanding": {
+  "cluster": "devnet",
+  "page": "anchor-devnet.html",
+  "signature": "3t75U4r8Y6pPBCJDc8DrecG3urr76v7E77oCKv22fivZEbh11GiMFrL3rsczGLSF6WzJTvhFhmvAVFtFD5fNHRA7"
+ },
+ "twinPageBadge": "879d69fc",
+ "twinPageSha256": "76d611f652856781ade74776a993d3143a37bcc7df8c6a5b7df34bed8968d0ed",
+ "verifyGate": "GATE CHAIN-PROOF PASS (verify-gate-output.txt)"
+}
