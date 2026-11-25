@@ -1,0 +1,80 @@
+[
+  {
+    "id": "R1",
+    "name": "both browser storages fail -> no broadcast, no claim, fail closed",
+    "pass": true,
+    "detail": "wallet signed x1 · error=\"Error: Browser storage is unavailable in this browser or webview, so the signed anchor cannot be durably recorded on this device —…\" · gate record=null"
+  },
+  {
+    "id": "R1b",
+    "name": "gatehouse store unwritable -> claim 503, send refused 503, nothing lands",
+    "pass": true,
+    "detail": "claim HTTP 503 \"anchor record store unavailable — fail closed\" · send HTTP 503 \"gatehouse: anchor record store unavailable (fail closed)\" · devnet status of would-be sig 24rR2ZHxzURB…=null"
+  },
+  {
+    "id": "R2a",
+    "name": "page sign -> claim -> broadcast -> landed + verified on devnet; gate record CONFIRMED by observation",
+    "pass": true,
+    "detail": "sig=32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZbsYaVCe9GN4z1Y3bFo9VabBYF6GC9PXbviAZH · page verdict=\"MEMO VERIFIED ON-CHAIN — the anchor is real\" · gate record={\"signature\":\"32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZbsYaVCe9GN4z1Y3bFo9VabBYF6GC9PXbviAZH\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"CONFIRMED\",\"claimedAt\":\"2026-11-25T02:33:31.261Z\",\"updatedAt\":\"2026-11-25T02:33:34.274Z\",\"confirmedSignature\":null}"
+  },
+  {
+    "id": "R2b",
+    "name": "reload in a fresh browser (empty storage): server record stops the second signature — wallet never asked",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"This memo is already anchored — the Gatehouse record stands CONFIRMED on-chain (signature 32BMi3uyNy6qQJknE8xS9pUeMD3yKn\""
+  },
+  {
+    "id": "R5",
+    "name": "previously confirmed anchor reopened -> page recognizes it and stops, no new signature",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"This memo is already anchored — the Gatehouse record stands CONFIRMED on-chain (signature 32BMi3uyNy6qQJknE8xS9pUeMD3yKn\""
+  },
+  {
+    "id": "R3",
+    "name": "RPC null for a LANDED tx (+ expired blockhash): record NOT cleared — history+memo reconciliation proves the landing, record graduates CONFIRMED",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"The anchor signed earlier is CONFIRMED on-chain (signature 32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZ\" · local mirror after=\"CONFIRMED\" · gate record={\"signature\":\"32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZbsYaVCe9GN4z1Y3bFo9VabBYF6GC9PXbviAZH\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"CONFIRMED\",\"claimedAt\":\"2026-11-25T02:33:36.174Z\",\"updatedAt\":\"2026-11-25T02:33:36.770Z\",\"confirmedSignature\":null}"
+  },
+  {
+    "id": "R4",
+    "name": "incomplete provider history after expiration -> LOCKED; local + gate records intact; no clearing, no signature",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"A signed anchor (signature 32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZbsYaVCe9GN4z1Y3bFo9VabBYF6GC9PXb\" · local mirror after=\"SIGNED_UNCONFIRMED\" · gate record={\"signature\":\"32BMi3uyNy6qQJknE8xS9pUeMD3yKn7X3YG7jZxMgFrfAB5XNEZbsYaVCe9GN4z1Y3bFo9VabBYF6GC9PXbviAZH\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"BROADCAST\",\"claimedAt\":\"2026-11-25T02:33:37.111Z\",\"updatedAt\":\"2026-11-25T02:33:37.111Z\",\"confirmedSignature\":null}"
+  },
+  {
+    "id": "R6",
+    "name": "two concurrent sessions: server lock admits exactly one claim + one broadcast; the other is refused and never lands",
+    "pass": true,
+    "detail": "claims=[200,409] (A first) · winner=A vi5J2JxKRp25… · loser send HTTP 403 \"gatehouse policy refusal: duplicate-anchor prevention — an anchor is already rec\" · winner devnet status=finalized · loser devnet status=null · gate record sig=vi5J2JxKRp25…"
+  },
+  {
+    "id": "R7",
+    "name": "expired stamp refused at preflight -> DEAD_PREFLIGHT (positive evidence) frees the lock; fresh stamp claims + broadcasts",
+    "pass": true,
+    "detail": "height=513093391 > lvbh=513093370 · expired send error=\"Transaction simulation failed: Blockhash not found\" · record after=DEAD_PREFLIGHT · fresh claim HTTP 200 · fresh send HTTP 200 · final record=\"BROADCAST\"/cqScvR9EbNLP…"
+  },
+  {
+    "id": "R5b",
+    "name": "local CONFIRMED mirror alone (no Gatehouse record) stops the signature — the local branch, isolated",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"This memo is already anchored — a signed record from an earlier session stands CONFIRMED on-chain. Nothing more to sign.\" · gate record=null"
+  },
+  {
+    "id": "R8",
+    "name": "BROADCAST record + blockhash-worded re-send refusal -> record STAYS BROADCAST, lock held, other signature refused (P-C1)",
+    "pass": true,
+    "detail": "claim HTTP 200 · send1 HTTP 200 · record after send1=BROADCAST · re-send error=\"Transaction simulation failed: Blockhash not found\" · record after re-send=BROADCAST · other-signature claim HTTP 409"
+  },
+  {
+    "id": "R9",
+    "name": "Gatehouse record unreadable + no local record -> fail closed, wallet never asked (P-C4)",
+    "pass": true,
+    "detail": "signTransaction calls=0 · error=\"Error: The Gatehouse anchor record cannot be read right now, and this browser holds no local record — refusing to sign blind. Chec\""
+  },
+  {
+    "id": "R10",
+    "name": "blockhash refusal AFTER a failed first upstream contact -> NOT proof of death: no DEAD_PREFLIGHT, NO plaque, mirror + lock intact (P-C1 contacts guard + P-C2)",
+    "pass": true,
+    "detail": "signTransaction calls=1 · plaque shown=false · error=\"Error: The stamp expired, but the anchor record for this attempt still stands (Gatehouse status: BROADCAST) — …\" · mirror=SIGNED_UNCONFIRMED · gate record=BROADCAST"
+  }
+]
