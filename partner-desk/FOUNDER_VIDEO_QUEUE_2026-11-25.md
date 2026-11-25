@@ -4,11 +4,13 @@
 
 ---
 
-## JOB 1 — MINT · MASTER ENVIRONMENT (source clip 1 of the 30–60 s assembly) — ⭐ FIRST
+> **⭐⭐ VERDICT LOCKED — GEMINI #120, 2026-11-25 ~15:49 CT: BLESSED WITH CHANGES** (full text: `GEMINI_120_VERDICT_2026-11-25.md`). The changes, applied to every job below: **(1)** loops are matched **A→A keyframes** + phase-offset — boomerang is retired as a master technique (ambient light / micro-breathing only); **(2)** scenery masters are **one 8s A→A clip** (at most 15–16s, two clips, one crossfade) — the 47s assembly is CUT, long-horizon variation is made in-engine by layered phase-offset compositing; **(3)** the 54-credit queue is APPROVED as sane; **(4)** three clip-killers audited on every landed clip — unanchored camera drift (incl. lens breathe), sparse-keyframe/heavy-B-frame encoding (must scrub frame-by-frame), pre-baked foreground/background lock (machinery + portals stay isolated from scenery); **(5)** sync law: coupled layers ≤1 frame off a single master Engine clock · uncoupled ambient layers on coprime durations, never synchronized.
+
+## JOB 1 — MINT · THE SCENERY MASTER (one 8 s A→A clip — Gemini #120) — ⭐ FIRST
 - **Universe / asset:** The Mint — `mint-master-environment` (environment layer L1, the universe's scenery bed)
-- **Reference image:** `04-mint-press-room.png` (Genspark batch #2 — attached in chat by the captain; founder saves it and uses it as the START frame / image-to-video source)
+- **Reference image:** `04-mint-press-room.png` (Genspark batch #2 — attached in chat by the captain; founder saves it and uses it as **BOTH the Start frame AND the End frame** — the A→A matched-keyframe pair Gemini #120 mandates)
 - **Model / settings:** Veo 3.1 Fast · Video · **16:9** · 720p · 8 s · x1
-- **Camera:** LOCKED — perfectly still, no pan, no zoom, no drift (a still camera is what lets the assembly feel infinite)
+- **Camera:** LOCKED — perfectly still, no pan, no zoom, no drift, **no lens breathe** (any camera motion breaks registration against the Engine's overlay layers — clip-killer #1 in Gemini #120)
 - **Beginning / ending frames:** begins on the reference image; must END in the same composition — press back at rest position, flames at similar height — so the clip can loop and chain
 - **Lighting / atmosphere:** warm golden forge light from the upper left; drifting sparks; gentle heat shimmer; molten gold glowing in its channel
 - **Loop compatibility:** continuous gentle motion only — nothing enters or exits the frame; nothing completes a big action (the press breathes, it does not finish a strike)
