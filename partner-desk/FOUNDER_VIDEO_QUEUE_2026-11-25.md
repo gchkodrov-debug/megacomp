@@ -77,3 +77,38 @@ Cinematic video, 16:9. The character in the uploaded image — a small brass-and
 ---
 
 **After these four:** the assembly work is the captain's (30–60 s master from Job-1-class clips + Jobs 2–3 layered on independent cycles in the Engine), then the continuity examination (60 s / 5 min / 30 min). Further Mint clips (a second and third master-environment angle) are briefed only if the first assembly shows a gap — credits are spent on evidence, not volume.
+
+---
+
+# PART 2 — THE RECORD HALL SET (Jobs 5–7 · prepared 2026-11-25 16:56 CT, founder standing by)
+## Same law as Part 1 (Gemini #120): A→A matched frames for cycles · Start-only for the crossing · locked cameras except the portal · every take examined (sound · camera · bookends · keyframes) before it counts. ~10 cr each. Fire order: after the ET-120 assembly lands (its verdict names any Mint gap first; this set fires either way).
+
+## JOB 5 — RECORD · THE READING ROOM (scenery master)
+- **Reference image:** `town-art/genspark-batch7-2026-11-25/04-record-hall-reading-room.jpg` (captain attaches at fire time)
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
+- **Camera:** locked still, no push, no pan, no lens breathe
+- **Sound:** the Record's own — soft page turns, distant binding press, quiet room tone, no music, no voices
+- **Prompt (exact):**
+```
+Cinematic wide view of a great record hall reading room, 16:9, locked still camera. Bring the uploaded image to life: warm lamp light breathes gently, dust motes drift in the light shafts, a page on a far desk settles, the room alive and quiet. At the end, the room is exactly as it began, ready to cycle forever. Sound: soft page turns, a distant binding press, quiet room tone, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no text, no logos.
+```
+
+## JOB 6 — RECORD · THE PRINTING PRESS (living machinery)
+- **Reference image:** `town-art/genspark-batch5-2026-11-25/10-daybook-printing-press.jpg` (captain attaches at fire time)
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
+- **Camera:** locked still, closer framing on the press
+- **Sound:** the press's own — mechanism clicks, the platen's soft thump, paper sliding, no music, no voices
+- **Prompt (exact):**
+```
+Cinematic close view of a great day-book printing press, 16:9, locked still camera. Bring the uploaded image to life: the press completes one slow, complete printing cycle — gears turning, the platen pressing down once with weight, a fresh page sliding free, warm light glinting on brass. At the end, every gear and the platen are back exactly where they started, ready to cycle again forever. Sound: mechanism clicks, the platen's soft deep thump, paper sliding, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no readable words, no logos.
+```
+
+## JOB 7 — RECORD · THE STACKS CROSSING (portal)
+- **Reference image:** `town-art/genspark-batch6-2026-11-25/04-record-hall-stacks-aisle.jpg` (captain attaches at fire time)
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the still in the START slot ONLY — End stays EMPTY (a journey, not a loop)
+- **Camera:** slow push FORWARD down the aisle — the only moving-camera clip in this set
+- **Sound:** quiet footsteps of air, paper and leather breathing, one soft chime deep in the stacks
+- **Prompt (exact):**
+```
+Cinematic portal crossing, 16:9, one continuous shot — no cuts. The camera pushes slowly forward down a towering aisle of record shelves in the great hall of Provadia: warm lamp light pools and passes, dust drifts in the light, the shelves seem to breathe with stored centuries. The movement is smooth and unstoppable, like travelling deeper into memory itself. End deep in the stacks, the hall revealed vast and stable around the camera. Sound: soft air moving, paper and leather, one soft chime deep in the stacks, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no readable words, no logos.
+```
