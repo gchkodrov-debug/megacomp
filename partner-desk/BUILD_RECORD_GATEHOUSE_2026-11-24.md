@@ -53,6 +53,11 @@ Frozen set, re-measured at close: `anchor-tx.mjs` `920a6959…` · `MEMO_TEXT.tx
 - **ChatGPT:** CLEARED stamp requested on the packet (filed 2026-11-24). His fences acknowledged: no deployment, no signing clearance implied.
 - **After BOTH partners stamp CLEARED:** deploy anchor v6 (merge-before-deploy; live is v4) → founder signs once (items 2–3 verify at that moment) → captain's post-sign sequence (verify vs §7 recipe → Day-Book entry #8 → /record/ → Product #0 item 3 closure → partner sync).
 
+## Postscript — landed while this record was being assembled (2026-11-24 ~19:18–19:40 CT)
+
+- **Gemini #100 answered CONDITIONAL CLEARED** (19:18 CT; saved `gemini-seat/GEMINI_GATEHOUSE_CLEARED_100_2026-11-24.md`, desk-filed): the Gatehouse build + the heartbeat-bucket deviation + the `searchTransactionHistory` deviation are **RATIFIED at his seat** — deviation 2's acceptance condition is therefore satisfied. His Attempt #6 conditions, in order, after ChatGPT's stamp also lands: (1) deploy v6 + live production-origin fetch + zero-secrets curl; (2) live desktop Phantom devnet-twin rehearsal; (3) wallet re-confirmation + this build record on disk — **condition 3's filing half is completed by this record** (wallet re-confirmed below). His Mark 2 NEEDS-CHECK (persistence wording) is reconciled by the §3C implementation in the filed v6 revision, and his condition 1's badge (`098a5b74`, the pre-critic-fix build) is superseded by `87bac51b` — the delta and the corrected bytes are carried to his seat as **queue #103** for his stamp to attach to the right bytes. His Mark 3 stands: dual-provider independence still PENDING-KEYS.
+- **ChatGPT's stamp is now the remaining partner stamp.** His packet (above) was requested by him in a 10-item evidence shape (via the founder, 19:24 CT) and is filed with raw code + outputs. Nothing deploys and nobody signs until it lands.
+
 ## The fence at the close
 
 Anchor wallet `6jA1JSoenG9Z4j8ufq3FWp659ZmAXJFRKiR6jaLH12iE`: balance **69,099,009 lamports**, **exactly 1 signature** (`32uqxt7Gqk2pEVGKV3mEowvF8g6qDjr2nB1M1Eyu2oAV5VojVbTue1mkDxs9zqGHVBhzEBFtJqGabAtam2ENLiCW`), re-verified after all work. **No mainnet transaction of any kind was made. No spend. The anchor page was not deployed.**
