@@ -1,0 +1,194 @@
+[
+  {
+    "id": "R1",
+    "name": "both browser storages fail -> no broadcast, no claim, fail closed (Amendment 8: the RESERVATION stands, signature null)",
+    "pass": true,
+    "detail": "wallet tx-signed x1 · msg-proofs x1 · error=\"Error: Browser storage is unavailable in this browser or webview, so the signed anchor cannot be durably recorded on this device —…\" · gate record={\"signature\":null,\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"RESERVED\",\"claimedAt\":null,\"updatedAt\":\"2026-11-25T04:15:18.082Z\",\"confirmedSignature\":null,\"reservationId\":\"9221e58cdc4fa404773a643c5fcbc0ef\",\"blockhash\":\"986F5XFXusTibbUPoP8R8pL1jA9JAULyJ3vvu2Efkmw2\",\"lastValidBlockHeight\":513118524,\"reservedAt\":\"2026-11-25T04:15:18.082Z\"}"
+  },
+  {
+    "id": "R1b",
+    "name": "gatehouse store unwritable -> claim 503, send refused 503, nothing lands",
+    "pass": true,
+    "detail": "claim HTTP 503 \"anchor record store unavailable — fail closed\" · send HTTP 503 \"gatehouse: anchor record store unavailable (fail closed)\" · devnet status of would-be sig 2fb6xFZQsgfW…=null"
+  },
+  {
+    "id": "R2a",
+    "name": "page sign -> claim -> broadcast -> landed + verified on devnet; gate record CONFIRMED by observation",
+    "pass": true,
+    "detail": "sig=4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWNW93GJw5TE9KLv26E91TsoqyFZUtC6x8ePvx24 · page verdict=\"MEMO VERIFIED ON-CHAIN — the anchor is real\" · gate record={\"signature\":\"4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWNW93GJw5TE9KLv26E91TsoqyFZUtC6x8ePvx24\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"CONFIRMED\",\"claimedAt\":\"2026-11-25T04:15:23.001Z\",\"updatedAt\":\"2026-11-25T04:15:25.350Z\",\"confirmedSignature\":null,\"reservationId\":\"de72fb8c0fae844a9071689d36712103\",\"blockhash\":\"Hq4aR5oXDvMNsuydo1ftyuRQi72RwzoEvGM9MjWsrMVp\",\"lastValidBlockHeight\":513118544,\"reservedAt\":\"2026-11-25T04:15:22.890Z\"}"
+  },
+  {
+    "id": "R2b",
+    "name": "reload in a fresh browser (empty storage): server record stops the second signature — wallet never asked (tx or message)",
+    "pass": true,
+    "detail": "signTransaction calls=0 · signMessage calls=0 · result=\"This memo is already anchored — the Gatehouse record stands CONFIRMED on-chain (signature 4kje4J66Geg12HXZtUAGyem1Ct3sWF\""
+  },
+  {
+    "id": "R5",
+    "name": "previously confirmed anchor reopened -> page recognizes it and stops, no new signature",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"This memo is already anchored — the Gatehouse record stands CONFIRMED on-chain (signature 4kje4J66Geg12HXZtUAGyem1Ct3sWF\""
+  },
+  {
+    "id": "R3",
+    "name": "RPC null for a LANDED tx (+ expired blockhash): record NOT cleared — history+memo reconciliation proves the landing, record graduates CONFIRMED",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"The anchor signed earlier is CONFIRMED on-chain (signature 4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWN\" · local mirror after=\"CONFIRMED\" · gate record={\"signature\":\"4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWNW93GJw5TE9KLv26E91TsoqyFZUtC6x8ePvx24\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"CONFIRMED\",\"claimedAt\":\"2026-11-25T04:15:27.279Z\",\"updatedAt\":\"2026-11-25T04:15:27.881Z\",\"confirmedSignature\":null,\"reservationId\":null,\"blockhash\":null,\"lastValidBlockHeight\":null,\"reservedAt\":null}"
+  },
+  {
+    "id": "R4",
+    "name": "incomplete provider history after expiration -> LOCKED; local + gate records intact; no clearing, no signature",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"A signed anchor (signature 4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWNW93GJw5TE9KLv26E91TsoqyFZUtC6x8e\" · local mirror after=\"SIGNED_UNCONFIRMED\" · gate record={\"signature\":\"4kje4J66Geg12HXZtUAGyem1Ct3sWFVDExKa4FMunLnPNvMqVWNW93GJw5TE9KLv26E91TsoqyFZUtC6x8ePvx24\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet-regression\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"BROADCAST\",\"claimedAt\":\"2026-11-25T04:15:28.210Z\",\"updatedAt\":\"2026-11-25T04:15:28.210Z\",\"confirmedSignature\":null,\"reservationId\":null,\"blockhash\":null,\"lastValidBlockHeight\":null,\"reservedAt\":null}"
+  },
+  {
+    "id": "R6",
+    "name": "two concurrent sessions (server level): exactly one reserve + one bound claim + one broadcast; the other is refused and never lands",
+    "pass": true,
+    "detail": "reserves=[409,200] (A first) · claims=[null,200] · loser foreign-id claim HTTP 409 · winner=B 5PMcdykKs6bC… · loser send HTTP 403 · winner devnet status=finalized · loser devnet status=null · gate record sig=5PMcdykKs6bC…"
+  },
+  {
+    "id": "R6+",
+    "name": "two racing PAGE sessions: exactly ONE wallet transaction-signature request total; loser refused at reserve before signTransaction; one claim; one broadcast",
+    "pass": true,
+    "detail": "signTransaction total=1 (A=1 B=0) · signMessage A=1 B=1 (message proofs, not tx signatures) · reserves=[200,409] · claims=[200] · broadcasts=1 · loser error=\"Error: The Gatehouse refused the pre-signature reservation — the anchor lock is already held (status RESERVED)\" · gate record=CONFIRMED/tR26vHMiMEc3…"
+  },
+  {
+    "id": "R7",
+    "name": "expired stamp refused at preflight -> DEAD_PREFLIGHT (positive evidence) frees the lock; fresh stamp claims + broadcasts",
+    "pass": true,
+    "detail": "height=513118622 > lvbh=513118602 · expired send error=\"Transaction simulation failed: Blockhash not found\" · record after=DEAD_PREFLIGHT · fresh claim HTTP 200 · fresh send HTTP 200 · final record=\"BROADCAST\"/5LG37nctygHK…"
+  },
+  {
+    "id": "R5b",
+    "name": "local CONFIRMED mirror alone (no Gatehouse record) stops the signature — the local branch, isolated",
+    "pass": true,
+    "detail": "signTransaction calls=0 · result=\"This memo is already anchored — a signed record from an earlier session stands CONFIRMED on-chain. Nothing more to sign.\" · gate record=null"
+  },
+  {
+    "id": "R8",
+    "name": "BROADCAST record + blockhash-worded re-send refusal -> record STAYS BROADCAST, lock held, other signature refused (P-C1)",
+    "pass": true,
+    "detail": "claim HTTP 200 · send1 HTTP 200 · record after send1=BROADCAST · re-send error=\"Transaction simulation failed: Blockhash not found\" · record after re-send=BROADCAST · other-signature claim HTTP 409"
+  },
+  {
+    "id": "R9",
+    "name": "Gatehouse record unreadable + no local record -> fail closed, wallet never asked (P-C4)",
+    "pass": true,
+    "detail": "signTransaction calls=0 · error=\"Error: The Gatehouse anchor record cannot be read right now, and this browser holds no local record — refusing to sign blind. Chec\""
+  },
+  {
+    "id": "R10",
+    "name": "blockhash refusal AFTER a failed first upstream contact -> NOT proof of death: no DEAD_PREFLIGHT, NO plaque, mirror + lock intact (P-C1 contacts guard + P-C2)",
+    "pass": true,
+    "detail": "signTransaction calls=1 · plaque shown=false · error=\"Error: The stamp expired, but the anchor record for this attempt still stands (Gatehouse status: BROADCAST) — …\" · mirror=SIGNED_UNCONFIRMED · gate record=BROADCAST"
+  },
+  {
+    "id": "R11",
+    "name": "reserve attempt signed by a NON-payer key -> refused 403, no reservation created",
+    "pass": true,
+    "detail": "reserve HTTP 403 \"gatehouse policy refusal: message signature does not verify against the pinned fee payer\" · gate record=null"
+  },
+  {
+    "id": "R12",
+    "name": "challenge replay (same proof twice) -> second refused 403; the single reservation stands untouched",
+    "pass": true,
+    "detail": "first reserve HTTP 200 · replay HTTP 403 \"gatehouse policy refusal: challenge already used — replay refused\" · record=RESERVED/5f15a164…"
+  },
+  {
+    "id": "R13",
+    "name": "live reservation + passage of time + second session attempt -> reservation still held; second session refused before ANY wallet call",
+    "pass": true,
+    "detail": "state reads over ~6s=[\"RESERVED\",\"RESERVED\",\"RESERVED\"] · session2 signTransaction=0 signMessage=0 · session2 error=\"Error: The Gatehouse holds a live pre-signature RESERVATION (reservation b94956df0b603ed9765efe0b3e4…\" · record still=RESERVED"
+  },
+  {
+    "id": "R14",
+    "name": "claim with no reservation + claim with foreign reservationId -> both refused 409; reservation untouched, nothing recorded",
+    "pass": true,
+    "detail": "no-reservation claim HTTP 409 · foreign-id claim HTTP 409 \"gatehouse policy refusal: claim is not bound to a live reservation (reservation-\" · record=RESERVED sig=null"
+  },
+  {
+    "id": "R15",
+    "name": "evidence release: refused while stamp valid (409, no transition); EXPIRED_UNCLAIMED persisted once height passes the stamp; fresh full flow then succeeds",
+    "pass": true,
+    "detail": "early release HTTP 409 record=RESERVED · release HTTP 200 observedHeight=2000010 > lvbh=2000000 · record after=EXPIRED_UNCLAIMED · fresh flow signTransaction=1 · final record=CONFIRMED/tR26vHMiMEc3…"
+  },
+  {
+    "id": "R16",
+    "name": "claim with tx blockhash != reservation blockhash -> refused 409; reservation stands, signature still null",
+    "pass": true,
+    "detail": "claim HTTP 409 \"gatehouse policy refusal: claim is not bound to a live reservation (blockhash-mismatch)\" · tx blockhash=9e6VA85T9tnR… vs stamped EkSnNWid2c… · record=RESERVED"
+  },
+  {
+    "id": "R17",
+    "name": "resume: signed+persisted, claim died in transport -> next session completes the bound claim with stored bytes, ZERO new wallet signatures",
+    "pass": true,
+    "detail": "session1 signTransaction=1 · mirror blockhash=EkSnNWid2cvw… reservationId=37c35a31… · mid record=RESERVED · session2 signTransaction=0 signMessage=0 claims=[200] broadcasts=1 · final record=CONFIRMED/tR26vHMiMEc3…"
+  },
+  {
+    "id": "R18",
+    "name": "devnet TWIN page: full Amendment 8 flow lands + verifies on devnet; gate record CONFIRMED",
+    "pass": true,
+    "detail": "sig=43NWNu7B7xxTiGTQsPMsTK7hmNwuuzXqVh1u7gkygdCYcXaFvsSpNY3gU8M8k5AfqPgFntoy1WQzygQcgwCA9s2M · verdict=\"MEMO VERIFIED ON-CHAIN — the anchor is real\" · signTransaction=1 signMessage=1 · reserves=[200] claims=[200] · gate record={\"signature\":\"43NWNu7B7xxTiGTQsPMsTK7hmNwuuzXqVh1u7gkygdCYcXaFvsSpNY3gU8M8k5AfqPgFntoy1WQzygQcgwCA9s2M\",\"payer\":\"BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R\",\"cluster\":\"devnet\",\"memoSha256\":\"a760a0daaacf5aab4bab907aa17f58f5facc85d8e22b018d472396059e98fb28\",\"status\":\"CONFIRMED\",\"claimedAt\":\"2026-11-25T04:16:37.301Z\",\"updatedAt\":\"2026-11-25T04:16:39.556Z\",\"confirmedSignature\":null,\"reservationId\":\"edfd1a96d3cc34f1393db769c044266a\",\"blockhash\":\"2ZNqatAmaYTbqg3fwBodbMfgDBzCxG9KULnJjNRwXPiv\",\"lastValidBlockHeight\":513118852,\"reservedAt\":\"2026-11-25T04:16:37.223Z\"}"
+  },
+  {
+    "id": "R19",
+    "name": "improver FIX-1/FIX-2: garbage blockhash refused at challenge (400); far-future squat stamp + cross-cluster stamp refused at reserve (400) despite valid payer proof; honest stamp reserves",
+    "pass": true,
+    "detail": "garbage challenge HTTP 400 · squat reserve HTTP 400 record=null · cross-cluster reserve HTTP 400 · honest reserve HTTP 200 · final=RESERVED"
+  },
+  {
+    "id": "R20",
+    "name": "improver: purpose binding — reserve challenge refused at release door and vice versa (403 purpose mismatch); consumed challenge replay refused (403); the one honest reserve stands",
+    "pass": true,
+    "detail": "reserve->release HTTP 403 · release->reserve HTTP 403 · honest reserve HTTP 200 · second distinct reserve HTTP 409 (409 lock held, expected) · replay HTTP 403 · record=RESERVED"
+  },
+  {
+    "id": "R21",
+    "name": "improver: two reserve POSTs fired in the same tick (distinct challenges, both valid payer proofs) -> exactly one 200, one 409, one RESERVED record",
+    "pass": true,
+    "detail": "statuses=[200,409] · record=RESERVED id=b6c44278… winner id=b6c44278…"
+  },
+  {
+    "id": "R22",
+    "name": "improver: release abuse — wrong-payer proof 403 (stands), body/challenge id mismatch 400 (stands), release of CLAIMED record 409 (stands); bound claim + idempotent re-claim 200",
+    "pass": true,
+    "detail": "reserve HTTP 200 · stranger release HTTP 403 record=RESERVED · mismatch release HTTP 400 · claim HTTP 200 · release-of-CLAIMED HTTP 409 record=CLAIMED · re-claim HTTP 200"
+  },
+  {
+    "id": "R23",
+    "name": "improver: claim with EXPIRED_UNCLAIMED reservationId refused 409 (record untouched); stale-mirror resume completes bound claim under the SERVER reservationId, zero new wallet signatures",
+    "pass": true,
+    "detail": "expired claim HTTP 409 record=EXPIRED_UNCLAIMED · resume signTransaction=0 signMessage=0 claims=[200] broadcasts=1 · final record=CONFIRMED reservationId=bda1fd30… (server id bda1fd30…, mirror carried a stale id)"
+  },
+  {
+    "id": "R24",
+    "name": "fix round P1: valid signed anchor NEVER claimed -> raw send refused in null / RESERVED / EXPIRED_UNCLAIMED states; zero upstream forwards; record untouched",
+    "pass": true,
+    "detail": "null-state send HTTP 403 \"gatehouse policy refusal: duplicate-anchor prevention — a send is forw…\" · RESERVED send HTTP 403 record=RESERVED · EXPIRED send HTTP 403 record=EXPIRED_UNCLAIMED · upstream forwards=0 · tx sig=tR26vHMiMEc3…"
+  },
+  {
+    "id": "R25",
+    "name": "fix round P1: valid signed anchor never claimed -> raw send refused over standing FAILED_ONCHAIN and DEAD_PREFLIGHT records; zero forwards; records untouched",
+    "pass": true,
+    "detail": "FAILED_ONCHAIN: send HTTP 403 record=FAILED_ONCHAIN/SeededPriorSignatureFAILED_ONCHAIN forwards=0 · DEAD_PREFLIGHT: send HTTP 403 record=DEAD_PREFLIGHT/SeededPriorSignatureDEAD_PREFLIGHT forwards=0"
+  },
+  {
+    "id": "R26",
+    "name": "fix round P1: bound-claim send forwards + lands (record BROADCAST); a DIFFERENT valid signed anchor tx while the claim stands is refused, never forwarded",
+    "pass": true,
+    "detail": "claim HTTP 200 · claimed send HTTP 200 result=tR26vHMiMEc3… record=BROADCAST · other tx sig=5CFRe1VYvFiu… send HTTP 403 · upstream forwards total=1 · record still=BROADCAST/tR26vHMiMEc3…"
+  },
+  {
+    "id": "R27",
+    "name": "fix round P2: server EXPIRED_UNCLAIMED (stamped B/R, no signature) + local SIGNED_UNCONFIRMED mirror (B/R) -> mirror cleared, notice surfaced, ZERO wallet signature requests; second tap runs a fresh full flow",
+    "pass": true,
+    "detail": "release HTTP 200 server record=EXPIRED_UNCLAIMED sig=null · mirror after convergence=null · notice=\"The Gatehouse has RELEASED the pre-signature reservation this device signed under (reservation c4623b040015d93…\" · convergence wallet calls signTransaction=0 signMessage=0 · second tap signTransaction=1 broadcasts=1 · final record=CONFIRMED/tR26vHMiMEc3… reservationId=fb55fc15… (released was c4623b04…)"
+  },
+  {
+    "id": "R28",
+    "name": "fix round P2 negative twins: EXPIRED_UNCLAIMED with mismatched mirror blockhash+reservationId, and EXPIRED_UNCLAIMED carrying a signature -> both stay LOCKED, mirrors intact, zero wallet signature requests",
+    "pass": true,
+    "detail": "(a) result=\"A signed anchor (signature tR26vHMiMEc3wbGFYkoNwiYK66jYVNtUQmTDd91HDmw61VSCzXxw4…\" mirror=SIGNED_UNCONFIRMED wallet sign/msg=0/0 · (b) result=\"A signed anchor (signature tR26vHMiMEc3wbGFYkoNwiYK66jYVNtUQmTDd91HDmw61VSCzXxw4…\" mirror=SIGNED_UNCONFIRMED wallet sign/msg=0/0"
+  }
+]
