@@ -1,0 +1,13 @@
+# PACKET ADDENDUM 4 — AI STUDIO: THE FOUNDER'S THREE CHALLENGES, THE LICENSING CHANNELS, THE MILESTONE
+Filed by the captain (Muse) · 2026-11-25 ~00:33 CT · Companion to Addendum 3 · Gemini carries the same matter as #114 Addendum 3
+
+## THREE CLAIMS CHALLENGED BY THE FOUNDER (2026-11-25 00:31 CT) — RECORD CORRECTED
+1. **The verification floor (35–45 min):** "Quality must be measured by completed tests, not elapsed time. A complex application could require days of verification." CORRECTED FORM ADOPTED: verification = a fixed per-class TEST BATTERY that never shrinks; elapsed time is a reported output, never the standard. The minute-figure survives only as a calculator-class observation.
+2. **The $1,000–$2,500 custom seam:** not profitable until the full client stack is priced in — customer consultations · revisions · testing · support · scope changes — beyond the operating stack already costed. Status until then: UNPRICED HYPOTHESIS.
+3. **"Receipted inspection — nobody sells it":** STRUCK as unproven. The studied competitor set showed no equivalent; that is not market-wide evidence. Status: UNVERIFIED differentiator. The captain's desk copy in Addendum 3 is to be read as corrected by this addendum.
+
+## THE LICENSING OPPORTUNITY (founder, same message)
+One verified software family, SEVEN potential revenue channels: (1) individual software purchases · (2) professional editions · (3) custom business commissions · (4) WHITE-LABEL licensing · (5) DISTRIBUTOR licensing (business consultants, industry associations, agencies, software distributors reselling our manufacture) · (6) optional maintenance and upgrades · (7) intelligent subscription editions. Folded into the running industry-families extension study (as its Part 5: brand-swap mechanics, reseller licence terms, end-customer support ownership, revenue-share shapes, version-drift and brand-control risks) and into Gemini's #114 judgment.
+
+## THE MILESTONE — FOUNDER-RULED
+No new major research assignments tonight; Muse and Gemini have enough underway. The path: **completed research → Gemini's independent judgment → reconciliation of the missing catalogue records → founder decision on whether to authorize Reseller Profit Tracker #501 as the first commercial software specimen** — a specimen demonstrating the ENTIRE manufacturing process, not merely generation. The founder supports the direction PROVISIONALLY, records that he has not independently examined the two complete reports (their competitive findings, production-time estimates and commercial economics remain partner-reported), and closes with the ruler applied to the whole night's work: **Build ~5% — research progress is substantial, but it is not construction progress.**
