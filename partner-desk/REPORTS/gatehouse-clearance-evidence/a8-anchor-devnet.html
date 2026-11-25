@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://unpkg.com; connect-src https://rpc.provadiacoin.com; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<!-- Amendment 4 (Addendum 11): best-effort in-page cache hints ONLY. The real
+     cache discipline is the visible Build badge + the ?v=6 fresh-load route —
+     the hosting platform sets the actual response Cache-Control header and
+     this page cannot override it (see Addenda 11-12). -->
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>PROVADIA — Night Brick Anchor (DEVNET REHEARSAL)</title>
+<style>
+  :root{--bg:#141210;--gold:#C9A227;--cream:#E9DDC6;--brown:#30251B}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+  main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
+  h1{color:var(--gold);font-weight:normal;letter-spacing:.08em;font-size:28px;margin:0 0 8px}
+  h2{color:var(--gold);font-weight:normal;font-size:18px;margin:32px 0 8px}
+  .rule{border-top:1px solid var(--gold);opacity:.6;margin:20px 0}
+  .memo{background:var(--brown);border:1px solid var(--gold);padding:20px;word-break:break-all;font-size:17px}
+  .meta{font-size:15px}.meta dt{color:var(--gold)}.meta dd{margin:0 0 10px;word-break:break-all}
+  button{background:transparent;color:var(--cream);border:1px solid var(--gold);padding:12px 20px;font:inherit;cursor:pointer;margin:8px 8px 8px 0}
+  button:hover{background:var(--brown)} button:disabled{opacity:.45;cursor:default}
+  #wallet,#result,#verifyVerdict{word-break:break-all;margin-top:12px}
+  #verifyVerdict{font-weight:bold}
+  #verifyVerdict.ok{color:#9fce8a}
+  #verifyVerdict.bad{color:#f2a6a6}
+  #error{display:none;background:#3a1a1a;border:1px solid #a33;color:#f2c6c6;padding:14px;margin-top:16px;white-space:pre-wrap;word-break:break-word}
+  #buildBadge{display:inline-block;color:var(--gold);border:1px solid var(--gold);padding:6px 12px;margin:12px 0 4px;font-size:16px;letter-spacing:.05em}
+  #reissue{display:none;border:2px solid var(--gold);background:var(--brown);padding:18px;margin-top:16px}
+  #reissue p{margin:0 0 10px}
+  #reissueBtn{min-height:56px;width:100%;font-size:19px;background:var(--gold);color:#141210;border:none;padding:14px 20px;margin:8px 0 0;cursor:pointer}
+  #reissueBtn:disabled{opacity:.45;cursor:default}
+  a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+  <h1>PROVADIA</h1>
+  <p>The Night Brick — Day-Book Root Anchor</p>
+  <p><strong>DEVNET REHEARSAL — this page talks to Solana DEVNET through the devnet twin Gatehouse. Devnet SOL only; nothing signed here is the mainnet anchor.</strong></p>
+  <div class="rule"></div>
+
+  <h2>The memo — in full, before any signing</h2>
+  <p class="memo" id="memoText">PROVADIA · DAYBOOK ROOT v1 · MAINNET · 79e375edd0f466d259366c002088eb666c8e1f55464e615882c202356ec6face · 7 ENTRIES · 2026-11-23</p>
+
+  <dl class="meta">
+    <dt>Day-Book root</dt>
+    <dd>79e375edd0f466d259366c002088eb666c8e1f55464e615882c202356ec6face</dd>
+    <dt>Entries</dt>
+    <dd>7 ENTRIES · 2026-11-23</dd>
+    <dt>Network</dt>
+    <dd><strong>Solana DEVNET — rehearsal cluster only: devnet SOL has no value, and a signed rehearsal anchor proves the flow, never the day.</strong> It is not mainnet.</dd>
+    <dt>What this transaction does</dt>
+    <dd>It writes the memo above to Solana via the Memo program. The transaction carries exactly three instructions: our own ComputeBudget pair (unit price 0, unit limit 210,000 — declared in the open, §3.1 of the build record) and then the Memo instruction itself, with no keys. Nothing else.</dd>
+    <dt>Cost &amp; what moves</dt>
+    <dd>Expected fee: 0.000005 SOL (5,000 lamports for one signature; our ComputeBudget price is 0, so no priority fee is paid). The fee payer pays that fee and NOTHING else moves — no transfer, no approval.</dd>
+  </dl>
+
+  <div class="rule"></div>
+  <div id="buildBadge" aria-live="polite"></div>
+  <p class="meta">Always open this page fresh at its rehearsal address with <strong>?v=6</strong> and check that the badge above reads <strong>Build: v6</strong> before signing. If it reads anything else, you are looking at an old copy — close the tab and open the fresh address.</p>
+  <button id="connectBtn">Connect Wallet</button>
+  <button id="signBtn" disabled>Sign the Night Brick</button>
+  <div id="wallet" aria-live="polite"></div>
+  <div id="result" aria-live="polite"></div>
+  <div id="verifyVerdict" aria-live="polite"></div>
+  <div id="reissue" role="alert">
+    <p id="reissueMsg"></p>
+    <p id="reissueTele"></p>
+    <p>Tap the button below — it builds a fresh stamp and asks Phantom to sign it. The new sheet opens because YOU tapped: on the phone, that fresh tap is what the wallet requires.</p>
+    <button id="reissueBtn" disabled>RE-ISSUE FRESH STAMP &amp; SIGN</button>
+  </div>
+  <div id="error" role="alert"></div>
+</main>
+
+<script src="https://unpkg.com/@solana/web3.js@1.99.0/lib/index.iife.min.js" integrity="sha384-DjHoHg45N+L5RZPO5p+uK874TyHExfoonwFDUKKpozAERZGg+SY8y+ntxvWd672b" crossorigin="anonymous"></script>
+<!-- Construction below mirrors anchor-tx.mjs faithfully: our ComputeBudget pair (price 0, limit 210,000) then the Memo instruction, keys [], utf8 data, feePayer + recentBlockhash only — the §3.1 shape. -->
+<script>
+const CLUSTER = 'devnet'; // DEVNET TWIN of the main page — re-verify this constant before any use
+const MEMO_PROGRAM_ID = 'MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr';
+const COMPUTE_BUDGET_PROGRAM_ID = 'ComputeBudget111111111111111111111111111111';
+const COMPUTE_UNIT_LIMIT = 210000;
+// AMENDMENT 5 (Addendum 12) — SUPERSEDED by Amendment 6 (the Gatehouse)
+// below; retained as history. The single public endpoint this page used
+// (api.mainnet-beta.solana.com) refuses browser POSTs outright — HTTP 403
+// "Access forbidden" to requests carrying a browser Origin (Gemini #96,
+// sustained by the captain; the founder's desktop attempt died at the
+// blockhash fetch, before Phantom was ever asked). The page now carries
+// an ordered chain of keyless, CORS-open endpoints and fails over inside
+// the blockhash fetch (see fetchBlockhashWithFailover below). The mainnet
+// chain is evidence-built (VPS browser-Origin proof, Addendum 12):
+// PublicNode's two hosts are the only keyless endpoints that answered
+// 200 with a valid blockhash and an open CORS header; dRPC and 1RPC were
+// probed and are dead for keyless Solana (free-plan exclusion / unknown
+// network), so they are NOT in the chain. api.mainnet-beta.solana.com
+// stays last, as a last resort only. The devnet list carries the
+// cluster's one live public endpoint twice — the second entry
+// query-tagged — so the failover machinery is exercised end-to-end on
+// the rehearsal cluster as well.
+// AMENDMENT 6 (the Gatehouse, #97 reconciliation — design of record
+// GEMINI_GATEHOUSE_RECONCILIATION_97_2026-11-24.md): the browser talks ONLY
+// to our own gatehouse. The Amendment 5 keyless public chain is struck from
+// the page; provider failover (Helius -> Alchemy -> read-only Tier-3) now
+// happens server-side behind this single origin, and the gatehouse re-runs
+// the byte assert before any broadcast. The one-element list keeps the
+// Amendment 5 pin/telemetry machinery working unchanged (it degenerates to
+// the single pinned endpoint), and the telemetry line names the gatehouse
+// while the X-Provadia-Upstream response header names the serving provider.
+// DEVNET TWIN ROUTE (Amendment 8 proposal, applied by the coordinator —
+// this candidate does not change the VPS or nginx): an additive nginx
+// location on rpc.provadiacoin.com, `location /devnet/ { proxy_pass
+// http://127.0.0.1:8742/; ... }` (trailing slash strips the /devnet/
+// prefix), reaching the devnet twin Gatehouse on 127.0.0.1:8742. The
+// twin is pinned server-side to the DEVNET rehearsal payer + memo +
+// cluster in its own env, so this public route can never touch the
+// mainnet record or forward a mainnet-shaped anchor.
+const RPC_ENDPOINTS = ['https://rpc.provadiacoin.com/devnet/v1/night-brick'];
+const RPC_TIMEOUT_MS = 4000;
+// FIX 2 (critic 2a): the memo lives in this JS string constant ONLY.
+// The displayed memo is rendered FROM this constant on load (below), signed
+// bytes are built FROM this constant, and at sign time the rendered text is
+// asserted equal to this constant — the DOM is never the source of the memo.
+const MEMO_TEXT = 'PROVADIA · DAYBOOK ROOT v1 · MAINNET · 79e375edd0f466d259366c002088eb666c8e1f55464e615882c202356ec6face · 7 ENTRIES · 2026-11-23';
+
+let provider = null;
+let walletPubkey = null;
+let connecting = false;
+let signing = false;
+let submitted = false;
+// Improver P-C3: a SYNCHRONOUS latch over the whole tap flow. `signing`
+// is only set inside runAttempt — after the reconciliation gate's reads
+// — so two fast taps could both pass the guard and both reach the
+// wallet. This latch is set before the first await of either handler
+// and cleared only when the handler's flow has fully settled.
+let tapInFlight = false;
+// FIX 3 (critic 2b): set when Phantom reports accountChanged. While set,
+// signing stays disabled until the founder explicitly clicks Connect again
+// for the new account — the fee payer is never silently retargeted.
+let accountChangeRequiresReconnect = false;
+// AMENDMENT 4 (Addendum 11): the build badge. (Version bumped to v5 by
+// Amendment 5, Addendum 12.) BUILD_LABEL is rendered into
+// #buildBadge at load; the founder reads it aloud from any screenshot so the
+// house can prove WHICH build his phone is showing (the stale-tab failure of
+// 2026-11-24 was invisible precisely because the page carried no build mark).
+// The 8-hex token is a checksum field: it equals the first 8 hex of the
+// SHA-256 of this file with the token itself zeroed ('00000000') —
+// rehearse.mjs re-verifies that on every run, so the badge cannot drift
+// from the bytes it labels.
+const BUILD_LABEL = 'Build: v6 · ce8823ec';
+// Flow state shared by the Sign tap and the re-issue tap (Amendment 4): the
+// connection is created once per flow, on the Sign tap.
+let flowWeb3 = null;
+let flowConnection = null;
+// AMENDMENT 5: the endpoint pinned for the current attempt — an index
+// into RPC_ENDPOINTS plus its hostname for the telemetry line. The whole
+// attempt (blockhash, height reads, broadcast, confirmation) talks to
+// this one endpoint's ledger view; endpoints are never mixed mid-attempt
+// except by the send-path failover, which re-pins before it broadcasts.
+let activeRpcIndex = -1;
+let activeRpcHost = null;
+// True while the re-issue plaque is on screen: the only road forward is the
+// founder's tap on it (a wallet event can still lock the flow — see
+// watchWalletEvents, which hides the plaque via hideReissue()).
+let awaitingReissue = false;
+let nextAttempt = 0;
+const $ = id => document.getElementById(id);
+function showError(e) {
+  const box = $('error');
+  box.style.display = 'block';
+  box.textContent = 'Error: ' + (e && e.message ? e.message : String(e));
+}
+function clearError() { $('error').style.display = 'none'; $('error').textContent = ''; }
+function renderWallet() {
+  // The founder must see WHO pays and WHERE (which cluster) before signing.
+  $('wallet').textContent = walletPubkey
+    ? 'Connected: ' + walletPubkey.toString() +
+      ' · Cluster: ' + CLUSTER + ' (DEVNET — REHEARSAL)' +
+      ' · Fee payer: ' + walletPubkey.toString() +
+      ' · Expected fee: 0.000005 SOL'
+    : 'Not connected.';
+}
+function setDisconnected(message) {
+  walletPubkey = null;
+  accountChangeRequiresReconnect = false;
+  hideReissue();
+  $('signBtn').disabled = true;
+  renderWallet();
+  if (message) showError(new Error(message));
+}
+function watchWalletEvents(p) {
+  if (!p || typeof p.on !== 'function' || p.__anchorWatched) return;
+  p.__anchorWatched = true;
+  p.on('disconnect', () => {
+    if (signing) return; // an in-flight sign reports its own outcome
+    setDisconnected('Wallet disconnected. Nothing was signed — reconnect to continue.');
+  });
+  p.on('accountChanged', (newPubkey) => {
+    if (signing) return; // never swap the payer mid-flight; the pre-sign check guards the next attempt
+    if (!newPubkey) {
+      setDisconnected('Wallet account disconnected. Nothing was signed — reconnect to continue.');
+      return;
+    }
+    // FIX 3 (critic 2b): account changed under the page. This handler does
+    // exactly what this comment says: it updates the DISPLAY to the new
+    // account, sets accountChangeRequiresReconnect, and DISABLES signing.
+    // It does NOT adopt the new account as the fee payer for signing — the
+    // founder must explicitly click Connect again for the new account
+    // before Sign is re-enabled. No silent retargeting of the fee payer.
+    walletPubkey = newPubkey;
+    accountChangeRequiresReconnect = true;
+    if (!submitted) $('result').textContent = ''; // never erase a submitted signature from the page
+    showError(new Error('Wallet account changed to ' + newPubkey.toString() + '. Signing is disabled — click Connect again to explicitly connect this account before signing.'));
+    renderWallet();
+    hideReissue();
+    $('signBtn').disabled = true;
+  });
+}
+
+// FIX 2 (critic 2a): render the displayed memo FROM the constant on load.
+document.getElementById('memoText').textContent = MEMO_TEXT;
+// AMENDMENT 4: render the build badge FROM its constant, the same discipline.
+$('buildBadge').textContent = BUILD_LABEL;
+renderWallet();
+
+$('connectBtn').addEventListener('click', async () => {
+  if (connecting || signing) return;
+  connecting = true;
+  $('connectBtn').disabled = true;
+  clearError();
+  try {
+    // Phantom only: window.phantom.solana, or window.solana when it identifies as Phantom.
+    // A different wallet injecting window.solana must not be silently used in Phantom's name.
+    provider = window.phantom?.solana ?? (window.solana && window.solana.isPhantom ? window.solana : null);
+    if (!provider) throw new Error('Phantom wallet not found. Install Phantom, unlock it, then reload this page.');
+    const resp = await provider.connect();
+    walletPubkey = resp.publicKey || provider.publicKey;
+    if (!walletPubkey) throw new Error('Wallet connected but returned no public key.');
+    // FIX 3: an explicit Connect click is the only way to clear the
+    // accountChanged lockout and adopt this account as the fee payer.
+    accountChangeRequiresReconnect = false;
+    watchWalletEvents(provider);
+    renderWallet();
+    $('signBtn').disabled = submitted;
+  } catch (e) { showError(e); }
+  finally { connecting = false; $('connectBtn').disabled = false; }
+});
+
+function showResult(sig, statusLine) {
+  // Built with DOM APIs, never innerHTML: a signature string comes from the wallet,
+  // and it is validated as base58 before it is ever placed in a link.
+  const box = $('result');
+  box.textContent = '';
+  const line = document.createElement('div');
+  line.textContent = statusLine;
+  const sigLine = document.createElement('div');
+  sigLine.textContent = 'Signature: ' + sig;
+  const link = document.createElement('a');
+  link.href = 'https://solscan.io/tx/' + sig + '?cluster=devnet';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = 'View on Solscan';
+  box.append(line, sigLine, link);
+}
+
+function showVerifyVerdict(ok, line) {
+  const box = $('verifyVerdict');
+  box.textContent = line;
+  box.className = ok ? 'ok' : 'bad';
+}
+// Minimal base58 decoder (Bitcoin/Solana alphabet) — web3.js returns legacy
+// instruction data as a base58 string; the page must decode it itself to
+// byte-compare the landed memo (FIX 6) without any extra dependency.
+function decodeBase58(str) {
+  const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+  const bytes = [0];
+  for (const ch of str) {
+    const v = ALPHABET.indexOf(ch);
+    if (v < 0) throw new Error('invalid base58 in landed transaction data');
+    let carry = v;
+    for (let i = 0; i < bytes.length; i++) { carry += bytes[i] * 58; bytes[i] = carry & 0xff; carry >>= 8; }
+    while (carry > 0) { bytes.push(carry & 0xff); carry >>= 8; }
+  }
+  let zeros = 0;
+  while (zeros < str.length && str[zeros] === '1') zeros++;
+  const out = new Uint8Array(zeros + bytes.length);
+  for (let i = 0; i < bytes.length; i++) out[zeros + bytes.length - 1 - i] = bytes[i];
+  return str.length === 0 ? new Uint8Array(0) : out.slice(zeros === 0 && bytes.length === 1 && bytes[0] === 0 ? 1 : 0);
+}
+// Minimal base58 ENCODER — the mirror of decodeBase58 above. §3C needs it:
+// a transaction's signature is a function of its signed bytes, so the page
+// derives the signature from the signed transaction itself, before any
+// broadcast, and persists it (below).
+function encodeBase58(bytes) {
+  const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+  let zeros = 0;
+  while (zeros < bytes.length && bytes[zeros] === 0) zeros++;
+  const digits = [0];
+  for (let i = zeros; i < bytes.length; i++) {
+    let carry = bytes[i];
+    for (let j = 0; j < digits.length; j++) { carry += digits[j] << 8; digits[j] = carry % 58; carry = (carry / 58) | 0; }
+    while (carry) { digits.push(carry % 58); carry = (carry / 58) | 0; }
+  }
+  let out = '1'.repeat(zeros);
+  for (let i = digits.length - 1; i >= 0; i--) out += ALPHABET[digits[i]];
+  return out;
+}
+// §3C DUPLICATE-ANCHOR PREVENTION (design #97 §3C), CORRECTED by
+// AMENDMENT 7 (2026-11-24) after ChatGPT's independent review of the
+// clearance packet found two confirmed defects in the first §3C build:
+//
+//   DEFECT 01 — the old saveAnchorRecord caught storage write failures
+//   and broadcast anyway, so "no broadcast without a persisted record"
+//   was a claim the code did not keep. NOW: persistence is VERIFIED
+//   (write, then read back byte-identical) and a broadcast happens only
+//   after BOTH the verified on-device record AND the Gatehouse's
+//   server-side claim succeed. If durable persistence cannot be
+//   established, the page FAILS CLOSED — nothing is broadcast.
+//
+//   DEFECT 02 — the old reconciliation cleared the record when the
+//   status read returned null past lastValidBlockHeight. A null status
+//   is NOT proof of non-landing (a lagging provider or incomplete
+//   history returns the same null), and expiry proves only that the
+//   bytes cannot NEWLY land. NOW: a record is never cleared on missing
+//   evidence. An uncertain submission stays LOCKED until AUTHORITATIVE
+//   reconciliation establishes the outcome — a confirmed/finalized
+//   status, a provable on-chain failure, or a landed transaction from
+//   this wallet carrying the exact memo bytes, found in the wallet's
+//   own history. Absence of evidence changes nothing.
+//
+// THE PERMANENT RULE (ChatGPT, 2026-11-24 — the acceptance standard):
+//   1. One inscription, one durable identity.
+//   2. No broadcast without a verified record.
+//   3. No second signature while the first transaction remains unresolved.
+//   4. No clearing a confirmed inscription because a provider returns
+//      incomplete information.
+//   5. No automatic unlocking after a timeout.
+//
+// AUTHORITY: the durable record lives SERVER-SIDE, in the Gatehouse
+// (Amendment 7) — it survives any browser, device, reload or crash, and
+// its atomic lock is what decides competing sessions. The browser
+// record below is a local MIRROR only: it can stop this page, it can
+// never overrule the Gatehouse, and it is never the sole basis for
+// clearing anything.
+const ANCHOR_RECORD_KEY = 'provadia-anchor-record-devnet-v6'; // twin-local mirror key — never shares the main page's key
+let anchorRecordPending = false; // a record was verified-persisted during THIS page session
+function persistAnchorRecordVerified(rec) {
+  // Write to BOTH stores, then read back: the record counts as persisted
+  // only if at least one store returns the exact bytes written. Any
+  // failure (private-mode quotas, webview storage denial, disabled
+  // storage) is reported to the caller — never swallowed (Defect 01).
+  const s = JSON.stringify(rec);
+  let verified = false;
+  for (const store of [sessionStorage, localStorage]) {
+    try {
+      store.setItem(ANCHOR_RECORD_KEY, s);
+      if (store.getItem(ANCHOR_RECORD_KEY) === s) verified = true;
+    } catch (e) { /* this store is unavailable; the other may still hold */ }
+  }
+  if (verified) anchorRecordPending = true;
+  return verified;
+}
+function mirrorAnchorRecord(rec) {
+  // Best-effort mirror write (status graduations). The Gatehouse record
+  // is the authority; a mirror write failure changes no decision.
+  const s = JSON.stringify(rec);
+  try { sessionStorage.setItem(ANCHOR_RECORD_KEY, s); } catch (e) { /* mirror only */ }
+  try { localStorage.setItem(ANCHOR_RECORD_KEY, s); } catch (e) { /* mirror only */ }
+}
+function loadAnchorRecord() {
+  for (const store of [sessionStorage, localStorage]) {
+    try {
+      const s = store.getItem(ANCHOR_RECORD_KEY);
+      if (s) { const rec = JSON.parse(s); if (rec && typeof rec.signature === 'string') return rec; }
+    } catch (e) { /* unreadable storage reads as no local record; the Gatehouse record still governs at the Sign-tap gate */ }
+  }
+  return null;
+}
+function clearAnchorRecord() {
+  anchorRecordPending = false;
+  try { sessionStorage.removeItem(ANCHOR_RECORD_KEY); } catch (e) { /* ignore */ }
+  try { localStorage.removeItem(ANCHOR_RECORD_KEY); } catch (e) { /* ignore */ }
+}
+// The Gatehouse anchor record (Amendment 7): the server-side authority.
+async function fetchServerAnchorState() {
+  const res = await timedFetch(RPC_ENDPOINTS[0] + '/anchor-state', { method: 'GET' });
+  if (!res || !res.ok) throw new Error('Gatehouse anchor-state read failed (HTTP ' + (res ? res.status : 'no response') + ')');
+  const body = await res.json();
+  if (!body || body.store !== 'ok') throw new Error('Gatehouse anchor record store is unavailable');
+  return body.record || null;
+}
+async function claimServerAnchorRecord(txB64, reservationId) {
+  const res = await timedFetch(RPC_ENDPOINTS[0] + '/anchor-claim', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ tx: txB64, reservationId }),
+  });
+  let body = null;
+  try { body = await res.json(); } catch (e) { /* non-JSON refusal */ }
+  if (!res.ok || !body || body.ok !== true) {
+    const held = body && body.signature ? ' (recorded signature ' + body.signature + ', status ' + body.status + ')' : '';
+    const err = new Error('Gatehouse refused the anchor registration' + held + ': ' + (body && body.error ? body.error : 'HTTP ' + res.status));
+    err.status = res.status; // the claim step branches on 409 (improver P-C4)
+    err.heldSignature = body && body.signature ? body.signature : null;
+    err.heldStatus = body && body.status ? body.status : null;
+    throw err;
+  }
+  return body;
+}
+// AMENDMENT 8 — the pre-signature reservation (Lock -> Sign -> Persist ->
+// Broadcast -> Verify). BEFORE the wallet is ever asked for a TRANSACTION
+// signature, this page reserves the anchor lock on the Gatehouse: the
+// server issues a single-use challenge, the wallet proves control of the
+// pinned payer by signing that challenge MESSAGE (provider.signMessage —
+// a message proof, not a transaction signature), and the server
+// atomically persists a RESERVED record stamped with this attempt's
+// blockhash + lastValidBlockHeight. Only then may signTransaction run,
+// and the later claim is bound to the reservation (same record, matching
+// reservationId, signed tx blockhash == the stamped blockhash).
+async function fetchAnchorChallenge(fields) {
+  const res = await timedFetch(RPC_ENDPOINTS[0] + '/anchor-challenge', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(fields),
+  });
+  let body = null;
+  try { body = await res.json(); } catch (e) { /* non-JSON refusal */ }
+  if (!res.ok || !body || body.ok !== true) {
+    throw new Error('Gatehouse refused the reservation challenge: ' + (body && body.error ? body.error : 'HTTP ' + res.status));
+  }
+  return body;
+}
+async function reserveServerAnchor(blockhash, lastValidBlockHeight) {
+  const ch = await fetchAnchorChallenge({ purpose: 'reserve', blockhash, lastValidBlockHeight });
+  if (!provider || typeof provider.signMessage !== 'function') {
+    throw new Error('This wallet does not offer signMessage, so the pre-signature reservation cannot be proven — nothing was signed or reserved. Use a wallet that supports message signing.');
+  }
+  let proof = null;
+  try {
+    proof = await provider.signMessage(new TextEncoder().encode(ch.message));
+  } catch (e) {
+    // A founder rejection of the MESSAGE proof stops the tap cleanly:
+    // nothing was reserved by this tap and no transaction signature was
+    // requested. (If a reservation from an earlier tap stands, it is
+    // left to the state-read / resume / evidence-release paths — this
+    // page never silently re-reserves over it.)
+    throw new Error('The wallet message-signing for the pre-signature reservation was rejected or failed (' + (e && e.message ? e.message : String(e)) + ') — nothing was reserved by this tap and no transaction signature was requested.');
+  }
+  const sigBytes = proof && proof.signature ? proof.signature : proof;
+  if (!sigBytes || sigBytes.length !== 64) {
+    throw new Error('The wallet returned an invalid message signature for the reservation — nothing was reserved and no transaction signature was requested.');
+  }
+  const res = await timedFetch(RPC_ENDPOINTS[0] + '/anchor-reserve', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ challengeId: ch.challengeId, signature: uint8ToBase64(sigBytes) }),
+  });
+  let body = null;
+  try { body = await res.json(); } catch (e) { /* non-JSON refusal */ }
+  if (!res.ok || !body || body.ok !== true) {
+    const err = new Error('Gatehouse refused the pre-signature reservation: ' + (body && body.error ? body.error : 'HTTP ' + res.status));
+    err.status = res.status;
+    err.heldStatus = body && body.status ? body.status : null;
+    throw err;
+  }
+  return body;
+}
+function uint8ToBase64(bytes) {
+  let bin = '';
+  const CHUNK = 0x8000;
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+  }
+  return btoa(bin);
+}
+// Authoritative reconciliation of ONE recorded signature (Defect 02
+// procedure). Outcomes:
+//   'confirmed' — the signature itself reads confirmed/finalized, or a
+//                 landed transaction from this wallet carrying the exact
+//                 memo bytes was found in the wallet's own history and
+//                 verified byte-for-byte (verifyLandedTransaction).
+//   'failed'    — the signature reads back with an on-chain error:
+//                 positive proof nothing was anchored by it.
+//   'locked'    — everything else. A null status, an empty or unreadable
+//                 history scan, expiry — none of it is evidence the
+//                 transaction did not land, so the lock stands.
+async function reconcileAnchorSignature(web3, conn, sig, payerStr) {
+  const { value } = await conn.getSignatureStatuses([sig], { searchTransactionHistory: true });
+  const st = value && value[0];
+  if (st && st.err) return { outcome: 'failed' };
+  if (st && (st.confirmationStatus === 'confirmed' || st.confirmationStatus === 'finalized')) {
+    return { outcome: 'confirmed', foundSignature: sig };
+  }
+  if (payerStr) {
+    let hist = null;
+    try { hist = await conn.getSignaturesForAddress(new web3.PublicKey(payerStr), { limit: 50 }); } catch (e) { hist = null; }
+    if (Array.isArray(hist)) {
+      let scanned = 0;
+      for (const entry of hist) {
+        if (scanned >= 10) break;
+        if (!entry || entry.err || typeof entry.signature !== 'string') continue;
+        scanned++;
+        const v = await verifyLandedTransaction(web3, conn, entry.signature, payerStr);
+        if (v.ok) return { outcome: 'confirmed', foundSignature: entry.signature };
+      }
+    }
+  }
+  return { outcome: 'locked' };
+}
+// On load, surface any record left by an earlier session: the founder must
+// know a signed anchor exists before he ever reaches for the Sign button.
+{
+  const existing = loadAnchorRecord();
+  if (existing) {
+    $('result').textContent = 'A signed anchor transaction is on record (signature ' + existing.signature + ', status ' + existing.status + '). Tapping Sign reconciles it against the chain before anything new is signed.';
+  } else {
+    // No local mirror — the Gatehouse may still hold the record (another
+    // browser, another device, a cleared cache). Surface it the same way.
+    (async () => {
+      try {
+        const serverRec = await fetchServerAnchorState();
+        if (serverRec && !loadAnchorRecord()) {
+          $('result').textContent = serverRec.status === 'RESERVED'
+            ? 'The Gatehouse holds a live pre-signature RESERVATION (reservation ' + serverRec.reservationId + ', blockhash ' + serverRec.blockhash + '). No transaction signature may be requested while it stands; tapping Sign reconciles it first.'
+            : 'The Gatehouse holds a signed anchor record (signature ' + serverRec.signature + ', status ' + serverRec.status + '). Tapping Sign reconciles it against the chain before anything new is signed.';
+        }
+      } catch (e) { /* silent at load; the Sign-tap gate re-reads it authoritatively */ }
+    })();
+  }
+}
+// §3.1 shape helpers (Addendum 8): decode a ComputeBudget instruction's data
+// (Buffer or Uint8Array — index access works for both). Returns
+// { kind: 'price', value } / { kind: 'limit', value } / null.
+function decodeComputeBudget(data) {
+  if (!data || data.length < 1) return null;
+  if (data[0] === 3 && data.length >= 9) {
+    let v = 0; for (let i = 8; i >= 1; i--) v = v * 256 + data[i];
+    return { kind: 'price', value: v };
+  }
+  if (data[0] === 2 && data.length >= 5) {
+    return { kind: 'limit', value: data[1] + data[2] * 256 + data[3] * 65536 + data[4] * 16777216 };
+  }
+  return null;
+}
+function ixDataBytes(ix) {
+  return typeof ix.data === 'string' ? decodeBase58(ix.data) : new Uint8Array(ix.data || []);
+}
+function ixProgramId(ix, accountKeys) {
+  return ix.programId ? ix.programId.toString()
+    : (accountKeys[ix.programIdIndex] ? accountKeys[ix.programIdIndex].toString() : '');
+}
+// FIX 6 (critic 5b): post-landing verification, ported from rehearse.mjs.
+// Fetches the landed transaction and verifies it against the constant and the
+// §3.1 shape. Returns { ok, line } — the day is anchored only when ok is true.
+async function verifyLandedTransaction(web3, connection, sig, expectedPayer) {
+  let landed = null;
+  for (let i = 0; i < 10 && !landed; i++) {
+    landed = await connection.getTransaction(sig, { commitment: 'confirmed', maxSupportedTransactionVersion: 0 });
+    if (!landed) await new Promise(r => setTimeout(r, 1500));
+  }
+  if (!landed) return { ok: false, line: 'MEMO VERIFICATION FAILED — could not fetch the landed transaction (getTransaction returned null). Do NOT treat this day as anchored.' };
+  const fail = (specific) => ({ ok: false, line: 'MEMO VERIFICATION FAILED — ' + specific + ' Do NOT treat this day as anchored.' });
+  const message = landed.transaction && landed.transaction.message;
+  if (!message) return fail('landed transaction has no message.');
+  const accountKeys = message.staticAccountKeys || message.accountKeys || [];
+  // Critic Finding B: the fee payer must be the anchor wallet itself —
+  // a transaction that merely REFERENCES the wallet while carrying the
+  // memo is not the founder's inscription.
+  if (expectedPayer && (!accountKeys[0] || accountKeys[0].toString() !== expectedPayer)) {
+    return fail('fee payer is not the anchor wallet (expected ' + expectedPayer + ', found ' + (accountKeys[0] ? accountKeys[0].toString() : 'none') + ').');
+  }
+  const rawIxs = message.compiledInstructions || message.instructions || [];
+  if (rawIxs.length !== 3) return fail('expected exactly 3 instructions, found ' + rawIxs.length + '.');
+  // ix[0] + ix[1]: our ComputeBudget pair — price MUST be 0, limit 210,000.
+  let cb0, cb1;
+  try {
+    cb0 = decodeComputeBudget(ixDataBytes(rawIxs[0]));
+    cb1 = decodeComputeBudget(ixDataBytes(rawIxs[1]));
+  } catch (e) { return fail('could not decode landed ComputeBudget data: ' + e.message + '.'); }
+  if (ixProgramId(rawIxs[0], accountKeys) !== COMPUTE_BUDGET_PROGRAM_ID || !cb0 || cb0.kind !== 'price' || cb0.value !== 0) {
+    return fail('instruction[0] is not our ComputeBudget SetComputeUnitPrice at price 0.');
+  }
+  if (ixProgramId(rawIxs[1], accountKeys) !== COMPUTE_BUDGET_PROGRAM_ID || !cb1 || cb1.kind !== 'limit' || cb1.value !== COMPUTE_UNIT_LIMIT) {
+    return fail('instruction[1] is not our ComputeBudget SetComputeUnitLimit at ' + COMPUTE_UNIT_LIMIT + '.');
+  }
+  // ix[2]: the Memo instruction.
+  const ix = rawIxs[2];
+  const programId = ixProgramId(ix, accountKeys);
+  if (programId !== MEMO_PROGRAM_ID) return fail('program mismatch: expected Memo program ' + MEMO_PROGRAM_ID + ', found ' + (programId || 'unknown') + '.');
+  const accounts = ix.accountKeyIndexes || ix.accounts || [];
+  if (accounts.length !== 0) return fail('expected 0 instruction accounts, found ' + accounts.length + '.');
+  let dataBytes;
+  try {
+    dataBytes = ixDataBytes(ix);
+  } catch (e) { return fail('could not decode landed memo data: ' + e.message + '.'); }
+  const expected = new TextEncoder().encode(MEMO_TEXT);
+  const byteEqual = dataBytes.length === expected.length && dataBytes.every((b, i) => b === expected[i]);
+  if (!byteEqual) return fail('memo bytes mismatch: landed ' + dataBytes.length + ' bytes do not byte-equal the MEMO_TEXT constant (' + expected.length + ' bytes).');
+  const fee = landed.meta && landed.meta.fee;
+  if (fee !== 5000) return fail('fee mismatch: expected 5000 lamports, found ' + fee + '.');
+  return { ok: true, line: 'MEMO VERIFIED ON-CHAIN — the anchor is real' };
+}
+
+// AMENDMENT 4 (Addendum 11) — EXPIRY IS A FOUNDER-TAP STATE, NEVER AN
+// AUTO-RE-INVOKE. Amendment 3's bounded rebuild loop re-invoked the wallet
+// programmatically inside the one Sign click; on the founder's iPhone that
+// second request is gesture-gated by Phantom iOS (Gemini #80, hypothesis
+// H2, captain-adjudicated): a sign request that does not ride a fresh OS
+// user gesture is silently dropped, so the loop's second sheet can never
+// appear on the phone — while the desktop extension, which enforces no
+// such rule, passed every gate. The flow is therefore a state machine
+// driven by the founder's taps:
+//   Sign tap → attempt 1. On a blockhash expiry with nothing submitted,
+//   the page renders the re-issue plaque (plain words + telemetry + one
+//   large tap target) and WAITS. The founder's tap on the plaque runs the
+//   next attempt: a fresh confirmed blockhash fetched inside that tap,
+//   the identical §3.1 transaction, the wallet invoked on the gesture.
+//   Cap: MAX_SIGN_ATTEMPTS attempts total; after the last one ages out
+//   the page fails closed with the honest message, as it always has.
+// Only expiry reaches the plaque: a wallet rejection, a shape mismatch,
+// or any other error stops the flow instantly, exactly as before — the
+// page never re-prompts after a founder's "no", and it never re-prompts
+// at all without his tap.
+const MAX_SIGN_ATTEMPTS = 3;
+const isBlockhashExpiry = (e) => !!e && /blockhash/i.test((e && e.message) || '');
+
+function telemetryLine(t) {
+  // Plain words ride in the plaque/error text itself; this formats the
+  // numbers line that accompanies them (Amendment 4 telemetry): the
+  // elapsed fetch→expiry time, and — when the chain heights are known —
+  // how far past the stamp's last valid block height the chain had run.
+  let s = 'Elapsed: ' + (t.elapsedMs / 1000).toFixed(1) + 's';
+  if (typeof t.slotsPastExpiry === 'number' && t.slotsPastExpiry > 0) {
+    s += ' · +' + t.slotsPastExpiry + ' slots past expiry';
+  }
+  if (activeRpcHost) {
+    s += ' · RPC: ' + activeRpcHost;
+  }
+  return s;
+}
+function hideReissue() {
+  awaitingReissue = false;
+  nextAttempt = 0;
+  const box = $('reissue');
+  if (box) box.style.display = 'none';
+  const btn = $('reissueBtn');
+  if (btn) btn.disabled = true;
+}
+function offerReissue(attemptsUsed, t) {
+  awaitingReissue = true;
+  nextAttempt = attemptsUsed + 1;
+  $('reissueMsg').textContent = (attemptsUsed === 1 ? 'The first stamp' : 'The second stamp') +
+    ' aged out before the approval finished — nothing was sent and no fee was paid.';
+  $('reissueTele').textContent = telemetryLine(t);
+  $('reissue').style.display = 'block';
+  $('reissueBtn').disabled = false;
+  $('signBtn').disabled = true;
+  $('connectBtn').disabled = true;
+}
+
+// AMENDMENT 5 (Addendum 12) — ORDERED ENDPOINT FAILOVER, STICKY PER
+// ATTEMPT (Gemini #96 prescription, captain-sustained). When a founder
+// tap starts an attempt, the blockhash fetch walks RPC_ENDPOINTS in
+// order — 4,000 ms per endpoint, no silent rate-limit retry — until one
+// endpoint returns a valid confirmed blockhash; that endpoint is pinned
+// (flowConnection + activeRpcIndex/Host) for the rest of the attempt, so
+// every later read and the broadcast share one ledger view. Failover
+// lives ONLY here (before Phantom is invoked) and in the send-path catch
+// in driveAttempt (for already-signed bytes after a transport error).
+function isTransportError(e) {
+  if (!e) return false;
+  if (e.name === 'AbortError') return true;
+  const m = ((e && e.message) || String(e)) + '';
+  return /abort|failed to fetch|fetch failed|network|timeout|timed out|socket|econn|dns|rate limit|too many requests|server error|bad gateway|service unavailable|gateway timeout|error: (403|429|5\d\d)\b/i.test(m);
+}
+function timedFetch(input, init) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), RPC_TIMEOUT_MS);
+  const merged = {};
+  if (init) for (const k of Object.keys(init)) merged[k] = init[k];
+  merged.signal = ctrl.signal;
+  return fetch(input, merged).finally(() => clearTimeout(timer));
+}
+function makeRpcConnection(web3, url) {
+  // disableRetryOnRateLimit: web3.js must not silently sleep-and-retry a
+  // 403/429 behind our back — a refused endpoint fails over at once.
+  return new web3.Connection(url, { commitment: 'confirmed', disableRetryOnRateLimit: true, fetch: timedFetch });
+}
+async function fetchBlockhashWithFailover(web3) {
+  let lastErr = null;
+  for (let i = 0; i < RPC_ENDPOINTS.length; i++) {
+    const conn = makeRpcConnection(web3, RPC_ENDPOINTS[i]);
+    try {
+      const res = await Promise.race([
+        conn.getLatestBlockhash('confirmed'),
+        new Promise((unusedResolve, reject) => setTimeout(() => reject(new Error('endpoint ' + RPC_ENDPOINTS[i] + ' did not answer within ' + RPC_TIMEOUT_MS + ' ms')), RPC_TIMEOUT_MS)),
+      ]);
+      if (res && typeof res.blockhash === 'string' && res.blockhash.length > 0 && typeof res.lastValidBlockHeight === 'number') {
+        flowConnection = conn;
+        activeRpcIndex = i;
+        try { activeRpcHost = new URL(RPC_ENDPOINTS[i]).hostname; } catch (urlErr) { activeRpcHost = RPC_ENDPOINTS[i]; }
+        return res;
+      }
+      lastErr = new Error('endpoint ' + RPC_ENDPOINTS[i] + ' returned an invalid blockhash response');
+    } catch (e) { lastErr = e; }
+  }
+  throw new Error('No RPC endpoint could fetch a fresh blockhash (' + RPC_ENDPOINTS.length + ' tried). Last error: ' + (lastErr && lastErr.message ? lastErr.message : String(lastErr)) + ' — nothing was signed or sent.');
+}
+
+// ONE sign attempt, run only from a founder tap (the Sign button or the
+// re-issue plaque). Returns { outcome: 'signed', sig } or
+// { outcome: 'expired', telemetry }; throws on any stop condition.
+async function driveAttempt(attempt) {
+  const web3 = flowWeb3;
+  // The Sign click's stop rules, re-checked on EVERY tap: the memo
+  // constant, the accountChanged lockout, and the payer Phantom holds NOW
+  // — the fee payer can never drift between attempts.
+  const renderedMemo = document.getElementById('memoText').textContent;
+  if (renderedMemo !== MEMO_TEXT) {
+    throw new Error('Displayed memo does not match the memo constant — aborting, nothing was signed. Reload this page and compare the memo before trying again.');
+  }
+  if (accountChangeRequiresReconnect) {
+    throw new Error('Wallet account changed — signing is disabled until you click Connect again for the new account. Nothing was signed.');
+  }
+  if (!provider || !walletPubkey) throw new Error('Connect a wallet first.');
+  const currentPubkey = provider.publicKey;
+  if (!currentPubkey) throw new Error('Wallet is no longer connected. Reconnect, then sign again.');
+  if (currentPubkey.toString() !== walletPubkey.toString()) {
+    walletPubkey = currentPubkey;
+    accountChangeRequiresReconnect = true;
+    renderWallet();
+    throw new Error('Wallet account changed to ' + currentPubkey.toString() + '. Signing is disabled — click Connect again to explicitly connect this account before signing.');
+  }
+  // AMENDMENT 8 — STATE READ BEFORE ANY SIGNATURE. The Gatehouse record
+  // is re-read inside this tap: if a governing record or a live
+  // RESERVATION stands, this attempt reconciles/refuses — it never
+  // requests a new signature while anything is unresolved (Permanent
+  // Rule 3). The one road forward under a RESERVATION is the RESUME
+  // path: this browser's local mirror holds a signature for the SAME
+  // blockhash the reservation stamps (signed, persisted, then the
+  // session died before the claim) — the bound claim is completed with
+  // those stored bytes, and NO new signature is requested.
+  let serverRec0 = null;
+  try { serverRec0 = await fetchServerAnchorState(); }
+  catch (e) { throw new Error('The Gatehouse anchor record cannot be read — refusing to request any signature blind. Nothing was signed or sent.'); }
+  let reservationId = null;
+  let resumeLocal = null;
+  let blockhash = null;
+  let lastValidBlockHeight = null;
+  if (serverRec0 && serverRec0.status === 'RESERVED') {
+    const local0 = loadAnchorRecord();
+    if (local0 && local0.memoText === MEMO_TEXT && typeof local0.signature === 'string' && local0.blockhash === serverRec0.blockhash) {
+      resumeLocal = local0;
+      reservationId = serverRec0.reservationId;
+      blockhash = serverRec0.blockhash;
+      lastValidBlockHeight = serverRec0.lastValidBlockHeight;
+    } else {
+      throw new Error('The Gatehouse holds a live pre-signature reservation (reservation ' + serverRec0.reservationId + ', blockhash ' + serverRec0.blockhash + ') — refusing to request a signature while it stands. It converts only by the bound claim of the session that signed for it, or is released on positive evidence that its stamped blockhash has expired. Nothing was signed or sent.');
+    }
+  } else if (serverRec0 && (serverRec0.status === 'CLAIMED' || serverRec0.status === 'BROADCAST' || serverRec0.status === 'CONFIRMED')) {
+    throw new Error('The Gatehouse already holds a signed anchor record (signature ' + serverRec0.signature + ', status ' + serverRec0.status + ') — refusing to request another signature. Reload this page to reconcile it. Nothing was signed or sent.');
+  }
+  // STEP 0 LOCK (captain's Mark 1 on Gemini #80): the blockhash is fetched
+  // HERE — inside the founder's tap, at 'confirmed', fresh for this
+  // attempt; it is never fetched at page load and never at 'finalized'.
+  // (Verified against the pre-Amendment-4 source in Addendum 11: this was
+  // already the instrument's behavior; Amendment 4 locks it in rehearsal.)
+  // The resume path is the single exception: it re-uses the reservation's
+  // stamped blockhash, because the bound claim must name exactly it.
+  const tFetch = performance.now();
+  if (resumeLocal) {
+    flowConnection = makeRpcConnection(web3, RPC_ENDPOINTS[0]);
+    activeRpcIndex = 0;
+    try { activeRpcHost = new URL(RPC_ENDPOINTS[0]).hostname; } catch (urlErr) { activeRpcHost = RPC_ENDPOINTS[0]; }
+  } else {
+    const fresh = await fetchBlockhashWithFailover(web3);
+    blockhash = fresh.blockhash;
+    lastValidBlockHeight = fresh.lastValidBlockHeight;
+  }
+  const connection = flowConnection;
+  const expiryTelemetry = async (heightKnown) => {
+    const t = { elapsedMs: performance.now() - tFetch, slotsPastExpiry: null };
+    let h = heightKnown;
+    if (typeof h !== 'number') {
+      try { h = await connection.getBlockHeight('confirmed'); } catch (e) { h = null; }
+    }
+    if (typeof h === 'number' && typeof lastValidBlockHeight === 'number' && h > lastValidBlockHeight) {
+      t.slotsPastExpiry = h - lastValidBlockHeight;
+    }
+    return t;
+  };
+  // Mirror of buildAnchorTransaction in anchor-tx.mjs:
+  const data = typeof Buffer !== 'undefined'
+    ? Buffer.from(MEMO_TEXT, 'utf8')
+    : new TextEncoder().encode(MEMO_TEXT);
+  const instruction = new web3.TransactionInstruction({
+    programId: new web3.PublicKey(MEMO_PROGRAM_ID),
+    keys: [],
+    data,
+  });
+  const tx = new web3.Transaction();
+  tx.feePayer = walletPubkey;
+  tx.recentBlockhash = blockhash;
+  tx.lastValidBlockHeight = lastValidBlockHeight;
+  // The §3.1 shape (Addendum 8, founder ruling 2026-11-24): our own
+  // ComputeBudget pair first — price, then limit, the gate10 diagnostic's
+  // proven construction order — then the Memo. Mirror of anchor-tx.mjs.
+  tx.add(web3.ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 0 }));
+  tx.add(web3.ComputeBudgetProgram.setComputeUnitLimit({ units: COMPUTE_UNIT_LIMIT }));
+  tx.add(instruction);
+  // SEND PATH (Addendum 7 — Option 1: amend the instrument, never the
+  // standard). Phantom's combined sign-and-send call AUGMENTED this
+  // transaction on the Addendum 6 gate run: it prepended its own
+  // ComputeBudget SetComputeUnitPrice (375,000 µL/CU) + SetComputeUnitLimit
+  // (200,000) instructions, and the landed transaction had 3 instructions
+  // and an 80,000-lamport fee instead of 1 instruction and 5,000. So the
+  // wallet now SIGNS ONLY: signTransaction returns the signed transaction
+  // to this page, the page asserts below that what was signed is still
+  // exactly the instrument's transaction, and the PAGE broadcasts the raw
+  // bytes itself. The wallet never gets a send path to augment.
+  let signedTx = null;
+  if (resumeLocal) {
+    // RESUME (Amendment 8): re-attach the stored signature to the
+    // identically rebuilt transaction — the wallet is NOT asked for a
+    // new signature. The shape asserts below re-verify the rebuilt
+    // bytes exactly as they do a fresh signing.
+    try { tx.addSignature(walletPubkey, decodeBase58(resumeLocal.signature)); }
+    catch (e) { throw new Error('The stored signature could not be re-attached for the bound claim (' + (e && e.message ? e.message : String(e)) + ') — refusing to proceed. Nothing was sent.'); }
+    signedTx = tx;
+  } else {
+    // AMENDMENT 8 — LOCK BEFORE SIGN: the atomic pre-signature
+    // reservation must stand on the Gatehouse BEFORE signTransaction is
+    // called. On a 409 the lock is held by another session: converge
+    // the local mirror to the authority when it names a signature, and
+    // stop — signTransaction is NOT called on this tap.
+    let reservation = null;
+    try {
+      reservation = await reserveServerAnchor(blockhash, lastValidBlockHeight);
+    } catch (resErr) {
+      if (resErr && resErr.status === 409) {
+        try {
+          const heldRec = await fetchServerAnchorState();
+          if (heldRec && heldRec.signature) {
+            mirrorAnchorRecord({
+              signature: heldRec.signature, memoText: MEMO_TEXT, lastValidBlockHeight: 0,
+              status: heldRec.status === 'CONFIRMED' ? 'CONFIRMED' : 'SIGNED_UNCONFIRMED',
+              cluster: CLUSTER, savedAt: new Date().toISOString(),
+            });
+          }
+        } catch (e2) { /* mirror convergence is best-effort; the stop is the substance */ }
+        throw new Error('The Gatehouse refused the pre-signature reservation — the anchor lock is already held' + (resErr.heldStatus ? ' (status ' + resErr.heldStatus + ')' : '') + '. NO transaction signature was requested on this tap. Nothing was signed or sent.');
+      }
+      throw resErr;
+    }
+    reservationId = reservation.reservationId;
+    try {
+      signedTx = await provider.signTransaction(tx);
+    } catch (e) {
+      // A stamp can age out inside Phantom's own simulation: that is an
+      // expiry — hand it to the plaque, never to an automatic retry. A
+      // founder rejection or any other wallet error stops the flow.
+      // (The reservation stands on the Gatehouse; it is left to the
+      // state-read / resume / evidence-release paths, per Amendment 8.)
+      if (isBlockhashExpiry(e)) return { outcome: 'expired', telemetry: await expiryTelemetry(null) };
+      throw e;
+    }
+  }
+  // Fail closed BEFORE broadcast: if the returned transaction is not still
+  // exactly the §3.1 shape — our ComputeBudget pair (price 0, limit
+  // 210,000) then the Memo instruction, zero keys, the constant's exact
+  // bytes, and this wallet as fee payer — refuse to broadcast it. A
+  // transaction that does not match the published shape must never leave
+  // this page wearing the instrument's name.
+  const signedIxs = signedTx.instructions || [];
+  if (signedIxs.length !== 3) {
+    throw new Error('Wallet returned a transaction with ' + signedIxs.length + ' instructions (expected exactly 3) — refusing to broadcast a transaction that does not match the published shape. Nothing was sent.');
+  }
+  const cbPrice = decodeComputeBudget(signedIxs[0].data || []);
+  if (!signedIxs[0].programId || signedIxs[0].programId.toString() !== COMPUTE_BUDGET_PROGRAM_ID || !cbPrice || cbPrice.kind !== 'price' || cbPrice.value !== 0) {
+    throw new Error('Wallet returned a transaction whose instruction[0] is not our ComputeBudget SetComputeUnitPrice at price 0 — refusing to broadcast. Nothing was sent.');
+  }
+  const cbLimit = decodeComputeBudget(signedIxs[1].data || []);
+  if (!signedIxs[1].programId || signedIxs[1].programId.toString() !== COMPUTE_BUDGET_PROGRAM_ID || !cbLimit || cbLimit.kind !== 'limit' || cbLimit.value !== COMPUTE_UNIT_LIMIT) {
+    throw new Error('Wallet returned a transaction whose instruction[1] is not our ComputeBudget SetComputeUnitLimit at ' + COMPUTE_UNIT_LIMIT + ' — refusing to broadcast. Nothing was sent.');
+  }
+  const six = signedIxs[2];
+  if (!six.programId || six.programId.toString() !== MEMO_PROGRAM_ID) {
+    throw new Error('Wallet returned a transaction whose instruction[2] is not the Memo program — refusing to broadcast. Nothing was sent.');
+  }
+  if ((six.keys || []).length !== 0) {
+    throw new Error('Wallet returned a Memo instruction with accounts attached — refusing to broadcast. Nothing was sent.');
+  }
+  const signedData = six.data || [];
+  const expectedData = new TextEncoder().encode(MEMO_TEXT);
+  const dataEqual = signedData.length === expectedData.length &&
+    Array.prototype.every.call(signedData, (b, i) => b === expectedData[i]);
+  if (!dataEqual) {
+    throw new Error('Wallet returned a Memo instruction whose bytes differ from the memo constant — refusing to broadcast. Nothing was sent.');
+  }
+  if (!signedTx.feePayer || signedTx.feePayer.toString() !== walletPubkey.toString()) {
+    throw new Error('Wallet returned a transaction with a different fee payer — refusing to broadcast. Nothing was sent.');
+  }
+  // FRESHNESS CHECK (Amendment 3, carried into the tap-driven flow by
+  // Amendment 4): if this stamp's blockhash already expired while the
+  // approval was open, do NOT broadcast a doomed transaction — hand the
+  // expiry to the plaque instead. The check is advisory: if the height
+  // read itself fails, fall through to the broadcast, whose preflight
+  // performs the same expiry test authoritatively (an expired stamp is
+  // rejected there, never lands, and costs no fee — and the broadcast
+  // catch below hands that expiry to the plaque the same way).
+  let heightNow = null;
+  if (typeof lastValidBlockHeight === 'number') {
+    try { heightNow = await connection.getBlockHeight('confirmed'); } catch (heightErr) { heightNow = null; }
+    if (typeof heightNow === 'number' && heightNow > lastValidBlockHeight) {
+      return { outcome: 'expired', telemetry: await expiryTelemetry(heightNow) };
+    }
+  }
+  // §3C (design #97), as corrected by Amendment 7: derive the signature
+  // from the signed bytes — the signature is a function of the bytes, so
+  // it is known NOW — then establish the duplicate-prevention record
+  // BEFORE broadcast, in two layers, BOTH mandatory:
+  //   (1) the on-device record, VERIFIED persisted (written and read
+  //       back byte-identical — Defect 01: a swallowed storage failure
+  //       must never again let a broadcast through), and
+  //   (2) the Gatehouse's durable server-side record: the signed bytes
+  //       are registered with the gatehouse, which re-verifies them and
+  //       atomically claims the duplicate-prevention lock.
+  // If either layer cannot be established, the page FAILS CLOSED: the
+  // signed bytes never leave this page. From this point on, any exit
+  // path (transport error, reload, crash) leaves a record the next Sign
+  // tap must reconcile before a new signature can be requested.
+  const sigEntry = signedTx.signatures && signedTx.signatures[0];
+  const derivedSig = sigEntry && sigEntry.signature ? encodeBase58(sigEntry.signature) : null;
+  if (!derivedSig || !/^[1-9A-HJ-NP-Za-km-z]{87,88}$/.test(derivedSig)) {
+    throw new Error('Could not derive a valid signature from the signed transaction — refusing to broadcast without a persisted duplicate-prevention record. Nothing was sent.');
+  }
+  const anchorRec = { signature: derivedSig, memoText: MEMO_TEXT, lastValidBlockHeight, blockhash, reservationId, status: 'SIGNED_UNCONFIRMED', cluster: CLUSTER, savedAt: new Date().toISOString() };
+  if (!persistAnchorRecordVerified(anchorRec)) {
+    throw new Error('Browser storage is unavailable in this browser or webview, so the signed anchor cannot be durably recorded on this device — refusing to broadcast. Nothing was sent. Open this page in a full browser where site storage works, and sign there.');
+  }
+  const rawTx = signedTx.serialize();
+  try {
+    await claimServerAnchorRecord(uint8ToBase64(rawTx), reservationId);
+  } catch (claimErr) {
+    // Improver P-C4: on a 409 CONFLICT the Gatehouse holds a DIFFERENT
+    // signature — this attempt's bytes were never claimed and never
+    // broadcast, so the local mirror must CONVERGE to the authority:
+    // replace it with the Gatehouse's governing record. Keeping the
+    // refused signature locally would let unsent bytes govern a later
+    // session and lock this page on a transaction that never existed
+    // on-chain. (On any other claim failure — transport, store down —
+    // the claim's outcome is unknown, so the local record stays as the
+    // conservative mirror.)
+    if (claimErr && claimErr.status === 409 && claimErr.heldSignature && claimErr.heldSignature !== derivedSig) {
+      mirrorAnchorRecord({
+        signature: claimErr.heldSignature, memoText: MEMO_TEXT, lastValidBlockHeight: 0,
+        status: claimErr.heldStatus === 'CONFIRMED' ? 'CONFIRMED' : 'SIGNED_UNCONFIRMED',
+        cluster: CLUSTER, savedAt: new Date().toISOString(),
+      });
+      throw new Error('The Gatehouse already holds a different signed anchor (signature ' + claimErr.heldSignature + ', status ' + claimErr.heldStatus + ') — this signature was refused and NOT broadcast. The Gatehouse record governs; reload this page to reconcile it before anything else is signed.');
+    }
+    throw new Error((claimErr && claimErr.message ? claimErr.message : String(claimErr)) + ' — refusing to broadcast without the Gatehouse duplicate-prevention record. Nothing was sent. Do NOT sign again until the recorded anchor is reconciled; reloading this page reconciles before any new signature.');
+  }
+  let sig = null;
+  try {
+    sig = await connection.sendRawTransaction(rawTx, { skipPreflight: false });
+  } catch (e) {
+    // A blockhash rejection at preflight means the stamp was NOT
+    // submitted — an expiry, handed to the plaque.
+    if (isBlockhashExpiry(e)) return { outcome: 'expired', telemetry: await expiryTelemetry(null) };
+    // AMENDMENT 5: a transport/HTTP failure (403/429/5xx, timeout,
+    // network) means the pinned endpoint never returned a signature for
+    // these already-signed bytes. Offer the SAME raw bytes to the
+    // remaining endpoints in order — re-broadcasting identical bytes is
+    // idempotent (the signature is a function of the bytes), so this can
+    // never double-anchor. The winning endpoint is re-pinned so the
+    // confirmation polling reads the view that accepted the broadcast.
+    // Any non-transport error keeps the standing behavior: stop, report.
+    if (!isTransportError(e)) throw e;
+    let lastErr = e;
+    for (let i = activeRpcIndex + 1; i < RPC_ENDPOINTS.length; i++) {
+      try {
+        const alt = makeRpcConnection(web3, RPC_ENDPOINTS[i]);
+        sig = await alt.sendRawTransaction(rawTx, { skipPreflight: false });
+        flowConnection = alt;
+        activeRpcIndex = i;
+        try { activeRpcHost = new URL(RPC_ENDPOINTS[i]).hostname; } catch (urlErr) { activeRpcHost = RPC_ENDPOINTS[i]; }
+        lastErr = null;
+        break;
+      } catch (e2) {
+        if (isBlockhashExpiry(e2)) return { outcome: 'expired', telemetry: await expiryTelemetry(null) };
+        // A definitive non-transport rejection (a simulation verdict, a
+        // balance refusal) is endpoint-independent — the same bytes
+        // would be refused anywhere. Stop at once: failover exists for
+        // transport failures only (critic finding, Addendum 12).
+        if (!isTransportError(e2)) throw e2;
+        lastErr = e2;
+      }
+    }
+    if (lastErr && lastErr !== e) {
+      // Surface the PINNED endpoint's original failure first — it is the
+      // error that started the failover — with the last one appended.
+      throw new Error('Broadcast failed on the pinned endpoint: ' + (e && e.message ? e.message : String(e)) +
+        ' — fallback endpoint(s) also failed; last error: ' + (lastErr && lastErr.message ? lastErr.message : String(lastErr)));
+    }
+    if (lastErr) throw lastErr;
+  }
+  if (!sig || !/^[1-9A-HJ-NP-Za-km-z]{87,88}$/.test(sig)) {
+    throw new Error('Wallet returned no valid signature. Treat the transaction as NOT submitted and check the wallet before retrying.');
+  }
+  // The broadcast bytes are exactly the persisted record's bytes, so the
+  // returned signature and the derived signature are one and the same;
+  // the derived one governs (it is what §3C reconciles).
+  sig = derivedSig;
+  return { outcome: 'signed', sig };
+}
+
+async function runAttempt(attempt) {
+  signing = true;
+  $('signBtn').disabled = true;
+  $('connectBtn').disabled = true;
+  $('reissueBtn').disabled = true;
+  try {
+    const res = await driveAttempt(attempt);
+    if (res.outcome === 'expired') {
+      // §3C as corrected by Amendment 7 (Defect 02 discipline): an expiry
+      // outcome reaches here from three roads — the stamp aged out inside
+      // the wallet or at the freshness check (never broadcast, no record
+      // exists), or the Gatehouse's upstream refused the broadcast at
+      // preflight (the Gatehouse marks its own record DEAD_PREFLIGHT on
+      // exactly that positive evidence). The local mirror is cleared
+      // ONLY when the Gatehouse record agrees the attempt is dead —
+      // absent, DEAD_PREFLIGHT or FAILED_ONCHAIN. If the Gatehouse
+      // cannot be read, or holds a live record, the mirror STAYS:
+      // locked, never cleared on absence of evidence.
+      if (anchorRecordPending) {
+        let serverRec = null, serverRead = false;
+        try { serverRec = await fetchServerAnchorState(); serverRead = true; } catch (e) { /* unreadable — keep the mirror */ }
+        if (serverRead && (!serverRec || serverRec.status === 'DEAD_PREFLIGHT' || serverRec.status === 'FAILED_ONCHAIN')) {
+          clearAnchorRecord();
+        }
+      }
+      if (attempt < MAX_SIGN_ATTEMPTS) {
+        // Improver P-C2: the plaque is offered ONLY when the duplicate-
+        // prevention lock is actually free — the Gatehouse record absent
+        // or positively dead (DEAD_PREFLIGHT / FAILED_ONCHAIN) and no
+        // local record standing. An expiry the Gatehouse did NOT judge
+        // a preflight blockhash refusal leaves its record CLAIMED or
+        // BROADCAST: the mirror stays (above) and NO plaque is offered —
+        // the flow stops locked instead of inviting a second signature
+        // that the lock would only refuse after the wallet was asked.
+        let plaqueRec = null, plaqueRead = false;
+        try { plaqueRec = await fetchServerAnchorState(); plaqueRead = true; } catch (e) { /* unreadable — not free */ }
+        const lockFree = plaqueRead && (!plaqueRec || plaqueRec.status === 'DEAD_PREFLIGHT' || plaqueRec.status === 'FAILED_ONCHAIN') && !loadAnchorRecord();
+        if (lockFree) {
+          // Park the flow on the plaque: the finally block leaves the
+          // buttons exactly as offerReissue set them, and the founder's
+          // tap on the plaque is the only way forward.
+          offerReissue(attempt, res.telemetry);
+          return;
+        }
+        submitted = true;
+        showError(new Error('The stamp expired, but the anchor record for this attempt still stands (Gatehouse status: ' + (plaqueRead && plaqueRec ? plaqueRec.status : 'unreadable') + ') — it is NOT proven dead, so no fresh stamp is offered and nothing more may be signed. Reload this page to reconcile the record.'));
+        return;
+      }
+      // Every founder-tapped attempt aged out. Fail closed and honest,
+      // as the instrument always has: nothing was sent, no fee was paid.
+      throw new Error('The blockhash expired before signing (approval took too long) — nothing was sent and no fee was paid. ' +
+        telemetryLine(res.telemetry) + ' — the stamp was rebuilt fresh on every founder-tapped attempt (' +
+        MAX_SIGN_ATTEMPTS + ' tries) and each one aged out. Click Sign again to start over.');
+    }
+    const sig = res.sig;
+    submitted = true;
+    hideReissue();
+    const web3 = flowWeb3;
+    const connection = flowConnection;
+    showResult(sig, 'Submitted to ' + CLUSTER + ' — waiting for on-chain confirmation…');
+    // A returned signature means SUBMITTED, not confirmed. Poll the RPC (same pattern
+    // as rehearse.mjs) and report the chain's verdict, not an assumed success.
+    let verdict = null;
+    for (let i = 0; i < 30 && !verdict; i++) {
+      const { value } = await connection.getSignatureStatuses([sig], { searchTransactionHistory: true });
+      const st = value && value[0];
+      if (st && st.err) verdict = 'failed';
+      else if (st && (st.confirmationStatus === 'confirmed' || st.confirmationStatus === 'finalized')) verdict = 'confirmed';
+      else await new Promise(r => setTimeout(r, 2000));
+    }
+    if (verdict === 'confirmed') {
+      // §3C: the local mirror graduates (the Gatehouse record graduates
+      // on its own observation of these same status reads) — a later
+      // session reads CONFIRMED and never asks for a second signature.
+      const recC = loadAnchorRecord();
+      if (recC) mirrorAnchorRecord({ ...recC, status: 'CONFIRMED' });
+      // FIX 6 (critic 5b): confirmation alone does NOT anchor the day.
+      // Fetch the landed transaction, decode it, and verify it on-chain
+      // before any "anchored" verdict is shown.
+      showResult(sig, 'Confirmed on-chain (' + CLUSTER + ') — verifying the landed memo on-chain…');
+      const v = await verifyLandedTransaction(web3, connection, sig, walletPubkey ? walletPubkey.toString() : null);
+      if (v.ok) {
+        showVerifyVerdict(true, v.line);
+        showResult(sig, 'Confirmed on-chain (' + CLUSTER + ') and verified below. The Night Brick is anchored.');
+      } else {
+        showVerifyVerdict(false, v.line);
+        showResult(sig, 'Confirmed on-chain (' + CLUSTER + ') but NOT verified — see the verification verdict below. The day is NOT anchored.');
+        showError(new Error(v.line));
+      }
+    } else if (verdict === 'failed') {
+      clearAnchorRecord(); // §3C: provably failed on-chain — the record's guard is spent
+      submitted = false; // it landed and failed — nothing was anchored, so a retry is safe
+      showError(new Error('Transaction failed on-chain. Nothing was anchored. You may sign again.'));
+      showResult(sig, 'Submitted but FAILED on-chain (' + CLUSTER + ').');
+    } else {
+      showResult(sig, 'Submitted to ' + CLUSTER + ' but not confirmed within ~60 seconds. Do NOT sign again — check Solscan first; the transaction may still land.');
+    }
+  } catch (e) {
+    // Expiry never reaches this catch as a raw error — driveAttempt hands
+    // it back as an outcome — so anything caught here is a stop condition
+    // (a rejection, a shape mismatch, the cap message built above) and is
+    // shown as-is. Nothing was submitted when this catch runs — with ONE
+    // §3C exception: if a signed record was persisted during this run, the
+    // broadcast may have been accepted before the error surfaced, so the
+    // latch stays DOWN and the message says so.
+    hideReissue();
+    if (anchorRecordPending) {
+      submitted = true;
+      const recP = loadAnchorRecord();
+      showError(new Error((e && e.message ? e.message : String(e)) + ' — A SIGNED anchor transaction is on record' + (recP ? ' (signature ' + recP.signature + ')' : '') + ' and may already have been submitted. Do NOT sign again — check Solscan first; reloading this page reconciles the record before any new signature.'));
+    } else {
+      showError(e);
+    }
+  } finally {
+    signing = false;
+    // While the plaque is up it owns the buttons; otherwise restore the
+    // standing states: Sign stays disabled after a submission (confirmed
+    // or still pending) so the same memo cannot be anchored twice by
+    // accident, and re-enables only when nothing was submitted or the
+    // submitted transaction provably failed on-chain (the tail above
+    // resets `submitted` in that case).
+    if (!awaitingReissue) {
+      $('connectBtn').disabled = false;
+      $('signBtn').disabled = submitted || !walletPubkey || accountChangeRequiresReconnect;
+    }
+  }
+}
+
+// §3C RECONCILIATION GATE (design #97), rewritten by Amendment 7 around
+// the Gatehouse's server-side record (the authority) and the corrected
+// Defect 02 rule. Before any new signature is requested, the gate reads
+// BOTH records and reconciles the governing signature against the chain.
+// Only positive evidence moves it:
+//   - the Gatehouse record stands CONFIRMED      -> already anchored, stop
+//   - the governing signature reconciles         -> 'confirmed': stop
+//   - the governing signature reconciles         -> 'failed' (an on-chain
+//     error — proof nothing was anchored) AND the Gatehouse lock is free
+//     or freed by its own observation of the same reads -> proceed
+//   - anything else (null status, incomplete history, unreadable reads)
+//     -> LOCKED. The record is never cleared on missing evidence, and no
+//     timeout anywhere in this page unlocks it (Permanent Rule 5).
+async function evaluateAnchorGate(web3) {
+  const local = loadAnchorRecord();
+  let serverRec = null, serverReadable = false;
+  try { serverRec = await fetchServerAnchorState(); serverReadable = true; } catch (e) { serverRec = null; }
+  // Improver P-C4: the Gatehouse record is the authority. If it cannot
+  // be read AND this browser holds no local record, there is nothing to
+  // reconcile against — fail closed rather than sign blind (a held lock
+  // the page cannot see would otherwise be discovered only after the
+  // wallet had been asked for a second signature). With a local record
+  // present, reconciliation proceeds against it via the RPC reads.
+  if (!serverReadable && !local) {
+    return { action: 'unreadable', message: 'The Gatehouse anchor record cannot be read right now, and this browser holds no local record — refusing to sign blind. Check the connection and tap Sign again; nothing was signed or sent.' };
+  }
+  if (serverRec && serverRec.status === 'CONFIRMED') {
+    if (local && local.signature === serverRec.signature) mirrorAnchorRecord({ ...local, status: 'CONFIRMED' });
+    return { action: 'anchored', signature: serverRec.signature, message: 'This memo is already anchored — the Gatehouse record stands CONFIRMED on-chain (signature ' + serverRec.signature + '). Nothing more to sign.' };
+  }
+  if (local && local.memoText === MEMO_TEXT && local.status === 'CONFIRMED' && (!serverRec || serverRec.signature === local.signature)) {
+    return { action: 'anchored', signature: local.signature, message: 'This memo is already anchored — a signed record from an earlier session stands CONFIRMED on-chain. Nothing more to sign.' };
+  }
+  // AMENDMENT 8: a live RESERVATION governs before any signature talk.
+  // With a local mirror holding a signature for the reservation's exact
+  // stamped blockhash, the tap proceeds — driveAttempt completes the
+  // bound claim with the stored bytes (the resume path) and requests NO
+  // new signature. Without one, the tap is refused here, before the
+  // wallet is asked for anything at all (not even a message proof).
+  if (serverRec && serverRec.status === 'RESERVED') {
+    if (local && local.memoText === MEMO_TEXT && typeof local.signature === 'string' && local.blockhash === serverRec.blockhash) {
+      return { action: 'proceed' };
+    }
+    return { action: 'reserved', message: 'The Gatehouse holds a live pre-signature RESERVATION (reservation ' + serverRec.reservationId + ', blockhash ' + serverRec.blockhash + ') and this browser holds no signed bytes for it — no signature may be requested while it stands (Permanent Rule 3). It converts only by its bound claim, or is released on positive evidence that its stamped blockhash has expired (observed chain height past ' + serverRec.lastValidBlockHeight + '). Nothing was signed.' };
+  }
+  // AMENDMENT 8 FIX ROUND (critic P2 / NC-2) — the released-reservation
+  // convergence. The Gatehouse persists EXPIRED_UNCLAIMED only after
+  // OBSERVING chain height past the reservation's stamped
+  // lastValidBlockHeight (its own upstream evidence, never a clock or a
+  // timeout on this page). A local mirror in SIGNED_UNCONFIRMED that was
+  // signed under that reservation carries the SAME stamped blockhash
+  // (the A8 mirror records blockhash + reservationId), so those signed
+  // bytes can never land — the reservation is provably dead and the
+  // mirror's guard is spent. ONLY on that exact positive evidence does
+  // the page clear the mirror and stand the gate down to a fresh state:
+  //   - the server record is EXPIRED_UNCLAIMED and carries NO signature
+  //   - the local mirror is SIGNED_UNCONFIRMED for this memo
+  //   - the mirror's recorded blockhash equals the released
+  //     reservation's stamped blockhash, OR the mirror's reservationId
+  //     matches the released record's reservationId
+  // Any ambiguity — a different blockhash and a different reservationId,
+  // a signature on the server record, a mirror in any other state —
+  // falls through to the governing-signature reconciliation below and
+  // stays LOCKED (Defect 02 discipline is untouched).
+  if (serverRec && serverRec.status === 'EXPIRED_UNCLAIMED' && !serverRec.signature &&
+      local && local.memoText === MEMO_TEXT && local.status === 'SIGNED_UNCONFIRMED' &&
+      (local.blockhash === serverRec.blockhash ||
+       (typeof local.reservationId === 'string' && local.reservationId.length > 0 && local.reservationId === serverRec.reservationId))) {
+    clearAnchorRecord();
+    return { action: 'released', message: 'The Gatehouse has RELEASED the pre-signature reservation this device signed under (reservation ' + serverRec.reservationId + ', status EXPIRED_UNCLAIMED): the server observed the chain pass the reservation\u2019s stamped lastValidBlockHeight (' + serverRec.lastValidBlockHeight + '), so the signed bytes held on this device — which carry that same stamped blockhash — can never land. Nothing was broadcast under that reservation, and no fee was paid. The stale signed record on this device has been cleared. A new attempt may begin: tap Sign again to start fresh.' };
+  }
+  // The governing signature: the Gatehouse's live record outranks the
+  // local mirror (it may come from another browser or device — Rule 3).
+  let governing = null;
+  if (serverRec && (serverRec.status === 'CLAIMED' || serverRec.status === 'BROADCAST')) {
+    governing = { signature: serverRec.signature };
+  } else if (local && local.memoText === MEMO_TEXT && local.status === 'SIGNED_UNCONFIRMED') {
+    governing = { signature: local.signature };
+  }
+  if (!governing) return { action: 'proceed' };
+  const conn = makeRpcConnection(web3, RPC_ENDPOINTS[0]);
+  flowConnection = conn;
+  activeRpcIndex = 0;
+  try { activeRpcHost = new URL(RPC_ENDPOINTS[0]).hostname; } catch (uE) { activeRpcHost = RPC_ENDPOINTS[0]; }
+  let rec = null;
+  try {
+    rec = await reconcileAnchorSignature(web3, conn, governing.signature, walletPubkey ? walletPubkey.toString() : null);
+  } catch (e) { rec = null; }
+  if (!rec) {
+    return { action: 'unreadable', signature: governing.signature, message: 'A signed anchor is on record (signature ' + governing.signature + ') but its on-chain status could not be read — refusing to sign again (duplicate-anchor prevention). Check the signature on Solscan, then reload this page.' };
+  }
+  if (rec.outcome === 'confirmed') {
+    if (local && local.signature === governing.signature) mirrorAnchorRecord({ ...local, status: 'CONFIRMED' });
+    return { action: 'anchored', signature: rec.foundSignature || governing.signature, message: 'The anchor signed earlier is CONFIRMED on-chain (signature ' + (rec.foundSignature || governing.signature) + '). Nothing more to sign.' };
+  }
+  if (rec.outcome === 'failed') {
+    // Positive on-chain evidence of failure. The status reads above pass
+    // THROUGH the Gatehouse, which frees its own lock on the same
+    // evidence; clear the local mirror if it names this signature, then
+    // re-read the Gatehouse record once before proceeding.
+    if (local && local.signature === governing.signature) clearAnchorRecord();
+    let serverRec2 = null, server2Read = false;
+    try { serverRec2 = await fetchServerAnchorState(); server2Read = true; } catch (e) { /* fall through */ }
+    if (server2Read && serverRec2 && serverRec2.signature === governing.signature &&
+        (serverRec2.status === 'CLAIMED' || serverRec2.status === 'BROADCAST')) {
+      return { action: 'locked', signature: governing.signature, message: 'The recorded anchor (signature ' + governing.signature + ') reads as failed on-chain, but the Gatehouse lock has not released yet. Wait a moment and tap Sign again — do not sign anything elsewhere meanwhile.' };
+    }
+    return { action: 'proceed' };
+  }
+  // 'locked' — the Defect 02 outcome. The record stands; nothing clears it.
+  return { action: 'locked', signature: governing.signature, message: 'A signed anchor (signature ' + governing.signature + ') is neither proven landed nor proven failed. Under the duplicate-prevention rule it stays LOCKED — a missing or incomplete status is never treated as proof it did not land, and no timeout unlocks it. Do NOT sign again. Reconciliation: check the wallet history on Solscan for this exact memo — if it landed, reload and this page will confirm it; if it provably never landed, the house clears the Gatehouse record by hand, with that evidence, per the build record.' };
+}
+
+$('signBtn').addEventListener('click', async () => {
+  // In-flight / already-submitted / plaque-up guard: a second click must
+  // never build or send a second transaction (a duplicate anchor costs a
+  // second fee and writes a duplicate memo).
+  if (tapInFlight || signing || submitted || awaitingReissue) return;
+  tapInFlight = true; // set synchronously, before the first await (P-C3)
+  try {
+    const web3 = window.solanaWeb3;
+    if (!web3) { showError(new Error('@solana/web3.js failed to load.')); return; }
+    flowWeb3 = web3;
+    // AMENDMENT 5: no single fixed connection exists anymore — each
+    // attempt pins its endpoint inside the blockhash fetch.
+    flowConnection = null;
+    activeRpcIndex = -1;
+    activeRpcHost = null;
+    // §3C RECONCILIATION GATE (Amendment 7 form, above): the Gatehouse
+    // record and the local mirror are reconciled against the chain BEFORE
+    // any new signature is requested (Permanent Rule 3).
+    const gate = await evaluateAnchorGate(web3);
+    if (gate.action === 'released') {
+      // AMENDMENT 8 FIX ROUND (critic P2): the mirror was already
+      // cleared inside evaluateAnchorGate on the server's positive
+      // evidence. Surface the notice and stand down FRESH — nothing
+      // submitted, Sign stays live for a new attempt.
+      clearError();
+      $('result').textContent = gate.message;
+      return;
+    }
+    if (gate.action === 'anchored' || gate.action === 'locked') {
+      submitted = true;
+      $('signBtn').disabled = true;
+      showResult(gate.signature, gate.message);
+      return;
+    }
+    if (gate.action === 'unreadable' || gate.action === 'reserved') {
+      showError(new Error(gate.message));
+      return;
+    }
+    clearError(); $('result').textContent = ''; $('verifyVerdict').textContent = ''; $('verifyVerdict').className = '';
+    hideReissue();
+    await runAttempt(1);
+  } finally { tapInFlight = false; }
+});
+
+$('reissueBtn').addEventListener('click', async () => {
+  // The founder's fresh tap IS the mechanism (Amendment 4): this click is
+  // a new OS user gesture, and the attempt it drives fetches its blockhash
+  // inside the tap and invokes the wallet on that gesture — the shape
+  // Phantom iOS requires before it will present another sheet.
+  if (tapInFlight || signing || submitted || !awaitingReissue) return;
+  tapInFlight = true; // set synchronously, before the first await (P-C3)
+  try {
+    clearError();
+    const attempt = nextAttempt;
+    awaitingReissue = false;
+    $('reissue').style.display = 'none';
+    $('reissueBtn').disabled = true;
+    // Improver P-C2 (defense in depth): the plaque tap re-runs the
+    // reconciliation gate before any new signature is requested — the
+    // plaque is only ever offered with the lock free, but the gate is
+    // the authority and is never bypassed.
+    const web3 = window.solanaWeb3;
+    if (!web3) { showError(new Error('@solana/web3.js failed to load.')); return; }
+    flowWeb3 = web3;
+    const gate = await evaluateAnchorGate(web3);
+    if (gate.action === 'released') {
+      // AMENDMENT 8 FIX ROUND (critic P2): same convergence as the Sign
+      // tap — mirror cleared on positive evidence, notice surfaced,
+      // gate stands down fresh.
+      clearError();
+      $('result').textContent = gate.message;
+      return;
+    }
+    if (gate.action === 'anchored' || gate.action === 'locked') {
+      submitted = true;
+      $('signBtn').disabled = true;
+      showResult(gate.signature, gate.message);
+      return;
+    }
+    if (gate.action === 'unreadable' || gate.action === 'reserved') {
+      showError(new Error(gate.message));
+      return;
+    }
+    await runAttempt(attempt);
+  } finally { tapInFlight = false; }
+});
+</script>
+</body>
+</html>
