@@ -1,0 +1,62 @@
+{
+  "frozenAt": "2026-11-25T02:34:30.659Z",
+  "gatehouseSha256": "2b16dfd069146fc4abc74c7becac78be1baf73917bf3a8ab13f0758f3a0357c7",
+  "pageSha256": "be558a0495c1cba04e282c5ddfc23edd11e0cf1ce25e355594b9fc47773bf418",
+  "pageBadge": "90f4b792",
+  "harnessSha256": "5d02a11d62991258d3b6d30ef97be5781e15122977a62ff1b7e8cc993650abe0",
+  "note": "Harness hash supersedes the pre-verification manifest: R8/R10 state-dir wipes added after the blind verifier found the suite non-idempotent in place. Artefact hashes unchanged. Two consecutive in-place runs, both 13/13.",
+  "results": [
+    {
+      "id": "R1",
+      "pass": true
+    },
+    {
+      "id": "R1b",
+      "pass": true
+    },
+    {
+      "id": "R2a",
+      "pass": true
+    },
+    {
+      "id": "R2b",
+      "pass": true
+    },
+    {
+      "id": "R5",
+      "pass": true
+    },
+    {
+      "id": "R3",
+      "pass": true
+    },
+    {
+      "id": "R4",
+      "pass": true
+    },
+    {
+      "id": "R6",
+      "pass": true
+    },
+    {
+      "id": "R7",
+      "pass": true
+    },
+    {
+      "id": "R5b",
+      "pass": true
+    },
+    {
+      "id": "R8",
+      "pass": true
+    },
+    {
+      "id": "R9",
+      "pass": true
+    },
+    {
+      "id": "R10",
+      "pass": true
+    }
+  ]
+}
