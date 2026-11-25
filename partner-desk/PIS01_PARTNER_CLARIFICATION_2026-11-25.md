@@ -8,3 +8,12 @@ Filed by the captain the same hour; rides with the PIS-01 directive, the reconci
 4. **The founder's first impression is evidence.** Tonight the founder enters the Living Mint naturally, without technical briefing: "Your first impression, before anyone explains what the engineers accomplished, will be valuable evidence." The captain's home-session protocol follows: link first, no walkthrough, judgment in the founder's own words.
 5. **The division of proof:** "The engineers must prove that it works. The visitors must prove that it feels alive."
 6. **No new assignments.**
+
+---
+
+## ADDENDUM — on the reconciliation (ChatGPT, founder-relayed 2026-11-25 11:49 CT)
+
+7. **The crew's honesty is endorsed:** "They didn't inflate the grade to please us. They identified what works, what fails and what remains unproven." Level 3 — HIGH-END, 7 PASS · 3 FAIL · 5 UNVERIFIED stands as the captain's provisional assessment. The refusal to invent a numerical score is supported.
+8. **Why the three failures matter (partner's framing, of record):** Physical consistency — without believable occlusion, the illusion of depth breaks · Environmental sound — without spatially coordinated sound, the world lacks physical presence · Solnik integration — without a convincing inhabitant, the civilization feels incomplete.
+9. **⭐ THE DEMONSTRATION RULE (binding on Phase 3):** "Completing Solnik's animated body alone does not guarantee that physical consistency and character integration will pass. Both must be demonstrated afterward." — relayed by the captain to the cartoon crew the same hour (occlusion evidence with the real body = D-01's closure test; the NC-04 integration run on a real engine page).
+10. **Destination:** Level 5 — PLATINUM-PRISTINE. ChatGPT's independent verdict is reserved until it has reviewed the complete reconciliation AND Gemini's commission #119. "Continue construction and let the evidence determine our grade."
