@@ -19,3 +19,9 @@ The two-sided doctrine (founder, same message): a healthy server alone does not 
 - No additional spending; no security compromise in the testing itself.
 
 **Captain's execution note:** checks 6–8 (isolation, closed-gate accuracy, security boundaries) were added to the running service-side probe the same hour; results land in the Solnik verification packet for independent review. Founder's technical verdict reserved until the evidence is available. Mint: HOLD · READY: 0.
+
+## FOUNDER'S DISTINCTION (2026-11-25 ~07:39 CT)
+
+Server-side success does NOT automatically establish customer-side success. If Solnik answers correctly on the VPS but visitors cannot communicate with him through the website, the complete experience remains UNVERIFIED. A successful conversation through an ordinary visitor's browser is required — preferably on both a computer and a physical phone. Status table at adoption: Animated body PASS · Dismiss/Disable PASS · Mute state-change confirmed · Type/Speak UNVERIFIED · Brain connectivity, Memory isolation, Knowledge accuracy, Security boundaries: testing. No additional assignments; complete the existing investigation first.
+
+Captain's execution: a visitor-browser test on a real browser engine (desktop viewport + emulated phone viewport) commissioned the same hour; the PHYSICAL-phone leg is recorded honestly as closable only by a real device.
