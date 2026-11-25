@@ -1,0 +1,158 @@
+[
+  {
+    "id": "B1",
+    "name": "devnet simulate through gateway",
+    "pass": true,
+    "detail": "err=null · unitsConsumed=48729"
+  },
+  {
+    "id": "B2",
+    "name": "devnet anchor SEND through gateway landed",
+    "pass": true,
+    "detail": "sig=TLCFmn6C2AgP8Ve76pnC5cXGmrCnMSNCBpDECHTqZDKAao9u29qDhYCeuKGNkiubzzvL3Fuj3qJothJgChbjpeX · status=finalized · err=null"
+  },
+  {
+    "id": "B3",
+    "name": "landed tx: fee exactly 5000, only payer moved, 3 instructions",
+    "pass": true,
+    "detail": "fee=5000 · ixs=3 · payer=BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R · onlyPayerMoved=true"
+  },
+  {
+    "id": "B4",
+    "name": "duplicate-prevention: getSignatureStatuses (searchTransactionHistory) reads landed sig",
+    "pass": true,
+    "detail": "status=finalized · err=null"
+  },
+  {
+    "id": "B5",
+    "name": "devnet byte-assert refusal (wrong memo)",
+    "pass": true,
+    "detail": "HTTP 403 · gatehouse policy refusal: ix[2] memo bytes mismatch"
+  },
+  {
+    "id": "B6",
+    "name": "expired blockhash send rejected, zero broadcast",
+    "pass": true,
+    "detail": "height=513114879 > lvbh=513114863 · refused via other refusal · 403 Forbidden: {\"jsonrpc\":\"2.0\",\"id\":\"fcd19805-2b75-459f-8b2b-348e4568cb26\",\"error\":{\"code\":-32003,\"message\":\"gatehouse policy refusal: dupl"
+  },
+  {
+    "id": "A1",
+    "name": "production-origin getLatestBlockhash",
+    "pass": true,
+    "detail": "HTTP 200 · 852ms · ACAO=https://provadiacoin.com · upstream=primary · blockhash=7vxjemtLmgoFvCC6kw8LmsHGCLT1F13TqXnimYF7AEUN"
+  },
+  {
+    "id": "A2",
+    "name": "foreign Origin refused",
+    "pass": true,
+    "detail": "HTTP 403"
+  },
+  {
+    "id": "A3",
+    "name": "non-allowlisted method refused (getBalance on night-brick)",
+    "pass": true,
+    "detail": "HTTP 403 · method not allowlisted on this route"
+  },
+  {
+    "id": "A4",
+    "name": "keeper read route (getBalance ANCHOR)",
+    "pass": true,
+    "detail": "HTTP 200 · value=69099009 lamports"
+  },
+  {
+    "id": "A5",
+    "name": "WALLET FENCE: anchor wallet signature count",
+    "pass": true,
+    "detail": "HTTP 200 · signatures=1 · 32uqxt7Gqk2pEVGKV3mEowvF8g6qDjr2nB1M1Eyu2oAV5VojVbTue1mkDxs9zqGHVBhzEBFtJqGabAtam2ENLiCW"
+  },
+  {
+    "id": "A6",
+    "name": "sentinel getProgramAccounts without worker token refused",
+    "pass": true,
+    "detail": "HTTP 403"
+  },
+  {
+    "id": "A7",
+    "name": "byte-assert refuses wrong-memo send (never forwarded)",
+    "pass": true,
+    "detail": "HTTP 403 · gatehouse policy refusal: ix[2] memo bytes mismatch"
+  },
+  {
+    "id": "A8",
+    "name": "byte-assert refuses wrong fee payer",
+    "pass": true,
+    "detail": "HTTP 403 · gatehouse policy refusal: feePayer !== ANCHOR"
+  },
+  {
+    "id": "A9",
+    "name": "valid-shape simulate passes the assert and reaches upstream",
+    "pass": true,
+    "detail": "HTTP 200 · err=null · unitsConsumed=48729 · upstream=primary"
+  },
+  {
+    "id": "A10",
+    "name": "valid-shape UNSIGNED send refused at signature verification (Amendment 7 lock binding); mainnet anchor record stays null",
+    "pass": true,
+    "detail": "HTTP 403 · gatehouse policy refusal: signature does not verify against the pinned fee payer · anchor record after=null"
+  },
+  {
+    "id": "A11",
+    "name": "heartbeat limit — LOCAL candidate gate, fixed source 127.0.0.1 (improver N6 label: this local PASS is NOT a production re-test; the production standing FAIL-from-this-origin — egress proxy pool rotates source IPs — stands as recorded in BUILDER_REPORT §4/§7-N6; fixed-source production proof is D1/D2)",
+    "pass": true,
+    "detail": "200s=2 · 429s=60 of 90 concurrent calls · see D1/D2"
+  },
+  {
+    "id": "A12",
+    "name": "candidate anchor-state endpoint live; store ok; record null pre-ceremony (local mainnet-pinned instance)",
+    "pass": true,
+    "detail": "HTTP 200 · store=ok · record=null"
+  },
+  {
+    "id": "C1",
+    "name": "ATK1 arbitrary program wearing ix[0] data + ANCHOR attached",
+    "pass": true,
+    "detail": "HTTP 403 in 12ms · gatehouse policy refusal: message header mismatch (expected 1 signer / 0 readonly-signed / 2 readonly-unsigned)"
+  },
+  {
+    "id": "C2",
+    "name": "ATK2 ComputeBudget ix[0] carrying ANCHOR as an attached key",
+    "pass": true,
+    "detail": "HTTP 403 in 4ms · gatehouse policy refusal: ix[0] carries keys (must be 0)"
+  },
+  {
+    "id": "C3",
+    "name": "ATK3 extra co-signer (on-chain fee would be 10000, not 5000)",
+    "pass": true,
+    "detail": "HTTP 403 in 4ms · gatehouse policy refusal: signature count !== 1 (fee would not be 5000)"
+  },
+  {
+    "id": "C4",
+    "name": "ATK-SV non-canonical / overflowing shortvec",
+    "pass": true,
+    "detail": "HTTP 403 in 3ms · gatehouse policy refusal: decode failure: shortvec too long"
+  },
+  {
+    "id": "C5",
+    "name": "ATK-DOS header claiming 60000 account keys, tiny body",
+    "pass": true,
+    "detail": "HTTP 403 in 3ms · gatehouse policy refusal: decode failure: account keys overrun"
+  },
+  {
+    "id": "C6",
+    "name": "ENC declared base58 encoding refused (gateway/upstream parse-divergence fence)",
+    "pass": true,
+    "detail": "HTTP 403 · gatehouse policy refusal: encoding \"base58\" refused (base64 only)"
+  },
+  {
+    "id": "D1",
+    "name": "heartbeat bucket engages under burst (tunnel, fixed source)",
+    "pass": true,
+    "detail": "histogram={\"200\":30,\"429\":10} of 40 concurrent calls (non-200/429 = free devnet upstream refusing the burst, failover exhausted)"
+  },
+  {
+    "id": "D2",
+    "name": "general bucket engages under burst (tunnel, fixed source)",
+    "pass": true,
+    "detail": "histogram={\"200\":10,\"429\":10} of 20 concurrent calls (10 burst tokens, then gateway 429s)"
+  }
+]
