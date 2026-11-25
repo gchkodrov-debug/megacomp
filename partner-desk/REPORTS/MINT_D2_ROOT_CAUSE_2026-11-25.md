@@ -1,0 +1,30 @@
+# ROOT-CAUSE INVESTIGATION — The Mint's Missing Inspection Image (D2)
+Captain's investigation, 2026-11-25, under the founder's order. Evidence-cited throughout.
+
+## The short answer
+
+The defect was **not missed by detection — it was detected, written down, and then carried as a non-blocking "cleanup" item through every subsequent verdict.** The failure, in order of weight: **(c) the defect was known but not treated as blocking** — because **(a) no rule in the Alive Listing Standard made a known-open declared-asset defect block a verified verdict** — compounded by **(b) two checks that measured the wrong thing**: the engine probe certified the asset's existence in a local demo tree instead of at its live URL, and the standard's own evidence check (§6c) accepts "on disk" as proof.
+
+## The evidence chain, seat by seat
+
+1. **Born in the wrong tree (2026-11-23).** The Presentation Engine relay's improver (DeepSeek-V4-Pro) flagged it first — finding F3a: the asset file `assets/inspect-mint-mark.webp` was "not among the delivered files… Without the asset, that claim is unverifiable." The asset was genuinely created (cropped from the founder-approved obverse artwork) but placed in the engine's DEMO tree (`presentation-engine/demo/assets/inspect-mint-mark.webp`), never published to the live site at `/listings/assets/`. The engine probe's `inspect:opens-real-asset` assertion ran against the demo/mirror tree where the file exists — it passed while certifying the mirror, not the town.
+2. **Completion-pass seats never had the declared set (2026-11-23).** The blind verifier graded L3 PICTURES — PASS from the deployed page's own measurements; the manifest was explicitly out of scope ("NOT TOUCHED (quarantined, Gemini #46)"). That seat verified the page's stills and film; the genome's declared assets were never in its evidence pack. (Timeline note: the founder's 2026-11-24 walk preceded the D2 record — D2 did not exist on paper when he approved the page.)
+3. **The conformance pass walked past it (2026-11-24).** The manifest conformance note conformed frames/locks/tips to live truth and states "inspect… untouched"; its scope was field conformance, not live asset existence; it never probed the live `/listings/assets/` path.
+4. **The one check that DID catch it — and graded PASS anyway (2026-11-24).** The specimen verification (conveyor/MINT_SPECIMEN_VERIFICATION_2026-11-24.md), Requirement 3, records verbatim: "Exception (D2): the manifest declares an inspect asset for stage 05 The Mark… That file returns 404 on the live site and is referenced nowhere in the page or its scripts — declared evidence that does not exist live." Severity: Medium. The same record grades Requirement 3 — PASS "(one defect recorded, D2)" and issues PROVISIONAL TECHNICAL PASS / LISTING VERIFIED. The standard's §6(c) check traces deliverables to "a real artifact **on disk** or a live record" — a test the missing asset satisfies, because it exists on disk in the demo tree.
+5. **The co-sign carried it as a residual (2026-11-24).** Gemini #92 co-signed with "Noted Residuals (D2, D5, D7): Logged for cleanup" and named a cleanup crew tuple. The captain's adjudication: tuples "ADOPTED as named (noted, not commissioned by this run)." The queue carried D2 as "crew fix queued" — queued in words, never dispatched, no deadline, no verdict consequence. It stayed open while the listing's status advanced.
+6. **Why the 39-file sweep couldn't see it (2026-11-25).** Re-fetched live during this investigation: the page's referenced assets all answer 200, and the string `inspect-mint-mark` appears nowhere in the page or its scripts. A reference sweep is structurally blind to a declared-but-unreferenced asset — the general form the founder named.
+
+## Which check should have caught it
+
+- Earliest: the engine probe's `inspect:opens-real-asset` — right shape, wrong target (local tree, not live origin). Failure type (b).
+- Did catch it: the specimen verification's Requirement 3 parity run — the only live-origin, declared-set check ever run. The failure after detection is type (c) riding on type (a): no blocking rule existed, so a Medium log entry was a lawful outcome of a PASS verdict, and the named cleanup was never commissioned.
+
+## The standard, corrected (draft — not self-adopted)
+
+ALIVE_LISTING_STANDARD_AMENDMENT_DECLARED_ASSETS_DRAFT_2026-11-25.md (filed alongside this report): a general law (reference sweeps and mirror probes are necessary, never sufficient evidence) · new §6(g) DECLARED-ASSET COMPLETENESS — every genome/manifest-declared asset must (i) return HTTP 200 at its live URL on the production origin, (ii) be confirmed actually rendered in the customer-eye pass on desktop AND mobile, summoned the way a visitor summons it, (iii) stand with no known-open asset defect at any severity · a §7 BLOCKING RULE — a known-open declared-asset defect blocks LISTING VERIFIED and every state above it until fixed and re-probed live; naming a cleanup crew does not discharge it · a §6(c) wording fix striking "on disk" as sufficient proof. Adoption requires captain + Gemini ratification.
+
+## Scope of the same hole elsewhere (honest, not audited)
+
+The other ~415 were not audited. The risk class is precise: any product whose verification (i) rests on a genome/manifest (the PALS pattern — every future Alive Listing), or (ii) whose asset evidence came from page-reference sweeps or local-mirror probes rather than a declared-set-vs-live-origin probe. Named exposure: **The Keeper (T-002)** — its verification is still owed and would walk through the identical hole today; the corrected standard reaches it first. The store's 394 were verified under a different instrument (delivery proven by $0 test checkout), so their delivery evidence does not carry this hole; their page-declared imagery is unexamined and no claim is made either way. The Mint is the only product verified under the manifest-parity method — and the one that proved the hole exists.
+
+$0 spent · no live edits by this investigation (the asset fix itself landed separately, live-verified 2026-11-25 07:15 CT).
