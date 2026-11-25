@@ -1,0 +1,17 @@
+PASS — cluster is devnet (this script only reads api.devnet.solana.com)
+PASS — instruction count == 3
+PASS — ix[0] program == ComputeBudget (ComputeBudget111111111111111111111111111111)
+PASS — ix[0] == SetComputeUnitPrice with price == 0 µL/CU (found 0)
+PASS — ix[1] program == ComputeBudget (ComputeBudget111111111111111111111111111111)
+PASS — ix[1] == SetComputeUnitLimit == 210000 (found 210000)
+PASS — ix[2] program == Memo (MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr)
+PASS — ix[2] instruction accounts == 0 (keys [])
+PASS — ix[2] memo bytes byte-equal MEMO_TEXT.txt (133 bytes)
+PASS — fee == 5000 lamports (found 5000)
+PASS — fee payer == throwaway devnet account BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R (found BMhv2yHk8m33eudSs3n7DkMgLDtVmRgrXWEURQ4P7V6R)
+PASS — no balance movement besides the payer fee
+PASS — meta.err == null
+PASS — slot recorded: 526021928
+Signature: Swz11ZBZ5THSmGdpmvcYeKTWkNUybBwJPz5VfuQp9DWjcsXm6rNgZ9QbbUiQEyW8B7qUkvDVauJLQAYGE7aztnk
+Solscan: https://solscan.io/tx/Swz11ZBZ5THSmGdpmvcYeKTWkNUybBwJPz5VfuQp9DWjcsXm6rNgZ9QbbUiQEyW8B7qUkvDVauJLQAYGE7aztnk?cluster=devnet
+GATE CHAIN-PROOF PASS
