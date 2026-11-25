@@ -1,0 +1,30 @@
+{
+  "suite": "Gatehouse fault injection (throwaway instance, VPS 127.0.0.1:8744, same gatehouse.mjs sha256 4312e3ba8c0327ee28ba093613a032998b7ae716a9949565aa64c2364cd105cf)",
+  "note": "FI3/FI4 each passed TWICE: once with Tier-3 = https://api.mainnet-beta.solana.com and once with Tier-3 = https://solana-rpc.publicnode.com. Separately recorded: at 01:33 UTC 2026-11-25, api.mainnet-beta.solana.com TIMED OUT from the VPS (direct curl 10s, no response; gateway failed closed 502 in 7-10s, log lines preserved in the build record) and answered minutes later \u2014 the public RPC is an unreliable leg from a datacenter, which is the founding reason for this gatehouse.",
+  "results": [
+    {
+      "id": "FI1",
+      "name": "dead primary -> fallback serves keeper read",
+      "pass": true,
+      "detail": "HTTP 200 \u00b7 upstream=fallback \u00b7 value=69099009"
+    },
+    {
+      "id": "FI2",
+      "name": "dead primary -> fallback serves night-brick blockhash",
+      "pass": true,
+      "detail": "HTTP 200 \u00b7 upstream=fallback \u00b7 blockhash=CkDoAXzpLjS3ZskCndfaiM8biahRR533PoGpMGtMiXMr"
+    },
+    {
+      "id": "FI3",
+      "name": "primary+fallback dead -> Tier-3 (read-only) serves keeper read",
+      "pass": true,
+      "detail": "HTTP 200 \u00b7 upstream=tier3 \u00b7 value=69099009"
+    },
+    {
+      "id": "FI4",
+      "name": "valid-shape SEND with keyed upstreams dead -> 502 fail-closed (Tier-3 never broadcasts)",
+      "pass": true,
+      "detail": "HTTP 502 \u00b7 gatehouse: all upstreams unavailable (fail closed)"
+    }
+  ]
+}
