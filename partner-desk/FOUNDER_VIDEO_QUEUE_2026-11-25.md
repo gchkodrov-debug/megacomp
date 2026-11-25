@@ -54,6 +54,8 @@ Cinematic close view of living mint machinery, 16:9, locked still camera. Bring 
 Cinematic portal crossing, 16:9, one continuous shot — no cuts. The camera pushes slowly forward through the great golden town gate of Provadia as the gates open: dusk bronze light outside gives way to warm golden forge light inside; light spills around the opening doors; dust and sparks drift in the light. The movement is smooth and unstoppable, like passing into another world. End inside, the breathtaking golden forge hall revealed and stable. Sound: great gate hinges, warm forge air rising, one soft chime at the moment of crossing, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no text, no logos.
 ```
 - **Priority / credits:** THIRD · ~10 cr
+- **⭐✅ JOB 3 COMPLETE + EXAMINED (2026-11-25 16:35 CT):** founder fired it in Flow (Veo 3.1 Fast · Start-only frame, End empty by design · 16:9 · 10 cr). Landed file `assets/mint-portal-crossing_take1.mp4`. **Examination (visual, captain's frame reads):** the crossing is REAL — the camera pushes through the gate arch and AT the threshold plane the misty outer world transforms into the golden forge hall (furnaces, spark rain), ending inside, stable and revealed. One continuous shot, no cut. The engine may play it in either direction (entry or exit reveal); the transition is the asset. Sound measured on the file (see exam line in the build log).
+
 
 ## JOB 4 — SOLNIK · THE INTRODUCTION (Grand Arrival hero; founder-approved 2026-11-25 10:40 CT)
 - **Universe / asset:** The Grand Arrival — `solnik-introduction` (hero film for the top of / ; Omni's voice + lip-sync)
