@@ -22,7 +22,7 @@ Specifically, establish with evidence — on OUR existing accounts and subscript
 
 - A unified World Engine architecture on the existing Living Universe Engine (data-driven universes, master clock, phase-offset crossfade, occlusion planes — 171 tests passing) extended with: a route/journey graph (Chamber → Gate → Street → Library), a real-time character layer (Solnik's cartoon rig + a first guest avatar), and a Magical Manifestation module evolving the Surfer scroll-assembly (scroll → materialize → separate → threaded callouts → reassemble → parchment with real price/purchase state).
 - First prototype: isolated, in `living-universe/prototype-journey/` — one avatar, one route, one real product (the Mint, $245/$196, purchase CLOSED per standing law).
-- Production ruling tonight: Job 5 (the Reading Room — the Library's scenery master, on the Order 7 route) completes as the last clip of the old queue; Jobs 6–10 are HELD under Order 3 until the manufacturing method is established. Genspark zero-credit scenery production continues (224 filed, batch #12 running).
+- Production ruling tonight: Job 5 (the Reading Room — the Library's scenery master, on the Order 7 route) completes as the last clip of the old queue; Jobs 6–10 are HELD under Order 3 until the manufacturing method is established. Genspark zero-credit scenery production continues (204 filed; batch #12 still running, not yet on disk).
 
 ## Delivery
 
