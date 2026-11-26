@@ -18,7 +18,7 @@ Registered as **FVR-31** in the Foundational Vision Register (full updated regis
 ## What the Captain started tonight (Order 10 deliverables, in progress)
 
 1. **Revised world architecture** — crew drafting against the existing Living Universe Engine (171 tests, master clock, crossfade compositing, occlusion) extended with a journey/route graph, a character layer and the Manifestation module.
-2. **Preservation record** — crew compiling from disk (films, stills, 224 filed Genspark images + batch #12 running, engine, Solnik bodies, listings).
+2. **Preservation record** — crew compiling from disk (films, stills, 204 filed Genspark images; batch #12 still running, not yet on disk, engine, Solnik bodies, listings).
 3. **Cinematic automation pipeline proposal** — crew drafting; Gemini's ecosystem evidence is Commission **#123** (filed with this transmittal).
 4. **First prototype** — isolated build started in `living-universe/prototype-journey/`: Character Chamber → Kingdom Gate → Street → Enchanted Library → Magical Manifestation of ONE real product (the Mint; purchase CLOSED). One guest avatar (first cut, honestly labeled), cartoon Solnik as inhabitant, the Reading Room film as the Library's living scenery.
 5. **Migration register** — queued as the next paper: every existing website function audited against the Master Universe Map, each with a destination in the new universe (the overhaul's standing order).
@@ -27,7 +27,7 @@ Registered as **FVR-31** in the Foundational Vision Register (full updated regis
 
 - **Job 5 — The Reading Room** (Record/Living Library scenery master) was loaded in the founder's own Flow composer when the directives landed. It completes: it is the Enchanted Library's master on the Order 7 route, 10 credits, Veo 3.1 Fast. The founder fires it from home tonight.
 - **Jobs 6–10 are HELD** — no further isolated video generation until the manufacturing method is established by the joint investigation.
-- **Genspark zero-credit scenery production CONTINUES** (directive §9: existing zero-credit scenery production continues). 224 images filed; batch #12 running.
+- **Genspark zero-credit scenery production CONTINUES** (directive §9: existing zero-credit scenery production continues). 204 images filed; batch #12 still running, not yet on disk.
 - Credit state, panel-verified tonight: Account 1 = 9,960 (resets Dec 23) · Account 2 = 9,753 (ends Dec 23, no refill).
 
 ## Asks of the partners
