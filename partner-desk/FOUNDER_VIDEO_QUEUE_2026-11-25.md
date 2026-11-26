@@ -83,7 +83,11 @@ Cinematic video, 16:9. The character in the uploaded image — a small brass-and
 # PART 2 — THE RECORD HALL SET (Jobs 5–7 · prepared 2026-11-25 16:56 CT, founder standing by)
 ## Same law as Part 1 (Gemini #120): A→A matched frames for cycles · Start-only for the crossing · locked cameras except the portal · every take examined (sound · camera · bookends · keyframes) before it counts. ~10 cr each. Fire order: after the ET-120 assembly lands (its verdict names any Mint gap first; this set fires either way).
 
-## JOB 5 — RECORD · THE READING ROOM (scenery master)
+## JOB 5 — RECORD · THE READING ROOM (scenery master) ✅ MANUFACTURED + EXAMINED (2026-11-25 22:48 CT)
+- **Fired by the founder** from home (Account 2, the Nov 24 project) after the full walk: frames A→A, the 15s-duration blocker found + cleared, model corrected Omni → Veo 3.1 Fast in the walk, fired at 10 credits.
+- **Take:** `living-universe/assets/record-reading-room_take1.mp4` (4,468,587 B · 1920×1080 · 24 fps · 7.85 s); raw kept as `record-reading-room_take1-raw.mp4`.
+- **Examination (captain, 22:48–22:52 CT):** camera LOCKED (frames pixel-stable across the scrub) · the room lives exactly per brief — lamp light breathing, dust in the shafts, and mid-take the books on the far tables OPEN (pages lift ~2.4–3.6 s) and settle · **bookend RMSE 1.70** — the cleanest loop candidate of the whole queue (Jobs 1/2: 19.94/19.52; gate ≤8) · **SOUND GATE: raw mean −38.3 dB (quiet room by design, peaks −4.2 dB) → loudnorm post-fix → −21.3 dB PASS** (the fixed take is the landed take; raw preserved). Gemini listening judgment rides as usual.
+- **Wiring:** the prototype journey's Library probes for exactly this filename — the Enchanted Library now plays the living room instead of the still, automatically. Jobs 1–5 complete: 5 of 5 manufactured by the founder, 100 credits total across both accounts. Jobs 6–10 remain HELD (mass-production hold).
 - **Reference image:** `town-art/genspark-batch7-2026-11-25/04-record-hall-reading-room.jpg` (captain attaches at fire time)
 - **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
 - **Camera:** locked still, no push, no pan, no lens breathe
@@ -94,7 +98,7 @@ Cinematic wide view of a great record hall reading room, 16:9, locked still came
 ```
 
 ## JOB 6 — RECORD · THE PRINTING PRESS (living machinery)
-- **Reference image:** `town-art/genspark-batch5-2026-11-25/10-daybook-printing-press.jpg` (captain attaches at fire time)
+- **Reference image:** `town-art/genspark-batch6-2026-11-25/10-daybook-printing-press.jpg` (captain attaches at fire time) — PATH CORRECTED 2026-11-25 17:56 CT: the queue originally named batch5; the press still is batch #6's #10 (batch #5's #10 is the empty bronze perch).
 - **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
 - **Camera:** locked still, closer framing on the press
 - **Sound:** the press's own — mechanism clicks, the platen's soft thump, paper sliding, no music, no voices
@@ -112,3 +116,51 @@ Cinematic close view of a great day-book printing press, 16:9, locked still came
 ```
 Cinematic portal crossing, 16:9, one continuous shot — no cuts. The camera pushes slowly forward down a towering aisle of record shelves in the great hall of Provadia: warm lamp light pools and passes, dust drifts in the light, the shelves seem to breathe with stored centuries. The movement is smooth and unstoppable, like travelling deeper into memory itself. End deep in the stacks, the hall revealed vast and stable around the camera. Sound: soft air moving, paper and leather, one soft chime deep in the stacks, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no readable words, no logos.
 ```
+
+---
+
+# PART 3 — THE KEEPER SET (Jobs 8–10, written by the captain 2026-11-25 18:00 CT under the founder's "do not wait for me — you could be on Job 10" order)
+
+## JOB 8 — KEEPER · THE COUNTING DESK (scenery master)
+- **Reference image:** `town-art/genspark-batch7-2026-11-25/01-keeper-counting-desk.jpg`
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
+- **Camera:** locked still
+- **Sound:** the Keeper's own — quiet room tone, a counting instrument's soft tick, one distant heavy key turning, no music, no voices
+- **Prompt (exact):**
+```
+Cinematic wide view of the Keeper's counting desk chamber in Provadia, 16:9, locked still camera. Bring the uploaded image to life: candle and lamp flames breathe gently, dust drifts in the light, a great ledger's page settles, brass instruments glint as the light moves. At the end, the chamber is exactly as it began, ready to cycle forever. Sound: quiet room tone, the soft tick of a counting instrument, a distant heavy key turning once, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no readable words, no logos.
+```
+
+## JOB 9 — KEEPER · THE SEALING BENCH (living machinery)
+- **Reference image:** `town-art/genspark-batch5-2026-11-25/02-keeper-sealing-wax-bench.png`
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the SAME still in BOTH Start and End slots
+- **Camera:** locked still, closer framing on the bench
+- **Sound:** the flame's soft hiss, the great seal's heavy brass press and lift, wax settling, no music, no voices
+- **Prompt (exact):**
+```
+Cinematic close view of the Keeper's sealing-wax bench, 16:9, locked still camera. Bring the uploaded image to life: the sealing ritual completes one slow cycle — wax softens and gleams by the flame, the great brass seal rises and presses down once with ceremony, then lifts clear as the wax cools and hardens. At the end, the bench is exactly as it began, ready to cycle again forever. Sound: the flame's soft hiss, the seal's heavy brass press and lift, wax settling, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream, deep sealing red. No people, no readable words, no logos.
+```
+
+## JOB 10 — KEEPER · THE VAULT DOOR (portal)
+- **Reference image:** `town-art/genspark-batch6-2026-11-25/01-keeper-vault-door-macro.jpg`
+- **Model / settings:** Veo 3.1 Fast · Video · Frames · 16:9 · 720p · 8 s · x1 · the still in the START slot ONLY — End stays EMPTY (a journey, not a loop)
+- **Camera:** slow push FORWARD toward and through the vault door
+- **Sound:** heavy brass mechanisms, bolts sliding, the door's deep swing, then warm silence, no music, no voices
+- **Prompt (exact):**
+```
+Cinematic portal crossing, 16:9, one continuous shot — no cuts. The camera pushes slowly toward the Keeper's great vault door: its brass mechanisms wake, rings and bolts turn with weight, and the massive door swings inward on deep hinges, revealing warm golden dark beyond. The movement is smooth and unstoppable. End inside the threshold, the vault's warm gloom stable around the camera. Sound: heavy brass mechanisms, bolts sliding, the door's deep swing, then warm silence, no music, no voices. Palette: near-black brown, antique gold, dark bronze, bone cream. No people, no readable words, no logos.
+```
+
+## ⚠️ CAPTAIN'S SPRINT ATTEMPT — 2026-11-25 17:54–17:58 CT (Account 1, captain-driven, founder at his brother's birthday under his "do not wait" order)
+- Sign-in: SUCCESS — Account 1 (onejobkits@gmail.com) signed in, ULTRA, 21 projects, balance 9,960 verified.
+- JOB 5: project built (flow.google.com/project/7601e379-64e9-431d-984c-2472fe4bd632), frames + prompt + settings all loaded and verified — generation REFUSED by Flow: "We noticed some unusual activity." 0 credits charged. Project sits READY in the workspace (frames + prompt loaded; only the Generate press remains).
+- JOB 6: project built (flow.google.com/project/c5788817-3c47-4f4d-b5d2-78b0dc1d6df1), same refusal, 0 credits. Project sits READY.
+- FILM 16: not fired (sprint stop rule — session-level block, not item-specific).
+- READ: the refusal is Google's automation wall on the captain's browser, the same one seen on Film 13 attempts; the founder's human home session generates cleanly (Jobs 1–4 proof). Routes forward: (a) founder presses Generate on the two READY projects from home (Account 1 is in his home browser), (b) Jobs 7–10 walk from home as planned, (c) the watch keeps its Film 16 attempts as the flag cools (Films 14/15 fired from a machine lane on the morning of 2026-11-25, so the wall does lift).
+
+---
+## ⛔ FOUNDER COURSE CHANGE — 2026-11-25 ~21:52 CT (FVR-31, Order 3)
+The founder's Living Cinematic Universe directives landed while Job 5 was being staged in his home composer. Captain's ruling under Order 3 ("temporarily suspend unnecessary isolated video generation"):
+- **JOB 5 COMPLETES** — it is the Enchanted Library's scenery master, directly on the Order 7 first-journey route (Chamber → Gate → Street → Library → Manifestation). Founder fires it from home tonight, Account 2, Veo 3.1 Fast, 10 credits.
+- **JOBS 6–10 ARE HELD** — no further isolated clips until the joint manufacturing investigation (captain's pipeline proposal + Gemini #123 + ChatGPT) establishes the method. The Account 1 READY projects for Jobs 5/6 stay as they are — do not fire Job 6 from them.
+- Genspark zero-credit scenery production is NOT held (directive §9) — it continues.
