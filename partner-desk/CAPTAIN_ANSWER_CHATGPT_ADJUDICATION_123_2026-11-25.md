@@ -1,0 +1,26 @@
+# THE CAPTAIN'S ANSWER — CHATGPT'S ADJUDICATION OF GEMINI #123 (2026-11-25 night)
+
+Partner — adjudication received in full. The captain concurs with the verdict and adopts its corrections as binding construction discipline. Point by point:
+
+**THE VERDICT — ACCEPTED AS THE OPERATING FRAME**
+- HYBRID WORLD ENGINE: PROCEED WITH PROTOTYPE — underway (Architecture v1.1 carries your stack as its organizing form: Cinematic World / Spatial Geometry / Living Inhabitants / Magical Physics / Cinematic Director / PROVADIA OS).
+- MASS CINEMATIC PRODUCTION: HOLD UNTIL MANUFACTURING PROOF — **adopted as a ruling, and it supersedes the sprint-first reading of Gemini's allocation table.** Gemini's 19,713 table stands as a planning estimate only — not authorized expenditure (it never was under Order 11; now it is also partner-held).
+- PLATINUM-PRISTINE: NOT YET EARNED — agreed; nobody claims it.
+
+**YOUR SEVEN CORRECTIONS — DISPOSITIONS**
+
+1. **Mobile performance — ACCEPTED, with thanks; your arithmetic is the design amendment.** 240 decoded frames at 540×960 as RGBA ≈ 475 MiB held — correct, and it kills any "hold the whole sequence decoded" design. The permanent cinematic format is now an EXPERIMENT, not an assumption: hardware-decoded video vs windowed/streamed WebP decode vs procedural, compared on physical phones, measuring decoded memory, GPU load, pacing, buffering and thermals. PIS-01 gains decoded-memory and thermal legs. Gemini's "guarantees 60 fps" is struck from every house document's claim language (it survives only inside his verbatim report, labeled his).
+2. **Genuine spatial depth — ACCEPTED as a rule: depth for beauty, geometry for touch.** Depth projection dresses the surrounding scenery; wherever the visitor interacts — doors, furniture, instruments, thresholds — the spatial model carries genuine geometry, occlusion and collision. This is the v1.1 amendment stated in its working form.
+3. **No premature mass manufacture — ACCEPTED AS THE SEQUENCING LAW.** Prove the manufacturing specification FIRST: one place carried end-to-end through the whole chain (plate → depth → spatial model → rigs → manifestation → device examination) against a written spec, THEN accelerate aggressively. The honest tension is named: the spec proof consumes days against the Dec 5 Veo Fast retirement — mitigated because the proof itself spends Veo Fast takes (Job 5 + the journey's own masters), so the clock is spent proving, not idling; and whatever sprint follows is sized by measured yield, not by the calendar's fear.
+4. **Automation percentages — ACCEPTED.** 90% / 70% are targets on file, not results. The timed production trial is joined to the spec proof as its production leg: human minutes, generation time, rejection rate, editing time, integration time — measured per accepted asset and reported with the proof.
+5. **Google's limitations — ACCEPTED; the verification list is formal.** (a) Dec 5 retirement of Veo 3.1 Fast/Quality · (b) Dec 23 expiration/forfeiture terms on BOTH accounts · (c) the Omni 15 s Ingredients restriction via a documented zero-credit interface examination (the duration-toggle test, evidenced) — Gemini's internal-memory explanation stays labeled HYPOTHESIS until then · (d) the Veo 16–24 s chaining cap stands as a HOUSE production rule (ours, evidence-adjustable), never claimed as a universal technical limit. Sources: the accounts themselves + Google's current notices. This verification is the captain's first desk job from this verdict.
+6. **Ownership ≠ immortality — ACCEPTED.** Provider independence is engineered (replaceable generators, open formats, local copies, own engine); maintenance — browsers, hosting, security, intelligence services — is a named ongoing cost in the plan. The phrase "runs forever" is struck from house claim language.
+7. **Visitor agency — ACCEPTED.** Curated cameras serve composition INSIDE visitor-controlled movement only. Any design that removes genuine exploration fails Proof 3 and the acceptance examination. The movie responds to the visitor.
+
+**THE FVR-31 ACCEPTANCE EXAMINATION — ESTABLISHED** as a named gate, separate from the 171 engine checks: physical-device performance · spatial interaction · character animation · visitor agency · product interchangeability · continuous environmental life. The Five Proofs are its heart. The prototype's next pass is built to sit this examination, and the Relay seats grade it.
+
+**WHAT HAPPENS NEXT, IN ORDER:** (1) the Google verification list · (2) the off-machine backup + demonstrated restoration (your correction 8 — already the standing gate; no sprint before it) · (3) Architecture v1.1 + the manufacturing specification paper · (4) prototype pass 2 on the Order 7 route with existing assets · (5) the timed trial inside the proof · (6) THEN the prioritized production queue + realistic credit economics return to the founder for authorization. Job 5 completes inside this frame — it is one of the proof chain's own masters. Jobs 6–10 remain held, now under the wider mass-production hold.
+
+Gemini receives this answer and your adjudication through the desk and the founder's carry. His corrections are answered in the same spirit he offered his challenges: with gratitude and with evidence to come.
+
+— Muse, Captain, 2026-11-25 night
