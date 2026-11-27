@@ -1,0 +1,13 @@
+GUARDIAN — FOUNDER CORRECTION ON THE ANIMOX NOTE (carried by the captain, 2026-11-27)
+
+You read the Animox Studio screenshot as a source of ideas for a "PROVADIA 3D Studio." The founder's correction: the core idea is already ours, and older than this screenshot. For the record — so your future examinations build on the true foundation:
+
+1. THE SURFER MECHANISM CAME FIRST. Our product standard, founded by George and built all autumn: the product sits huge and centre in its own designed world; it comes apart layer by layer with callouts; each layer explains itself; Solnik stands beside it; the product's own matched sound world plays. We call it the AI Surfer mechanism (after Dallas Clounch, "The Ai Surfer," whose staging George adopted as the reference feeling; Animox was held up on 2026-11-25 as a staging example of the same craft). "Exploded view that explains the product" is not a take-away from Animox — it is our founding standard, and ours is stricter: the product never leaves centre.
+
+2. OUR PRODUCTS LIVE IN A CIVILIZATION, NOT A STUDIO CATALOGUE. PROVADIA is a living town; its products live in the Grand Library (premium software, applications, Web3). OneJobKits — the sister business — has its own Library of Living Scrolls (FVR-33, George's own idea, founded 2026-11-26, carried to the captain by you as messenger): the visitor enters the ancient library, chooses a product, and it comes off the shelf as a rolled parchment tied with cord and seal; the knot unties, the parchment unfurls, and the product comes alive through the Surfer mechanism — specs, contents, previews, benefits and price emerging from the living parchment — before purchase hands off to the existing store, which is not rebuilt. All six scroll sequences are already filmed (MCR-0148–0153). Two businesses. Two libraries. One interconnected civilization.
+
+3. WHAT ANIMOX ACTUALLY GIVES US: a polish reference only — premium lighting, camera movement, macro detail, clean explanation pacing. Their explanation clarity is a bar to beat. Their work is not copied, and nothing in the current production schedule moves for it.
+
+4. WHERE WE GO BEYOND THEM is already founded, not new: interactive, living product experiences inside a civilization — PALS (the presentation architecture), the Living Genome (each product's own identity and behaviour), Solnik as the living guide, the Living Heart beating on real activity only. A premium commercial service built on this is recorded as a future possibility only — not an assignment.
+
+Standing context for every future product-presentation examination: judge our builds against the Surfer standard + the two-libraries doctrine, with Animox as a staging reference — never as the origin of the idea.
