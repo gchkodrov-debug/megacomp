@@ -19,11 +19,13 @@ Demonstrate — not assume — automatic end-to-end retrieval and delivery among
 3. **Captain leg:** the captain logs dispatch times, harvest times, and the verbatim responses in the results section below, and reports the outcome to the founder in the main chat.
 
 ## Results (filled as evidence lands)
-- Gemini leg dispatched: PENDING (queue #131, on verification of the restored session)
+- Gemini leg dispatched: QUEUED 2026-11-27 08:47 CT as queue #131 (session verified live 08:45 CT: original conversation accessible, signed in as OneJobKits / Account 1, Ultra, full history; the queue+watch mechanism already proved itself — commission #127 was dispatched and ANSWERED by Gemini before this test was queued)
 - Gemini response harvested: —
 - Guardian signal filed: 2026-11-27 (this file, Partner Desk REPORTS)
-- Guardian response via Outbox: —
-- Verdict: —
+- Guardian acknowledgment (FOUNDER-CARRIED): received 2026-11-27 ~08:56 CT via the founder's forward — the Guardian states plainly this counts as acknowledgment through the founder-carried route ONLY, NOT as successful automatic delivery. The captain concurs and records it as such.
+- Guardian response via Outbox (AUTOMATIC leg): STILL PENDING — the test is NOT complete until his acknowledgment + response arrive through the Drive Outbox without founder hand-carry.
+- Desk coordinates of this test message (as demanded by the Guardian): repo `gchkodrov-debug/megacomp`, branch `main`, path `partner-desk/REPORTS/THREE_WAY_COMMS_TEST_TW3-2026-11-27-001.md`, blob sha at first filing `d54ef3a0753273a89d776bc06dd7dd86e41e2cd9` (this update creates a new revision; both are independently inspectable in the repo history).
+- Verdict: IN PROGRESS — Gemini leg dispatched next in queue; Guardian automatic leg pending; founder-carried ack recorded but NOT counted.
 
 ## Fences
 No spending · no new accounts/credentials · no production content in the test · the test never interrupts cinematic production (Account 2) or any construction line.
