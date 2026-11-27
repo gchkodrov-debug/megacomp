@@ -17,31 +17,31 @@
 
 | Model | Capabilities (snapshot) | Specialization | Assignment | Status | Live chat |
 |---|---|---|---|---|---|
-| gpt-oss:120b | completion, tools, thinking | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| muse-spark-open | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| gpt-oss:120b | completion, tools, thinking | systems reasoning, architecture review | Architecture & Reasoning seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| muse-spark-open | completion, thinking, tools, vision | vision, world/visual review | Visual QA seat — civilization worlds | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 | deepseek-v4.1-flash:1017 | completion, thinking, tools, vision | bulk copy, QA sweeps, fast turnaround | Bulk Copy/QA seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | PROVEN |
-| nemotron-3-ultra | completion, thinking, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| mistral-large-4 | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| mimo-v2.6-pro | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| nemotron-3-ultra | completion, thinking, tools | verification and consistency checking | Verifier seat — verification team 2 | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| mistral-large-4 | completion, thinking, tools, vision | critique with vision | Critic seat — worlds & visual QA | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| mimo-v2.6-pro | completion, thinking, tools, vision | code and build work | Build seat — software manufacturing | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 | kimi-k3 | vision, thinking, completion, tools | critique and independent verification (different-family critic seat) | Chief Critic — verification teams | LISTED-REACHABLE (tags snapshot 2026-11-27) | PROVEN |
-| gpt-oss:20b | completion, tools, thinking | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| minimax-m3.1-flash | completion, tools, thinking, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| inkling-2-small | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| gpt-oss:20b | completion, tools, thinking | lightweight utility work | Utility seat — monitoring scripts & checks | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| minimax-m3.1-flash | completion, tools, thinking, vision | bulk product copy | Library copy seat — Living Scrolls | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| inkling-2-small | completion, thinking, tools, vision | fast classification and triage | Triage seat — inbox & queue triage | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 | deepseek-v4-pro:0813 | completion, tools, thinking | code generation and hard reasoning | Code & Reasoning seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| mimo-v2.6-flash | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| mimo-v2.6-flash | completion, thinking, tools, vision | fast bulk research and summarization | Research seat — bulk research | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 | glm-5.3 | completion, thinking, tools | reasoning and analysis | Reasoning seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| kimi-k2.6 | vision, thinking, completion, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| kimi-k2.6 | vision, thinking, completion, tools | critique, vision reads | Critic seat — verification team 2 | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 | kimi-k2.7-code | vision, thinking, completion, tools | code generation and code review | Code seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| gemma4:31b | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| nemotron-3-super | completion, thinking, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| beam | completion, thinking, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| deepseek-v4.1-flash | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| minimax-m3 | completion, tools, thinking, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| clef:27b | decision, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| glm-5.2 | thinking, completion, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| glm-5.3-flash | completion, thinking, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| hy4 | thinking, completion, tools, vision | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
-| kimi-k3.1-pro | vision, thinking, completion, tools | general — unverified specialization | UNASSIGNED — idle capacity | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| gemma4:31b | completion, thinking, tools, vision | independent verification (Google family, vision) | Blind Verifier — different-family seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| nemotron-3-super | completion, thinking, tools | verification sweeps | Verifier seat — verification team 3 | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| beam | completion, thinking, tools | build and implementation support | Build seat 2 — software manufacturing | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| deepseek-v4.1-flash | completion, thinking, tools, vision | bulk evidence gathering | Research seat 2 — evidence sweeps | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| minimax-m3 | completion, tools, thinking, vision | world text, signage-free scene copy | Worlds copy seat — civilization worlds | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| clef:27b | decision, vision | decision support ONLY — never assigned production work | PARKED — restricted (decision+vision only, no completion capability) | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| glm-5.2 | thinking, completion, tools | reasoning, structured critique | Critic seat — verification team 3 | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| glm-5.3-flash | completion, thinking, tools, vision | fast QA on copy and structure | Scrolls QA seat — OneJobKits library | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| hy4 | thinking, completion, tools, vision | research assistance | Research support seat | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
+| kimi-k3.1-pro | vision, thinking, completion, tools | critique and verification leadership (Kimi family) | Verification Team Lead — critic team 2 | LISTED-REACHABLE (tags snapshot 2026-11-27) | NOT-YET-PROVEN |
 
 Cost, every row: Ollama Cloud subscription — included; exact rate limits UNKNOWN (not published to us).
 
@@ -62,7 +62,7 @@ Cost, every row: Ollama Cloud subscription — included; exact rate limits UNKNO
 
 ## Idle capacity
 
-20 of 25 models are UNASSIGNED — idle capacity: gpt-oss:120b, muse-spark-open, nemotron-3-ultra, mistral-large-4, mimo-v2.6-pro, gpt-oss:20b, minimax-m3.1-flash, inkling-2-small, mimo-v2.6-flash, kimi-k2.6, gemma4:31b, nemotron-3-super, beam, deepseek-v4.1-flash, minimax-m3, clef:27b, glm-5.2, glm-5.3-flash, hy4, kimi-k3.1-pro.
+0 of 25 models are UNASSIGNED — idle capacity: .
 
 ## Operating rules that bind this register
 
