@@ -42,8 +42,13 @@ LOG_PATH = HERE / "orchestrator.log"
 KILL_PATH = HERE / "KILL"
 JOBS_DIR = HERE / "jobs"
 PACKETS_DIR = HERE / "packets"
-OLLAMA = Path.home() / "workspace/custom-connectors/custom.ollama/bin/ollama.py"
-MAX_PARALLEL = 4
+# Resolve the bench CLI from THIS FILE's location, never from the process
+# HOME — under systemd the daemon's HOME is /root, which silently pointed
+# the first launch at a nonexistent path (caught in the first-run test).
+HATCH_HOME = HERE.parents[3]
+OLLAMA = HATCH_HOME / "workspace/custom-connectors/custom.ollama/bin/ollama.py"
+PROCS: dict[str, subprocess.Popen] = {}
+MAX_PARALLEL = 2
 MAX_ATTEMPTS = 2
 
 # Different-family examination rotation (Relay Law: critic seat != builder seat family)
@@ -119,12 +124,15 @@ def running_jobs(q: dict) -> list[dict]:
 
 
 def pid_alive(pid: int | None) -> bool:
+    """True only for a genuinely running process. A zombie (state Z) is dead:
+    os.kill(pid, 0) alone stays true for zombies, which would stall reaping
+    forever — the second defect caught in the first-run test."""
     if not pid:
         return False
     try:
-        os.kill(pid, 0)
-        return True
-    except (ProcessLookupError, PermissionError):
+        stat = Path(f"/proc/{pid}/stat").read_text(encoding="utf-8")
+        return stat.rsplit(")", 1)[1].split()[1] != "Z"
+    except (FileNotFoundError, IndexError):
         return False
 
 
@@ -136,11 +144,13 @@ def dispatch(q: dict, job: dict) -> None:
     with out_path.open("wb") as out, err_path.open("wb") as err:
         proc = subprocess.Popen(cmd, stdout=out, stderr=err,
                                 start_new_session=True)
+    PROCS[job["id"]] = proc  # kept so reap can poll() — poll reaps the child
     job["pid"] = proc.pid
     job["status"] = "running"
     job["attempts"] += 1
     job["started_at"] = now()
     job["output"] = str(out_path)
+    save_queue(q)  # persist BEFORE returning: a crash here must never re-dispatch (C2)
     log(f"dispatched {job['id']} -> {job['seat']} pid={proc.pid} attempt={job['attempts']}")
 
 
@@ -177,14 +187,30 @@ def route_examination(q: dict, job: dict) -> None:
 
 def reap(q: dict) -> None:
     for job in running_jobs(q):
-        if pid_alive(job["pid"]):
+        proc = PROCS.get(job["id"])
+        retcode = None
+        if proc is not None:
+            retcode = proc.poll()
+            if retcode is None:
+                continue
+            PROCS.pop(job["id"], None)
+        elif pid_alive(job["pid"]):
             continue
         err_text = ""
         err_path = JOBS_DIR / f"{job['id']}.err"
         if err_path.exists():
             err_text = err_path.read_text(encoding="utf-8", errors="replace")
-        out_ok = (job["output"] and Path(job["output"]).exists()
-                  and Path(job["output"]).stat().st_size > 0)
+        out_path = Path(job["output"]) if job["output"] else None
+        out_size = out_path.stat().st_size if out_path and out_path.exists() else 0
+        out_head = ""
+        if out_path and out_path.exists() and out_size > 0:
+            out_head = out_path.read_text(encoding="utf-8", errors="replace")[:16]
+        # Delivery gate (hardened after the first-run test): the bench CLI
+        # reports transport failures as a tiny "HTTP <status>" file with a
+        # zero-ish footprint — that is a FAILURE, never a delivery.
+        out_ok = (retcode in (0, None) and out_size >= 200
+                  and not out_head.startswith("HTTP ")
+                  and not err_text.strip().startswith("Traceback"))
         job["pid"] = None
         job["finished_at"] = now()
         if "402" in err_text or "credit" in err_text.lower():
@@ -192,15 +218,45 @@ def reap(q: dict) -> None:
             job["flag"] = "FOUNDER-ACTION: resource/credit failure at the seat — no retry"
             log(f"{job['id']} PARKED — credit/resource failure")
             continue
-        if out_ok and not err_text.strip().startswith("Traceback"):
+        if out_ok:
             job["status"] = "delivered"
             log(f"{job['id']} DELIVERED ({job['seat']})")
             if job["parent"]:
                 parent = next((j for j in q["jobs"] if j["id"] == job["parent"]), None)
                 if parent and parent["status"] == "in_examination":
-                    parent["status"] = "examined"
-                    parent["verdict"] = f"examination delivered: {job['id']} -> {job['output']}"
-                    log(f"{parent['id']} EXAMINED via {job['id']}")
+                    # Parse the examiner's VERDICT line — an examination must
+                    # have operational effect, not dead-end at "examined".
+                    exam_text = Path(job["output"]).read_text(
+                        encoding="utf-8", errors="replace") if job["output"] else ""
+                    verdict = "UNPARSED"
+                    for ln in exam_text.splitlines():
+                        if "VERDICT:" in ln:
+                            verdict = ln.split("VERDICT:", 1)[1].strip()[:40]
+                    parent["verdict"] = f"{verdict} (exam {job['id']})"
+                    if verdict.startswith("FAIL") and not parent.get("rework_of"):
+                        parent["status"] = "examined"
+                        rw_sys = JOBS_DIR / f"{parent['id']}.rework-system.txt"
+                        rw_usr = JOBS_DIR / f"{parent['id']}.rework-user.txt"
+                        rw_sys.write_text(
+                            "You are a PROVADIA army builder seat under the Relay Law. "
+                            "Revise the work below against the examiner's findings. "
+                            "Deliver the complete corrected document, not a diff.", encoding="utf-8")
+                        orig = Path(parent["output"]).read_text(
+                            encoding="utf-8", errors="replace")[:9000] if parent["output"] else ""
+                        rw_usr.write_text(
+                            f"REWORK of {parent['id']} — {parent['title']}\n\n"
+                            f"=== EXAMINER'S FINDINGS ===\n{exam_text[:6000]}\n\n"
+                            f"=== ORIGINAL WORK ===\n{orig}\n", encoding="utf-8")
+                        rw = enqueue(q, line=parent["line"],
+                                     title=f"Rework of {parent['id']} — {parent['title']}",
+                                     seat=parent["seat"], kind="army",
+                                     system=str(rw_sys), user=str(rw_usr))
+                        if rw:
+                            rw["rework_of"] = parent["id"]
+                            log(f"{parent['id']} verdict FAIL — rework {rw['id']} enqueued")
+                    else:
+                        parent["status"] = "examined"
+                    log(f"{parent['id']} EXAMINED via {job['id']} — verdict: {verdict}")
             else:
                 route_examination(q, job)
         else:
@@ -230,13 +286,17 @@ def prepare_packets(q: dict) -> None:
 
 
 def dispatch_idle(q: dict) -> None:
+    """At most ONE new dispatch per tick: the first-run test proved a burst
+    of simultaneous large generations collapses the route (all four seats
+    returned transport failures) while solo launches succeed. Launches are
+    staggered a tick apart; executions still overlap."""
     busy_seats = {j["seat"] for j in running_jobs(q)}
+    if len(running_jobs(q)) >= MAX_PARALLEL:
+        return
     for job in q["jobs"]:
-        if len(running_jobs(q)) >= MAX_PARALLEL:
-            break
         if job["kind"] == "army" and job["status"] == "queued" and job["seat"] not in busy_seats:
             dispatch(q, job)
-            busy_seats.add(job["seat"])
+            return
 
 
 def render_register(q: dict) -> None:
@@ -247,9 +307,11 @@ def render_register(q: dict) -> None:
     REGISTER_JSON.write_text(json.dumps(reg, indent=1), encoding="utf-8")
     lines = [f"# PROVADIA PRODUCTION ORCHESTRATOR — LIVE REGISTER",
              f"Updated: {reg['updated_at']} UTC · counts: {counts}", ""]
-    lines.append("| Job | Line | Seat | Status | Title | Started | Delivered |")
+    lines.append("| Job | Line | Seat | Status | Title | Started | Finished |")
     lines.append("|---|---|---|---|---|---|---|")
     for j in q["jobs"]:
+        # M1 fix: the last column is FINISHED, never "Delivered" — failed and
+        # parked jobs also finish, and the register must not dress them as deliveries.
         lines.append(f"| {j['id']} | {j['line']} | {j['seat']} | {j['status']} | "
                      f"{j['title'][:64]} | {j['started_at'][11:19]} | {j['finished_at'][11:19]} |")
     flags = [j for j in q["jobs"] if j.get("flag")]
